@@ -1,4 +1,3 @@
--- Obfuscated with QuasarTools (Lua / Luau)
 do
     _0x69v43_0x69v43__VEIL_last_bind then pcall(function_0x69v43game:GetService("\082\117\110\083\101\114\118\105\099\101"):UnbindFromRenderStep_0x69v43.__VEIL_last_bind) _0x69v43) _0x69v43
     _0x69v43_0x69v43__VEIL_viewfov_bind then pcall(function_0x69v43game:GetService("\082\117\110\083\101\114\118\105\099\101"):UnbindFromRenderStep_0x69v43.__VEIL_viewfov_bind) _0x69v43) _0x69v43
