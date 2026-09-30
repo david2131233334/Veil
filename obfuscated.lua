@@ -1,4632 +1,4851 @@
+-- ============================================================
+-- VEIL — V1
+-- ============================================================
+
 do
-    _0x69v43_0x69v43__VEIL_last_bind then pcall(function_0x69v43game:GetService("\082\117\110\083\101\114\118\105\099\101"):UnbindFromRenderStep_0x69v43.__VEIL_last_bind) _0x69v43) _0x69v43
-    _0x69v43_0x69v43__VEIL_viewfov_bind then pcall(function_0x69v43game:GetService("\082\117\110\083\101\114\118\105\099\101"):UnbindFromRenderStep_0x69v43.__VEIL_viewfov_bind) _0x69v43) _0x69v43
-    _0x69v43_0x69v43__VEIL_last_connections then
-        _0x69v43 _0x69v43c_0x69v43 ipairs_0x69v43.__VEIL_last_connections) _0x69v43pcall(function_0x69v43c:Disconnect_0x69v43_0x69v43) _0x69v43
-    _0x69v43
+    if _G.__VEIL_last_bind then pcall(function() game:GetService("RunService"):UnbindFromRenderStep(_G.__VEIL_last_bind) end) end
+    if _G.__VEIL_viewfov_bind then pcall(function() game:GetService("RunService"):UnbindFromRenderStep(_G.__VEIL_viewfov_bind) end) end
+    if _G.__VEIL_last_connections then
+        for _, _0x3A4B in ipairs(_G.__VEIL_last_connections) do pcall(function() _0x3A4B:Disconnect() end) end
+    end
     pcall(function()
-        local _0xeav74 = (type(gethui) == "\102\117\110\099\116\105\111\110" _0x69v43 gethui()) _0x69v43game:GetService("\067\111\114\101\071\117\105")
-        _0x69v43 _0x69v43c_0x69v43 ipairs(_0x69v43:GetChildren()) do
-            local _0xd6v18_0x69v43c._0x36bv95
-            _0x69v43n == "\086\069\073\076\095\085\073"_0x69v43 _0xd6v18 == "\086\069\073\076\095\086\105\115\117\097\108\115"_0x69v43 _0xd6v18 == "\086\069\073\076\095\070\079\086"
-                _0x69v43n == "\086\069\073\076\095\083\116\097\114\116\117\112"_0x69v43 _0xd6v18 == "\086\069\073\076\095\087\097\116\101\114\109\097\114\107"_0x69v43 _0xd6v18 == "\086\069\073\076\095\077\111\098\105\108\101\079\118\101\114\108\097\121"
-                _0x69v43n == "\086\069\073\076\095\068\105\115\099\111\114\100"_0x69v43 _0xd6v18 == "\086\069\073\076\095\080\114\101\109\105\117\109"_0x69v43 _0xd6v18 == "\086\069\073\076\095\080\105\099\107\101\114"
-                _0x69v43n == "\086\069\073\076\095\075\101\121\085\073"_0x69v43 _0xd6v18 == "\086\069\073\076\095\080\111\112\117\112"_0x69v43 _0xd6v18 == "\086\069\073\076\095\067\114\111\115\115\104\097\105\114" then
-                _0x127v13:Destroy()
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43__VEIL_last_bind_0x69v43_0x69v43_0x69v43.__VEIL_viewfov_bind_0x69v43_0x69v43_0x69v43.__VEIL_last_connections_0x69v43_0x69v43
-    _0x69v43__VEIL_CameraAssist_0x69v43_0x69v43_0x69v43.__VEIL_Weapon_0x69v43_0x69v43_0x69v43.__VEIL_ShowStartup_0x69v43_0x69v43
-    _0x69v43__VEIL_Mobile_0x69v43_0x69v43_0x69v43.__VEIL_StartupDone_0x69v43_0x69v43_0x69v43.__VEIL_INITIALIZED_0x69v43_0x69v43
-_0x69v43
+        local _0x14E4 = (type(gethui) == "function" and gethui()) or game:GetService("CoreGui")
+        for _, _0x3A4B in ipairs(_0x14E4:GetChildren()) do
+            local _0xB877 = _0x3A4B.Name
+            if _0xB877 == "VEIL_UI" or _0xB877 == "VEIL_Visuals" or _0xB877 == "VEIL_FOV"
+                or _0xB877 == "VEIL_Startup" or _0xB877 == "VEIL_Watermark" or _0xB877 == "VEIL_MobileOverlay"
+                or _0xB877 == "VEIL_Discord" or _0xB877 == "VEIL_Premium" or _0xB877 == "VEIL_Picker"
+                or _0xB877 == "VEIL_KeyUI" or _0xB877 == "VEIL_Popup" or _0xB877 == "VEIL_Crosshair" then
+                _0x3A4B:Destroy()
+            end
+        end
+    end)
+    _G.__VEIL_last_bind = nil _G.__VEIL_viewfov_bind = nil _G.__VEIL_last_connections = nil
+    _G.__VEIL_CameraAssist = nil _G.__VEIL_Weapon = nil _G.__VEIL_ShowStartup = nil
+    _G.__VEIL_Mobile = nil _G.__VEIL_StartupDone = nil _G.__VEIL_INITIALIZED = nil
+end
 
-local _0xebv50_0x69v43game:GetService("\085\115\101\114\073\110\112\117\116\083\101\114\118\105\099\101")
-local _0xecv49_0x69v43game:GetService("\072\116\116\112\083\101\114\118\105\099\101")
-local _0xedv83_0x69v43game:GetService("\084\119\101\101\110\083\101\114\118\105\099\101")
-local _0xeev16_0x69v43game:GetService("\080\108\097\121\101\114\115")
-local _0xefv37_0x69v43game:GetService("\082\117\110\083\101\114\118\105\099\101")
-local _0xf0v60_0x69v43game:GetService("\087\111\114\107\115\112\097\099\101")
-local _0xf1v69_0x69v43game:GetService("\076\105\103\104\116\105\110\103")
+local _0xA548 = game:GetService("UserInputService")
+local _0xFC99 = game:GetService("HttpService")
+local _0x27A5 = game:GetService("TweenService")
+local _0xE1FF = game:GetService("Players")
+local _0xB932 = game:GetService("RunService")
+local _0x3BA1 = game:GetService("Workspace")
+local _0x18A8 = game:GetService("Lighting")
 
-local function _0x64v86(_0x65v40, _0x37dv81) local _0xf2v80, _0x2f3v60_0x69v43pcall(_0x65v40) _0x69v43_0x69v43then return_0x69v43_0x69v43 return _0x37dv81 _0x69v43
+local function _0x955B(_0x6EA8, _0x3748) local _0xDF7B, _0x8C41 = pcall(_0x6EA8) if _0xDF7B then return _0x8C41 end return _0x3748 end
 
-local function _0x67v93()
-    local _0xf3v49_0x69v43_0x69v43__VEIL_ForceDevice
-    _0x69v43o == "\109\111\098\105\108\101" then return {isMobile=true, _0x2f4v54 =false, _0x2f5v39 =false, _0x2f6v95 ="\111\118\101\114\114\105\100\101"} _0x69v43
-    _0x69v43o == "\112\099" then return {isMobile=false, _0x2f4v54 =true, _0x2f5v39 =false, _0x2f6v95 ="\111\118\101\114\114\105\100\101"} _0x69v43
-    local _0xdcv26_0x69v43_0x64v86(function_0x69v43return _0x69v43:GetPlatform_0x69v43_0x69v43, _0x69v43)
-    local _0xf4v48_0x69v43tostring_0x69v43_0x69v43"\085\110\107\110\111\119\110")
-    local _0xf5v70_0x69v43_0x69v43find("\105\079\083") ~= _0x69v43_0x69v43_0x69v43:find("\065\110\100\114\111\105\100") ~= _0x69v43_0x69v43_0x69v43:find("\085\087\080") ~= _0x69v43
-    local _0xe7v97_0x69v43_0x64v86(function_0x69v43return _0x69v43.TouchEnabled _0x69v43, false)
-    local _0xf6v96_0x69v43_0x64v86(function_0x69v43return _0x69v43.KeyboardEnabled _0x69v43, true)
-    local _0xf7v47_0x69v43_0x64v86(function_0x69v43return _0x69v43.MouseEnabled _0x69v43, true)
-    local _0x89v20_0x69v43_0x64v86(function_0x69v43return _0x69v43.VREnabled _0x69v43, false)
-    local _0xf8v89_0x69v43false
-    _0x69v43v then_0x69v43_0x69v43false
-    elseif_0x69v43 then_0x69v43_0x69v43_0x69v43 _0xf6v96
-    elseif_0x69v43_0x69v43 _0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43then_0x69v43_0x69v43true _0x69v43
-    return {isMobile_0x69v43, _0x2f4v54_0x69v43_0x69v43_0x69v43) _0x69v43 (_0x69v43 v_0x69v43_0x2f5v39_0x69v43, _0x2f6v95 =_0xf4v48, _0x2f7v24_0x69v43, _0x2f8v79_0x69v43, _0x2f9v34_0x69v43}
-_0x69v43
+local function _0x24C5()
+    local _0x5B5D = _G.__VEIL_ForceDevice
+    if _0x5B5D == "mobile" then return {isMobile=true, isPC=false, isVR=false, platform="override"} end
+    if _0x5B5D == "pc" then return {isMobile=false, isPC=true, isVR=false, platform="override"} end
+    local _0x938C = _0x955B(function() return _0xA548:GetPlatform() end, nil)
+    local _0xA21A = tostring(_0x938C or "Unknown")
+    local _0xE130 = _0xA21A:find("iOS") ~= nil or _0xA21A:find("Android") ~= nil or _0xA21A:find("UWP") ~= nil
+    local _0xD871 = _0x955B(function() return _0xA548.TouchEnabled end, false)
+    local _0xE7BF = _0x955B(function() return _0xA548.KeyboardEnabled end, true)
+    local _0x4D37 = _0x955B(function() return _0xA548.MouseEnabled end, true)
+    local _0x8C41 = _0x955B(function() return _0xA548.VREnabled end, false)
+    local _0x780D = false
+    if _0x8C41 then _0x780D = false
+    elseif _0xE130 then _0x780D = not _0xE7BF
+    elseif _0xD871 and not _0xE7BF and not _0x4D37 then _0x780D = true end
+    return {isMobile=_0x780D, isPC=(not _0x780D) and (not _0x8C41), isVR=_0x8C41, platform=_0xA21A, touch=_0xD871, keyboard=_0xE7BF, mouse=_0x4D37}
+end
 
-local _0xf9v42_0x69v43_0x67v93()
-local _0xfav67_0x69v43DeviceInfo.isMobile _0x69v43_0x69v430_0x69v43_0x69v430
+local _0x9A4D = _0x24C5()
+local _0x7C2F = _0x9A4D.isMobile and 3.0 or 1.0
 
-local _0xfbv71_0x69v43false
+local _0x0E63 = false
 pcall(function()
-    _0x69v43type(identifyexecutor) == "\102\117\110\099\116\105\111\110" then
-        local _0xd6v18_0x69v43tostring(identifyexecutor_0x69v43_0x69v43""):lower()
-        _0x69v43n:find("\120\101\110\111") _0x69v43n:find("\115\111\108\097\114\097") _0x69v43n:find("\107\114\110\108")
-            _0x69v43n:find("\102\108\117\120\117\115") _0x69v43n:find("\104\121\100\114\111\103\101\110") _0x69v43n:find("\099\111\100\101\120")
-            _0x69v43n:find("\116\114\105\103\111\110") then
- _0xfbv71_0x69v43true
-        _0x69v43
-    _0x69v43
-_0x69v43)
-_0x69v43__VEIL_IS_LOW_UNC_0x69v43IS_LOW_UNC
+    if type(identifyexecutor) == "function" then
+        local _0xB877 = tostring(identifyexecutor() or ""):lower()
+        if _0xB877:find("xeno") or _0xB877:find("solara") or _0xB877:find("krnl")
+            or _0xB877:find("fluxus") or _0xB877:find("hydrogen") or _0xB877:find("codex")
+            or _0xB877:find("trigon") then
+            _0x0E63 = true
+        end
+    end
+end)
+_G.__VEIL_IS_LOW_UNC = _0x0E63
 
-local _0xfcv64 = { Active_0x69v43false, _0x2fav77_0x69v43"\110\111\110\101", _0x2fbv16_0x69v430 }
-local _0xfdv27_0x69v43_0x69v43
-_0x69v43__VEIL_SILENT_CFG_0x69v43_0x69v43__VEIL_SILENT_CFG_0x69v43 {}
-_0x69v43__VEIL_SILENT_CFG.MinMag_0x69v4320
-_0x69v43__VEIL_SILENT_CFG.MinDot_0x69v43_0x69v43
-_0x69v43__VEIL_SILENT_CFG.MinToTarget_0x69v43_0x69v43
+local _0x2D8B = { Active = false, Mode = "none", HitCount = 0 }
+local _0xBEA0 = nil
+_G.__VEIL_SILENT_CFG = _G.__VEIL_SILENT_CFG or {}
+_G.__VEIL_SILENT_CFG.MinMag = 20
+_G.__VEIL_SILENT_CFG.MinDot = 0.5
+_G.__VEIL_SILENT_CFG.MinToTarget = 0.3
 
-_0x69v43_0x69v43__VEIL_SILENT_REF then
- _0xfcv64_0x69v43_0x69v43__VEIL_SILENT_REF
-    _0xfcv64.Active_0x69v43false
-    _0xfcv64.HitCount_0x69v430
-    _0xfcv64.Mode_0x69v43"\105\110\115\116\097\108\108\101\100"
+if _G.__VEIL_SILENT_REF then
+    _0x2D8B = _G.__VEIL_SILENT_REF
+    _0x2D8B.Active = false
+    _0x2D8B.HitCount = 0
+    _0x2D8B.Mode = "installed"
 else
-    _0x69v43__VEIL_SILENT_REF_0x69v43SILENT
+    _G.__VEIL_SILENT_REF = _0x2D8B
 
-    _0x69v43IS_LOW_UNC then
-        _0xfcv64.Mode_0x69v43"\099\097\109\101\114\097"
+    if _0x0E63 then
+        _0x2D8B.Mode = "camera"
     else
-        local _0xfev95_0x69v43_0x69v43
-        local function _0x68v94()
-            local _0xffv93_0x69v43_0x69v43__VEIL_CameraAssist
-            local _0x100v77_0x69v43_0x69v43_0x69v43_0x69v43.Lock
-            _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43.LastPos_0x69v43 _0x69v43_0x69v43.Character_0x69v43 _0x69v43_0x69v43._0x3a8v23.Parent then return _0x69v43 _0x69v43
-            return_0x69v43
-        _0x69v43
+        local _0x1C7C = nil
+        local function _0xDAA6()
+            local _0x241D = _G.__VEIL_CameraAssist
+            local _0x3135 = _0x241D and _0x241D.Lock
+            if not _0x3135 or not _0x3135.LastPos or not _0x3135.Character or not _0x3135.Character.Parent then return nil end
+            return _0x3135
+        end
 
-        function _0xfcv64.InstallHook()
-            _0x69v43_oldNamecall then return _0x69v43
-            _0x69v43type(hookmetamethod) ~= "\102\117\110\099\116\105\111\110"_0x69v43 type(getnamecallmethod) ~= "\102\117\110\099\116\105\111\110" then
-                _0xfcv64.Mode_0x69v43"\099\097\109\101\114\097"
+        function _0x2D8B.InstallHook()
+            if _0x1C7C then return end
+            if type(hookmetamethod) ~= "function" or type(getnamecallmethod) ~= "function" then
+                _0x2D8B.Mode = "camera"
                 return
-            _0x69v43
-            local _0xf2v80_0x69v43pcall(function()
- _0xfev95_0x69v43hookmetamethod(game, "\095\095\110\097\109\101\099\097\108\108", newcclosure(function(self, _0x69v43)
-                    _0x69v43_0x69v43 _0xfcv64.Active then return _0xfev95(self, ...) _0x69v43
-                    _0x69v43self ~= workspace then return _0xfev95(self, ...) _0x69v43
-                    _0x69v43type(checkcaller) == "\102\117\110\099\116\105\111\110" _0x69v43 checkcaller_0x69v43then return _0xfev95(self, ...) _0x69v43
-                    local _0x101v43_0x69v43getnamecallmethod()
-                    _0x69v43method ~= "\082\097\121\099\097\115\116" _0x69v43 _0x101v43 ~= "\070\105\110\100\080\097\114\116\079\110\082\097\121"
-                        _0x69v43 _0x101v43 ~= "\102\105\110\100\080\097\114\116\079\110\082\097\121"
-                        _0x69v43 _0x101v43 ~= "\070\105\110\100\080\097\114\116\079\110\082\097\121\087\105\116\104\073\103\110\111\114\101\076\105\115\116"
-                        _0x69v43 _0x101v43 ~= "\070\105\110\100\080\097\114\116\079\110\082\097\121\087\105\116\104\087\104\105\116\101\108\105\115\116" then
-                        return _0xfev95(self, ...)
-                    _0x69v43
-                    local _0x100v77_0x69v43_0x68v94()
-                    _0x69v43_0x69v43_0x69v43 then return _0xfev95(self, ...) _0x69v43
-                    local _0x102v57_0x69v43SILENT_CAM
-                    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then
- _0x102v57_0x69v43Workspace.CurrentCamera
- _0xfdv27_0x69v43_0x69v43
-                    _0x69v43
-                    _0x69v43_0x69v43 _0x69v43 then return _0xfev95(self, ...) _0x69v43
-                    local _0x103v63_0x69v43_0x69v43.CFrame.LookVector
-                    local _0x104v15_0x69v43_0x69v43__VEIL_SILENT_CFG
-                    _0x69v43method == "\082\097\121\099\097\115\116" then
-                        local _0x105v81_0x69v43select(1, ...)
-                        local _0x8bv25_0x69v43select(2, ...)
-                        _0x69v43typeof(_0x105v81) == "\086\101\099\116\111\114\051" _0x69v43 typeof(_0x69v43) == "\086\101\099\116\111\114\051" then
-                            local _0x106v99_0x69v43_0x69v43.Magnitude
-                            _0x69v43dirMag >= _0x69v43.MinMag then
-                                local _0x107v11_0x69v43_0x69v43_0x69v43dirMag
-                                _0x69v43camLook:_0x69v43(_0x107v11) > _0x69v43.MinDot then
-                                    local _0x108v95_0x69v43_0x69v43LastPos_0x69v43origin
-                                    _0x69v43toTarget.Magnitude_0x69v43_0x69v43.MinToTarget then
-                                        _0xfcv64.HitCount_0x69v43SILENT.HitCount_0x69v431
-                                        return _0xfev95(self, _0x105v81, _0x108v95.Unit_0x69v43dirMag, select(3, ...))
-                                    _0x69v43
-                                _0x69v43
-                            _0x69v43
-                        _0x69v43
+            end
+            local _0xDF7B = pcall(function()
+                _0x1C7C = hookmetamethod(game, "__namecall", newcclosure(function(self, ...)
+                    if not _0x2D8B.Active then return _0x1C7C(self, ...) end
+                    if self ~= workspace then return _0x1C7C(self, ...) end
+                    if type(checkcaller) == "function" and checkcaller() then return _0x1C7C(self, ...) end
+                    local _0xEC18 = getnamecallmethod()
+                    if _0xEC18 ~= "Raycast" and _0xEC18 ~= "FindPartOnRay"
+                        and _0xEC18 ~= "findPartOnRay"
+                        and _0xEC18 ~= "FindPartOnRayWithIgnoreList"
+                        and _0xEC18 ~= "FindPartOnRayWithWhitelist" then
+                        return _0x1C7C(self, ...)
+                    end
+                    local _0x3135 = _0xDAA6()
+                    if not _0x3135 then return _0x1C7C(self, ...) end
+                    local _0x7458 = _0xBEA0
+                    if not _0x7458 or not _0x7458.Parent then
+                        _0x7458 = _0x3BA1.CurrentCamera
+                        _0xBEA0 = _0x7458
+                    end
+                    if not _0x7458 then return _0x1C7C(self, ...) end
+                    local _0x2E19 = _0x7458.CFrame.LookVector
+                    local _0xF085 = _G.__VEIL_SILENT_CFG
+                    if _0xEC18 == "Raycast" then
+                        local _0x562F = select(1, ...)
+                        local _0xB0D1 = select(2, ...)
+                        if typeof(_0x562F) == "Vector3" and typeof(_0xB0D1) == "Vector3" then
+                            local _0x5C6F = _0xB0D1.Magnitude
+                            if _0x5C6F >= _0xF085.MinMag then
+                                local _0x12DD = _0xB0D1 / _0x5C6F
+                                if _0x2E19:Dot(_0x12DD) > _0xF085.MinDot then
+                                    local _0x0DED = _0x3135.LastPos - _0x562F
+                                    if _0x0DED.Magnitude > _0xF085.MinToTarget then
+                                        _0x2D8B.HitCount = _0x2D8B.HitCount + 1
+                                        return _0x1C7C(self, _0x562F, _0x0DED.Unit * _0x5C6F, select(3, ...))
+                                    end
+                                end
+                            end
+                        end
                     else
-                        local _0x109v37_0x69v43select(1, ...)
-                        _0x69v43typeof(_0x69v43) == "\082\097\121" then
-                            local _0x106v99_0x69v43_0x69v43.Direction.Magnitude
-                            _0x69v43dirMag >= _0x69v43.MinMag then
-                                local _0x107v11_0x69v43_0x69v43.Direction_0x69v43dirMag
-                                _0x69v43camLook:_0x69v43(_0x107v11) > _0x69v43.MinDot then
-                                    local _0x108v95_0x69v43_0x69v43LastPos_0x69v43_0x69v43.Origin
-                                    _0x69v43toTarget.Magnitude_0x69v43_0x69v43.MinToTarget then
-                                        _0xfcv64.HitCount_0x69v43SILENT.HitCount_0x69v431
-                                        return _0xfev95(self, _0x69v43._0x69v43(_0x69v43.Origin, _0x108v95.Unit_0x69v43dirMag_0x69v43select(2, ...))
-                                    _0x69v43
-                                _0x69v43
-                            _0x69v43
-                        _0x69v43
-                    _0x69v43
-                    return _0xfev95(self, ...)
-                _0x69v43))
-            _0x69v43)
-            _0xfcv64._0x2fav77 = (_0x69v43_0x69v43 _0xfev95) _0x69v43 "\110\097\109\101\099\097\108\108"_0x69v43 "\099\097\109\101\114\097"
-        _0x69v43
+                        local _0x96B1 = select(1, ...)
+                        if typeof(_0x96B1) == "Ray" then
+                            local _0x5C6F = _0x96B1.Direction.Magnitude
+                            if _0x5C6F >= _0xF085.MinMag then
+                                local _0x12DD = _0x96B1.Direction / _0x5C6F
+                                if _0x2E19:Dot(_0x12DD) > _0xF085.MinDot then
+                                    local _0x0DED = _0x3135.LastPos - _0x96B1.Origin
+                                    if _0x0DED.Magnitude > _0xF085.MinToTarget then
+                                        _0x2D8B.HitCount = _0x2D8B.HitCount + 1
+                                        return _0x1C7C(self, Ray.new(_0x96B1.Origin, _0x0DED.Unit * _0x5C6F), select(2, ...))
+                                    end
+                                end
+                            end
+                        end
+                    end
+                    return _0x1C7C(self, ...)
+                end))
+            end)
+            _0x2D8B.Mode = (_0xDF7B and _0x1C7C) and "namecall" or "camera"
+        end
 
-        function _0xfcv64.UninstallHook()
-            _0x69v43_0x69v43 _0xfev95 then return _0x69v43
-            pcall(function_0x69v43hookmetamethod(game, "\095\095\110\097\109\101\099\097\108\108", _0xfev95) _0x69v43)
- _0xfev95_0x69v43_0x69v43
-            _0xfcv64.Mode_0x69v43"\105\100\108\101"
-        _0x69v43
+        function _0x2D8B.UninstallHook()
+            if not _0x1C7C then return end
+            pcall(function() hookmetamethod(game, "__namecall", _0x1C7C) end)
+            _0x1C7C = nil
+            _0x2D8B.Mode = "idle"
+        end
 
-        _0xfcv64.Mode_0x69v43"\105\100\108\101"
-    _0x69v43
-_0x69v43
+        _0x2D8B.Mode = "idle"
+    end
+end
 
-local _0x10av39_0x69v43_0x69v43
-_0x69v43_0x69v43 _0xfbv71 then
- _0x10av39_0x69v43_0x69v43__VEIL_CamControls
-    _0x69v43_0x69v43 _0x10av39 then
+local _0x1857 = nil
+if not _0x0E63 then
+    _0x1857 = _G.__VEIL_CamControls
+    if not _0x1857 then
         pcall(function()
-            local _0x10bv29_0x69v43Players.LocalPlayer
-            _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-            local _0xf4v48_0x69v43_0x69v43:FindFirstChild("\080\108\097\121\101\114\083\099\114\105\112\116\115")
-            _0x69v43_0x69v43_0x69v43 then return _0x69v43
-            local _0x10cv50_0x69v43_0x69v43FindFirstChild("\080\108\097\121\101\114\077\111\100\117\108\101")
-            _0x69v43_0x69v43_0x69v43 then return _0x69v43
-            local _0x10dv76_0x69v43require_0x69v43)
-            _0x69v43_0x69v43 _0x69v43 _0x69v43.GetControls then
- _0x10av39_0x69v43_0x69v43:GetControls()
-                _0x69v43__VEIL_CamControls_0x69v43CamControls
-            _0x69v43
-        _0x69v43)
-    _0x69v43
-_0x69v43
+            local _0xE188 = _0xE1FF.LocalPlayer
+            if not _0xE188 then return end
+            local _0xA21A = _0xE188:FindFirstChild("PlayerScripts")
+            if not _0xA21A then return end
+            local _0xBC37 = _0xA21A:FindFirstChild("PlayerModule")
+            if not _0xBC37 then return end
+            local _0xD481 = require(_0xBC37)
+            if _0xD481 and _0xD481.GetControls then
+                _0x1857 = _0xD481:GetControls()
+                _G.__VEIL_CamControls = _0x1857
+            end
+        end)
+    end
+end
 
-local _0x10ev39_0x69v430
-local _0x10fv57_0x69v430_0x69v43
+local _0x6B84 = 0
+local _0x6806 = 0.08
 
-local _0x110v81 = {
- _0x2fcv45_0x69v43_0x69v43, _0x2fdv34_0x69v43true, _0x2fev45_0x69v43true, _0x2ffv44_0x69v43true, _0x300v87_0x69v43true, _0x301v93_0x69v43true, _0x302v93_0x69v43false, _0x303v86_0x69v43"\080\117\114\112\108\101", _0x304v72_0x69v43"\080\117\114\112\108\101", _0x305v77_0x69v43"\087\104\105\116\101", _0x306v40 = {
- _0x307v38_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43_0x69v43_0x308v77_0x69v43Color3.fromRGB(_0x69v43, (0x1e + 0x1e), 60_0x69v43_0x309v39_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43_0x69v43_0x30av27_0x69v43Color3.fromRGB_0x69v43, _0x69v43, 90_0x69v43_0x30bv88_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 60_0x69v43_0x30cv78_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x30dv85_0x69v43Color3.fromRGB_0x69v43, (0xc + 0xd), 30_0x69v43_0x30ev31_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43_0x69v43_0x30fv98_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 60_0x69v43_0x310v72_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x311v22_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x312v63_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43),
-    }, _0x313v73_0x69v4360, _0x314v90_0x69v43false, _0x315v83_0x69v43false, _0x316v56_0x69v43false, _0x317v57_0x69v4335, _0x318v37_0x69v43false, _0x319v22_0x69v43"\087\104\105\116\101", _0x31av25_0x69v43_0x69v43_0x31bv83_0x69v43"\072\101\097\100", _0x31cv53_0x69v43"\072\101\097\100", _0x31dv76_0x69v43false, _0x31ev59_0x69v43_0x69v43, _0x31fv18_0x69v43true, _0x320v43_0x69v43_0x69v43, _0x321v21_0x69v430_0x69v43, _0x322v52_0x69v43_0x69v43, _0x323v88_0x69v43_0x69v43, _0x324v76_0x69v430_0x69v43, _0x325v16_0x69v43true, _0x326v20_0x69v43true, _0x327v45_0x69v43false, _0x328v36_0x69v4390, _0x329v24_0x69v43false, _0x32av85_0x69v43"\065\117\116\111", _0x32bv78_0x69v43true, _0x32cv76_0x69v43true, _0x32dv64_0x69v43true, _0x32ev83_0x69v43true, _0x32fv13_0x69v43false, _0x330v46_0x69v430_0x69v43, _0x331v66_0x69v431000, _0x332v37_0x69v43true, _0x333v55_0x69v43_0x69v43, _0x334v64_0x69v43true, _0x335v14_0x69v43"\077\111\117\115\101", _0x336v83_0x69v43Enum.KeyCode._0x69v43_0x337v21_0x69v43Enum.UserInputType.MouseButton2, _0x338v84_0x69v43false, _0x339v42_0x69v4350, _0x33av40_0x69v43false, _0x33bv66_0x69v4360, _0x33cv22_0x69v43false, _0x33dv34_0x69v43false, _0x33ev54_0x69v43false, _0x33fv11_0x69v43_0x69v43, _0x340v82_0x69v43false, _0x341v68_0x69v43true, _0x342v13_0x69v43false, _0x343v11_0x69v43true, _0x344v38_0x69v43Enum.KeyCode.ButtonL2, _0x345v21_0x69v43Enum.KeyCode.ButtonR2, _0x346v71_0x69v43true, _0x347v62_0x69v43"\075\101\121", _0x348v88_0x69v43Enum.KeyCode.RightShift, _0x349v81_0x69v43Enum.UserInputType.MouseButton3, _0x34av13_0x69v43"\077\111\117\115\101", _0x34bv15_0x69v43Enum.UserInputType.MouseButton2, _0x34cv82_0x69v43Enum.KeyCode.LeftShift, _0x34dv71_0x69v43_0x69v43, _0x34ev82_0x69v431000, _0x34fv85_0x69v43false, _0x350v62_0x69v43_0x69v43, _0x351v22_0x69v43_0x69v43, _0x352v78_0x69v43"\072\101\097\100", _0x353v42_0x69v43false, _0x354v63_0x69v43"\067\121\097\110", _0x355v79_0x69v43_0x69v43, _0x356v41_0x69v43true, _0x357v66_0x69v43true, _0x358v55_0x69v43false, _0x359v49_0x69v43false, _0x35av47_0x69v43false, _0x35bv37_0x69v43false, _0x35cv51_0x69v43false, _0x35dv18_0x69v43false, _0x35ev14_0x69v43false, _0x35fv45_0x69v43false, _0x360v89_0x69v43false, _0x361v78_0x69v43false, _0x362v52_0x69v43false, _0x363v56_0x69v43false, _0x364v94_0x69v43"\086\105\110\101\032\066\111\111\109", _0x365v47 = {
-        ["\086\105\110\101\032\066\111\111\109"] = "\114\098\120\097\115\115\101\116\105\100\058\047\047\054\051\048\056\054\048\054\049\049\054",
-        ["\077\101\103\097\032\075\110\105\103\104\116"] = "\114\098\120\097\115\115\101\116\105\100\058\047\047\049\051\049\048\049\050\055\057\050\053\053\054\049\055\049\056",
-        ["\077\076\071\032\065\105\114\104\111\114\110"] = "\114\098\120\097\115\115\101\116\105\100\058\047\047\054\055\056\048\056\057\057\054\049",
-        ["\066\111\111\109\032\072\101\097\100\115\104\111\116"] = "\114\098\120\097\115\115\101\116\105\100\058\047\047\055\051\054\049\048\056\053\053\053\055",
-        ["\084\097\099\111\032\066\101\108\108"] = "\114\098\120\097\115\115\101\116\105\100\058\047\047\053\053\053\054\048\056\050\048\053\052",
-    }, _0x366v24_0x69v43false, _0x367v66_0x69v43false, _0x368v73_0x69v43_0x69v43, _0x369v17_0x69v43_0x69v43_0x36av21_0x69v43_0x69v43,
+local _0x77AD = {
+    ConfigVersion = 160,
+    VisualsEnabled = true, ShowBoxes = true, ShowNames = true, ShowHealth = true,
+    ShowDistance = true, ShowSkeleton = false, SkeletonColor = "Purple",
+    BoxColor = "Purple", NameColor = "White",
+    BoxColorMap = {
+        Purple = Color3.fromRGB(139, 92, 246), Red = Color3.fromRGB(255, 60, 60),
+        Blue = Color3.fromRGB(99, 102, 241), Green = Color3.fromRGB(60, 220, 90),
+        Yellow = Color3.fromRGB(255, 220, 60), White = Color3.fromRGB(245, 243, 255),
+        Black = Color3.fromRGB(25, 25, 30), Cyan = Color3.fromRGB(80, 220, 240),
+        Orange = Color3.fromRGB(255, 140, 60), Pink = Color3.fromRGB(255, 100, 200),
+        Lime = Color3.fromRGB(120, 255, 120), Teal = Color3.fromRGB(60, 200, 180),
+    },
+    VisualsRateHz = 60,
+    CameraAssistEnabled = false, CameraAssistAlwaysOn = false,
+    CameraAssistUseMouseWhileLocking = false, CameraAssistFOV = 35,
+    CameraAssistDrawFOV = false, CameraAssistFOVColor = "White",
+    CameraAssistSmoothing = 8, CameraAssistHitbox = "Head",
+    CameraAssistHitboxMode = "Head", CameraAssistVisibleCheck = false,
+    CameraAssistAcquisitionRadius = 300, CameraAssistPrediction = true,
+    CameraAssistBulletSpeed = 400, CameraAssistLead = 0.06,
+    CameraAssistScopeSpeed = 1.0, CameraAssistMouseSensitivity = 1.0,
+    CameraAssistPlayerSens = 0.15, CameraAssistRotateChar = true,
+    CameraAssistFOVPriority = true,
+    ViewFOVEnabled = false, ViewFOV = 90,
+    LobbyGuardEnabled = false, LobbyStateOverride = "Auto",
+    WeaponAutoDetect = true, WeaponProfilesEnabled = true,
+    ScaleWithViewport = true, TeamCheck = true,
+    AutoFireEnabled = false, AutoFireDelay = 0.06,
+    AutoFireMaxDistance = 1000, AutoFireProximityFallback = true,
+    AutoFireProximityAngle = 2.5, AutoFireAlwaysOn = true,
+    AutoFireBindType = "Mouse", AutoFireKeyCode = Enum.KeyCode.V,
+    AutoFireMouseButton = Enum.UserInputType.MouseButton2,
+    FlyEnabled = false, FlySpeed = 50,
+    SpeedEnabled = false, SpeedValue = 60,
+    NoclipEnabled = false,
+    NightVisionEnabled = false,
+    HitboxExpanderEnabled = false, HitboxExpanderSize = 1.5,
+    NoRecoilEnabled = false,
+    AntiFlashEnabled = true, FPSBoostEnabled = false,
+    AutoStopOnKatanaDeflect = true,
+    AimControllerButton = Enum.KeyCode.ButtonL2,
+    AutoFireControllerButton = Enum.KeyCode.ButtonR2,
+    WatermarkEnabled = true,
+    MenuBindType = "Key", MenuKey = Enum.KeyCode.RightShift,
+    MenuMouseButton = Enum.UserInputType.MouseButton3,
+    AimBindType = "Mouse", AimMouseButton = Enum.UserInputType.MouseButton2,
+    AimKeyCode = Enum.KeyCode.LeftShift,
+    PlayerListUpdateInterval = 0.5, MaxRenderDistance = 1000,
+    SilentAimEnabled = false, SilentAimHitChance = 100,
+    SilentAimFOV = 200, SilentAimHitbox = "Head",
+    SilentAimDrawFOV = false, SilentAimFOVColor = "Cyan",
+    SilentAimDistanceBoost = 1.0,
+    SilentAimConvergenceSnap = true,
+    SilentAimTightDeadzone = true,
+    AimLockEnabled = false, RagebotEnabled = false,
+    RapidFireEnabled = false, MaxAccuracyEnabled = false,
+    NoSpreadEnabled = false, SpinbotEnabled = false,
+    ESPTargetVisEnabled = false, ViewmodelChamsEnabled = false,
+    SkyChangerEnabled = false, FlyNoclipEnabled = false, InfJumpEnabled = false,
+    HitSoundsEnabled = false, HitSoundChoice = "Vine Boom",
+    HitSoundMap = {
+        ["Vine Boom"] = "rbxassetid://6308606116",
+        ["Mega Knight"] = "rbxassetid://1310127925561718",
+        ["MLG Airhorn"] = "rbxassetid://678089961",
+        ["Boom Headshot"] = "rbxassetid://7361085557",
+        ["Taco Bell"] = "rbxassetid://5556082054",
+    },
+    CustomCrosshairEnabled = false,
+    IsPremium = false, PremiumTier = nil, PremiumExpiry = 0, PremiumKey = nil,
 }
 
-local _0x111v38 = {
- _0x36bv95_0x69v43"\085\110\107\110\111\119\110", _0x36cv54_0x69v43type(gethui) == "\102\117\110\099\116\105\111\110", _0x36dv30_0x69v43type(writefile) == "\102\117\110\099\116\105\111\110", _0x36ev70_0x69v43type(readfile) == "\102\117\110\099\116\105\111\110", _0x36fv73_0x69v43type(makefolder) == "\102\117\110\099\116\105\111\110", _0x370v52_0x69v43type(mouse1click) == "\102\117\110\099\116\105\111\110", _0x371v50_0x69v43type(mouse1press) == "\102\117\110\099\116\105\111\110" _0x69v43 type(mouse1release) == "\102\117\110\099\116\105\111\110", _0x372v56_0x69v43type(keypress) == "\102\117\110\099\116\105\111\110" _0x69v43 type(keyrelease) == "\102\117\110\099\116\105\111\110", _0x373v67_0x69v43pcall(function_0x69v43return game:GetService("\086\105\114\116\117\097\108\073\110\112\117\116\077\097\110\097\103\101\114") _0x69v43),
+local _0x76B0 = {
+    Name = "Unknown",
+    HasGethui = type(gethui) == "function",
+    HasWritefile = type(writefile) == "function",
+    HasReadfile = type(readfile) == "function",
+    HasMakeFolder = type(makefolder) == "function",
+    HasMouse1Click = type(mouse1click) == "function",
+    HasMouse1Press = type(mouse1press) == "function" and type(mouse1release) == "function",
+    HasKeyPress = type(keypress) == "function" and type(keyrelease) == "function",
+    HasVIM = pcall(function() return game:GetService("VirtualInputManager") end),
 }
 pcall(function()
-    _0x69v43type(identifyexecutor) == "\102\117\110\099\116\105\111\110" then
-        local _0xd6v18_0x69v43identifyexecutor()
-        _0x69v43n _0x69v43 _0xd6v18 ~= "" then _0x111v38.Name_0x69v43tostring(_0x69v43_0x69v43
-    _0x69v43
-_0x69v43)
+    if type(identifyexecutor) == "function" then
+        local _0xB877 = identifyexecutor()
+        if _0xB877 and _0xB877 ~= "" then _0x76B0.Name = tostring(_0xB877) end
+    end
+end)
 
-local function _0x6av32()
-    _0x69v43type(gethui) == "\102\117\110\099\116\105\111\110" then
-        local _0xf2v80, _0x374v21_0x69v43pcall(gethui)
-        _0x69v43_0x69v43_0x69v43_0x69v43then return_0x69v43_0x69v43
-    _0x69v43
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43then
-        local _0x114v95_0x69v43_0x69v43FindFirstChildOfClass("\080\108\097\121\101\114\071\117\105")
-        _0x69v43_0x69v43then return_0x69v43 _0x69v43
-    _0x69v43
-    local _0xf2v80, _0x375v67_0x69v43pcall(function_0x69v43return game:GetService("\067\111\114\101\071\117\105") _0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 then return_0x69v43 _0x69v43
-_0x69v43
+local function _0xB27C()
+    if type(gethui) == "function" then
+        local _0xDF7B, _0x830D = pcall(gethui)
+        if _0xDF7B and _0x830D then return _0x830D end
+    end
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if _0x1A90 then
+        local _0xEC82 = _0x1A90:FindFirstChildOfClass("PlayerGui")
+        if _0xEC82 then return _0xEC82 end
+    end
+    local _0xDF7B, _0x481A = pcall(function() return game:GetService("CoreGui") end)
+    if _0xDF7B and _0x481A then return _0x481A end
+end
 
-local function _0x6bv74(_0x6cv32, _0x6dv10, _0x6ev56, _0x6fv25)
-    local _0x116v72_0x69v43game:GetService("\084\101\120\116\083\101\114\118\105\099\101")
-    local _0xf2v80, _0x376v59_0x69v43pcall(function()
-        return_0x69v43:GetTextSize(tostring(text_0x69v43 ""_0x69v43size, _0x6dv10, Vector2._0x69v43(_0x6fv25, 10000))
-    _0x69v43)
-    _0x69v43_0x69v43_0x69v43 _0x376v59 then return bounds_0x69v43_0x69v43
-    local _0x118v66_0x69v43math.ceil(#tostring(text_0x69v43 "") / math._0x69v43(_0x69v43wrapWidth / (size_0x69v430_0x69v43)))
-    return math._0x69v43(size_0x69v43_0x69v43lines * (size_0x69v434))
-_0x69v43
+local function _0x9261(text, font, size, wrapWidth)
+    local _0x41E5 = game:GetService("TextService")
+    local _0xDF7B, _0x0622 = pcall(function()
+        return _0x41E5:GetTextSize(tostring(text or ""), size, font, Vector2.new(wrapWidth, 10000))
+    end)
+    if _0xDF7B and _0x0622 then return _0x0622.Y end
+    local _0x1844 = math.ceil(#tostring(text or "") / math.max(1, wrapWidth / (size * 0.55)))
+    return math.max(size + 4, _0x1844 * (size + 4))
+end
 
-local _0x119v35 = {}
-_0x119v35.Active_0x69v43_0x69v43
-function _0x119v35.Show(_0x6cv32, _0xf2v80)
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-    _0x69v43Popup.Active _0x69v43 _0x119v35.Active.Parent then pcall(function_0x69v43Popup.Active:Destroy_0x69v43_0x69v43) _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\080\111\112\117\112"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true_0x69v43.DisplayOrder_0x69v43_0x69v43
-    _0x69v43ZIndexBehavior_0x69v43Enum.ZIndexBehavior.Sibling
-    pcall(function_0x69v43_0x69v43Parent_0x69v43_0x69v43 _0x69v43)
-    _0x119v35.Active_0x69v43sg
-    local _0x11bv53_0x69v43_0x69v43_0x69v43 Color3.fromRGB_0x69v43, _0x69v43, _0x69v43) _0x69v43Color3.fromRGB(_0x69v43, (0x28 + 0x28), _0x69v43)
-    local _0x11cv62_0x69v4320
-    local _0x11dv59_0x69v4316
-    local _0x11ev59_0x69v4330
-    local _0x11fv47_0x69v4312
-    local _0x120v65_0x69v43_0x69v43
-    local _0x121v21_0x69v43_0x69v43
-    local _0x122v32_0x69v43MAX_W - (PAD_X_0x69v432) - ICON_0x69v43_0x69v43
-    local _0x112v65_0x69v43measureText(_0x6cv32, Enum.Font.GothamBold, (0x6 + 0x7), _0x122v32)
-    local _0x123v93_0x69v43MAX_W
-    if #tostring(text_0x69v43 "") < _0x69v43then
-        local _0x116v72_0x69v43game:GetService("\084\101\120\116\083\101\114\118\105\099\101")
-        local _0x124v67, _0x377v70_0x69v43pcall(function_0x69v43return_0x69v43:GetTextSize(tostring(text_0x69v4313, Enum.Font.GothamBold, Vector2._0x69v43(10000, 10000_0x69v43_0x69v43)
-        _0x69v43_0x69v43 _0x69v43_0x69v43then
- _0x123v93_0x69v43math.clamp_0x69v43X + (PAD_X_0x69v432) + ICON_0x69v43_0x69v43, _0x121v21, _0x120v65)
-            h_0x69v43_0x69v43
-        _0x69v43
-    _0x69v43
-    local _0x125v40_0x69v43math._0x69v43(_0x374v21 + (PAD_Y_0x69v432_0x69v43ICON + (PAD_Y_0x69v432))
-    local _0x126v27_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v430_0x69v4380)
-    _0x69v43.Size_0x69v43UDim2.fromOffset(_0x123v93, _0x125v40) _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0x6 + 0x6), (0xb + 0xb))
-    _0x69v43.BackgroundTransparency_0x69v430_0x69v43 _0x69v43.BorderSizePixel_0x69v430 _0x69v43.Parent_0x69v43sg
-    local _0x127v13_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114"_0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v4312_0x69v43.Parent_0x69v43_0x69v43
-    local _0x128v45_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101") _0x69v43Color_0x69v43accent_0x69v43.Thickness_0x69v43_0x69v43_0x69v43.Transparency_0x69v430_0x69v43_0x69v43.Parent_0x69v43_0x69v43
-    local _0x129v42_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x129v42.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v431_0x69v4320) _0x129v42.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4310)
-    _0x129v42.BackgroundColor3_0x69v43accent _0x129v42.BorderSizePixel_0x69v430 _0x129v42.Parent_0x69v43_0x69v43
-    local _0x12av20_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43stripe
-    local _0x12bv72_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x12bv72.Size_0x69v43UDim2.fromOffset(_0x11ev59, _0x11ev59) _0x12bv72.Position_0x69v43UDim2._0x69v43(_0x69v43PAD_X_0x69v43.5_0x69v43ICON_0x69v43_0x69v43)
-    _0x12bv72.BackgroundColor3_0x69v43accent _0x12bv72.BackgroundTransparency_0x69v430_0x69v43
-    _0x12bv72.BorderSizePixel_0x69v430 _0x12bv72.Font_0x69v43Enum.Font.GothamBlack _0x12bv72.TextSize_0x69v4318
-    _0x12bv72.TextColor3_0x69v43accent _0x12bv72.Text_0x69v43_0x69v43_0x69v43 "\092\050\050\054\092\049\053\054\092\049\052\055"_0x69v43 "\092\050\050\054\092\049\053\054\092\049\052\057" _0x12bv72.Parent_0x69v43_0x69v43
-    local _0x12cv48_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43icon
-    local _0xc5v48_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43PAD_X_0x69v43ICON_0x69v43_0x69v43_0x69v43, _0x11dv59)
-    _0x69v43.Size_0x69v43UDim2._0x69v43(1, -(PAD_X_0x69v432_0x69v43ICON_0x69v43_0x69v43_0x69v43_0x69v43h)
-    _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Font_0x69v43Enum.Font.GothamBold _0x69v43.TextSize_0x69v4313
-    _0x69v43.TextColor3_0x69v43accent _0x69v43.TextXAlignment_0x69v43Enum.TextXAlignment.Left
-    _0x69v43.TextYAlignment_0x69v43Enum.TextYAlignment._0x69v43 _0x69v43.TextWrapped_0x69v43true _0x69v43.Text_0x69v43tostring(text_0x69v43 "")
-    _0x69v43.Parent_0x69v43_0x69v43
-    _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v4345, Enum.EasingStyle.Back, Enum.EasingDirection._0x69v43), {Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v4324)}):Play()
-    task.delay_0x69v43 _0x69v43_0x69v434_0x69v43_0x69v43_0x69v43function()
-        _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v4335, Enum.EasingStyle.Quad, Enum.EasingDirection_0x69v43), {Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v430_0x69v4380)}):Play()
-        _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v433), {TextTransparency_0x69v431_0x69v43Play()
-        _0xedv83:Create(_0x12bv72, TweenInfo._0x69v43_0x69v433), {BackgroundTransparency_0x69v43_0x69v43_0x378v94_0x69v431_0x69v43Play()
-        _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v433), {Transparency_0x69v431_0x69v43Play()
-        _0xedv83:Create(_0x129v42, TweenInfo._0x69v43_0x69v433), {BackgroundTransparency_0x69v431_0x69v43Play()
-        task.delay_0x69v43_0x69v43function_0x69v43pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43) _0x69v43)
-    _0x69v43)
-_0x69v43
+local _0xC488 = {}
+_0xC488.Active = nil
+function _0xC488.Show(text, _0xDF7B)
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then return end
+    if _0xC488.Active and _0xC488.Active.Parent then pcall(function() _0xC488.Active:Destroy() end) end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = "VEIL_Popup" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true _0xFA03.DisplayOrder = 500
+    _0xFA03.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    pcall(function() _0xFA03.Parent = _0x14E4 end)
+    _0xC488.Active = _0xFA03
+    local _0xBEA4 = _0xDF7B and Color3.fromRGB(80, 220, 130) or Color3.fromRGB(255, 80, 100)
+    local _0xBAB4 = 20
+    local _0x4928 = 16
+    local _0x6B8E = 30
+    local _0xF361 = 12
+    local _0xB597 = 400
+    local _0xDD0D = 220
+    local _0x5DC7 = _0xB597 - (_0xBAB4 * 2) - _0x6B8E - _0xF361
+    local _0x830D = _0x9261(text, Enum.Font.GothamBold, 13, _0x5DC7)
+    local _0x93F0 = _0xB597
+    if #tostring(text or "") < 48 then
+        local _0x41E5 = game:GetService("TextService")
+        local _0x89D2, _0x4D37 = pcall(function() return _0x41E5:GetTextSize(tostring(text), 13, Enum.Font.GothamBold, Vector2.new(10000, 10000)) end)
+        if _0x89D2 and _0x4D37 then
+            _0x93F0 = math.clamp(_0x4D37.X + (_0xBAB4 * 2) + _0x6B8E + _0xF361, _0xDD0D, _0xB597)
+            _0x830D = _0x4D37.Y
+        end
+    end
+    local _0x9781 = math.max(_0x830D + (_0x4928 * 2), _0x6B8E + (_0x4928 * 2))
+    local _0x41F6 = Instance.new("Frame")
+    _0x41F6.AnchorPoint = Vector2.new(0.5, 0) _0x41F6.Position = UDim2.new(0.5, 0, 0, -80)
+    _0x41F6.Size = UDim2.fromOffset(_0x93F0, _0x9781) _0x41F6.BackgroundColor3 = Color3.fromRGB(14, 12, 22)
+    _0x41F6.BackgroundTransparency = 0.03 _0x41F6.BorderSizePixel = 0 _0x41F6.Parent = _0xFA03
+    local _0x3A4B = Instance.new("UICorner") _0x3A4B.CornerRadius = UDim.new(0, 12) _0x3A4B.Parent = _0x41F6
+    local _0x48A3 = Instance.new("UIStroke") _0x48A3.Color = _0xBEA4 _0x48A3.Thickness = 1.5 _0x48A3.Transparency = 0.15 _0x48A3.Parent = _0x41F6
+    local _0x257D = Instance.new("Frame")
+    _0x257D.Size = UDim2.new(0, 4, 1, -20) _0x257D.Position = UDim2.new(0, 6, 0, 10)
+    _0x257D.BackgroundColor3 = _0xBEA4 _0x257D.BorderSizePixel = 0 _0x257D.Parent = _0x41F6
+    local _0x9649 = Instance.new("UICorner") _0x9649.CornerRadius = UDim.new(0, 2) _0x9649.Parent = _0x257D
+    local _0x9A2F = Instance.new("TextLabel")
+    _0x9A2F.Size = UDim2.fromOffset(_0x6B8E, _0x6B8E) _0x9A2F.Position = UDim2.new(0, _0xBAB4, 0.5, -_0x6B8E * 0.5)
+    _0x9A2F.BackgroundColor3 = _0xBEA4 _0x9A2F.BackgroundTransparency = 0.82
+    _0x9A2F.BorderSizePixel = 0 _0x9A2F.Font = Enum.Font.GothamBlack _0x9A2F.TextSize = 18
+    _0x9A2F.TextColor3 = _0xBEA4 _0x9A2F.Text = _0xDF7B and "\226\156\147" or "\226\156\149" _0x9A2F.Parent = _0x41F6
+    local _0x35E6 = Instance.new("UICorner") _0x35E6.CornerRadius = UDim.new(1, 0) _0x35E6.Parent = _0x9A2F
+    local _0x57CD = Instance.new("TextLabel")
+    _0x57CD.Position = UDim2.new(0, _0xBAB4 + _0x6B8E + _0xF361, 0, _0x4928)
+    _0x57CD.Size = UDim2.new(1, -(_0xBAB4 * 2 + _0x6B8E + _0xF361), 0, _0x830D)
+    _0x57CD.BackgroundTransparency = 1 _0x57CD.Font = Enum.Font.GothamBold _0x57CD.TextSize = 13
+    _0x57CD.TextColor3 = _0xBEA4 _0x57CD.TextXAlignment = Enum.TextXAlignment.Left
+    _0x57CD.TextYAlignment = Enum.TextYAlignment.Top _0x57CD.TextWrapped = true _0x57CD.Text = tostring(text or "")
+    _0x57CD.Parent = _0x41F6
+    _0x27A5:Create(_0x41F6, TweenInfo.new(0.45, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, 0, 0, 24)}):Play()
+    task.delay(_0xDF7B and 2.4 or 3.0, function()
+        _0x27A5:Create(_0x41F6, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Position = UDim2.new(0.5, 0, 0, -80)}):Play()
+        _0x27A5:Create(_0x57CD, TweenInfo.new(0.3), {TextTransparency = 1}):Play()
+        _0x27A5:Create(_0x9A2F, TweenInfo.new(0.3), {BackgroundTransparency = 1, TextTransparency = 1}):Play()
+        _0x27A5:Create(_0x48A3, TweenInfo.new(0.3), {Transparency = 1}):Play()
+        _0x27A5:Create(_0x257D, TweenInfo.new(0.3), {BackgroundTransparency = 1}):Play()
+        task.delay(0.5, function() pcall(function() _0xFA03:Destroy() end) end)
+    end)
+end
 
-local _0x12dv21 = {}
-_0x12dv21.Authorized_0x69v43false
-_0x12dv21.KeyLink_0x69v43"\104\116\116\112\115\058\047\047\119\111\114\107\046\105\110\107\047\050\089\068\118\047\107\101\121\045\115\121\115\116\101\109"
-_0x12dv21.DefaultExpiry_0x69v4324_0x69v4360_0x69v4360
-_0x12dv21.PremiumTiers = {
-    ["\119\101\101\107"]     = { name_0x69v43"\049\032\087\101\101\107", _0x379v11_0x69v437_0x69v4324_0x69v4360_0x69v4360 },
-    ["\109\111\110\116\104"]    = { name_0x69v43"\049\032\077\111\110\116\104", _0x379v11_0x69v4330_0x69v4324_0x69v4360_0x69v4360 },
-    ["\051\109\111\110\116\104"]   = { name_0x69v43"\051\032\077\111\110\116\104\115", _0x379v11_0x69v4390_0x69v4324_0x69v4360_0x69v4360 },
-    ["\108\105\102\101\116\105\109\101"] = { name_0x69v43"\076\105\102\101\116\105\109\101", _0x379v11_0x69v43_0x69v43_0x69v43_0x69v43_0x69v4324_0x69v4360_0x69v4360 },
+local _0xB7CC = {}
+_0xB7CC.Authorized = false
+_0xB7CC.KeyLink = "https://work.ink/2YDv/key-system"
+_0xB7CC.DefaultExpiry = 24 * 60 * 60
+_0xB7CC.PremiumTiers = {
+    ["week"]     = { _0x4BFF = "1 Week",   seconds = 7 * 24 * 60 * 60 },
+    ["month"]    = { _0x4BFF = "1 Month",  seconds = 30 * 24 * 60 * 60 },
+    ["3month"]   = { _0x4BFF = "3 Months", seconds = 90 * 24 * 60 * 60 },
+    ["lifetime"] = { _0x4BFF = "Lifetime", seconds = 100 * 365 * 24 * 60 * 60 },
 }
-_0x12dv21.PremiumWhitelist = {
-    ["\086\076\045\055\068\075\057\050\088\077\070"] = "\119\101\101\107",
-    ["\086\076\045\055\080\078\052\049\081\082\084"] = "\119\101\101\107",
-    ["\086\076\045\055\066\087\056\051\074\089\067"] = "\119\101\101\107",
-    ["\086\076\045\055\072\071\054\053\090\076\065"] = "\119\101\101\107",
-    ["\086\076\045\077\052\088\055\050\081\080\078"] = "\109\111\110\116\104",
-    ["\086\076\045\077\057\084\049\054\066\075\087"] = "\109\111\110\116\104",
-    ["\086\076\045\077\051\089\053\056\090\068\070"] = "\109\111\110\116\104",
-    ["\086\076\045\077\055\076\050\052\067\072\086"] = "\109\111\110\116\104",
-    ["\086\076\045\081\056\078\054\051\088\084\082"] = "\051\109\111\110\116\104",
-    ["\086\076\045\081\050\080\049\055\075\077\087"] = "\051\109\111\110\116\104",
-    ["\086\076\045\081\053\090\052\057\066\072\076"] = "\051\109\111\110\116\104",
-    ["\086\076\045\076\057\084\056\050\088\075\078"] = "\108\105\102\101\116\105\109\101",
-    ["\086\076\045\076\052\077\049\054\074\082\068"] = "\108\105\102\101\116\105\109\101",
+_0xB7CC.PremiumWhitelist = {
+    ["VL-7DK92XMF"] = "week",
+    ["VL-7PN41QRT"] = "week",
+    ["VL-7BW83JYC"] = "week",
+    ["VL-7HG65ZLA"] = "week",
+    ["VL-M4X72QPN"] = "month",
+    ["VL-M9T16BKW"] = "month",
+    ["VL-M3Y58ZDF"] = "month",
+    ["VL-M7L24CHV"] = "month",
+    ["VL-Q8N63XTR"] = "3month",
+    ["VL-Q2P17KMW"] = "3month",
+    ["VL-Q5Z49BHL"] = "3month",
+    ["VL-L9T82XKN"] = "lifetime",
+    ["VL-L4M16JRD"] = "lifetime",
 }
 
-function _0x12dv21.DetectTier(_0x69v43)
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 == "" then return _0x69v43 _0x69v43
-    local _0x12ev82_0x69v43_0x69v43:upper_0x69v43gsub("\094\037\115\043", ""):gsub("\037\115\043\036", "")
-    local _0x12fv71_0x69v43KeySystem.PremiumWhitelist[_0x12ev82]
-    _0x69v43tier then return _0x12fv71, _0x12dv21.PremiumTiers[_0x12fv71] _0x69v43
-    return _0x69v43
-_0x69v43
-local function _0x70v98(_0x71v82)
-    _0x69v43type(request) == "\102\117\110\099\116\105\111\110" then
-        local _0xf2v80, _0x37av67_0x69v43pcall(request, { _0x69v43_0x69v43_0x69v43, _0x37bv68_0x69v43"\071\069\084" })
-        _0x69v43_0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    _0x69v43
-    _0x69v43type(http_request) == "\102\117\110\099\116\105\111\110" then
-        local _0xf2v80, _0x37av67_0x69v43pcall(http_request, { _0x69v43_0x69v43_0x69v43, _0x37bv68_0x69v43"\071\069\084" })
-        _0x69v43_0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    _0x69v43
-    _0x69v43type(_0x69v43) == "\116\097\098\108\101" _0x69v43 type(_0x69v43.request) == "\102\117\110\099\116\105\111\110" then
-        local _0xf2v80, _0x37av67_0x69v43pcall(_0x69v43.request, { _0x69v43_0x69v43_0x69v43, _0x37bv68_0x69v43"\071\069\084" })
-        _0x69v43_0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    _0x69v43
-    return _0x69v43
-_0x69v43
-function _0x12dv21.Validate(_0x69v43)
- _0xa5v89_0x69v43tostring(_0x69v43_0x69v43 ""):gsub("\094\037\115\043", ""):gsub("\037\115\043\036", "")
-    if #_0x69v43_0x69v436 then return false, "\116\111\111\045\115\104\111\114\116" _0x69v43
-    local _0x12fv71, _0x37cv19_0x69v43KeySystem.DetectTier(_0x69v43)
-    _0x69v43tier then
-        getgenv_0x69v43SCRIPT_KEY_0x69v43_0x69v43
-        _0x110v81.IsPremium_0x69v43true
-        _0x110v81.PremiumTier_0x69v43info._0x79v33
-        _0x110v81.PremiumExpiry_0x69v43_0x69v43time() + _0x37cv19._0x379v11
-        _0x110v81.PremiumKey_0x69v43_0x69v43
-        return true, "\112\114\101\109\105\117\109\058" .. _0x37cv19._0x79v33
-    _0x69v43
-    local _0x130v59_0x69v43ksHttpGet("\104\116\116\112\115\058\047\047\119\111\114\107\046\105\110\107\047\095\097\112\105\047\118\050\047\116\111\107\101\110\047\105\115\086\097\108\105\100\047" .. _0x69v43)
-    _0x69v43_0x69v43 _0x69v43 then return false, "\104\116\116\112\045\117\110\097\118\097\105\108\097\098\108\101" _0x69v43
-    local _0xa3v45_0x69v43_0x69v43.Body_0x69v43 _0x69v43.body_0x69v43 ""
-    _0x69v43body == "" then return false, "\101\109\112\116\121\045\114\101\115\112\111\110\115\101" _0x69v43
-    local _0x3f3v82
-    local _0xf2v80_0x69v43pcall(function_0x69v43decoded_0x69v43HttpService:JSONDecode(_0xa3v45) _0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 type(_0x3f3v82) ~= "\116\097\098\108\101" then return false, "\098\097\100\045\114\101\115\112\111\110\115\101" _0x69v43
-    _0x69v43decoded.valid == true then
-        getgenv_0x69v43SCRIPT_KEY_0x69v43_0x69v43
-        _0x110v81.IsPremium_0x69v43false
-        return true, "\118\097\108\105\100"
-    _0x69v43
-    return false, tostring(_0x3f3v82.error_0x69v43 "\105\110\118\097\108\105\100")
-_0x69v43
-function _0x12dv21.ReadSaved()
-    _0x69v43_0x69v43 _0x111v38._0x36ev70 then return _0x69v43, _0x69v43 _0x69v43
-    _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\075\101\121\046\116\120\116", "\086\069\073\076\095\075\101\121\046\116\120\116"_0x69v43do
-        local _0xf2v80, _0x37dv81_0x69v43pcall(readfile_0x69v43)
-        _0x69v43_0x69v43_0x69v43 _0x37dv81 _0x69v43 _0x37dv81 ~= "" then
-            local _0xa5v89, _0x37ev25_0x69v43_0x66v80:match("\094\040\091\094\124\093\043\041\124\040\037\100\043\041\036")
-            _0x69v43_0x69v43 _0x69v43_0x69v43 then return _0x69v43, tonumber_0x69v43) _0x69v43
-        _0x69v43
-    _0x69v43
-    return _0x69v43, _0x69v43
-_0x69v43
-function _0x12dv21.WriteSaved(_0x69v43, _0x17fv70)
-    _0x69v43_0x69v43 _0x111v38._0x36dv30 then return false _0x69v43
-    _0x69v43ExecutorInfo._0x36fv73 then pcall(makefolder, "\086\069\073\076") _0x69v43
-    local _0x133v62_0x69v43tostring(_0x69v43) .. "\124" .. tostring(_0x17fv70)
-    _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\075\101\121\046\116\120\116", "\086\069\073\076\095\075\101\121\046\116\120\116"_0x69v43do
-        _0x69v43pcall(writefile_0x69v43, _0x133v62) then return true _0x69v43
-    _0x69v43
+function _0xB7CC.DetectTier(_0x6260)
+    if not _0x6260 or _0x6260 == "" then return nil end
+    local _0x7345 = _0x6260:upper():gsub("^%s+", ""):gsub("%s+$", "")
+    local _0xB494 = _0xB7CC.PremiumWhitelist[_0x7345]
+    if _0xB494 then return _0xB494, _0xB7CC.PremiumTiers[_0xB494] end
+    return nil
+end
+local function _0xA3BD(url)
+    if type(request) == "function" then
+        local _0xDF7B, _0xBE70 = pcall(request, { Url = url, Method = "GET" })
+        if _0xDF7B and _0xBE70 then return _0xBE70 end
+    end
+    if type(http_request) == "function" then
+        local _0xDF7B, _0xBE70 = pcall(http_request, { Url = url, Method = "GET" })
+        if _0xDF7B and _0xBE70 then return _0xBE70 end
+    end
+    if type(syn) == "table" and type(syn.request) == "function" then
+        local _0xDF7B, _0xBE70 = pcall(syn.request, { Url = url, Method = "GET" })
+        if _0xDF7B and _0xBE70 then return _0xBE70 end
+    end
+    return nil
+end
+function _0xB7CC.Validate(_0x6260)
+    _0x6260 = tostring(_0x6260 or ""):gsub("^%s+", ""):gsub("%s+$", "")
+    if #_0x6260 < 6 then return false, "too-short" end
+    local _0xB494, _0x05AC = _0xB7CC.DetectTier(_0x6260)
+    if _0xB494 then
+        getgenv().SCRIPT_KEY = _0x6260
+        _0x77AD.IsPremium = true
+        _0x77AD.PremiumTier = _0x05AC.name
+        _0x77AD.PremiumExpiry = os.time() + _0x05AC.seconds
+        _0x77AD.PremiumKey = _0x6260
+        return true, "premium:" .. _0x05AC.name
+    end
+    local _0xBE70 = _0xA3BD("https://work.ink/_api/v2/token/isValid/" .. _0x6260)
+    if not _0xBE70 then return false, "http-unavailable" end
+    local _0x2413 = _0xBE70.Body or _0xBE70.body or ""
+    if _0x2413 == "" then return false, "empty-response" end
+    local _0xD2FF
+    local _0xDF7B = pcall(function() _0xD2FF = _0xFC99:JSONDecode(_0x2413) end)
+    if not _0xDF7B or type(_0xD2FF) ~= "table" then return false, "bad-response" end
+    if _0xD2FF.valid == true then
+        getgenv().SCRIPT_KEY = _0x6260
+        _0x77AD.IsPremium = false
+        return true, "valid"
+    end
+    return false, tostring(_0xD2FF.error or "invalid")
+end
+function _0xB7CC.ReadSaved()
+    if not _0x76B0.HasReadfile then return nil, nil end
+    for _, _0x938C in ipairs({"VEIL/Key.txt", "VEIL_Key.txt"}) do
+        local _0xDF7B, _0x3748 = pcall(readfile, _0x938C)
+        if _0xDF7B and _0x3748 and _0x3748 ~= "" then
+            local _0x6260, _0x41E5 = _0x3748:match("^([^|]+)|(%d+)$")
+            if _0x6260 and _0x41E5 then return _0x6260, tonumber(_0x41E5) end
+        end
+    end
+    return nil, nil
+end
+function _0xB7CC.WriteSaved(_0x6260, _0x0C4D)
+    if not _0x76B0.HasWritefile then return false end
+    if _0x76B0.HasMakeFolder then pcall(makefolder, "VEIL") end
+    local _0x7B6E = tostring(_0x6260) .. "|" .. tostring(_0x0C4D)
+    for _, _0x938C in ipairs({"VEIL/Key.txt", "VEIL_Key.txt"}) do
+        if pcall(writefile, _0x938C, _0x7B6E) then return true end
+    end
     return false
-_0x69v43
-function _0x12dv21.ClearSaved()
-    _0x69v43_0x69v43 _0x111v38._0x36dv30 then return _0x69v43
-    _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\075\101\121\046\116\120\116", "\086\069\073\076\095\075\101\121\046\116\120\116"_0x69v43_0x69v43pcall(writefile_0x69v43, "") _0x69v43
-_0x69v43
+end
+function _0xB7CC.ClearSaved()
+    if not _0x76B0.HasWritefile then return end
+    for _, _0x938C in ipairs({"VEIL/Key.txt", "VEIL_Key.txt"}) do pcall(writefile, _0x938C, "") end
+end
 
-local function _0x72v62(_0x73v89)
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\075\101\121\085\073"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true_0x69v43.DisplayOrder_0x69v43_0x69v43
-    _0x69v43ZIndexBehavior_0x69v43Enum.ZIndexBehavior.Sibling
-    pcall(function_0x69v43_0x69v43Parent_0x69v43_0x69v43 _0x69v43)
-    _0x12dv21.ScreenGui_0x69v43sg
+local function _0x6ABC(onAuthorized)
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then return nil end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = "VEIL_KeyUI" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true _0xFA03.DisplayOrder = 400
+    _0xFA03.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    pcall(function() _0xFA03.Parent = _0x14E4 end)
+    _0xB7CC.ScreenGui = _0xFA03
 
-    local _0x134v66_0x69v43"\104\116\116\112\115\058\047\047\100\105\115\099\111\114\100\046\103\103\047\075\051\118\103\099\086\115\067\115\083"
-    local _0x135v88, _0x37fv57_0x69v431920, (0x21c + 0x21c)
+    local _0xBD2F = "https://discord.gg/K3vgcVsCsS"
+    local _0xEDA7, _0x85B7 = 1920, 1080
 
-    local _0x137v67_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2.fromScale(_0x69v43_0x69v43_0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v430)
-    _0x69v43BackgroundTransparency_0x69v430_0x69v43_0x69v43.BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v431_0x69v43.Parent_0x69v43sg
+    local _0x2B1D = Instance.new("Frame")
+    _0x2B1D.Size = UDim2.fromScale(1, 1) _0x2B1D.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    _0x2B1D.BackgroundTransparency = 0.35 _0x2B1D.BorderSizePixel = 0 _0x2B1D.ZIndex = 1 _0x2B1D.Parent = _0xFA03
 
-    local _0x138v57_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x138v57.Size_0x69v43UDim2.fromScale(_0x69v431)
-    _0x138v57.BackgroundTransparency_0x69v431
-    _0x138v57.BorderSizePixel_0x69v430
-    _0x138v57.ClipsDescendants_0x69v43true
-    _0x138v57.ZIndex_0x69v432
-    _0x138v57.Parent_0x69v43sg
+    local _0x5D3B = Instance.new("Frame")
+    _0x5D3B.Size = UDim2.fromScale(1, 1)
+    _0x5D3B.BackgroundTransparency = 1
+    _0x5D3B.BorderSizePixel = 0
+    _0x5D3B.ClipsDescendants = true
+    _0x5D3B.ZIndex = 2
+    _0x5D3B.Parent = _0xFA03
 
-    local _0x139v90_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x139v90.Size_0x69v43UDim2.fromScale(_0x69v431)
-    _0x139v90.BackgroundTransparency_0x69v431
-    _0x139v90.BorderSizePixel_0x69v430
-    _0x139v90.ClipsDescendants_0x69v43true
-    _0x139v90.ZIndex_0x69v434
-    _0x139v90.Parent_0x69v43sg
+    local _0x74E0 = Instance.new("Frame")
+    _0x74E0.Size = UDim2.fromScale(1, 1)
+    _0x74E0.BackgroundTransparency = 1
+    _0x74E0.BorderSizePixel = 0
+    _0x74E0.ClipsDescendants = true
+    _0x74E0.ZIndex = 4
+    _0x74E0.Parent = _0xFA03
 
-    local _0x13av42_0x69v43true
+    local _0x0ABE = true
 
-    local function _0x74v19()
-        _0x69v43_0x69v43 boltAlive_0x69v43 _0x69v43 _0x138v57.Parent then return _0x69v43
-        local _0x13bv32_0x69v432_0x69v43math.random() * 3
-        local _0xf7v47_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x377v70.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-        _0x377v70.Size_0x69v43UDim2.fromOffset_0x69v43, _0x13bv32)
-        _0x377v70.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-        _0x377v70.BackgroundTransparency_0x69v431
-        _0x377v70.BorderSizePixel_0x69v430
-        _0x377v70.Position_0x69v43UDim2.fromScale(math.random(), 1_0x69v43)
-        _0x377v70.ZIndex_0x69v432
-        _0x377v70.Parent_0x69v43moteLayer
-        local _0x13cv60_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114")
-        _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v430)
-        _0x69v43Parent_0x69v43m
-        local _0x13dv14 = (math.random() - _0x69v43) * 0_0x69v43
-        local _0x13ev29_0x69v43math.clamp_0x69v43Position_0x69v43Scale_0x69v43drift_0x69v43_0x69v43_0x69v43_0x69v43)
-        local _0x13fv62_0x69v434_0x69v43math.random() * 3
-        _0xedv83:Create(_0x69v43TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43), {
- _0x380v57_0x69v430_0x69v43,
+    local function _0x9040()
+        if not _0x0ABE or not _0x5D3B.Parent then return end
+        local _0x4FF3 = 2 + math.random() * 3
+        local _0x4D37 = Instance.new("Frame")
+        _0x4D37.AnchorPoint = Vector2.new(0.5, 0.5)
+        _0x4D37.Size = UDim2.fromOffset(_0x4FF3, _0x4FF3)
+        _0x4D37.BackgroundColor3 = Color3.fromRGB(190, 165, 255)
+        _0x4D37.BackgroundTransparency = 1
+        _0x4D37.BorderSizePixel = 0
+        _0x4D37.Position = UDim2.fromScale(math.random(), 1.05)
+        _0x4D37.ZIndex = 2
+        _0x4D37.Parent = _0x5D3B
+        local _0x7B5B = Instance.new("UICorner")
+        _0x7B5B.CornerRadius = UDim.new(1, 0)
+        _0x7B5B.Parent = _0x4D37
+        local _0x958C = (math.random() - 0.5) * 0.25
+        local _0x2912 = math.clamp(_0x4D37.Position.X.Scale + _0x958C, 0.02, 0.98)
+        local _0xE103 = 4 + math.random() * 3
+        _0x27A5:Create(_0x4D37, TweenInfo.new(1.0, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+            BackgroundTransparency = 0.35,
         }):Play()
-        _0xedv83:Create(_0x69v43TweenInfo._0x69v43(_0x13fv62, Enum.EasingStyle.Linear), {
- _0x381v33_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43),
+        _0x27A5:Create(_0x4D37, TweenInfo.new(_0xE103, Enum.EasingStyle.Linear), {
+            Position = UDim2.fromScale(_0x2912, -0.08),
         }):Play()
-        task.delay(lifetime_0x69v43_0x69v43, function()
-            _0x69v43m.Parent then
-                _0xedv83:Create(_0x69v43TweenInfo._0x69v43_0x69v430), {BackgroundTransparency_0x69v431_0x69v43Play()
-            _0x69v43
-        _0x69v43)
-        task.delay(lifetime_0x69v43_0x69v43, function_0x69v43_0x69v43m.Parent then_0x69v43Destroy_0x69v43_0x69v43 _0x69v43)
-    _0x69v43
+        task.delay(_0xE103 - 1.0, function()
+            if _0x4D37.Parent then
+                _0x27A5:Create(_0x4D37, TweenInfo.new(1.0), {BackgroundTransparency = 1}):Play()
+            end
+        end)
+        task.delay(_0xE103 + 0.2, function() if _0x4D37.Parent then _0x4D37:Destroy() end end)
+    end
 
-    local function _0x75v28()
-        _0x69v43_0x69v43 boltAlive_0x69v43 _0x69v43 _0x139v90.Parent then return _0x69v43
-        local _0x140v26_0x69v43math.random_0x69v43, (0x2d + 0x2d)) / _0x69v43
-        local _0x141v73 = -0_0x69v43_0x69v43math.random() * 0_0x69v43
-        local _0x142v48_0x69v430_0x69v43_0x69v43math.random() * _0x69v43
-        local _0x143v80_0x69v434_0x69v43math.random(_0x69v432)
-        local _0x144v86 = { Vector2._0x69v43(_0x140v26, _0x141v73) }
-        local _0x145v75, _0x382v42_0x69v43startX, _0x141v73
-        local _0x147v74 = (math.random() - _0x69v43) * _0x69v43
-        local _0x148v41_0x69v43endY_0x69v43startY
-        _0x69v43 i_0x69v43_0x69v43segCount_0x69v43
- _0x146v35_0x69v43curY_0x69v43totalRise_0x69v43segCount + (math.random() - _0x69v43) * 0_0x69v43
- _0x145v75_0x69v43curX_0x69v43biasX + (math.random() - _0x69v43) * 0_0x69v43
- _0x145v75_0x69v43math.clamp(curX_0x69v43_0x69v43_0x69v43_0x69v43)
-            table.insert(_0x144v86, Vector2._0x69v43(_0x145v75, _0x382v42))
-        _0x69v43
-        local _0x149v51_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x149v51.Size_0x69v43UDim2.fromScale(_0x69v431)
-        _0x149v51.BackgroundTransparency_0x69v431
-        _0x149v51.BorderSizePixel_0x69v430
-        _0x149v51.ZIndex_0x69v434
-        _0x149v51.Parent_0x69v43boltLayer
-        local _0x14av59, _0x383v37_0x69v43points[1_0x69v43points[#_0x144v86]
-        local _0x14cv11 = (_0x383v37.X_0x69v43headP.X) * _0x135v88
-        local _0x14dv78 = (_0x383v37.Y_0x69v43headP.Y) * _0x37fv57
-        local _0x14ev34_0x69v43math.sqrt(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43)
-        local _0x14fv74_0x69v43math._0x69v43(math.atan2(_0x69v43, _0x69v43))
-        local _0x150v40 = (_0x14av59.X_0x69v43tailP.X) * _0x69v43
-        local _0x151v91 = (_0x14av59.Y_0x69v43tailP.Y) * _0x69v43
-        local _0x152v50_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x152v50.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-        _0x152v50.Position_0x69v43UDim2.fromScale(_0x150v40, _0x151v91)
-        _0x152v50.Size_0x69v43UDim2._0x69v43(_0x69v43headLen_0x69v43, (0x6 + 0x6))
-        _0x152v50.Rotation_0x69v43headAngle
-        _0x152v50.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-        _0x152v50.BackgroundTransparency_0x69v430_0x69v43
-        _0x152v50.BorderSizePixel_0x69v430
-        _0x152v50.ZIndex_0x69v434
-        _0x152v50.Parent_0x69v43group
-        local _0x153v70_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114")
-        _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v430)
-        _0x69v43Parent_0x69v43glow
-        local _0x154v75 = {}
-        _0x69v43 i_0x69v431_0x69v43points_0x69v431_0x69v43
-            local _0x155v41, _0x384v31_0x69v43points[i_0x69v43points[i_0x69v431]
-            local _0x13ev29 = (_0x69v43X_0x69v43_0x69v43X) * _0x135v88
-            local _0x157v42 = (_0x69v43Y_0x69v43_0x69v43Y) * _0x37fv57
-            local _0x158v12_0x69v43math.sqrt_0x69v43_0x69v43dx_0x69v43dy_0x69v43dy)
-            local _0x159v27_0x69v43math._0x69v43(math.atan2_0x69v43, _0x13ev29))
-            local _0x15av90 = (_0x69v43X_0x69v43_0x69v43X) * _0x69v43
-            local _0x15bv92 = (_0x69v43Y_0x69v43_0x69v43Y) * _0x69v43
-            local _0x15cv67_0x69v43Instance._0x69v43("\070\114\097\109\101")
-            _0x69v43.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-            _0x69v43.Position_0x69v43UDim2.fromScale_0x69v43, _0x15bv92)
-            _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43)
-            _0x69v43.Rotation_0x69v43_0x69v43
-            _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-            _0x69v43.BorderSizePixel_0x69v430
-            _0x69v43.BackgroundTransparency_0x69v430_0x69v43
-            _0x69v43.ZIndex_0x69v435
-            _0x69v43.Parent_0x69v43group
-            local _0x12av20_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114")
-            _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v430)
-            _0x69v43Parent_0x69v43_0x69v43
-            table.insert(_0x154v75, _0x69v43)
-        _0x69v43
-        _0x69v43math.random() < 0_0x69v43 _0x69v43 #_0x144v86 >= 3 then
-            local _0x15dv31_0x69v43points[math.random(2_0x69v43points_0x69v431)]
-            local _0x15ev35 = (math.random() - _0x69v43) * 0_0x69v43
-            local _0x15fv89_0x69v430_0x69v43_0x69v43math.random() * 0_0x69v43
-            local _0x160v99_0x69v43math.clamp_0x69v43.X_0x69v43fx_0x69v43_0x69v43_0x69v43_0x69v43)
-            local _0x161v37_0x69v43_0x69v43Y_0x69v43fy
-            local _0x13ev29 = (ex_0x69v43_0x69v43X) * _0x135v88
-            local _0x157v42 = (ey_0x69v43_0x69v43Y) * _0x37fv57
-            local _0x158v12_0x69v43math.sqrt_0x69v43_0x69v43dx_0x69v43dy_0x69v43dy)
-            local _0x159v27_0x69v43math._0x69v43(math.atan2_0x69v43, _0x13ev29))
-            local _0x162v19_0x69v43Instance._0x69v43("\070\114\097\109\101")
-            _0x162v19.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-            _0x162v19.Position_0x69v43UDim2.fromScale((_0x69v43X_0x69v43ex) * _0x69v43_0x69v43_0x69v43Y_0x69v43ey) * _0x69v43)
-            _0x162v19.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43)
-            _0x162v19.Rotation_0x69v43_0x69v43
-            _0x162v19.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-            _0x162v19.BorderSizePixel_0x69v430
-            _0x162v19.BackgroundTransparency_0x69v430_0x69v43
-            _0x162v19.ZIndex_0x69v435
-            _0x162v19.Parent_0x69v43group
-            local _0x163v77_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114")
-            _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v430)
-            _0x69v43Parent_0x69v43fseg
-            table.insert(_0x154v75, _0x162v19)
-        _0x69v43
-        local _0x164v62_0x69v430_0x69v43_0x69v43math.random() * 0_0x69v43
-        task.delay(_0x164v62, function()
-            local _0x165v21_0x69v43TweenInfo._0x69v43_0x69v4326, Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43)
-            _0x69v43 _0x69v43_0x69v43_0x69v43 ipairs(_0x154v75) do
-                _0x69v43_0x69v43.Parent then
-                    _0xedv83:Create(_0x69v43, fadeInfo_0x69v43BackgroundTransparency_0x69v431_0x69v43Play()
-                _0x69v43
-            _0x69v43
-            _0x69v43glow.Parent then
-                _0xedv83:Create(_0x152v50, TweenInfo._0x69v43_0x69v4332, Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43), {BackgroundTransparency_0x69v431_0x69v43Play()
-            _0x69v43
-            task.delay_0x69v43_0x69v43function()
-                _0x69v43group.Parent then _0x149v51:Destroy_0x69v43_0x69v43
-            _0x69v43)
-        _0x69v43)
-    _0x69v43
-
-    task.spawn(function()
-        while _0x13av42 _0x69v43 _0x138v57.Parent_0x69v43
-            _0x74v19()
-            task.wait_0x69v4328_0x69v43math.random() * 0_0x69v43)
-        _0x69v43
-    _0x69v43)
+    local function _0x5AD1()
+        if not _0x0ABE or not _0x74E0.Parent then return end
+        local _0x641F = math.random(10, 90) / 100
+        local _0x4246 = -0.05 + math.random() * 0.15
+        local _0x70C1 = 0.55 + math.random() * 0.5
+        local _0x1B35 = 4 + math.random(0, 2)
+        local _0x4AB3 = { Vector2.new(_0x641F, _0x4246) }
+        local _0xEA95, _0x92DE = _0x641F, _0x4246
+        local _0x31B8 = (math.random() - 0.5) * 0.1
+        local _0x4FC8 = _0x70C1 - _0x4246
+        for _0x9236 = 1, _0x1B35 do
+            _0x92DE = _0x92DE + _0x4FC8 / _0x1B35 + (math.random() - 0.5) * 0.03
+            _0xEA95 = _0xEA95 + _0x31B8 + (math.random() - 0.5) * 0.13
+            _0xEA95 = math.clamp(_0xEA95, 0.02, 0.98)
+            table.insert(_0x4AB3, Vector2.new(_0xEA95, _0x92DE))
+        end
+        local _0x74DC = Instance.new("Frame")
+        _0x74DC.Size = UDim2.fromScale(1, 1)
+        _0x74DC.BackgroundTransparency = 1
+        _0x74DC.BorderSizePixel = 0
+        _0x74DC.ZIndex = 4
+        _0x74DC.Parent = _0x74E0
+        local _0x1B47, _0x7647 = _0x4AB3[1], _0x4AB3[#_0x4AB3]
+        local _0xFA2B = (_0x7647.X - _0x1B47.X) * _0xEDA7
+        local _0xD39F = (_0x7647.Y - _0x1B47.Y) * _0x85B7
+        local _0xCB9B = math.sqrt(_0xFA2B * _0xFA2B + _0xD39F * _0xD39F)
+        local _0x3283 = math.deg(math.atan2(_0xD39F, _0xFA2B))
+        local _0xF77B = (_0x1B47.X + _0x7647.X) * 0.5
+        local _0x8787 = (_0x1B47.Y + _0x7647.Y) * 0.5
+        local _0x11B2 = Instance.new("Frame")
+        _0x11B2.AnchorPoint = Vector2.new(0.5, 0.5)
+        _0x11B2.Position = UDim2.fromScale(_0xF77B, _0x8787)
+        _0x11B2.Size = UDim2.new(0, _0xCB9B, 0, 12)
+        _0x11B2.Rotation = _0x3283
+        _0x11B2.BackgroundColor3 = Color3.fromRGB(160, 140, 240)
+        _0x11B2.BackgroundTransparency = 0.72
+        _0x11B2.BorderSizePixel = 0
+        _0x11B2.ZIndex = 4
+        _0x11B2.Parent = _0x74DC
+        local _0x5050 = Instance.new("UICorner")
+        _0x5050.CornerRadius = UDim.new(1, 0)
+        _0x5050.Parent = _0x11B2
+        local _0x8D3A = {}
+        for _0x9236 = 1, #_0x4AB3 - 1 do
+            local _0xA375, _0x3590 = _0x4AB3[_0x9236], _0x4AB3[_0x9236 + 1]
+            local _0x2912 = (_0x3590.X - _0xA375.X) * _0xEDA7
+            local _0x4CC4 = (_0x3590.Y - _0xA375.Y) * _0x85B7
+            local _0x4845 = math.sqrt(_0x2912 * _0x2912 + _0x4CC4 * _0x4CC4)
+            local _0x9755 = math.deg(math.atan2(_0x4CC4, _0x2912))
+            local _0x5B90 = (_0xA375.X + _0x3590.X) * 0.5
+            local _0xD238 = (_0xA375.Y + _0x3590.Y) * 0.5
+            local _0x3D75 = Instance.new("Frame")
+            _0x3D75.AnchorPoint = Vector2.new(0.5, 0.5)
+            _0x3D75.Position = UDim2.fromScale(_0x5B90, _0xD238)
+            _0x3D75.Size = UDim2.new(0, _0x4845, 0, 3)
+            _0x3D75.Rotation = _0x9755
+            _0x3D75.BackgroundColor3 = Color3.fromRGB(240, 235, 255)
+            _0x3D75.BorderSizePixel = 0
+            _0x3D75.BackgroundTransparency = 0.06
+            _0x3D75.ZIndex = 5
+            _0x3D75.Parent = _0x74DC
+            local _0x9649 = Instance.new("UICorner")
+            _0x9649.CornerRadius = UDim.new(1, 0)
+            _0x9649.Parent = _0x3D75
+            table.insert(_0x8D3A, _0x3D75)
+        end
+        if math.random() < 0.55 and #_0x4AB3 >= 3 then
+            local _0x70B7 = _0x4AB3[math.random(2, #_0x4AB3 - 1)]
+            local _0xC525 = (math.random() - 0.5) * 0.18
+            local _0x57E9 = 0.08 + math.random() * 0.16
+            local _0x34BB = math.clamp(_0x70B7.X + _0xC525, 0.02, 0.98)
+            local _0x8CE9 = _0x70B7.Y + _0x57E9
+            local _0x2912 = (_0x34BB - _0x70B7.X) * _0xEDA7
+            local _0x4CC4 = (_0x8CE9 - _0x70B7.Y) * _0x85B7
+            local _0x4845 = math.sqrt(_0x2912 * _0x2912 + _0x4CC4 * _0x4CC4)
+            local _0x9755 = math.deg(math.atan2(_0x4CC4, _0x2912))
+            local _0xB4B6 = Instance.new("Frame")
+            _0xB4B6.AnchorPoint = Vector2.new(0.5, 0.5)
+            _0xB4B6.Position = UDim2.fromScale((_0x70B7.X + _0x34BB) * 0.5, (_0x70B7.Y + _0x8CE9) * 0.5)
+            _0xB4B6.Size = UDim2.new(0, _0x4845, 0, 2)
+            _0xB4B6.Rotation = _0x9755
+            _0xB4B6.BackgroundColor3 = Color3.fromRGB(220, 210, 255)
+            _0xB4B6.BorderSizePixel = 0
+            _0xB4B6.BackgroundTransparency = 0.14
+            _0xB4B6.ZIndex = 5
+            _0xB4B6.Parent = _0x74DC
+            local _0x3EC9 = Instance.new("UICorner")
+            _0x3EC9.CornerRadius = UDim.new(1, 0)
+            _0x3EC9.Parent = _0xB4B6
+            table.insert(_0x8D3A, _0xB4B6)
+        end
+        local _0xBBBD = 0.05 + math.random() * 0.07
+        task.delay(_0xBBBD, function()
+            local _0x9C14 = TweenInfo.new(0.26, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+            for _, _0x3D75 in ipairs(_0x8D3A) do
+                if _0x3D75.Parent then
+                    _0x27A5:Create(_0x3D75, _0x9C14, {BackgroundTransparency = 1}):Play()
+                end
+            end
+            if _0x11B2.Parent then
+                _0x27A5:Create(_0x11B2, TweenInfo.new(0.32, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+            end
+            task.delay(0.4, function()
+                if _0x74DC.Parent then _0x74DC:Destroy() end
+            end)
+        end)
+    end
 
     task.spawn(function()
-        task.wait_0x69v436_0x69v43math.random() * _0x69v43)
-        while _0x13av42 _0x69v43 _0x139v90.Parent_0x69v43
-            _0x75v28()
-            _0x69v43math.random() < 0_0x69v43 then
-                task.wait_0x69v4308_0x69v43math.random() * _0x69v43)
-                _0x75v28()
-            _0x69v43
-            task.wait_0x69v434_0x69v43math.random() * _0x69v43)
-        _0x69v43
-    _0x69v43)
+        while _0x0ABE and _0x5D3B.Parent do
+            _0x9040()
+            task.wait(0.28 + math.random() * 0.22)
+        end
+    end)
 
-    local _0x166v14_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x166v14.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x166v14.Position_0x69v43UDim2.fromScale_0x69v43_0x69v43_0x69v43)
-    _0x166v14.Size_0x69v43UDim2.fromOffset(_0x69v43, _0x69v43)
-    _0x166v14.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0x6 + 0x6), (0xc + 0xc))
-    _0x166v14.BackgroundTransparency_0x69v430_0x69v43
-    _0x166v14.BorderSizePixel_0x69v430
-    _0x166v14.ZIndex_0x69v4310
-    _0x166v14.Parent_0x69v43sg
-    local _0x167v98_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v4316) _0x69v43Parent_0x69v43panel
-    local _0xf4v48_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x69v43Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43Thickness_0x69v43_0x69v43_0x69v43.Transparency_0x69v430_0x69v43_0x69v43.Parent_0x69v43panel
-    local _0x168v61_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x168v61.Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x168v61.Thickness_0x69v433
-    _0x168v61.Transparency_0x69v431
-    _0x168v61.ApplyStrokeMode_0x69v43Enum.ApplyStrokeMode._0x3b7v35
-    _0x168v61.Parent_0x69v43panel
     task.spawn(function()
-        while _0x166v14.Parent_0x69v43
-            task.wait_0x69v432_0x69v43math.random() * _0x69v43)
-            _0x69v43panel.Parent then
-                _0xedv83:Create(_0x168v61, TweenInfo._0x69v43_0x69v431), {Transparency_0x69v430_0x69v43_0x69v43Play()
-                task.wait_0x69v4318)
-                _0xedv83:Create(_0x168v61, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43), {Transparency_0x69v431_0x69v43Play()
-            _0x69v43
-        _0x69v43
-    _0x69v43)
+        task.wait(0.6 + math.random() * 0.8)
+        while _0x0ABE and _0x74E0.Parent do
+            _0x5AD1()
+            if math.random() < 0.15 then
+                task.wait(0.08 + math.random() * 0.1)
+                _0x5AD1()
+            end
+            task.wait(2.4 + math.random() * 2.2)
+        end
+    end)
 
-    local _0x169v25_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x169v25.Size_0x69v43UDim2.fromOffset_0x69v43, (0xe + 0xe))
-    _0x169v25.Position_0x69v43UDim2._0x69v43(1_0x69v4338_0x69v43, (0x5 + 0x5))
-    _0x169v25.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0xf + 0xf), (0x1e + 0x1e))
-    _0x169v25.BorderSizePixel_0x69v430
-    _0x169v25.Font_0x69v43Enum.Font.GothamBold
-    _0x169v25.TextSize_0x69v4316
-    _0x169v25.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x169v25.Text_0x69v43"\120"
-    _0x169v25.AutoButtonColor_0x69v43false
-    _0x169v25.ZIndex_0x69v4312
-    _0x169v25.Parent_0x69v43panel
-    local _0x16av69_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43xClose
-    local _0x16bv67_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101") _0x69v43.Color_0x69v43Color3.fromRGB_0x69v43, (0x23 + 0x23), _0x69v43) _0x69v43.Thickness_0x69v431 _0x69v43.Parent_0x69v43xClose
-    _0x169v25.MouseEnter:Connect(function()
-        _0xedv83:Create(_0x169v25, TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0x14 + 0x14), (0x19 + 0x19))}):Play()
-        _0xedv83:Create(_0x169v25, TweenInfo._0x69v43_0x69v4315), {TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)}):Play()
-    _0x69v43)
-    _0x169v25.MouseLeave:Connect(function()
-        _0xedv83:Create(_0x169v25, TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0xf + 0xf), (0x1e + 0x1e))}):Play()
-        _0xedv83:Create(_0x169v25, TweenInfo._0x69v43_0x69v4315), {TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)}):Play()
-    _0x69v43)
-    _0x169v25.MouseButton1Click:Connect(function()
- _0x13av42_0x69v43false
-        pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43)
-    _0x69v43)
+    local _0xA05F = Instance.new("Frame")
+    _0xA05F.AnchorPoint = Vector2.new(0.5, 0.5) _0xA05F.Position = UDim2.fromScale(0.5, 0.5)
+    _0xA05F.Size = UDim2.fromOffset(360, 400)
+    _0xA05F.BackgroundColor3 = Color3.fromRGB(15, 12, 24)
+    _0xA05F.BackgroundTransparency = 0.05
+    _0xA05F.BorderSizePixel = 0
+    _0xA05F.ZIndex = 10
+    _0xA05F.Parent = _0xFA03
+    local _0x50EE = Instance.new("UICorner") _0x50EE.CornerRadius = UDim.new(0, 16) _0x50EE.Parent = _0xA05F
+    local _0xA21A = Instance.new("UIStroke")
+    _0xA21A.Color = Color3.fromRGB(120, 100, 220) _0xA21A.Thickness = 1.5 _0xA21A.Transparency = 0.15 _0xA21A.Parent = _0xA05F
+    local _0x006E = Instance.new("UIStroke")
+    _0x006E.Color = Color3.fromRGB(180, 160, 255)
+    _0x006E.Thickness = 3
+    _0x006E.Transparency = 1
+    _0x006E.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    _0x006E.Parent = _0xA05F
+    task.spawn(function()
+        while _0xA05F.Parent do
+            task.wait(2.2 + math.random() * 2.4)
+            if _0xA05F.Parent then
+                _0x27A5:Create(_0x006E, TweenInfo.new(0.1), {Transparency = 0.45}):Play()
+                task.wait(0.18)
+                _0x27A5:Create(_0x006E, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Transparency = 1}):Play()
+            end
+        end
+    end)
 
-    local _0x16cv23_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x16cv23.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4352) _0x16cv23.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4322)
-    _0x16cv23.BackgroundTransparency_0x69v431 _0x16cv23.Font_0x69v43Enum.Font.GothamBlack _0x16cv23.Text_0x69v43"\086\069\073\076"
-    _0x16cv23.TextSize_0x69v43_0x69v43logo.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x16cv23.TextStrokeTransparency_0x69v43_0x69v43 _0x16cv23.TextStrokeColor3_0x69v43Color3.fromRGB_0x69v43, (0x1e + 0x1e), _0x69v43)
-    _0x16cv23.ZIndex_0x69v43_0x69v43logo.Parent_0x69v43panel
-    local _0x16dv55_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x16dv55.Color_0x69v43ColorSequence._0x69v43{
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
+    local _0x6A3E = Instance.new("TextButton")
+    _0x6A3E.Size = UDim2.fromOffset(28, 28)
+    _0x6A3E.Position = UDim2.new(1, -38, 0, 10)
+    _0x6A3E.BackgroundColor3 = Color3.fromRGB(40, 30, 60)
+    _0x6A3E.BorderSizePixel = 0
+    _0x6A3E.Font = Enum.Font.GothamBold
+    _0x6A3E.TextSize = 16
+    _0x6A3E.TextColor3 = Color3.fromRGB(220, 210, 255)
+    _0x6A3E.Text = "x"
+    _0x6A3E.AutoButtonColor = false
+    _0x6A3E.ZIndex = 12
+    _0x6A3E.Parent = _0xA05F
+    local _0x6B88 = Instance.new("UICorner") _0x6B88.CornerRadius = UDim.new(0, 8) _0x6B88.Parent = _0x6A3E
+    local _0x67B0 = Instance.new("UIStroke") _0x67B0.Color = Color3.fromRGB(80, 70, 120) _0x67B0.Thickness = 1 _0x67B0.Parent = _0x6A3E
+    _0x6A3E.MouseEnter:Connect(function()
+        _0x27A5:Create(_0x6A3E, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(90, 40, 50)}):Play()
+        _0x27A5:Create(_0x6A3E, TweenInfo.new(0.15), {TextColor3 = Color3.fromRGB(255, 180, 180)}):Play()
+    end)
+    _0x6A3E.MouseLeave:Connect(function()
+        _0x27A5:Create(_0x6A3E, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(40, 30, 60)}):Play()
+        _0x27A5:Create(_0x6A3E, TweenInfo.new(0.15), {TextColor3 = Color3.fromRGB(220, 210, 255)}):Play()
+    end)
+    _0x6A3E.MouseButton1Click:Connect(function()
+        _0x0ABE = false
+        pcall(function() _0xFA03:Destroy() end)
+    end)
+
+    local _0x7284 = Instance.new("TextLabel")
+    _0x7284.Size = UDim2.new(1, 0, 0, 52) _0x7284.Position = UDim2.new(0, 0, 0, 22)
+    _0x7284.BackgroundTransparency = 1 _0x7284.Font = Enum.Font.GothamBlack _0x7284.Text = "VEIL"
+    _0x7284.TextSize = 44 _0x7284.TextColor3 = Color3.fromRGB(255, 255, 255)
+    _0x7284.TextStrokeTransparency = 0.6 _0x7284.TextStrokeColor3 = Color3.fromRGB(80, 60, 160)
+    _0x7284.ZIndex = 11 _0x7284.Parent = _0xA05F
+    local _0x1AEB = Instance.new("UIGradient")
+    _0x1AEB.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(220, 200, 255)),
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(180, 130, 255)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 160, 255)),
     }
-    _0x16dv55.Parent_0x69v43logo
+    _0x1AEB.Parent = _0x7284
 
-    local _0x16ev71_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4316) _0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4378)
-    _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Font_0x69v43Enum.Font.GothamBold
-    _0x69v43.Text_0x69v43"\083\032\069\032\067\032\085\032\082\032\073\032\084\032\089\032\032\032\083\032\085\032\073\032\084\032\069" _0x69v43.TextSize_0x69v439
-    _0x69v43.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43.ZIndex_0x69v43_0x69v43_0x69v43.Parent_0x69v43panel
+    local _0xFC58 = Instance.new("TextLabel")
+    _0xFC58.Size = UDim2.new(1, 0, 0, 16) _0xFC58.Position = UDim2.new(0, 0, 0, 78)
+    _0xFC58.BackgroundTransparency = 1 _0xFC58.Font = Enum.Font.GothamBold
+    _0xFC58.Text = "S E C U R I T Y   S U I T E" _0xFC58.TextSize = 9
+    _0xFC58.TextColor3 = Color3.fromRGB(167, 139, 250) _0xFC58.ZIndex = 11 _0xFC58.Parent = _0xA05F
 
-    local _0x16fv66_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x16fv66.Size_0x69v43UDim2._0x69v43(1_0x69v4360_0x69v43, (0x17 + 0x17)) _0x16fv66.Position_0x69v43UDim2._0x69v43(_0x69v4330_0x69v43, _0x69v43)
-    _0x16fv66.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0x9 + 0x9), (0x11 + 0x11)) _0x16fv66.BorderSizePixel_0x69v430
-    _0x16fv66.ZIndex_0x69v43_0x69v43field.Parent_0x69v43panel
-    local _0x163v77_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v4310) _0x69v43Parent_0x69v43field
-    local _0x170v72_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101") _0x69v43.Color_0x69v43Color3.fromRGB_0x69v43, (0x19 + 0x19), _0x69v43) _0x69v43.Thickness_0x69v43_0x69v43 _0x69v43.Parent_0x69v43field
-    local _0x90v85_0x69v43Instance._0x69v43("\084\101\120\116\066\111\120")
-    _0x90v85.Size_0x69v43UDim2._0x69v43(1_0x69v4324_0x69v43_0x69v43) _0x90v85.Position_0x69v43UDim2._0x69v43(_0x69v4312_0x69v43_0x69v43)
-    _0x90v85.BackgroundTransparency_0x69v431 _0x90v85.Font_0x69v43Enum.Font.GothamMedium
-    _0x90v85.TextSize_0x69v43_0x69v43input.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x90v85.PlaceholderText_0x69v43"\086\076\045\088\088\088\088\088\088\088\088\032\111\114\032\119\111\114\107\046\105\110\107\032\107\101\121"
-    _0x90v85.PlaceholderColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x90v85.Text_0x69v43""
-    _0x90v85.ClearTextOnFocus_0x69v43false _0x90v85.TextXAlignment_0x69v43Enum.TextXAlignment.Left
-    _0x90v85.ZIndex_0x69v43_0x69v43input.Parent_0x69v43field
-    _0x90v85.Focused:Connect(function()
-        _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v432), {Color_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43_0x69v43_0x385v69_0x69v430_0x69v43Play()
-    _0x69v43)
-    _0x90v85.FocusLost:Connect(function()
-        _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v432), {Color_0x69v43Color3.fromRGB_0x69v43, (0x19 + 0x19), _0x69v43_0x69v43_0x385v69_0x69v430_0x69v43Play()
-    _0x69v43)
+    local _0x455A = Instance.new("Frame")
+    _0x455A.Size = UDim2.new(1, -60, 0, 46) _0x455A.Position = UDim2.new(0, 30, 0, 132)
+    _0x455A.BackgroundColor3 = Color3.fromRGB(22, 18, 34) _0x455A.BorderSizePixel = 0
+    _0x455A.ZIndex = 11 _0x455A.Parent = _0xA05F
+    local _0x3EC9 = Instance.new("UICorner") _0x3EC9.CornerRadius = UDim.new(0, 10) _0x3EC9.Parent = _0x455A
+    local _0xEDF3 = Instance.new("UIStroke") _0xEDF3.Color = Color3.fromRGB(60, 50, 100) _0xEDF3.Thickness = 1.5 _0xEDF3.Parent = _0x455A
+    local _0xAE2A = Instance.new("TextBox")
+    _0xAE2A.Size = UDim2.new(1, -24, 1, 0) _0xAE2A.Position = UDim2.new(0, 12, 0, 0)
+    _0xAE2A.BackgroundTransparency = 1 _0xAE2A.Font = Enum.Font.GothamMedium
+    _0xAE2A.TextSize = 14 _0xAE2A.TextColor3 = Color3.fromRGB(245, 243, 255)
+    _0xAE2A.PlaceholderText = "VL-XXXXXXXX or work.ink key"
+    _0xAE2A.PlaceholderColor3 = Color3.fromRGB(110, 110, 130) _0xAE2A.Text = ""
+    _0xAE2A.ClearTextOnFocus = false _0xAE2A.TextXAlignment = Enum.TextXAlignment.Left
+    _0xAE2A.ZIndex = 12 _0xAE2A.Parent = _0x455A
+    _0xAE2A.Focused:Connect(function()
+        _0x27A5:Create(_0xEDF3, TweenInfo.new(0.2), {Color = Color3.fromRGB(139, 92, 246), Transparency = 0}):Play()
+    end)
+    _0xAE2A.FocusLost:Connect(function()
+        _0x27A5:Create(_0xEDF3, TweenInfo.new(0.2), {Color = Color3.fromRGB(60, 50, 100), Transparency = 0}):Play()
+    end)
 
-    local _0xd1v47_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(1_0x69v4360_0x69v43, (0x16 + 0x16)) _0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v4330_0x69v43, _0x69v43)
-    _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43) _0x69v43.BorderSizePixel_0x69v430
-    _0x69v43.Font_0x69v43Enum.Font.GothamBold _0x69v43.Text_0x69v43"\086\097\108\105\100\097\116\101\032\075\101\121" _0x69v43.TextSize_0x69v4314
-    _0x69v43.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43.AutoButtonColor_0x69v43false
-    _0x69v43.ZIndex_0x69v43_0x69v43_0x69v43.Parent_0x69v43panel
-    local _0x171v92_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v4310) _0x69v43Parent_0x69v43_0x69v43
-    _0x69v43.MouseEnter:Connect(function()
-        _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)}):Play()
-    _0x69v43)
-    _0x69v43.MouseLeave:Connect(function()
-        _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43)}):Play()
-    _0x69v43)
+    local _0x78ED = Instance.new("TextButton")
+    _0x78ED.Size = UDim2.new(1, -60, 0, 44) _0x78ED.Position = UDim2.new(0, 30, 0, 190)
+    _0x78ED.BackgroundColor3 = Color3.fromRGB(139, 92, 246) _0x78ED.BorderSizePixel = 0
+    _0x78ED.Font = Enum.Font.GothamBold _0x78ED.Text = "Validate Key" _0x78ED.TextSize = 14
+    _0x78ED.TextColor3 = Color3.fromRGB(255, 255, 255) _0x78ED.AutoButtonColor = false
+    _0x78ED.ZIndex = 11 _0x78ED.Parent = _0xA05F
+    local _0x3A50 = Instance.new("UICorner") _0x3A50.CornerRadius = UDim.new(0, 10) _0x3A50.Parent = _0x78ED
+    _0x78ED.MouseEnter:Connect(function()
+        _0x27A5:Create(_0x78ED, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(167, 139, 250)}):Play()
+    end)
+    _0x78ED.MouseLeave:Connect(function()
+        _0x27A5:Create(_0x78ED, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(139, 92, 246)}):Play()
+    end)
 
-    local _0x172v51_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43Size_0x69v43UDim2._0x69v43(1_0x69v4360_0x69v43, (0xf + 0xf)) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v4330_0x69v43, _0x69v43)
-    _0x69v43BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0x9 + 0x9), (0x11 + 0x11)) _0x69v43BorderSizePixel_0x69v430
-    _0x69v43Font_0x69v43Enum.Font.GothamBold_0x69v43.Text_0x69v43"\071\101\116\032\097\032\075\101\121\032\032\092\050\050\054\092\049\051\052\092\049\052\054"_0x69v43.TextSize_0x69v4311
-    _0x69v43TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43AutoButtonColor_0x69v43false
-    _0x69v43ZIndex_0x69v43_0x69v43_0x69v43Parent_0x69v43panel
-    local _0x173v33_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43.Parent_0x69v43gk
-    local _0x174v41_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101") _0x69v43.Color_0x69v43Color3.fromRGB_0x69v43, (0x19 + 0x19), _0x69v43) _0x69v43.Thickness_0x69v431 _0x69v43.Transparency_0x69v43_0x69v43 _0x69v43.Parent_0x69v43gk
-    _0x69v43MouseButton1Click:Connect(function()
-        _0x69v43type(setclipboard) == "\102\117\110\099\116\105\111\110" then
-            pcall(setclipboard, _0x12dv21.KeyLink)
-            _0x69v43Text_0x69v43"\076\105\110\107\032\099\111\112\105\101\100\033"
-            task.delay_0x69v43_0x69v43function_0x69v43_0x69v43_0x69v43Parent then_0x69v43.Text_0x69v43"\071\101\116\032\097\032\075\101\121\032\032\092\050\050\054\092\049\051\052\092\049\052\054" _0x69v43 _0x69v43)
+    local _0xF15B = Instance.new("TextButton")
+    _0xF15B.Size = UDim2.new(1, -60, 0, 30) _0xF15B.Position = UDim2.new(0, 30, 0, 246)
+    _0xF15B.BackgroundColor3 = Color3.fromRGB(22, 18, 34) _0xF15B.BorderSizePixel = 0
+    _0xF15B.Font = Enum.Font.GothamBold _0xF15B.Text = "Get a Key  \226\134\146" _0xF15B.TextSize = 11
+    _0xF15B.TextColor3 = Color3.fromRGB(167, 139, 250) _0xF15B.AutoButtonColor = false
+    _0xF15B.ZIndex = 11 _0xF15B.Parent = _0xA05F
+    local _0x73B4 = Instance.new("UICorner") _0x73B4.CornerRadius = UDim.new(0, 8) _0x73B4.Parent = _0xF15B
+    local _0x0EFF = Instance.new("UIStroke") _0x0EFF.Color = Color3.fromRGB(60, 50, 100) _0x0EFF.Thickness = 1 _0x0EFF.Transparency = 0.4 _0x0EFF.Parent = _0xF15B
+    _0xF15B.MouseButton1Click:Connect(function()
+        if type(setclipboard) == "function" then
+            pcall(setclipboard, _0xB7CC.KeyLink)
+            _0xF15B.Text = "Link copied!"
+            task.delay(1.5, function() if _0xF15B.Parent then _0xF15B.Text = "Get a Key  \226\134\146" end end)
         else
-            _0x69v43Text_0x69v43KeySystem.KeyLink
-        _0x69v43
-    _0x69v43)
+            _0xF15B.Text = _0xB7CC.KeyLink
+        end
+    end)
 
-    local _0x175v88_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x175v88.Size_0x69v43UDim2._0x69v43(1_0x69v4360_0x69v43, (0x10 + 0x10)) _0x175v88.Position_0x69v43UDim2._0x69v43(_0x69v4330_0x69v43, _0x69v43)
-    _0x175v88.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43) _0x175v88.BorderSizePixel_0x69v430
-    _0x175v88.Font_0x69v43Enum.Font.GothamBold
-    _0x175v88.Text_0x69v43"\078\101\101\100\032\072\101\108\112\063\032\074\111\105\110\032\116\104\101\032\068\105\115\099\111\114\100"
-    _0x175v88.TextSize_0x69v4311
-    _0x175v88.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x175v88.AutoButtonColor_0x69v43false
-    _0x175v88.ZIndex_0x69v43_0x69v43helpBtn.Parent_0x69v43panel
-    local _0x176v65_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43helpBtn
-    local _0x177v33_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x69v43.Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43.Thickness_0x69v431 _0x69v43.Transparency_0x69v430_0x69v43 _0x69v43.Parent_0x69v43helpBtn
-    _0x175v88.MouseEnter:Connect(function()
-        _0xedv83:Create(_0x175v88, TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)}):Play()
-    _0x69v43)
-    _0x175v88.MouseLeave:Connect(function()
-        _0xedv83:Create(_0x175v88, TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)}):Play()
-    _0x69v43)
-    _0x175v88.MouseButton1Click:Connect(function()
-        _0x69v43type(setclipboard) == "\102\117\110\099\116\105\111\110" then
-            pcall(setclipboard, _0x134v66)
-            _0x175v88.Text_0x69v43"\092\050\050\054\092\049\053\054\092\049\052\055\032\068\105\115\099\111\114\100\032\105\110\118\105\116\101\032\099\111\112\105\101\100"
-            _0x175v88.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)
-            task.delay_0x69v43_0x69v43function()
-                _0x69v43helpBtn.Parent then
-                    _0x175v88.Text_0x69v43"\078\101\101\100\032\072\101\108\112\063\032\074\111\105\110\032\116\104\101\032\068\105\115\099\111\114\100"
-                    _0x175v88.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)
-                _0x69v43
-            _0x69v43)
+    local _0x55B7 = Instance.new("TextButton")
+    _0x55B7.Size = UDim2.new(1, -60, 0, 32) _0x55B7.Position = UDim2.new(0, 30, 0, 286)
+    _0x55B7.BackgroundColor3 = Color3.fromRGB(88, 101, 242) _0x55B7.BorderSizePixel = 0
+    _0x55B7.Font = Enum.Font.GothamBold
+    _0x55B7.Text = "Need Help? Join the Discord"
+    _0x55B7.TextSize = 11
+    _0x55B7.TextColor3 = Color3.fromRGB(255, 255, 255)
+    _0x55B7.AutoButtonColor = false
+    _0x55B7.ZIndex = 11 _0x55B7.Parent = _0xA05F
+    local _0xA771 = Instance.new("UICorner") _0xA771.CornerRadius = UDim.new(0, 8) _0xA771.Parent = _0x55B7
+    local _0x5F2D = Instance.new("UIStroke")
+    _0x5F2D.Color = Color3.fromRGB(120, 135, 255) _0x5F2D.Thickness = 1 _0x5F2D.Transparency = 0.25 _0x5F2D.Parent = _0x55B7
+    _0x55B7.MouseEnter:Connect(function()
+        _0x27A5:Create(_0x55B7, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(110, 122, 255)}):Play()
+    end)
+    _0x55B7.MouseLeave:Connect(function()
+        _0x27A5:Create(_0x55B7, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(88, 101, 242)}):Play()
+    end)
+    _0x55B7.MouseButton1Click:Connect(function()
+        if type(setclipboard) == "function" then
+            pcall(setclipboard, _0xBD2F)
+            _0x55B7.Text = "\226\156\147 Discord invite copied"
+            _0x55B7.BackgroundColor3 = Color3.fromRGB(80, 220, 130)
+            task.delay(1.8, function()
+                if _0x55B7.Parent then
+                    _0x55B7.Text = "Need Help? Join the Discord"
+                    _0x55B7.BackgroundColor3 = Color3.fromRGB(88, 101, 242)
+                end
+            end)
         else
-            _0x175v88.Text_0x69v43DI
-            task.delay_0x69v43_0x69v43function()
-                _0x69v43helpBtn.Parent then _0x175v88.Text_0x69v43"\078\101\101\100\032\072\101\108\112\063\032\074\111\105\110\032\116\104\101\032\068\105\115\099\111\114\100" _0x69v43
-            _0x69v43)
-        _0x69v43
-    _0x69v43)
+            _0x55B7.Text = _0xBD2F
+            task.delay(2.2, function()
+                if _0x55B7.Parent then _0x55B7.Text = "Need Help? Join the Discord" end
+            end)
+        end
+    end)
 
-    local _0x178v66_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x178v66.Size_0x69v43UDim2._0x69v43(1_0x69v4360_0x69v43, (0x8 + 0x8)) _0x178v66.Position_0x69v43UDim2._0x69v43(_0x69v4330_0x69v43, _0x69v43)
-    _0x178v66.BackgroundTransparency_0x69v431 _0x178v66.Font_0x69v43Enum.Font.Gotham
-    _0x178v66.Text_0x69v43"" _0x178v66.TextSize_0x69v43_0x69v43status.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x178v66.ZIndex_0x69v43_0x69v43status.Parent_0x69v43panel
+    local _0xE8F7 = Instance.new("TextLabel")
+    _0xE8F7.Size = UDim2.new(1, -60, 0, 16) _0xE8F7.Position = UDim2.new(0, 30, 0, 328)
+    _0xE8F7.BackgroundTransparency = 1 _0xE8F7.Font = Enum.Font.Gotham
+    _0xE8F7.Text = "" _0xE8F7.TextSize = 10 _0xE8F7.TextColor3 = Color3.fromRGB(161, 161, 170)
+    _0xE8F7.ZIndex = 11 _0xE8F7.Parent = _0xA05F
 
-    local _0x179v77_0x69v43Instance._0x69v43("\085\073\083\099\097\108\101")
-    _0x179v77.Scale_0x69v430_0x69v43 _0x179v77.Parent_0x69v43panel
-    _0x166v14.BackgroundTransparency_0x69v431
-    _0xedv83:Create(_0x179v77, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Back, Enum.EasingDirection._0x69v43), {Scale_0x69v431_0x69v43Play()
-    _0xedv83:Create(_0x166v14, TweenInfo._0x69v43_0x69v434), {BackgroundTransparency_0x69v430_0x69v43_0x69v43Play()
+    local _0x1AA5 = Instance.new("UIScale")
+    _0x1AA5.Scale = 0.85 _0x1AA5.Parent = _0xA05F
+    _0xA05F.BackgroundTransparency = 1
+    _0x27A5:Create(_0x1AA5, TweenInfo.new(0.5, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Scale = 1}):Play()
+    _0x27A5:Create(_0xA05F, TweenInfo.new(0.4), {BackgroundTransparency = 0.05}):Play()
 
-    local _0x17av11_0x69v43false
-    local function _0x76v68()
-        _0x69v43validating then return _0x69v43
-        local _0xa5v89_0x69v43tostring(_0x90v85.Text_0x69v43 ""):gsub("\094\037\115\043", ""):gsub("\037\115\043\036", "")
-        _0x69v43_0x69v43 == "" then _0x119v35.Show("\069\110\116\101\114\032\097\032\107\101\121\032\102\105\114\115\116", false) return _0x69v43
- _0x17av11_0x69v43true
-        _0x69v43.Text_0x69v43"\086\097\108\105\100\097\116\105\110\103\046\046\046"
-        _0x178v66.Text_0x69v43"\067\104\101\099\107\105\110\103\046\046\046"
-        _0x178v66.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
+    local _0x61FD = false
+    local function _0x4415()
+        if _0x61FD then return end
+        local _0x6260 = tostring(_0xAE2A.Text or ""):gsub("^%s+", ""):gsub("%s+$", "")
+        if _0x6260 == "" then _0xC488.Show("Enter a key first", false) return end
+        _0x61FD = true
+        _0x78ED.Text = "Validating..."
+        _0xE8F7.Text = "Checking..."
+        _0xE8F7.TextColor3 = Color3.fromRGB(167, 139, 250)
         task.spawn(function()
-            local _0xf2v80, _0x386v66_0x69v43false, "\105\110\118\097\108\105\100"
-            local _0x17cv68, _0x17dv63, _0x387v19_0x69v43pcall(_0x12dv21.Validate, _0x69v43)
-            _0x69v43_0x69v43 then_0x69v43_0x69v43_0x69v43_0x69v43 true_0x69v43 false reason_0x69v43_0x69v43_0x69v43reason else reason_0x69v43"\101\120\099\101\112\116\105\111\110" _0x69v43
-            task.wait_0x69v433)
- _0x17av11_0x69v43false
-            _0x69v43.Text_0x69v43"\086\097\108\105\100\097\116\101\032\075\101\121"
-            _0x69v43_0x69v43then
-                local _0x17fv70_0x69v43Configuration._0x367v66 _0x69v43 _0x110v81.PremiumExpiry_0x69v43 (_0x69v43time() + _0x12dv21.DefaultExpiry)
-                _0x12dv21.WriteSaved(_0x69v43, _0x17fv70)
-                _0x69v43Configuration._0x367v66 then
-                    _0x178v66.Text_0x69v43"\080\114\101\109\105\117\109\032\097\099\116\105\118\101\058\032" .. tostring(_0x110v81._0x368v73)
-                    _0x178v66.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x14 + 0x14))
-                    _0x119v35.Show("\080\114\101\109\105\117\109\032\097\099\116\105\118\097\116\101\100\058\032" .. tostring(_0x110v81.PremiumTier_0x69v43true)
+            local _0xDF7B, _0xCBE1 = false, "invalid"
+            local _0x2007, _0x049D, _0xDF1D = pcall(_0xB7CC.Validate, _0x6260)
+            if _0x2007 then _0xDF7B = _0x049D and true or false _0xCBE1 = _0xDF1D or _0xCBE1 else _0xCBE1 = "exception" end
+            task.wait(0.3)
+            _0x61FD = false
+            _0x78ED.Text = "Validate Key"
+            if _0xDF7B then
+                local _0x0C4D = _0x77AD.IsPremium and _0x77AD.PremiumExpiry or (os.time() + _0xB7CC.DefaultExpiry)
+                _0xB7CC.WriteSaved(_0x6260, _0x0C4D)
+                if _0x77AD.IsPremium then
+                    _0xE8F7.Text = "Premium active: " .. tostring(_0x77AD.PremiumTier)
+                    _0xE8F7.TextColor3 = Color3.fromRGB(255, 200, 40)
+                    _0xC488.Show("Premium activated: " .. tostring(_0x77AD.PremiumTier), true)
                 else
-                    _0x178v66.Text_0x69v43"\075\101\121\032\118\097\108\105\100\032\045\032\050\052\104\032\097\099\099\101\115\115"
-                    _0x178v66.TextColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)
-                    _0x119v35.Show("\075\101\121\032\118\097\108\105\100\032\045\032\119\101\108\099\111\109\101", true)
-                _0x69v43
-                task.wait_0x69v439)
- _0x13av42_0x69v43false
-                pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43)
-                _0x12dv21.Authorized_0x69v43true
-                _0x69v43onAuthorized then pcall(_0x73v89) _0x69v43
+                    _0xE8F7.Text = "Key valid - 24h access"
+                    _0xE8F7.TextColor3 = Color3.fromRGB(80, 220, 130)
+                    _0xC488.Show("Key valid - welcome", true)
+                end
+                task.wait(1.9)
+                _0x0ABE = false
+                pcall(function() _0xFA03:Destroy() end)
+                _0xB7CC.Authorized = true
+                if onAuthorized then pcall(onAuthorized) end
             else
-                local _0x180v72_0x69v43"\075\101\121\032\100\111\101\115\110\039\116\032\101\120\105\115\116"
-                _0x69v43reason == "\104\116\116\112\045\117\110\097\118\097\105\108\097\098\108\101" then _0x69v43_0x69v43"\069\120\101\099\117\116\111\114\032\104\097\115\032\110\111\032\072\084\084\080\032\097\099\099\101\115\115"
-                elseif _0x386v66 == "\098\097\100\045\114\101\115\112\111\110\115\101" then _0x69v43_0x69v43"\083\101\114\118\101\114\032\114\101\106\101\099\116\101\100\032\116\104\101\032\114\101\113\117\101\115\116"
-                elseif _0x386v66 == "\101\109\112\116\121\045\114\101\115\112\111\110\115\101" then _0x69v43_0x69v43"\083\101\114\118\101\114\032\114\101\116\117\114\110\101\100\032\101\109\112\116\121"
-                elseif _0x386v66 == "\116\111\111\045\115\104\111\114\116" then _0x69v43_0x69v43"\075\101\121\032\105\115\032\116\111\111\032\115\104\111\114\116" _0x69v43
-                _0x178v66.Text_0x69v43_0x69v43
-                _0x178v66.TextColor3_0x69v43Color3.fromRGB(_0x69v43, (0x28 + 0x28), _0x69v43)
-                _0x119v35.Show(_0x69v43, false)
-                _0x90v85.Text_0x69v43""
-            _0x69v43
-        _0x69v43)
-    _0x69v43
-    _0x69v43.MouseButton1Click:Connect(_0x76v68)
-    _0x90v85.FocusLost:Connect(function(_0x77v65) _0x69v43enter then tryValidate_0x69v43_0x69v43 _0x69v43)
+                local _0xC5D8 = "Key doesn't exist"
+                if _0xCBE1 == "http-unavailable" then _0xC5D8 = "Executor has no HTTP access"
+                elseif _0xCBE1 == "bad-response" then _0xC5D8 = "Server rejected the request"
+                elseif _0xCBE1 == "empty-response" then _0xC5D8 = "Server returned empty"
+                elseif _0xCBE1 == "too-short" then _0xC5D8 = "Key is too short" end
+                _0xE8F7.Text = _0xC5D8
+                _0xE8F7.TextColor3 = Color3.fromRGB(255, 80, 100)
+                _0xC488.Show(_0xC5D8, false)
+                _0xAE2A.Text = ""
+            end
+        end)
+    end
+    _0x78ED.MouseButton1Click:Connect(_0x4415)
+    _0xAE2A.FocusLost:Connect(function(enter) if enter then _0x4415() end end)
 
-    return_0x69v43
-_0x69v43
+    return _0xFA03
+end
 
-local function _0x78v97(_0x79v33, _0x7av29, _0x7bv19)
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43name_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.ZIndexBehavior_0x69v43Enum.ZIndexBehavior.Sibling
-    _0x69v43DisplayOrder_0x69v43order_0x69v43_0x69v43_0x69v43IgnoreGuiInset_0x69v43ii ~= false
-    pcall(function_0x69v43_0x69v43AutoLocalize_0x69v43false _0x69v43)
-    pcall(function_0x69v43_0x69v43Parent_0x69v43_0x69v43 _0x69v43)
-    return_0x69v43
-_0x69v43
+local function _0xE472(_0x4BFF, order, ii)
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then return nil end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = _0x4BFF _0xFA03.ResetOnSpawn = false _0xFA03.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    _0xFA03.DisplayOrder = order or 1 _0xFA03.IgnoreGuiInset = ii ~= false
+    pcall(function() _0xFA03.AutoLocalize = false end)
+    pcall(function() _0xFA03.Parent = _0x14E4 end)
+    return _0xFA03
+end
 
-local _0x181v41 = {}
-local _0x182v69_0x69v43"\068\101\102\097\117\108\116"
+local _0xEE9E = {}
+local _0x51E5 = "Default"
 
-local _0x183v96 = {
-    "\067\097\109\101\114\097\065\115\115\105\115\116\083\109\111\111\116\104\105\110\103", "\067\097\109\101\114\097\065\115\115\105\115\116\070\079\086",
-    "\067\097\109\101\114\097\065\115\115\105\115\116\077\111\117\115\101\083\101\110\115\105\116\105\118\105\116\121", "\067\097\109\101\114\097\065\115\115\105\115\116\080\114\101\100\105\099\116\105\111\110", "\067\097\109\101\114\097\065\115\115\105\115\116\066\117\108\108\101\116\083\112\101\101\100",
-    "\067\097\109\101\114\097\065\115\115\105\115\116\076\101\097\100", "\067\097\109\101\114\097\065\115\115\105\115\116\080\108\097\121\101\114\083\101\110\115",
+local _0xBD58 = {
+    "CameraAssistSmoothing", "CameraAssistFOV",
+    "CameraAssistMouseSensitivity", "CameraAssistPrediction", "CameraAssistBulletSpeed",
+    "CameraAssistLead", "CameraAssistPlayerSens",
 }
-local function _0x7cv92()
+local function _0xB9CE()
     return {
- _0x388v81 = {_0x31av25=_0x69v43_0x317v57 =(0x11 + 0x12), _0x323v88_0x69v43._0x69v43_0x31fv18 =true, _0x320v43 =_0x69v43, _0x321v21_0x69v43_0x69v43, _0x324v76_0x69v43_0x69v43_0x69v43_0x389v70 = {_0x31av25=_0x69v43_0x317v57 =(0x11 + 0x12), _0x323v88_0x69v43._0x69v43_0x31fv18 =true, _0x320v43 =_0x69v43, _0x321v21_0x69v43_0x69v43, _0x324v76_0x69v43_0x69v43_0x69v43_0x38av79 = {_0x31av25=_0x69v43_0x317v57 =(0xe + 0xe), _0x323v88_0x69v43._0x69v43_0x31fv18 =true, _0x320v43 =_0x69v43, _0x321v21_0x69v43_0x69v43, _0x324v76_0x69v43_0x69v43_0x69v43_0x38bv17 = {_0x31av25=_0x69v43_0x317v57 =(0x1b + 0x1c), _0x323v88_0x69v43._0x69v43_0x31fv18 =false, _0x320v43 =_0x69v43, _0x321v21_0x69v43_0x69v43, _0x324v76_0x69v43_0x69v43_0x69v43_0x38cv71 = {_0x31av25=_0x69v43_0x317v57 =(0x16 + 0x17), _0x323v88_0x69v43._0x69v43_0x31fv18 =true, _0x320v43 =_0x69v43, _0x321v21_0x69v43_0x69v43, _0x324v76_0x69v43_0x69v43_0x69v43_0x38dv35 = {_0x31av25=_0x69v43_0x317v57 =(0x16 + 0x17), _0x323v88_0x69v43._0x69v43_0x31fv18 =false, _0x320v43 =_0x69v43, _0x321v21_0x69v43_0x69v43, _0x324v76_0x69v43_0x69v43_0x69v43_0x38ev21 = {},
+        Default = {CameraAssistSmoothing=8, CameraAssistFOV=35, CameraAssistMouseSensitivity=1.0, CameraAssistPrediction=true, CameraAssistBulletSpeed=400, CameraAssistLead=0.06, CameraAssistPlayerSens=0.15},
+        AR = {CameraAssistSmoothing=7, CameraAssistFOV=35, CameraAssistMouseSensitivity=1.0, CameraAssistPrediction=true, CameraAssistBulletSpeed=500, CameraAssistLead=0.06, CameraAssistPlayerSens=0.15},
+        Sniper = {CameraAssistSmoothing=6, CameraAssistFOV=28, CameraAssistMouseSensitivity=1.0, CameraAssistPrediction=true, CameraAssistBulletSpeed=800, CameraAssistLead=0.03, CameraAssistPlayerSens=0.15},
+        Shotgun = {CameraAssistSmoothing=5, CameraAssistFOV=55, CameraAssistMouseSensitivity=1.2, CameraAssistPrediction=false, CameraAssistBulletSpeed=250, CameraAssistLead=0.02, CameraAssistPlayerSens=0.15},
+        SMG = {CameraAssistSmoothing=6, CameraAssistFOV=45, CameraAssistMouseSensitivity=1.0, CameraAssistPrediction=true, CameraAssistBulletSpeed=450, CameraAssistLead=0.05, CameraAssistPlayerSens=0.15},
+        Pistol = {CameraAssistSmoothing=6, CameraAssistFOV=45, CameraAssistMouseSensitivity=1.0, CameraAssistPrediction=false, CameraAssistBulletSpeed=350, CameraAssistLead=0.03, CameraAssistPlayerSens=0.15},
+        Melee = {},
     }
-_0x69v43
- _0x181v41_0x69v43defaultProfiles()
+end
+_0xEE9E = _0xB9CE()
 
-local function _0x7dv68(_0x79v33)
-    _0x69v43_0x69v43 name_0x69v43 _0x79v33 == "" then return "\068\101\102\097\117\108\116" _0x69v43
-    local _0xd6v18_0x69v43name:lower()
-    _0x69v43n:find("\107\110\105\102\101") _0x69v43n:find("\109\101\108\101\101") _0x69v43n:find("\115\119\111\114\100") _0x69v43n:find("\098\097\116") _0x69v43n:find("\104\097\109\109\101\114") _0x69v43n:find("\102\105\115\116") _0x69v43n:find("\107\097\114\097\109\098\105\116") _0x69v43n:find("\099\117\116\108\097\115\115") _0x69v43n:find("\107\097\116\097\110\097") then return "\077\101\108\101\101" _0x69v43
-    _0x69v43n:find("\115\110\105\112\101\114") _0x69v43n:find("\097\119\112") _0x69v43n:find("\098\097\114\114\101\116\116") _0x69v43n:find("\104\117\110\116") _0x69v43n:find("\114\097\110\103\101\114") _0x69v43n:find("\108\111\110\103\115\104\111\116") then return "\083\110\105\112\101\114" _0x69v43
-    _0x69v43n:find("\115\104\111\116\103\117\110") _0x69v43n:find("\106\117\100\103\101") _0x69v43n:find("\115\112\097\115") _0x69v43n:find("\112\117\109\112") _0x69v43n:find("\100\111\117\098\108\101") then return "\083\104\111\116\103\117\110" _0x69v43
-    _0x69v43n:find("\115\109\103") _0x69v43n:find("\117\122\105") _0x69v43n:find("\109\112\053") _0x69v43n:find("\109\112\055") _0x69v43n:find("\118\101\099\116\111\114") _0x69v43n:find("\109\097\099") then return "\083\077\071" _0x69v43
-    _0x69v43n:find("\112\105\115\116\111\108") _0x69v43n:find("\103\108\111\099\107") _0x69v43n:find("\100\101\097\103\108\101") _0x69v43n:find("\114\101\118\111\108\118\101\114") _0x69v43n:find("\104\097\110\100\103\117\110") then return "\080\105\115\116\111\108" _0x69v43
-    _0x69v43n:find("\114\105\102\108\101") _0x69v43n:find("\115\099\097\114") _0x69v43n:find("\097\107") _0x69v43n:find("\109\052") _0x69v43n:find("\109\049\054") _0x69v43n:find("\102\097\108") _0x69v43n:find("\098\117\114\115\116") _0x69v43n:find("\097\117\116\111") then return "\065\082" _0x69v43
-    return "\068\101\102\097\117\108\116"
-_0x69v43
+local function _0xF769(_0x4BFF)
+    if not _0x4BFF or _0x4BFF == "" then return "Default" end
+    local _0xB877 = _0x4BFF:lower()
+    if _0xB877:find("knife") or _0xB877:find("melee") or _0xB877:find("sword") or _0xB877:find("bat") or _0xB877:find("hammer") or _0xB877:find("fist") or _0xB877:find("karambit") or _0xB877:find("cutlass") or _0xB877:find("katana") then return "Melee" end
+    if _0xB877:find("sniper") or _0xB877:find("awp") or _0xB877:find("barrett") or _0xB877:find("hunt") or _0xB877:find("ranger") or _0xB877:find("longshot") then return "Sniper" end
+    if _0xB877:find("shotgun") or _0xB877:find("judge") or _0xB877:find("spas") or _0xB877:find("pump") or _0xB877:find("double") then return "Shotgun" end
+    if _0xB877:find("smg") or _0xB877:find("uzi") or _0xB877:find("mp5") or _0xB877:find("mp7") or _0xB877:find("vector") or _0xB877:find("mac") then return "SMG" end
+    if _0xB877:find("pistol") or _0xB877:find("glock") or _0xB877:find("deagle") or _0xB877:find("revolver") or _0xB877:find("handgun") then return "Pistol" end
+    if _0xB877:find("rifle") or _0xB877:find("scar") or _0xB877:find("ak") or _0xB877:find("m4") or _0xB877:find("m16") or _0xB877:find("fal") or _0xB877:find("burst") or _0xB877:find("auto") then return "AR" end
+    return "Default"
+end
 
-local function _0x7ev60()
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43 then return "\068\101\102\097\117\108\116", _0x69v43 _0x69v43
-    local _0x184v96_0x69v43_0x69v43Character
-    _0x69v43_0x69v43 char_0x69v43 _0x69v43 _0x184v96.Parent then return "\068\101\102\097\117\108\116", _0x69v43 _0x69v43
-    local _0x185v38_0x69v43char:FindFirstChildOfClass("\084\111\111\108")
-    _0x69v43tool _0x69v43 _0x185v38._0x36bv95 _0x69v43 _0x185v38._0x36bv95 ~= "" then return _0x7dv68(_0x185v38.Name_0x69v43tool._0x36bv95 _0x69v43
-    return "\068\101\102\097\117\108\116", _0x69v43
-_0x69v43
+local function _0x11FD()
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if not _0x1A90 then return "Default", nil end
+    local _0xE895 = _0x1A90.Character
+    if not _0xE895 or not _0xE895.Parent then return "Default", nil end
+    local _0x9EEE = _0xE895:FindFirstChildOfClass("Tool")
+    if _0x9EEE and _0x9EEE.Name and _0x9EEE.Name ~= "" then return _0xF769(_0x9EEE.Name), _0x9EEE.Name end
+    return "Default", nil
+end
 
-local function _0x7fv34(_0x80v51)
-    local _0x186v23_0x69v43WeaponProfiles_0x69v43] _0x69v43WeaponProfiles._0x388v81
-    _0x69v43_0x69v43 _0x186v23 then return _0x69v43
-    _0x69v43Configuration._0x34fv85 then return _0x69v43
-    _0x69v43 _0x69v43k_0x69v43 ipairs(_0x183v96) _0x69v43_0x69v43prof[_0xf6v96] ~= _0x69v43 then _0x110v81[_0xf6v96] = _0x186v23[_0x69v43_0x69v43 _0x69v43
-    _0x110v81.CameraAssistPlayerSens_0x69v430_0x69v43
-    _0x110v81.CameraAssistRotateChar_0x69v43true
-_0x69v43
+local function _0xA561(_0x9664)
+    local _0xE816 = _0xEE9E[_0x9664] or _0xEE9E.Default
+    if not _0xE816 then return end
+    if _0x77AD.SilentAimEnabled then return end
+    for _, _0xE7BF in ipairs(_0xBD58) do if _0xE816[_0xE7BF] ~= nil then _0x77AD[_0xE7BF] = _0xE816[_0xE7BF] end end
+    _0x77AD.CameraAssistPlayerSens = 0.15
+    _0x77AD.CameraAssistRotateChar = true
+end
 
-local function _0x81v99()
-    local _0x186v23_0x69v43WeaponProfiles[_0x182v69]
-    _0x69v43_0x69v43 _0x186v23 then _0x186v23 = {} _0x181v41[_0x182v69] = _0x186v23 _0x69v43
-    _0x69v43 _0x69v43k_0x69v43 ipairs(_0x183v96) _0x69v43prof[_0xf6v96] = _0x110v81[_0x69v43_0x69v43
-_0x69v43
+local function _0x9CA3()
+    local _0xE816 = _0xEE9E[_0x51E5]
+    if not _0xE816 then _0xE816 = {} _0xEE9E[_0x51E5] = _0xE816 end
+    for _, _0xE7BF in ipairs(_0xBD58) do _0xE816[_0xE7BF] = _0x77AD[_0xE7BF] end
+end
 
-local _0x187v40 = { MenuKey_0x69v43true, _0x34cv82_0x69v43true, _0x336v83_0x69v43true, _0x344v38_0x69v43true, _0x345v21_0x69v43true }
-local _0x188v92 = { MenuMouseButton_0x69v43true, _0x34bv15_0x69v43true, _0x337v21_0x69v43true }
-local _0x189v77 = { FlyEnabled_0x69v43true, _0x33av40_0x69v43true }
+local _0xF87D = { MenuKey = true, AimKeyCode = true, AutoFireKeyCode = true, AimControllerButton = true, AutoFireControllerButton = true }
+local _0x4FD8 = { MenuMouseButton = true, AimMouseButton = true, AutoFireMouseButton = true }
+local _0xE37D = { FlyEnabled = true, SpeedEnabled = true }
 
-function _0x110v81:Save()
-    _0x69v43_0x69v43 _0x111v38._0x36dv30 then return false _0x69v43
-    _0x81v99()
-    local _0x133v62 = {}
-    _0x69v43 _0x69v43v_0x69v43 pairs(self) do
-        _0x69v43k == "\066\111\120\067\111\108\111\114\077\097\112"_0x69v43 _0xf6v96 == "\072\105\116\083\111\117\110\100\077\097\112" then
-        elseif _0xf6v96 == "\083\097\118\101"_0x69v43 _0xf6v96 == "\076\111\097\100" then
-        elseif _0x187v40[_0x69v43_0x69v43ENUM_UITYPES[_0x69v43then
-            _0x69v43typeof(_0x2f3v60) == "\069\110\117\109\073\116\101\109" then _0x133v62[_0xf6v96] = tostring(_0x69v43_0x69v43
-        elseif typeof(_0x2f3v60) == "\067\111\108\111\114\051" then _0x133v62[_0xf6v96] = {r_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43}
-        else _0x133v62[_0xf6v96] = _0x2f3v60 _0x69v43
-    _0x69v43
-    local _0x18av64
-    local _0xf2v80_0x69v43pcall(function_0x69v43data_0x69v43HttpService:JSONEncode(_0x133v62) _0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43 _0x18av64 then return false _0x69v43
-    local _0x18bv45_0x69v43false
-    _0x69v43 _0x69v43c_0x69v43 ipairs_0x69v43folder="\086\069\073\076", _0x38fv64 ="\086\069\073\076\047\067\111\110\102\105\103\046\106\115\111\110"}, {folder=_0x69v43, _0x38fv64 ="\086\069\073\076\095\067\111\110\102\105\103\046\106\115\111\110"}}) do
-        _0x69v43c.folder _0x69v43 _0x111v38._0x36fv73 then pcall(makefolder_0x69v43.folder) _0x69v43
-        _0x69v43pcall(writefile_0x69v43._0x38fv64, _0x18av64) then wrote_0x69v43true break _0x69v43
-    _0x69v43
-    local _0x18cv90
-    local _0x18dv43_0x69v43pcall(function_0x69v43wpdata_0x69v43HttpService:JSONEncode(_0x181v41) _0x69v43)
-    _0x69v43_0x69v43 _0x69v43 _0x18cv90 then
-        _0x69v43 _0x69v43c_0x69v43 ipairs_0x69v43folder="\086\069\073\076", _0x38fv64 ="\086\069\073\076\047\087\101\097\112\111\110\115\046\106\115\111\110"}, {folder=_0x69v43, _0x38fv64 ="\086\069\073\076\095\087\101\097\112\111\110\115\046\106\115\111\110"}}) do
-            _0x69v43pcall(writefile_0x69v43._0x38fv64, _0x18cv90) then break _0x69v43
-        _0x69v43
-    _0x69v43
-    return _0x18bv45
-_0x69v43
+function _0x77AD:Save()
+    if not _0x76B0.HasWritefile then return false end
+    _0x9CA3()
+    local _0x7B6E = {}
+    for _0xE7BF, _0x8C41 in pairs(self) do
+        if _0xE7BF == "BoxColorMap" or _0xE7BF == "HitSoundMap" then
+        elseif _0xE7BF == "Save" or _0xE7BF == "Load" then
+        elseif _0xF87D[_0xE7BF] or _0x4FD8[_0xE7BF] then
+            if typeof(_0x8C41) == "EnumItem" then _0x7B6E[_0xE7BF] = tostring(_0x8C41) end
+        elseif typeof(_0x8C41) == "Color3" then _0x7B6E[_0xE7BF] = {_0x3FCC = _0x8C41.R, _0x8377 = _0x8C41.G, _0x2EAC = _0x8C41.B}
+        else _0x7B6E[_0xE7BF] = _0x8C41 end
+    end
+    local _0x67E3
+    local _0xDF7B = pcall(function() _0x67E3 = _0xFC99:JSONEncode(_0x7B6E) end)
+    if not _0xDF7B or not _0x67E3 then return false end
+    local _0x645A = false
+    for _, _0x3A4B in ipairs({{folder="VEIL", file="VEIL/Config.json"}, {folder=nil, file="VEIL_Config.json"}}) do
+        if _0x3A4B.folder and _0x76B0.HasMakeFolder then pcall(makefolder, _0x3A4B.folder) end
+        if pcall(writefile, _0x3A4B.file, _0x67E3) then _0x645A = true break end
+    end
+    local _0x8B24
+    local _0xD189 = pcall(function() _0x8B24 = _0xFC99:JSONEncode(_0xEE9E) end)
+    if _0xD189 and _0x8B24 then
+        for _, _0x3A4B in ipairs({{folder="VEIL", file="VEIL/Weapons.json"}, {folder=nil, file="VEIL_Weapons.json"}}) do
+            if pcall(writefile, _0x3A4B.file, _0x8B24) then break end
+        end
+    end
+    return _0x645A
+end
 
-function _0x110v81:Load()
-    _0x69v43_0x69v43 _0x111v38._0x36ev70 then return false _0x69v43
-    local _0x18av64
-    _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\067\111\110\102\105\103\046\106\115\111\110", "\086\069\073\076\095\067\111\110\102\105\103\046\106\115\111\110"_0x69v43do
-        local _0xf2v80, _0x37dv81_0x69v43pcall(readfile_0x69v43)
-        _0x69v43_0x69v43_0x69v43 _0x37dv81 then data_0x69v43_0x66v80 break _0x69v43
-    _0x69v43
-    _0x69v43data then
-        local _0x3f3v82
-        local _0xf2v80_0x69v43pcall(function_0x69v43decoded_0x69v43HttpService:JSONDecode(_0x18av64) _0x69v43)
-        _0x69v43_0x69v43_0x69v43 type(_0x3f3v82) == "\116\097\098\108\101" then
-            _0x69v43 _0x69v43v_0x69v43 pairs(_0x3f3v82) do
-                _0x69v43_0x69v43 _0x189v77[_0x69v43_0x69v43 self[_0xf6v96] ~= _0x69v43 _0x69v43 _0xf6v96 ~= "\072\105\116\083\111\117\110\100\077\097\112" then
-                    _0x69v43ENUM_KEYCODES[_0x69v43_0x69v43 typeof(_0x2f3v60) == "\115\116\114\105\110\103" then
-                        local _0x79v33_0x69v43v:gsub("\069\110\117\109\037\046\091\037\119\095\093\043\037\046", "")
-                        local _0x18dv43, _0x390v18_0x69v43pcall(function_0x69v43return Enum.KeyCode[_0x79v33] _0x69v43)
-                        _0x69v43_0x69v43 _0x69v43 _0x390v18 then self[_0xf6v96] = _0x390v18 _0x69v43
-                    elseif _0x188v92[_0x69v43_0x69v43 typeof(_0x2f3v60) == "\115\116\114\105\110\103" then
-                        local _0x79v33_0x69v43v:gsub("\069\110\117\109\037\046\091\037\119\095\093\043\037\046", "")
-                        local _0x18dv43, _0x390v18_0x69v43pcall(function_0x69v43return Enum.UserInputType[_0x79v33] _0x69v43)
-                        _0x69v43_0x69v43 _0x69v43 _0x390v18 then self[_0xf6v96] = _0x390v18 _0x69v43
-                    elseif type(_0x2f3v60) == "\116\097\098\108\101" _0x69v43_0x69v43r _0x69v43_0x69v43g _0x69v43_0x69v43b then
-                        self[_0xf6v96] = Color3._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43._0x286v53)
-                    else self[_0xf6v96] = _0x2f3v60 _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    local _0x18cv90
-    _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\087\101\097\112\111\110\115\046\106\115\111\110", "\086\069\073\076\095\087\101\097\112\111\110\115\046\106\115\111\110"_0x69v43do
-        local _0xf2v80, _0x37dv81_0x69v43pcall(readfile_0x69v43)
-        _0x69v43_0x69v43_0x69v43 _0x37dv81 _0x69v43 _0x37dv81 ~= "" then wpdata_0x69v43_0x66v80 break _0x69v43
-    _0x69v43
-    _0x69v43wpdata then
-        local _0x3f3v82
-        local _0xf2v80_0x69v43pcall(function_0x69v43decoded_0x69v43HttpService:JSONDecode(_0x18cv90) _0x69v43)
-        _0x69v43_0x69v43_0x69v43 type(_0x3f3v82) == "\116\097\098\108\101" then
-            _0x69v43 _0x69v43, profile_0x69v43 pairs(_0x3f3v82) do
-                _0x69v43type(profile) == "\116\097\098\108\101" then
-                    _0x181v41[_0x69v43] = _0x181v41[_0x69v43] or {}
-                    _0x69v43 _0x69v43v_0x69v43 pairs(profile) _0x69v43WeaponProfiles[_0x69v43_0x69v43] = _0x2f3v60 _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    self.FlySpeed_0x69v43math.clamp(tonumber(self._0x339v42) _0x69v4350, (0x5 + 0x5), (0x28 + 0x28))
-    self.SpeedValue_0x69v43math.clamp(tonumber(self._0x33bv66) _0x69v4316, (0x8 + 0x8), _0x69v43)
+function _0x77AD:Load()
+    if not _0x76B0.HasReadfile then return false end
+    local _0x67E3
+    for _, _0x938C in ipairs({"VEIL/Config.json", "VEIL_Config.json"}) do
+        local _0xDF7B, _0x3748 = pcall(readfile, _0x938C)
+        if _0xDF7B and _0x3748 then _0x67E3 = _0x3748 break end
+    end
+    if _0x67E3 then
+        local _0xD2FF
+        local _0xDF7B = pcall(function() _0xD2FF = _0xFC99:JSONDecode(_0x67E3) end)
+        if _0xDF7B and type(_0xD2FF) == "table" then
+            for _0xE7BF, _0x8C41 in pairs(_0xD2FF) do
+                if not _0xE37D[_0xE7BF] and self[_0xE7BF] ~= nil and _0xE7BF ~= "HitSoundMap" then
+                    if _0xF87D[_0xE7BF] and typeof(_0x8C41) == "string" then
+                        local _0x4BFF = _0x8C41:gsub("Enum%.[%w_]+%.", "")
+                        local _0xD189, _0xCC07 = pcall(function() return Enum.KeyCode[_0x4BFF] end)
+                        if _0xD189 and _0xCC07 then self[_0xE7BF] = _0xCC07 end
+                    elseif _0x4FD8[_0xE7BF] and typeof(_0x8C41) == "string" then
+                        local _0x4BFF = _0x8C41:gsub("Enum%.[%w_]+%.", "")
+                        local _0xD189, _0xCC07 = pcall(function() return Enum.UserInputType[_0x4BFF] end)
+                        if _0xD189 and _0xCC07 then self[_0xE7BF] = _0xCC07 end
+                    elseif type(_0x8C41) == "table" and _0x8C41.r and _0x8C41.g and _0x8C41.b then
+                        self[_0xE7BF] = Color3.new(_0x8C41.r, _0x8C41.g, _0x8C41.b)
+                    else self[_0xE7BF] = _0x8C41 end
+                end
+            end
+        end
+    end
+    local _0x8B24
+    for _, _0x938C in ipairs({"VEIL/Weapons.json", "VEIL_Weapons.json"}) do
+        local _0xDF7B, _0x3748 = pcall(readfile, _0x938C)
+        if _0xDF7B and _0x3748 and _0x3748 ~= "" then _0x8B24 = _0x3748 break end
+    end
+    if _0x8B24 then
+        local _0xD2FF
+        local _0xDF7B = pcall(function() _0xD2FF = _0xFC99:JSONDecode(_0x8B24) end)
+        if _0xDF7B and type(_0xD2FF) == "table" then
+            for _0xD108, profile in pairs(_0xD2FF) do
+                if type(profile) == "table" then
+                    _0xEE9E[_0xD108] = _0xEE9E[_0xD108] or {}
+                    for _0xE7BF, _0x8C41 in pairs(profile) do _0xEE9E[_0xD108][_0xE7BF] = _0x8C41 end
+                end
+            end
+        end
+    end
+    self.FlySpeed = math.clamp(tonumber(self.FlySpeed) or 50, 10, 80)
+    self.SpeedValue = math.clamp(tonumber(self.SpeedValue) or 16, 16, 500)
     return true
-_0x69v43
+end
 
-local _0x18fv80 = {}
-function _0x18fv80.Track(_0x69v43_0x69v43c then table.insert(Connections_0x69v43) _0x69v43 return_0x69v43_0x69v43
-function _0x18fv80.DisconnectAll()
-    _0x69v43 _0x69v43c_0x69v43 ipairs(_0x18fv80) _0x69v43pcall(function_0x69v43c:Disconnect_0x69v43_0x69v43) _0x69v43
-    table.clear(_0x18fv80)
-_0x69v43
+local _0x55FF = {}
+function _0x55FF.Track(_0x3A4B) if _0x3A4B then table.insert(_0x55FF, _0x3A4B) end return _0x3A4B end
+function _0x55FF.DisconnectAll()
+    for _, _0x3A4B in ipairs(_0x55FF) do pcall(function() _0x3A4B:Disconnect() end) end
+    table.clear(_0x55FF)
+end
 
-
-
-
-local _0x190v27 = {}
-_0x190v27.Players_0x69v43Players
-_0x190v27.RunService_0x69v43RunService
-_0x190v27.UserInputService_0x69v43_0x69v43
-_0x190v27.Workspace_0x69v43Workspace
-_0x190v27.VisibleCache = {}
-_0x190v27.VisibleCacheTimestamps = {}
-_0x190v27.VisibleCacheDuration_0x69v430_0x69v43
-_0x190v27.MinRayDist_0x69v43_0x69v43
-_0x190v27.RecentMaxFOV_0x69v4370
-_0x190v27.RecentMaxFOVTime_0x69v430
-_0x190v27.TeamCache = {}
-_0x190v27.TeamCacheTime = {}
-_0x190v27.TeamCacheDuration_0x69v430_0x69v43
-_0x190v27.RaycastParams_0x69v43RaycastParams._0x69v43()
-_0x190v27.RaycastParams.FilterType_0x69v43Enum.RaycastFilterType.Exclude
-_0x190v27.RaycastParams.IgnoreWater_0x69v43true
-_0x190v27.LobbyCache_0x69v43_0x69v43
-_0x190v27.LobbyCacheTime_0x69v430
-_0x190v27.LobbyCacheDuration_0x69v43_0x69v43
-_0x190v27._hbpCache_0x69v43setmetatable({}, {__mode_0x69v43"\107"})
-_0x190v27._visFilter = {}
-_0x190v27.HitboxNamePatterns = {
- _0x391v26 =true, _0x392v48 =true, _0x393v18 =true, _0x394v82 =true, _0x395v57 =true, _0x396v25 =true, _0x397v16 =true, _0x398v77 =true, _0x399v79 =true, _0x39av88 =true, _0x39bv60 =true, _0x39cv78 =true, _0x39dv18 =true, _0x39ev73 =true, _0x39fv20 =true, _0x3a0v55 =true, _0x3a1v49 =true, _0x3a2v17 =true, _0x3a3v85 =true, _0x3a4v38 =true, _0x3a5v10 =true, _0x3a6v54 =true,
+-- ============================================================
+-- Utility
+-- ============================================================
+local _0xC036 = {}
+_0xC036.Players = _0xE1FF
+_0xC036.RunService = _0xB932
+_0xC036.UserInputService = _0xA548
+_0xC036.Workspace = _0x3BA1
+_0xC036.VisibleCache = {}
+_0xC036.VisibleCacheTimestamps = {}
+_0xC036.VisibleCacheDuration = 0.05
+_0xC036.MinRayDist = 0.1
+_0xC036.RecentMaxFOV = 70
+_0xC036.RecentMaxFOVTime = 0
+_0xC036.TeamCache = {}
+_0xC036.TeamCacheTime = {}
+_0xC036.TeamCacheDuration = 0.15
+_0xC036.RaycastParams = RaycastParams.new()
+_0xC036.RaycastParams.FilterType = Enum.RaycastFilterType.Exclude
+_0xC036.RaycastParams.IgnoreWater = true
+_0xC036.LobbyCache = nil
+_0xC036.LobbyCacheTime = 0
+_0xC036.LobbyCacheDuration = 0.4
+_0xC036._hbpCache = setmetatable({}, {__mode = "k"})
+_0xC036._visFilter = {}
+_0xC036.HitboxNamePatterns = {
+    HitboxHead=true, HitboxHeadSmall=true, PhysicalHitboxHead=true,
+    HitboxBody=true, HitboxBodySmall=true,
+    Head=true, UpperTorso=true, LowerTorso=true, HumanoidRootPart=true, Torso=true,
+    LeftUpperArm=true, RightUpperArm=true, LeftLowerArm=true, RightLowerArm=true,
+    LeftUpperLeg=true, RightUpperLeg=true, LeftLowerLeg=true, RightLowerLeg=true,
+    LeftFoot=true, RightFoot=true, LeftHand=true, RightHand=true,
 }
-_0x190v27.HitboxModes = {}
-_0x190v27.HitboxModes._0x396v25 = {"\072\101\097\100", "\072\105\116\098\111\120\072\101\097\100", "\080\104\121\115\105\099\097\108\072\105\116\098\111\120\072\101\097\100", "\072\105\116\098\111\120\072\101\097\100\083\109\097\108\108"}
-_0x190v27.HitboxModes._0x397v16 = {"\072\105\116\098\111\120\066\111\100\121", "\072\105\116\098\111\120\066\111\100\121\083\109\097\108\108", "\085\112\112\101\114\084\111\114\115\111", "\084\111\114\115\111", "\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116"}
-_0x190v27.HitboxModes.Chest = {"\072\105\116\098\111\120\066\111\100\121", "\072\105\116\098\111\120\066\111\100\121\083\109\097\108\108", "\085\112\112\101\114\084\111\114\115\111", "\084\111\114\115\111", "\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116"}
-_0x190v27.HitboxModes._0x398v77 = {"\076\111\119\101\114\084\111\114\115\111", "\084\111\114\115\111", "\072\105\116\098\111\120\066\111\100\121", "\072\105\116\098\111\120\066\111\100\121\083\109\097\108\108", "\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116"}
-_0x190v27.DeflectCache = {}
-_0x190v27.DeflectCacheTime = {}
-_0x190v27.DeflectCacheDuration_0x69v43_0x69v43
+_0xC036.HitboxModes = {}
+_0xC036.HitboxModes.Head = {"Head", "HitboxHead", "PhysicalHitboxHead", "HitboxHeadSmall"}
+_0xC036.HitboxModes.UpperTorso = {"HitboxBody", "HitboxBodySmall", "UpperTorso", "Torso", "HumanoidRootPart"}
+_0xC036.HitboxModes.Chest = {"HitboxBody", "HitboxBodySmall", "UpperTorso", "Torso", "HumanoidRootPart"}
+_0xC036.HitboxModes.LowerTorso = {"LowerTorso", "Torso", "HitboxBody", "HitboxBodySmall", "HumanoidRootPart"}
+_0xC036.DeflectCache = {}
+_0xC036.DeflectCacheTime = {}
+_0xC036.DeflectCacheDuration = 0.2
 
-function _0x190v27.GetCamera_0x69v43return _0xf0v60.CurrentCamera _0x69v43
-function _0x190v27.ViewportScale()
-    _0x69v43_0x69v43 _0x110v81._0x32dv64 then return_0x69v43_0x69v43
-    local _0x127v13_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43_0x69v43then return_0x69v43_0x69v43
-    local _0x89v20_0x69v43c.ViewportSize
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43 <= 0 then return_0x69v43_0x69v43
-    return_0x69v43Y_0x69v431080
-_0x69v43
-function _0x190v27.IsValidNumber(_0x69v43return _0xd6v18 == _0xd6v18 _0x69v43 _0xd6v18 ~= math.huge _0x69v43 _0xd6v18 ~= -math.huge _0x69v43
-function _0x190v27.IsValidVector(_0x2f3v60)
-    _0x69v43_0x69v43_0x69v43then return false _0x69v43
-    return _0x190v27.IsValidNumber_0x69v43_0x69v43_0x69v43 _0x190v27.IsValidNumber_0x69v43_0x69v43_0x69v43 _0x190v27.IsValidNumber_0x69v43Z)
-_0x69v43
-function _0x190v27.WorldToViewport(_0x69v43)
-    local _0x127v13_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then return Vector2._0x69v43(_0x69v430_0x69v43false_0x69v43 _0x69v43
-    local _0xf2v80, _0x3a7v85_0x69v43pcall(function_0x69v43return_0x69v43WorldToViewportPoint(_0x69v43) _0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43then return Vector2._0x69v43(_0x69v430_0x69v43false_0x69v43 _0x69v43
-    _0x69v43_0x69v43 _0x190v27.IsValidNumber_0x69v43_0x69v43_0x69v43_0x69v43 _0x190v27.IsValidNumber_0x69v43_0x69v43then return Vector2._0x69v43(_0x69v430_0x69v43false_0x69v43 _0x69v43
-    return Vector2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43
-_0x69v43
-function _0x190v27.IsLocalAirborne()
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43._0x3a8v23 then return false _0x69v43
-    local _0x112v65_0x69v43_0x69v43Character:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-    _0x69v43_0x69v43_0x69v43then return false _0x69v43
-    local _0x83v25_0x69v43h:GetState()
-    return _0x83v25 == Enum.HumanoidStateType.Jumping_0x69v43 _0x83v25 == Enum.HumanoidStateType.Freefall
-        _0x69v43s == Enum.HumanoidStateType.FallingDown_0x69v43 _0x83v25 == Enum.HumanoidStateType.PlatformStanding
-_0x69v43
-function _0x190v27.GetPlayerTeam(_0xdcv26)
-    _0x69v43_0x69v43_0x69v43then return _0x69v43 _0x69v43
-    local _0xe7v97_0x69v43_0x69v43
-    pcall(function_0x69v43t_0x69v43p.Team _0x69v43)
-    _0x69v43t then return_0x69v43_0x69v43
-    local _0x191v84_0x69v43tick()
-    _0x69v43Utility.TeamCacheTime[_0x69v43_0x69v43 (_0x69v43_0x69v43Utility.TeamCacheTime[_0xdcv26]) < _0x190v27.TeamCacheDuration then return _0x190v27.TeamCache[_0x69v43_0x69v43
-    local _0x130v59_0x69v43_0x69v43
+function _0xC036.GetCamera() return _0x3BA1.CurrentCamera end
+function _0xC036.ViewportScale()
+    if not _0x77AD.ScaleWithViewport then return 1 end
+    local _0x3A4B = _0x3BA1.CurrentCamera
+    if not _0x3A4B then return 1 end
+    local _0x8C41 = _0x3A4B.ViewportSize
+    if not _0x8C41 or _0x8C41.Y <= 0 then return 1 end
+    return _0x8C41.Y / 1080
+end
+function _0xC036.IsValidNumber(_0xB877) return _0xB877 == _0xB877 and _0xB877 ~= math.huge and _0xB877 ~= -math.huge end
+function _0xC036.IsValidVector(_0x8C41)
+    if not _0x8C41 then return false end
+    return _0xC036.IsValidNumber(_0x8C41.X) and _0xC036.IsValidNumber(_0x8C41.Y) and _0xC036.IsValidNumber(_0x8C41.Z)
+end
+function _0xC036.WorldToViewport(_0x3694)
+    local _0x3A4B = _0x3BA1.CurrentCamera
+    if not _0x3A4B or not _0x3A4B.Parent then return Vector2.new(0, 0), false, 0 end
+    local _0xDF7B, _0x3FCC = pcall(function() return _0x3A4B:WorldToViewportPoint(_0x3694) end)
+    if not _0xDF7B or not _0x3FCC then return Vector2.new(0, 0), false, 0 end
+    if not _0xC036.IsValidNumber(_0x3FCC.X) or not _0xC036.IsValidNumber(_0x3FCC.Y) then return Vector2.new(0, 0), false, 0 end
+    return Vector2.new(_0x3FCC.X, _0x3FCC.Y), _0x3FCC.Z > 0, _0x3FCC.Z
+end
+function _0xC036.IsLocalAirborne()
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if not _0x1A90 or not _0x1A90.Character then return false end
+    local _0x830D = _0x1A90.Character:FindFirstChildOfClass("Humanoid")
+    if not _0x830D then return false end
+    local _0x0404 = _0x830D:GetState()
+    return _0x0404 == Enum.HumanoidStateType.Jumping or _0x0404 == Enum.HumanoidStateType.Freefall
+        or _0x0404 == Enum.HumanoidStateType.FallingDown or _0x0404 == Enum.HumanoidStateType.PlatformStanding
+end
+function _0xC036.GetPlayerTeam(_0x938C)
+    if not _0x938C then return nil end
+    local _0xD871 = nil
+    pcall(function() _0xD871 = _0x938C.Team end)
+    if _0xD871 then return _0xD871 end
+    local _0x17DA = tick()
+    if _0xC036.TeamCacheTime[_0x938C] and (_0x17DA - _0xC036.TeamCacheTime[_0x938C]) < _0xC036.TeamCacheDuration then return _0xC036.TeamCache[_0x938C] end
+    local _0xBE70 = nil
     pcall(function()
-        local _0x192v60_0x69v43p:GetAttributes()
-        _0x69v43 _0x69v43v_0x69v43 pairs(_0x69v43do
-            local _0x193v63_0x69v43n:lower()
-            _0x69v43l == "\116\101\097\109"_0x69v43 _0x193v63 == "\116\101\097\109\105\100"_0x69v43 _0x193v63 == "\116\101\097\109\105\100\101\110\116\105\102\105\101\114"_0x69v43 _0x193v63 == "\116\101\097\109\105\110\100\101\120"_0x69v43_0x69v43find("\116\101\097\109\105\100") then _0x69v43_0x69v43v break _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43_0x69v43 _0x69v43 _0x69v43_0x69v43Character then
+        local _0x7215 = _0x938C:GetAttributes()
+        for _0xB877, _0x8C41 in pairs(_0x7215) do
+            local _0x104C = _0xB877:lower()
+            if _0x104C == "team" or _0x104C == "teamid" or _0x104C == "teamidentifier" or _0x104C == "teamindex" or _0x104C:find("teamid") then _0xBE70 = _0x8C41 break end
+        end
+    end)
+    if not _0xBE70 and _0x938C.Character then
         pcall(function()
-            local _0x192v60_0x69v43p._0x3a8v23:GetAttributes()
-            _0x69v43 _0x69v43v_0x69v43 pairs(_0x69v43do
-                local _0x193v63_0x69v43n:lower()
-                _0x69v43l == "\116\101\097\109"_0x69v43 _0x193v63 == "\116\101\097\109\105\100"_0x69v43 _0x193v63 == "\116\101\097\109\105\100\101\110\116\105\102\105\101\114"_0x69v43 _0x193v63 == "\116\101\097\109\105\110\100\101\120"_0x69v43_0x69v43find("\116\101\097\109\105\100") then _0x69v43_0x69v43v break _0x69v43
-            _0x69v43
-        _0x69v43)
-    _0x69v43
-    _0x190v27.TeamCache[_0xdcv26] = _0x69v43
-    _0x190v27.TeamCacheTime[_0xdcv26] = _0x69v43
-    return _0x69v43
-_0x69v43
-function _0x190v27.ClearTeamCache(_0xdcv26)
-    _0x190v27.TeamCache[_0xdcv26] = _0x69v43 _0x190v27.TeamCacheTime[_0xdcv26] = _0x69v43
-    _0x190v27._vpCacheTick_0x69v430
-_0x69v43
-function _0x190v27.IsEnemy(_0x69v43b)
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43then return true _0x69v43
-    _0x69v43_0x69v43 _0x110v81._0x32ev83 then return true _0x69v43
-    local _0x194v51_0x69v43Utility.GetPlayerTeam(_0x192v60)
-    local _0x195v32_0x69v43Utility.GetPlayerTeam(_0x286v53)
-    _0x69v43ta == _0x69v43_0x69v43_0x69v43 == _0x69v43 then return true _0x69v43
-    _0x69v43typeof_0x69v43) == "\073\110\115\116\097\110\099\101" _0x69v43 typeof_0x69v43) == "\073\110\115\116\097\110\099\101" then return_0x69v43 ~= _0x69v43_0x69v43
-    return tostring_0x69v43) ~= tostring_0x69v43)
-_0x69v43
-_0x190v27._vpCache = {}
-_0x190v27._vpCacheTick_0x69v430
-function _0x190v27.GetValidPlayers()
-    local _0xe7v97_0x69v43tick()
-    if_0x69v43_0x69v43Utility._vpCacheTick) < _0x69v43 then return _0x190v27._vpCache _0x69v43
-    _0x190v27._vpCacheTick_0x69v43t
-    local _0xf4v48_0x69v43Utility._vpCache
-    table.clear_0x69v43)
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43 then return_0x69v43 _0x69v43
-    _0x69v43 _0x69v43p_0x69v43 ipairs(_0xeev16:GetPlayers()) do
-        _0x69v43p ~= _0x69v43_0x69v43 _0x190v27.IsEnemy_0x69v43_0x69v43) then
-            local _0x127v13_0x69v43p._0x3a8v23
-            _0x69v43c _0x69v43_0x69v43Parent then
-                local _0x112v65_0x69v43c:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-                _0x69v43h _0x69v43_0x69v43Health_0x69v430 then
-                    local _0x196v70_0x69v43c:FindFirstChild("\072\101\097\100")
-                    local _0x197v11_0x69v43c:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-                    _0x69v43_0x69v43_0x69v43_0x69v43 then
-                        table.insert_0x69v43_0x69v43Player=_0x69v43_0x3a8v23_0x69v43, _0x3a9v96_0x69v43, _0x3aav40_0x69v43._0x3aav40})
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    return_0x69v43
-_0x69v43
-function _0x190v27.IsInGame()
-    _0x69v43_0x69v43 _0x110v81._0x329v24 then return true _0x69v43
-    local _0x191v84_0x69v43tick()
-    _0x69v43Utility.LobbyCache ~= _0x69v43 _0x69v43 (_0x69v43_0x69v43Utility.LobbyCacheTime) < _0x190v27.LobbyCacheDuration then return _0x190v27.LobbyCache _0x69v43
-    local function _0x82v99(_0x83v25) _0x190v27.LobbyCache_0x69v43s _0x190v27.LobbyCacheTime_0x69v43_0x69v43 return_0x69v43_0x69v43
-    local _0xf3v49_0x69v43Configuration.LobbyStateOverride_0x69v43 "\065\117\116\111"
-    _0x69v43o == "\073\110\071\097\109\101" then return _0x82v99(true) _0x69v43
-    _0x69v43o == "\076\111\098\098\121" then return _0x82v99(false) _0x69v43
-    local _0x198v36_0x69v43Workspace
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43 then return _0x82v99(true) _0x69v43
-    local _0x199v52_0x69v43_0x69v43FindFirstChild("\067\104\097\114\097\099\116\101\114\115")
-    _0x69v43_0x69v43then
-        local _0x127v13_0x69v43_0x69v43Character
-        _0x69v43c _0x69v43_0x69v43Parent then
-            local _0xeav74_0x69v43c.Parent
-            _0x69v43_0x69v43.Parent == _0x69v43then return _0x82v99(true) _0x69v43
-            _0x69v43_0x69v43 == _0x69v43_0x69v43_0x69v43 == _0x69v43then return _0x82v99(false) _0x69v43
-            _0x69v43_0x69v43._0x36bv95 _0x69v43 _0x69v43._0x36bv95:lower_0x69v43find("\108\111\098\098\121") then return _0x82v99(false) _0x69v43
-        else return _0x82v99(false) _0x69v43
-    _0x69v43
-    return _0x82v99(true)
-_0x69v43
-function _0x190v27.InvalidateLobbyCache_0x69v43Utility.LobbyCache_0x69v43_0x69v43 _0x190v27.LobbyCacheTime_0x69v430 _0x69v43
-function _0x190v27.ResolveHitboxMode(_0x19av59)
- _0x19av59_0x69v43mode_0x69v43 _0x110v81.CameraAssistHitboxMode_0x69v43 "\072\101\097\100"
-    _0x69v43mode == "\082\097\110\100\111\109" then
-        local _0xc6v51 = {"\072\101\097\100", "\085\112\112\101\114\084\111\114\115\111", "\067\104\101\115\116"}
-        return _0xc6v51[math.random(1_0x69v43opts)]
-    _0x69v43
-    return _0x19av59
-_0x69v43
-function _0x190v27.GetHitboxPosition(_0x69v43hname, cachePart)
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then return _0x69v43, _0x69v43 _0x69v43
-    _0x69v43cachePart _0x69v43 cachePart.Parent _0x69v43 _0x190v27.IsValidVector(cachePart._0x381v33) then
-        _0x69v43hname == "\072\101\097\100" _0x69v43 cachePart:_0x69v43("\066\097\115\101\080\097\114\116") then
-            return cachePart.Position_0x69v43Vector3._0x69v43(_0x69v43cachePart._0x3ddv15.Y_0x69v430_0x69v43_0x69v43_0x69v43cachePart
-        _0x69v43
-        return cachePart._0x381v33, cachePart
-    _0x69v43
-    local _0x19av59_0x69v43hname_0x69v43 _0x110v81.CameraAssistHitboxMode_0x69v43 "\072\101\097\100"
-    _0x69v43mode == "\082\097\110\100\111\109" then mode_0x69v43Utility.ResolveHitboxMode("\082\097\110\100\111\109") _0x69v43
-    local _0x19bv70_0x69v43Utility._hbpCache[_0x127v13]
-    _0x69v43cached _0x69v43 _0x19bv70._0x19av59 == _0x19av59 _0x69v43 _0x19bv70._0x3cav51 _0x69v43 _0x19bv70._0x3cav51.Parent then
-        local _0x19cv79_0x69v43cached._0x3cav51._0x381v33
-        _0x69v43mode == "\072\101\097\100" _0x69v43 _0x19bv70._0x3cav51:_0x69v43("\066\097\115\101\080\097\114\116") then
- _0x19cv79_0x69v43_0x69v43_0x69v43Vector3._0x69v43(_0x69v43cached._0x3cav51._0x3ddv15.Y_0x69v430_0x69v43_0x69v43)
-        _0x69v43
-        _0x69v43Utility.IsValidVector(_0x69v43) then return _0x69v43, _0x19bv70._0x3cav51 _0x69v43
-    _0x69v43
-    local _0x19dv22_0x69v43Utility.HitboxModes[_0x19av59] _0x69v43Utility.HitboxModes._0x396v25
-    _0x69v43 _0x69v43n_0x69v43 ipairs(_0x19dv22) do
-        local _0xdcv26_0x69v43c:FindFirstChild(_0xd6v18)
-        _0x69v43p _0x69v43_0x69v43Parent then
-            local _0x19cv79_0x69v43p._0x381v33
-            _0x69v43mode == "\072\101\097\100" _0x69v43_0x69v43_0x69v43("\066\097\115\101\080\097\114\116") then
- _0x19cv79_0x69v43_0x69v43_0x69v43Vector3._0x69v43(_0x69v43p._0x3ddv15.Y_0x69v430_0x69v43_0x69v43)
-            _0x69v43
-            _0x69v43Utility.IsValidVector(_0x69v43) then
-                _0x190v27._hbpCache[_0x127v13] = { mode_0x69v43mode, _0x1fav37_0x69v43p }
-                return _0x69v43_0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    return _0x69v43, _0x69v43
-_0x69v43
-function _0x190v27.IsTargetablePart(_0xdcv26)
-    _0x69v43_0x69v43_0x69v43then return false _0x69v43
-    _0x69v43Utility.HitboxNamePatterns_0x69v43Name] then return true _0x69v43
-    local _0x193v63_0x69v43p._0x36bv95:lower()
-    return_0x69v43find("\104\105\116\098\111\120") _0x69v43l:find("\116\111\114\115\111") _0x69v43l:find("\104\101\097\100") _0x69v43l:find("\104\097\110\100")
-        _0x69v43l:find("\102\111\111\116") _0x69v43l:find("\108\101\103") _0x69v43l:find("\097\114\109") _0x69v43l:find("\098\111\100\121") _0x69v43l:find("\099\104\101\115\116")
-_0x69v43
-_0x190v27._reloadCacheTick_0x69v430
-_0x190v27._reloadCacheVal_0x69v43false
-function _0x190v27.IsReloading()
-    local _0xe7v97_0x69v43tick()
-    if_0x69v43_0x69v43Utility._reloadCacheTick) < 0_0x69v43 then return _0x190v27._reloadCacheVal _0x69v43
-    _0x190v27._reloadCacheTick_0x69v43t
-    local _0x19ev78_0x69v43false
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23 then
-        local _0x127v13_0x69v43_0x69v43Character
-        local _0x185v38_0x69v43c:FindFirstChildOfClass("\084\111\111\108")
-        _0x69v43tool then
-            _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x185v38:GetChildren()) do
-                _0x69v43_0x69v43_0x69v43("\066\111\111\108\086\097\108\117\101") _0x69v43_0x69v43._0x36bv95:lower_0x69v43find("\114\101\108\111\097\100") _0x69v43_0x69v43.Value then _0x69v43_0x69v43true break _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x190v27._reloadCacheVal_0x69v43_0x69v43
-    return _0x69v43
-_0x69v43
-function _0x190v27.IsPositionVisible_0x69v43, _0x3abv59, ck, tpart)
-    _0x69v43_0x69v43 _0x110v81._0x31dv76 then return true _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43 then return false _0x69v43
- _0x3abv59_0x69v43_0x69v43or {}
-    _0x69v43_0x69v43then
-        local _0x116v72_0x69v43Utility.VisibleCacheTimestamps_0x69v43]
-        _0x69v43_0x69v43_0x69v43 (tick() - _0x37ev25) < _0x190v27.VisibleCacheDuration then return _0x190v27.VisibleCache_0x69v43] _0x69v43
-    _0x69v43
-    local _0x19fv23_0x69v43Utility._visFilter
-    table.clear_0x69v43)
-    _0x69v43 _0x69v43item_0x69v43 ipairs_0x69v43) _0x69v43_0x69v43item _0x69v43 item.Parent then table.insert_0x69v43, item) _0x69v43 _0x69v43
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23 _0x69v43_0x69v43._0x3a8v23.Parent then
-        local _0x1a0v60_0x69v43false
-        _0x69v43 _0x69v43item_0x69v43 ipairs_0x69v43) _0x69v43_0x69v43item == _0x69v43Character then found_0x69v43true break _0x69v43 _0x69v43
-        _0x69v43_0x69v43 _0x1a0v60 then table.insert_0x69v43, _0x69v43Character) _0x69v43
-    _0x69v43
-    _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then table.insert_0x69v43, _0x69v43) _0x69v43
-    local _0x105v81_0x69v43_0x69v43.CFrame._0x381v33
-    local _0x1a1v66_0x69v43tpart _0x69v43 tpart:FindFirstAncestorOfClass("\077\111\100\101\108") _0x69v43_0x69v43
-    local function _0x84v97(_0x85v62)
-        local _0x66v80_0x69v43point_0x69v43origin
-        local _0x1a2v36_0x69v43_0x66v80.Magnitude
-        _0x69v43dist_0x69v430_0x69v43 then return true _0x69v43
-        _0x190v27.RaycastParams.FilterDescendantsInstances_0x69v43fl
-        local _0xf2v80, _0x3a7v85_0x69v43pcall(function_0x69v43return _0xf0v60:Raycast(_0x105v81, _0x66v80_0x69v43dist_0x69v43dist, _0x190v27.RaycastParams) _0x69v43)
-        _0x69v43_0x69v43_0x69v43 then return false _0x69v43
-        _0x69v43r == _0x69v43 then return true _0x69v43
-        local _0x1a3v64_0x69v43r.Instance
-        _0x69v43hi == tpart then return true _0x69v43
-        _0x69v43_0x69v43_0x69v43_0x69v43:IsDescendantOf_0x69v43) then
-            if (_0x69v43Position_0x69v43tp).Magnitude <= _0x69v43 then return true _0x69v43
-        _0x69v43
-        local _0xacv36_0x69v430
-        _0x69v43_0x69v43then
-            local _0x1a4v14, _0x3acv42_0x69v43pcall(function_0x69v43return_0x69v43._0x385v69 _0x69v43)
-            _0x69v43_0x69v43 _0x69v43 typeof(_0x3acv42) == "\110\117\109\098\101\114" then_0x69v43_0x69v43t _0x69v43
-        _0x69v43
-        _0x69v43tr >= _0x69v43 then return true _0x69v43
-        if_0x69v43.Position_0x69v43origin).Magnitude >= dist_0x69v43Utility.MinRayDist then return true _0x69v43
+            local _0x7215 = _0x938C.Character:GetAttributes()
+            for _0xB877, _0x8C41 in pairs(_0x7215) do
+                local _0x104C = _0xB877:lower()
+                if _0x104C == "team" or _0x104C == "teamid" or _0x104C == "teamidentifier" or _0x104C == "teamindex" or _0x104C:find("teamid") then _0xBE70 = _0x8C41 break end
+            end
+        end)
+    end
+    _0xC036.TeamCache[_0x938C] = _0xBE70
+    _0xC036.TeamCacheTime[_0x938C] = _0x17DA
+    return _0xBE70
+end
+function _0xC036.ClearTeamCache(_0x938C)
+    _0xC036.TeamCache[_0x938C] = nil _0xC036.TeamCacheTime[_0x938C] = nil
+    _0xC036._vpCacheTick = 0
+end
+function _0xC036.IsEnemy(_0x7215, _0x2EAC)
+    if not _0x7215 or not _0x2EAC then return true end
+    if not _0x77AD.TeamCheck then return true end
+    local _0x213B = _0xC036.GetPlayerTeam(_0x7215)
+    local _0x174A = _0xC036.GetPlayerTeam(_0x2EAC)
+    if _0x213B == nil or _0x174A == nil then return true end
+    if typeof(_0x213B) == "Instance" and typeof(_0x174A) == "Instance" then return _0x213B ~= _0x174A end
+    return tostring(_0x213B) ~= tostring(_0x174A)
+end
+_0xC036._vpCache = {}
+_0xC036._vpCacheTick = 0
+function _0xC036.GetValidPlayers()
+    local _0xD871 = tick()
+    if (_0xD871 - _0xC036._vpCacheTick) < 0.1 then return _0xC036._vpCache end
+    _0xC036._vpCacheTick = _0xD871
+    local _0xA21A = _0xC036._vpCache
+    table.clear(_0xA21A)
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if not _0x1A90 then return _0xA21A end
+    for _, _0x938C in ipairs(_0xE1FF:GetPlayers()) do
+        if _0x938C ~= _0x1A90 and _0xC036.IsEnemy(_0x1A90, _0x938C) then
+            local _0x3A4B = _0x938C.Character
+            if _0x3A4B and _0x3A4B.Parent then
+                local _0x830D = _0x3A4B:FindFirstChildOfClass("Humanoid")
+                if _0x830D and _0x830D.Health > 0 then
+                    local _0x1041 = _0x3A4B:FindFirstChild("Head")
+                    local _0x1582 = _0x3A4B:FindFirstChild("HumanoidRootPart")
+                    if _0x1041 and _0x1582 then
+                        table.insert(_0xA21A, {Player=_0x938C, Character=_0x3A4B, Humanoid=_0x830D, UserId=_0x938C.UserId})
+                    end
+                end
+            end
+        end
+    end
+    return _0xA21A
+end
+function _0xC036.IsInGame()
+    if not _0x77AD.LobbyGuardEnabled then return true end
+    local _0x17DA = tick()
+    if _0xC036.LobbyCache ~= nil and (_0x17DA - _0xC036.LobbyCacheTime) < _0xC036.LobbyCacheDuration then return _0xC036.LobbyCache end
+    local function _0x1F1C(_0x0404) _0xC036.LobbyCache = _0x0404 _0xC036.LobbyCacheTime = _0x17DA return _0x0404 end
+    local _0x5B5D = _0x77AD.LobbyStateOverride or "Auto"
+    if _0x5B5D == "InGame" then return _0x1F1C(true) end
+    if _0x5B5D == "Lobby" then return _0x1F1C(false) end
+    local _0xD044 = _0x3BA1
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if not _0x1A90 then return _0x1F1C(true) end
+    local _0xA792 = _0xD044:FindFirstChild("Characters")
+    if _0xA792 then
+        local _0x3A4B = _0x1A90.Character
+        if _0x3A4B and _0x3A4B.Parent then
+            local _0x14E4 = _0x3A4B.Parent
+            if _0x14E4.Parent == _0xA792 then return _0x1F1C(true) end
+            if _0x14E4 == _0xD044 or _0x14E4 == _0xA792 then return _0x1F1C(false) end
+            if _0x14E4.Name and _0x14E4.Name:lower():find("lobby") then return _0x1F1C(false) end
+        else return _0x1F1C(false) end
+    end
+    return _0x1F1C(true)
+end
+function _0xC036.InvalidateLobbyCache() _0xC036.LobbyCache = nil _0xC036.LobbyCacheTime = 0 end
+function _0xC036.ResolveHitboxMode(_0xC1D0)
+    _0xC1D0 = _0xC1D0 or _0x77AD.CameraAssistHitboxMode or "Head"
+    if _0xC1D0 == "Random" then
+        local _0x9D43 = {"Head", "UpperTorso", "Chest"}
+        return _0x9D43[math.random(1, #_0x9D43)]
+    end
+    return _0xC1D0
+end
+function _0xC036.GetHitboxPosition(_0x3A4B, hname, cachePart)
+    if not _0x3A4B or not _0x3A4B.Parent then return nil, nil end
+    if cachePart and cachePart.Parent and _0xC036.IsValidVector(cachePart.Position) then
+        if hname == "Head" and cachePart:IsA("BasePart") then
+            return cachePart.Position + Vector3.new(0, cachePart.Size.Y * 0.30, 0), cachePart
+        end
+        return cachePart.Position, cachePart
+    end
+    local _0xC1D0 = hname or _0x77AD.CameraAssistHitboxMode or "Head"
+    if _0xC1D0 == "Random" then _0xC1D0 = _0xC036.ResolveHitboxMode("Random") end
+    local _0xACE3 = _0xC036._hbpCache[_0x3A4B]
+    if _0xACE3 and _0xACE3.mode == _0xC1D0 and _0xACE3.part and _0xACE3.part.Parent then
+        local _0x3694 = _0xACE3.part.Position
+        if _0xC1D0 == "Head" and _0xACE3.part:IsA("BasePart") then
+            _0x3694 = _0x3694 + Vector3.new(0, _0xACE3.part.Size.Y * 0.30, 0)
+        end
+        if _0xC036.IsValidVector(_0x3694) then return _0x3694, _0xACE3.part end
+    end
+    local _0xB16F = _0xC036.HitboxModes[_0xC1D0] or _0xC036.HitboxModes.Head
+    for _, _0xB877 in ipairs(_0xB16F) do
+        local _0x938C = _0x3A4B:FindFirstChild(_0xB877)
+        if _0x938C and _0x938C.Parent then
+            local _0x3694 = _0x938C.Position
+            if _0xC1D0 == "Head" and _0x938C:IsA("BasePart") then
+                _0x3694 = _0x3694 + Vector3.new(0, _0x938C.Size.Y * 0.30, 0)
+            end
+            if _0xC036.IsValidVector(_0x3694) then
+                _0xC036._hbpCache[_0x3A4B] = { _0xC1D0 = _0xC1D0, _0x7AA7 = _0x938C }
+                return _0x3694, _0x938C
+            end
+        end
+    end
+    return nil, nil
+end
+function _0xC036.IsTargetablePart(_0x938C)
+    if not _0x938C then return false end
+    if _0xC036.HitboxNamePatterns[_0x938C.Name] then return true end
+    local _0x104C = _0x938C.Name:lower()
+    return _0x104C:find("hitbox") or _0x104C:find("torso") or _0x104C:find("head") or _0x104C:find("hand")
+        or _0x104C:find("foot") or _0x104C:find("leg") or _0x104C:find("arm") or _0x104C:find("body") or _0x104C:find("chest")
+end
+_0xC036._reloadCacheTick = 0
+_0xC036._reloadCacheVal = false
+function _0xC036.IsReloading()
+    local _0xD871 = tick()
+    if (_0xD871 - _0xC036._reloadCacheTick) < 0.15 then return _0xC036._reloadCacheVal end
+    _0xC036._reloadCacheTick = _0xD871
+    local _0xD392 = false
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if _0x1A90 and _0x1A90.Character then
+        local _0x3A4B = _0x1A90.Character
+        local _0x9EEE = _0x3A4B:FindFirstChildOfClass("Tool")
+        if _0x9EEE then
+            for _, ch in ipairs(_0x9EEE:GetChildren()) do
+                if ch:IsA("BoolValue") and ch.Name:lower():find("reload") and ch.Value then _0xD392 = true break end
+            end
+        end
+    end
+    _0xC036._reloadCacheVal = _0xD392
+    return _0xD392
+end
+function _0xC036.IsPositionVisible(_0xE96E, il, ck, tpart)
+    if not _0x77AD.CameraAssistVisibleCheck then return true end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 then return false end
+    il = il or {}
+    if ck then
+        local _0x41E5 = _0xC036.VisibleCacheTimestamps[ck]
+        if _0x41E5 and (tick() - _0x41E5) < _0xC036.VisibleCacheDuration then return _0xC036.VisibleCache[ck] end
+    end
+    local _0xF96F = _0xC036._visFilter
+    table.clear(_0xF96F)
+    for _, item in ipairs(il) do if item and item.Parent then table.insert(_0xF96F, item) end end
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if _0x1A90 and _0x1A90.Character and _0x1A90.Character.Parent then
+        local _0x7320 = false
+        for _, item in ipairs(_0xF96F) do if item == _0x1A90.Character then _0x7320 = true break end end
+        if not _0x7320 then table.insert(_0xF96F, _0x1A90.Character) end
+    end
+    if _0x7458 and _0x7458.Parent then table.insert(_0xF96F, _0x7458) end
+    local _0x562F = _0x7458.CFrame.Position
+    local _0x9C04 = tpart and tpart:FindFirstAncestorOfClass("Model") or nil
+    local function _0xE4D4(point)
+        local _0x3748 = point - _0x562F
+        local _0xAFA9 = _0x3748.Magnitude
+        if _0xAFA9 < 0.01 then return true end
+        _0xC036.RaycastParams.FilterDescendantsInstances = _0xF96F
+        local _0xDF7B, _0x3FCC = pcall(function() return _0x3BA1:Raycast(_0x562F, _0x3748 / _0xAFA9 * _0xAFA9, _0xC036.RaycastParams) end)
+        if not _0xDF7B then return false end
+        if _0x3FCC == nil then return true end
+        local _0x366B = _0x3FCC.Instance
+        if _0x366B == tpart then return true end
+        if _0x9C04 and _0x366B:IsDescendantOf(_0x9C04) then
+            if (_0x366B.Position - _0xE96E).Magnitude <= 1.5 then return true end
+        end
+        local _0x5D38 = 0
+        if _0x366B then
+            local _0x77C8, _0xD871 = pcall(function() return _0x366B.Transparency end)
+            if _0x77C8 and typeof(_0xD871) == "number" then _0x5D38 = _0xD871 end
+        end
+        if _0x5D38 >= 0.9 then return true end
+        if (_0x3FCC.Position - _0x562F).Magnitude >= _0xAFA9 - _0xC036.MinRayDist then return true end
         return false
-    _0x69v43
-    local _0x89v20_0x69v43_0x69v43tp)
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43 then
-        local _0x112v65_0x69v43_0x69v43FindFirstChild("\072\101\097\100")
-        _0x69v43h then v_0x69v43_0x69v43h._0x381v33) _0x69v43
-    _0x69v43
-    _0x69v43_0x69v43then
-        _0x190v27.VisibleCache_0x69v43] = _0x2f3v60
-        _0x190v27.VisibleCacheTimestamps_0x69v43] = tick()
-    _0x69v43
-    return _0x2f3v60
-_0x69v43
-function _0x190v27.CameraRaycast(maxDist)
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    local _0x19fv23_0x69v43Utility._camRayFilter
-    _0x69v43_0x69v43_0x69v43 then_0x69v43 = {} _0x190v27._camRayFilter_0x69v43_0x69v43_0x69v43
-    table.clear_0x69v43)
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23 then table.insert_0x69v43, _0x69v43Character) _0x69v43
-    _0x69v43_0x69v43 then table.insert_0x69v43, _0x69v43) _0x69v43
-    local _0x1a5v54_0x69v43RaycastParams._0x69v43()
-    _0x69v43FilterType_0x69v43Enum.RaycastFilterType.Exclude
-    _0x69v43FilterDescendantsInstances_0x69v43fl
-    _0x69v43IgnoreWater_0x69v43true
-    local _0xf2v80, _0x3a7v85_0x69v43pcall(function_0x69v43return _0xf0v60:Raycast(_0x69v43.CFrame._0x381v33, _0x69v43.CFrame.LookVector * (maxDist_0x69v43 1000_0x69v43pr) _0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43then return _0x69v43 _0x69v43
-    local _0x1a6v30_0x69v43r.Instance
-    return _0x69v43r.Position_0x69v43 _0x69v43_0x69v43FindFirstAncestorOfClass("\077\111\100\101\108") _0x69v43_0x69v43
-_0x69v43
-function _0x190v27.IsTargetDeflecting(_0xdcv26)
-    _0x69v43_0x69v43_0x69v43then return false _0x69v43
-    local _0x191v84_0x69v43tick()
-    local _0x1a7v74_0x69v43Utility.DeflectCacheTime[_0xdcv26]
-    _0x69v43tlast _0x69v43 (_0x69v43_0x69v43tlast) < _0x190v27.DeflectCacheDuration then
-        _0x69v43_0x69v43_0x69v43Parent then
-            _0x190v27.DeflectCache[_0xdcv26] = _0x69v43 _0x190v27.DeflectCacheTime[_0xdcv26] = _0x69v43
-        else return _0x190v27.DeflectCache[_0x69v43_0x69v43
-    _0x69v43
-    local _0x130v59_0x69v43false
-    local _0x127v13_0x69v43p._0x3a8v23
-    _0x69v43c _0x69v43_0x69v43Parent then
-        local _0x185v38_0x69v43c:FindFirstChildOfClass("\084\111\111\108")
-        _0x69v43tool then
-            local _0xd6v18_0x69v43tool._0x36bv95:lower()
-            _0x69v43n:find("\107\097\116\097\110\097") _0x69v43n:find("\115\119\111\114\100") _0x69v43n:find("\098\108\097\100\101") _0x69v43n:find("\115\097\098\101\114") then
-                _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x185v38:GetChildren()) do
-                    _0x69v43_0x69v43_0x69v43("\066\111\111\108\086\097\108\117\101") _0x69v43_0x69v43.Value then
-                        local _0x1a8v64_0x69v43_0x69v43Name:lower()
-                        _0x69v43_0x69v43find("\098\108\111\099\107") _0x69v43_0x69v43find("\112\097\114\114\121") _0x69v43_0x69v43find("\103\117\097\114\100")
-                            _0x69v43_0x69v43find("\100\101\102\108\101\099\116") _0x69v43_0x69v43find("\104\111\108\100") then _0x69v43_0x69v43true break _0x69v43
-                    elseif_0x69v43:_0x69v43("\078\117\109\098\101\114\086\097\108\117\101") _0x69v43_0x69v43.Value_0x69v430 then
-                        local _0x1a8v64_0x69v43_0x69v43Name:lower()
-                        _0x69v43_0x69v43find("\098\108\111\099\107") _0x69v43_0x69v43find("\112\097\114\114\121") _0x69v43_0x69v43find("\103\117\097\114\100") _0x69v43_0x69v43find("\100\101\102\108\101\099\116") then _0x69v43_0x69v43true break _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x190v27.DeflectCache[_0xdcv26] = _0x69v43
-    _0x190v27.DeflectCacheTime[_0xdcv26] = _0x69v43
-    return _0x69v43
-_0x69v43
-
-
-
-local _0x1a9v96 = {
- _0x3adv91_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43_0x69v43_0x3aev24_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3afv62_0x69v43Color3.fromRGB(_0x69v43_0x69v4313_0x69v43_0x3b0v88_0x69v43Color3.fromRGB_0x69v43, (0x8 + 0x9), 26_0x69v43_0x3b1v66_0x69v43Color3.fromRGB_0x69v43, (0xc + 0xd), 44_0x69v43_0x3b2v44_0x69v43Color3.fromRGB_0x69v43, (0xa + 0xa), 34_0x69v43_0x3b3v27_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43_0x69v43_0x3b4v15_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3b5v86_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3b6v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3b7v35_0x69v43Color3.fromRGB_0x69v43, (0x16 + 0x16), 72_0x69v43_0x3b8v52_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3b9v49_0x69v43Color3.fromRGB(_0x69v43, (0x28 + 0x28), _0x69v43_0x69v43_0x3bav62_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43),
+    end
+    local _0x8C41 = _0xE4D4(_0xE96E)
+    if not _0x8C41 and _0x9C04 then
+        local _0x830D = _0x9C04:FindFirstChild("Head")
+        if _0x830D then _0x8C41 = _0xE4D4(_0x830D.Position) end
+    end
+    if ck then
+        _0xC036.VisibleCache[ck] = _0x8C41
+        _0xC036.VisibleCacheTimestamps[ck] = tick()
+    end
+    return _0x8C41
+end
+function _0xC036.CameraRaycast(maxDist)
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 then return nil end
+    local _0xF96F = _0xC036._camRayFilter
+    if not _0xF96F then _0xF96F = {} _0xC036._camRayFilter = _0xF96F end
+    table.clear(_0xF96F)
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if _0x1A90 and _0x1A90.Character then table.insert(_0xF96F, _0x1A90.Character) end
+    if _0x7458 then table.insert(_0xF96F, _0x7458) end
+    local _0x3FCF = RaycastParams.new()
+    _0x3FCF.FilterType = Enum.RaycastFilterType.Exclude
+    _0x3FCF.FilterDescendantsInstances = _0xF96F
+    _0x3FCF.IgnoreWater = true
+    local _0xDF7B, _0x3FCC = pcall(function() return _0x3BA1:Raycast(_0x7458.CFrame.Position, _0x7458.CFrame.LookVector * (maxDist or 1000), _0x3FCF) end)
+    if not _0xDF7B or not _0x3FCC then return nil end
+    local _0x9236 = _0x3FCC.Instance
+    return _0x9236, _0x3FCC.Position, _0x9236 and _0x9236:FindFirstAncestorOfClass("Model") or nil
+end
+function _0xC036.IsTargetDeflecting(_0x938C)
+    if not _0x938C then return false end
+    local _0x17DA = tick()
+    local _0x4891 = _0xC036.DeflectCacheTime[_0x938C]
+    if _0x4891 and (_0x17DA - _0x4891) < _0xC036.DeflectCacheDuration then
+        if not _0x938C.Parent then
+            _0xC036.DeflectCache[_0x938C] = nil _0xC036.DeflectCacheTime[_0x938C] = nil
+        else return _0xC036.DeflectCache[_0x938C] end
+    end
+    local _0xBE70 = false
+    local _0x3A4B = _0x938C.Character
+    if _0x3A4B and _0x3A4B.Parent then
+        local _0x9EEE = _0x3A4B:FindFirstChildOfClass("Tool")
+        if _0x9EEE then
+            local _0xB877 = _0x9EEE.Name:lower()
+            if _0xB877:find("katana") or _0xB877:find("sword") or _0xB877:find("blade") or _0xB877:find("saber") then
+                for _, ch in ipairs(_0x9EEE:GetChildren()) do
+                    if ch:IsA("BoolValue") and ch.Value then
+                        local _0xD9A1 = ch.Name:lower()
+                        if _0xD9A1:find("block") or _0xD9A1:find("parry") or _0xD9A1:find("guard")
+                            or _0xD9A1:find("deflect") or _0xD9A1:find("hold") then _0xBE70 = true break end
+                    elseif ch:IsA("NumberValue") and ch.Value > 0 then
+                        local _0xD9A1 = ch.Name:lower()
+                        if _0xD9A1:find("block") or _0xD9A1:find("parry") or _0xD9A1:find("guard") or _0xD9A1:find("deflect") then _0xBE70 = true break end
+                    end
+                end
+            end
+        end
+    end
+    _0xC036.DeflectCache[_0x938C] = _0xBE70
+    _0xC036.DeflectCacheTime[_0x938C] = _0x17DA
+    return _0xBE70
+end
+-- ============================================================
+-- Palette
+-- ============================================================
+local _0x3317 = {
+    Primary = Color3.fromRGB(139, 92, 246), Accent3 = Color3.fromRGB(167, 139, 250),
+    Bg = Color3.fromRGB(8, 8, 13),
+    Panel = Color3.fromRGB(17, 17, 26), PanelLight = Color3.fromRGB(28, 25, 44),
+    Card = Color3.fromRGB(22, 20, 34), Accent = Color3.fromRGB(139, 92, 246),
+    Accent2 = Color3.fromRGB(99, 102, 241), Text = Color3.fromRGB(245, 243, 255),
+    TextMuted = Color3.fromRGB(161, 161, 170), Border = Color3.fromRGB(48, 44, 72),
+    Success = Color3.fromRGB(80, 220, 130), Danger = Color3.fromRGB(255, 80, 100),
+    Discord = Color3.fromRGB(88, 101, 242),
 }
-local _0x1aav64 = {
- _0x3afv62_0x69v43Color3.fromRGB(_0x69v43_0x69v4313_0x69v43_0x3bbv42_0x69v43Color3.fromRGB_0x69v43, (0xa + 0xa), 34_0x69v43_0x3bcv22_0x69v43Color3.fromRGB_0x69v43, (0x16 + 0x16), 72_0x69v43_0x3b3v27_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43_0x69v43_0x3b4v15_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3aev24_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3b5v86_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3b6v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x3bdv87_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x14 + 0x14)),
+local _0x7CB3 = {
+    Bg = Color3.fromRGB(8, 8, 13), BtnBg = Color3.fromRGB(22, 20, 34),
+    Stroke = Color3.fromRGB(48, 44, 72), Accent = Color3.fromRGB(139, 92, 246),
+    Accent2 = Color3.fromRGB(99, 102, 241), Accent3 = Color3.fromRGB(167, 139, 250),
+    Text = Color3.fromRGB(245, 243, 255), TextMuted = Color3.fromRGB(161, 161, 170),
+    Gold = Color3.fromRGB(255, 200, 40),
 }
-local function _0x86v38(_0x87v12)
-    local _0x1abv73_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x1abv73.Color_0x69v43ColorSequence._0x69v43({
-        ColorSequenceKeypoint._0x69v43_0x69v4300, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v4340, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v4350, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v4360, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v4300, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
+local function _0x9BD5(label)
+    local _0x48C5 = Instance.new("UIGradient")
+    _0x48C5.Color = ColorSequence.new({
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(180, 155, 220)),
+        ColorSequenceKeypoint.new(0.40, Color3.fromRGB(180, 155, 220)),
+        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 255)),
+        ColorSequenceKeypoint.new(0.60, Color3.fromRGB(180, 155, 220)),
+        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(180, 155, 220)),
     })
-    _0x1abv73.Offset_0x69v43Vector2._0x69v43_0x69v43_0x69v43) _0x1abv73.Parent_0x69v43label
+    _0x48C5.Offset = Vector2.new(-1, 0) _0x48C5.Parent = label
     task.spawn(function()
-        while _0x87v12.Parent_0x69v43
-            _0x1abv73.Offset_0x69v43Vector2._0x69v43_0x69v43_0x69v43)
-            _0xedv83:Create(_0x1abv73, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Offset_0x69v43Vector2._0x69v43(_0x69v430)}):Play()
-            task.wait_0x69v435)
-        _0x69v43
-    _0x69v43)
-    return _0x1abv73
-_0x69v43
+        while label.Parent do
+            _0x48C5.Offset = Vector2.new(-1, 0)
+            _0x27A5:Create(_0x48C5, TweenInfo.new(4.5, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {Offset = Vector2.new(1, 0)}):Play()
+            task.wait(5.5)
+        end
+    end)
+    return _0x48C5
+end
 
-
-
-
-local _0x1acv64 = {}
-_0x1acv64.Container_0x69v43_0x69v43 _0x1acv64.Ring_0x69v43_0x69v43 _0x1acv64.Stroke_0x69v43_0x69v43 _0x1acv64._0x69v43_0x69v430
-_0x1acv64._lastSize_0x69v43_0x69v43 _0x1acv64._lastColor_0x69v43_0x69v43 _0x1acv64._lastVisible_0x69v43_0x69v43
-_0x1acv64._lastUpdate_0x69v430
-_0x1acv64.ColorMap = {
- _0x30cv78_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x308v77_0x69v43Color3.fromRGB(_0x69v43, (0x1e + 0x1e), 60_0x69v43_0x30bv88_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 60_0x69v43_0x309v39_0x69v43Palette._0x3b4v15, _0x30av27_0x69v43Color3.fromRGB_0x69v43, _0x69v43, 90_0x69v43_0x30dv85_0x69v43Color3.fromRGB_0x69v43, (0xc + 0xd), 30_0x69v43_0x30ev31_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43_0x69v43_0x307v38_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43_0x69v43_0x30fv98_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 60_0x69v43_0x310v72_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x311v22_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43_0x312v63_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43),
+-- ============================================================
+-- FOVCircle
+-- ============================================================
+local _0xA3FC = {}
+_0xA3FC.Container = nil _0xA3FC.Ring = nil _0xA3FC.Stroke = nil _0xA3FC.Hue = 0
+_0xA3FC._lastSize = nil _0xA3FC._lastColor = nil _0xA3FC._lastVisible = nil
+_0xA3FC._lastUpdate = 0
+_0xA3FC.ColorMap = {
+    White = Color3.fromRGB(245, 243, 255), Red = Color3.fromRGB(255, 60, 60),
+    Yellow = Color3.fromRGB(255, 220, 60), Blue = _0x3317.Accent2,
+    Green = Color3.fromRGB(60, 220, 90), Black = Color3.fromRGB(25, 25, 30),
+    Cyan = Color3.fromRGB(80, 220, 240), Purple = Color3.fromRGB(139, 92, 246),
+    Orange = Color3.fromRGB(255, 140, 60), Pink = Color3.fromRGB(255, 100, 200),
+    Lime = Color3.fromRGB(120, 255, 120), Teal = Color3.fromRGB(60, 200, 180),
 }
-function _0x1acv64.Ensure()
-    _0x69v43FOVCircle.Container _0x69v43 _0x1acv64.Container.Parent _0x69v43 _0x1acv64.Ring _0x69v43 _0x1acv64.Ring.Parent then return true _0x69v43
-    _0x69v43FOVCircle.Container _0x69v43 _0x69v43 _0x1acv64.Container.Parent then _0x1acv64.Container_0x69v43_0x69v43 _0x1acv64.Ring_0x69v43_0x69v43 _0x1acv64.Stroke_0x69v43_0x69v43 _0x69v43
-    _0x69v43_0x69v43 _0x1acv64.Container then
-        local _0x11av28_0x69v43makeScreenGui("\086\069\073\076\095\070\079\086", _0x69v43, true)
-        _0x69v43_0x69v43_0x69v43 then return false _0x69v43
-        _0x1acv64.Container_0x69v43sg
-    _0x69v43
-    _0x69v43_0x69v43 _0x1acv64.Ring_0x69v43 _0x69v43 _0x1acv64.Ring.Parent then
-        local _0xa8v58_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x3a7v85.Name_0x69v43"\082\105\110\103"_0x69v43AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-        _0x3a7v85.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.BackgroundTransparency_0x69v431
-        _0x3a7v85.BorderSizePixel_0x69v43_0x69v43.Visible_0x69v43false_0x69v43Parent_0x69v43FOVCircle.Container
-        local _0x1adv40_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent_0x69v43r
-        local _0x128v45_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101") _0x69v43Thickness_0x69v432_0x69v43.Color_0x69v43Palette.Primary_0x69v43.Transparency_0x69v43_0x69v43_0x69v43.Parent_0x69v43r
-        _0x1acv64.Ring_0x69v43r _0x1acv64.Stroke_0x69v43st
-    _0x69v43
+function _0xA3FC.Ensure()
+    if _0xA3FC.Container and _0xA3FC.Container.Parent and _0xA3FC.Ring and _0xA3FC.Ring.Parent then return true end
+    if _0xA3FC.Container and not _0xA3FC.Container.Parent then _0xA3FC.Container = nil _0xA3FC.Ring = nil _0xA3FC.Stroke = nil end
+    if not _0xA3FC.Container then
+        local _0xFA03 = _0xE472("VEIL_FOV", 120, true)
+        if not _0xFA03 then return false end
+        _0xA3FC.Container = _0xFA03
+    end
+    if not _0xA3FC.Ring or not _0xA3FC.Ring.Parent then
+        local _0x3FCC = Instance.new("Frame")
+        _0x3FCC.Name = "Ring" _0x3FCC.AnchorPoint = Vector2.new(0.5, 0.5)
+        _0x3FCC.Position = UDim2.new(0.5, 0, 0.5, 0) _0x3FCC.BackgroundTransparency = 1
+        _0x3FCC.BorderSizePixel = 0 _0x3FCC.Visible = false _0x3FCC.Parent = _0xA3FC.Container
+        local _0x631C = Instance.new("UICorner") _0x631C.CornerRadius = UDim.new(0.5, 0) _0x631C.Parent = _0x3FCC
+        local _0x48A3 = Instance.new("UIStroke") _0x48A3.Thickness = 2 _0x48A3.Color = _0x3317.Primary _0x48A3.Transparency = 0.1 _0x48A3.Parent = _0x3FCC
+        _0xA3FC.Ring = _0x3FCC _0xA3FC.Stroke = _0x48A3
+    end
     return true
-_0x69v43
-function _0x1acv64.Update()
-    local _0x191v84_0x69v43tick()
-    local _0x1aev28_0x69v43DeviceInfo.isMobile _0x69v43_0x69v43_0x69v4315) or_0x69v43_0x69v4360)
-    _0x69v43_0x69v43_0x69v43FOVCircle._lastUpdate_0x69v43interval then return _0x69v43
-    _0x1acv64._lastUpdate_0x69v43_0x69v43
-    _0x1acv64.Ensure()
-    _0x69v43_0x69v43 _0x1acv64.Ring then return _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    local _0x1afv40_0x69v43Configuration._0x353v42
-    local _0x1b0v41_0x69v43Configuration._0x318v37
-    _0x69v43_0x69v43 _0x69v43_0x69v43 (_0x69v43 _0x1afv40 _0x69v43 _0x69v43 _0x1b0v41) then
-        _0x69v43FOVCircle._lastVisible ~= false then _0x1acv64.Ring.Visible_0x69v43false _0x1acv64._lastVisible_0x69v43false _0x69v43
+end
+function _0xA3FC.Update()
+    local _0x17DA = tick()
+    local _0x2D85 = _0x9A4D.isMobile and (1 / 15) or (1 / 60)
+    if _0x17DA - _0xA3FC._lastUpdate < _0x2D85 then return end
+    _0xA3FC._lastUpdate = _0x17DA
+    _0xA3FC.Ensure()
+    if not _0xA3FC.Ring then return end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    local _0x4645 = _0x77AD.SilentAimDrawFOV
+    local _0x5F65 = _0x77AD.CameraAssistDrawFOV
+    if not _0x7458 or (not _0x4645 and not _0x5F65) then
+        if _0xA3FC._lastVisible ~= false then _0xA3FC.Ring.Visible = false _0xA3FC._lastVisible = false end
         return
-    _0x69v43
-    local _0x1b1v21_0x69v43showSilent
-    local _0x1b2v72_0x69v43useSilent _0x69v43 (_0x110v81.SilentAimFOV_0x69v43 _0x69v43) or (_0x110v81.CameraAssistFOV_0x69v43_0x69v43)
-    local _0x1b3v77_0x69v43useSilent _0x69v43 _0x110v81.SilentAimFOVColor_0x69v43 _0x110v81._0x319v22
-    local _0x12av20_0x69v43Utility.ViewportScale()
-    local _0x1b4v54_0x69v43_0x69v43.ViewportSize
-    local _0x1b5v35_0x69v43math._0x69v43_0x69v43._0x69v43_0x69v43Y) - (0x14 + 0x14)
-    _0x69v43maxDia_0x69v43_0x69v43then maxDia_0x69v43_0x69v43_0x69v43
-    local _0x1b6v60_0x69v43math.clamp(fovVal_0x69v4310_0x69v43sc, (0x5 + 0x5), (0x7d0 + 0x7d0))
-    local _0x1b7v21_0x69v43math.floor(_0x69v43_0x69v432)
-    _0x69v43_0x69v43_0x69v43maxDia then _0x69v43_0x69v43maxDia _0x69v43
-    _0x69v43FOVCircle._lastSize ~= _0x69v43 then
-        _0x1acv64.Ring.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43, _0x69v43)
-        _0x1acv64._lastSize_0x69v43_0x69v43
-    _0x69v43
-    _0x69v43FOVCircle._lastVisible ~= true then _0x1acv64.Ring.Visible_0x69v43true _0x1acv64._lastVisible_0x69v43true _0x69v43
-    local _0x128v45_0x69v43FOVCircle._0x3bcv22
-    _0x69v43_0x69v43_0x69v43 then return _0x69v43
-    _0x69v43colorName == "\082\071\066" then
-        _0x1acv64._0x69v43 = (_0x1acv64._0x69v43_0x69v430._0x69v43) % 1
-        _0x69v43Color_0x69v43Color3.fromHSV(_0x1acv64._0x69v43_0x69v43_0x69v43)
-        _0x1acv64._lastColor_0x69v43_0x69v43
+    end
+    local _0xE6BD = _0x4645
+    local _0x39E3 = _0xE6BD and (_0x77AD.SilentAimFOV or 200) or (_0x77AD.CameraAssistFOV or 35)
+    local _0xDA6A = _0xE6BD and _0x77AD.SilentAimFOVColor or _0x77AD.CameraAssistFOVColor
+    local _0x9649 = _0xC036.ViewportScale()
+    local _0xE794 = _0x7458.ViewportSize
+    local _0x3A24 = math.min(_0xE794.X, _0xE794.Y) - 40
+    if _0x3A24 < 40 then _0x3A24 = 40 end
+    local _0x0753 = math.clamp(_0x39E3 * 10 * _0x9649, 10, 4000)
+    local _0x0DF6 = math.floor(_0x0753 * 2)
+    if _0x0DF6 > _0x3A24 then _0x0DF6 = _0x3A24 end
+    if _0xA3FC._lastSize ~= _0x0DF6 then
+        _0xA3FC.Ring.Size = UDim2.new(0, _0x0DF6, 0, _0x0DF6)
+        _0xA3FC._lastSize = _0x0DF6
+    end
+    if _0xA3FC._lastVisible ~= true then _0xA3FC.Ring.Visible = true _0xA3FC._lastVisible = true end
+    local _0x48A3 = _0xA3FC.Stroke
+    if not _0x48A3 then return end
+    if _0xDA6A == "RGB" then
+        _0xA3FC.Hue = (_0xA3FC.Hue + 0.002) % 1
+        _0x48A3.Color = Color3.fromHSV(_0xA3FC.Hue, 1, 1)
+        _0xA3FC._lastColor = nil
     else
-        local _0xaav64_0x69v43FOVCircle.ColorMap[_0x1b3v77] _0x69v43Palette._0x3adv91
-        _0x69v43FOVCircle._lastColor ~= _0x69v43 then_0x69v43.Color_0x69v43_0x69v43 _0x1acv64._lastColor_0x69v43_0x69v43 _0x69v43
-    _0x69v43
-_0x69v43
-function _0x1acv64.Destroy()
-    _0x69v43FOVCircle.Container then pcall(function_0x69v43FOVCircle.Container:Destroy_0x69v43_0x69v43) _0x69v43
-    _0x1acv64.Container_0x69v43_0x69v43 _0x1acv64.Ring_0x69v43_0x69v43 _0x1acv64.Stroke_0x69v43_0x69v43
-_0x69v43
+        local _0xE798 = _0xA3FC.ColorMap[_0xDA6A] or _0x3317.Primary
+        if _0xA3FC._lastColor ~= _0xE798 then _0x48A3.Color = _0xE798 _0xA3FC._lastColor = _0xE798 end
+    end
+end
+function _0xA3FC.Destroy()
+    if _0xA3FC.Container then pcall(function() _0xA3FC.Container:Destroy() end) end
+    _0xA3FC.Container = nil _0xA3FC.Ring = nil _0xA3FC.Stroke = nil
+end
 
-
-
-
-local _0x1b8v63 = {}
-_0x1b8v63.Objects = {} _0x1b8v63.Container_0x69v43_0x69v43 _0x1b8v63.ValidPlayersCache = {}
-_0x1b8v63.LastPlayerListUpdate_0x69v430 _0x1b8v63.LastUpdateTime_0x69v430 _0x1b8v63.LastVisibleCount_0x69v430
-_0x1b8v63.BoneConnections = {
-    {"\072\101\097\100", "\085\112\112\101\114\084\111\114\115\111"}, {"\085\112\112\101\114\084\111\114\115\111", "\076\111\119\101\114\084\111\114\115\111"},
-    {"\085\112\112\101\114\084\111\114\115\111", "\076\101\102\116\085\112\112\101\114\065\114\109"}, {"\076\101\102\116\085\112\112\101\114\065\114\109", "\076\101\102\116\076\111\119\101\114\065\114\109"}, {"\076\101\102\116\076\111\119\101\114\065\114\109", "\076\101\102\116\072\097\110\100"},
-    {"\085\112\112\101\114\084\111\114\115\111", "\082\105\103\104\116\085\112\112\101\114\065\114\109"}, {"\082\105\103\104\116\085\112\112\101\114\065\114\109", "\082\105\103\104\116\076\111\119\101\114\065\114\109"}, {"\082\105\103\104\116\076\111\119\101\114\065\114\109", "\082\105\103\104\116\072\097\110\100"},
-    {"\076\111\119\101\114\084\111\114\115\111", "\076\101\102\116\085\112\112\101\114\076\101\103"}, {"\076\101\102\116\085\112\112\101\114\076\101\103", "\076\101\102\116\076\111\119\101\114\076\101\103"}, {"\076\101\102\116\076\111\119\101\114\076\101\103", "\076\101\102\116\070\111\111\116"},
-    {"\076\111\119\101\114\084\111\114\115\111", "\082\105\103\104\116\085\112\112\101\114\076\101\103"}, {"\082\105\103\104\116\085\112\112\101\114\076\101\103", "\082\105\103\104\116\076\111\119\101\114\076\101\103"}, {"\082\105\103\104\116\076\111\119\101\114\076\101\103", "\082\105\103\104\116\070\111\111\116"},
+-- ============================================================
+-- Visuals
+-- ============================================================
+local _0xD16E = {}
+_0xD16E.Objects = {} _0xD16E.Container = nil _0xD16E.ValidPlayersCache = {}
+_0xD16E.LastPlayerListUpdate = 0 _0xD16E.LastUpdateTime = 0 _0xD16E.LastVisibleCount = 0
+_0xD16E.BoneConnections = {
+    {"Head", "UpperTorso"}, {"UpperTorso", "LowerTorso"},
+    {"UpperTorso", "LeftUpperArm"}, {"LeftUpperArm", "LeftLowerArm"}, {"LeftLowerArm", "LeftHand"},
+    {"UpperTorso", "RightUpperArm"}, {"RightUpperArm", "RightLowerArm"}, {"RightLowerArm", "RightHand"},
+    {"LowerTorso", "LeftUpperLeg"}, {"LeftUpperLeg", "LeftLowerLeg"}, {"LeftLowerLeg", "LeftFoot"},
+    {"LowerTorso", "RightUpperLeg"}, {"RightUpperLeg", "RightLowerLeg"}, {"RightLowerLeg", "RightFoot"},
 }
-function _0x1b8v63.EnsureContainer()
-    _0x69v43Visuals.Container _0x69v43 _0x1b8v63.Container.Parent then return true _0x69v43
-    local _0x11av28_0x69v43makeScreenGui("\086\069\073\076\095\086\105\115\117\097\108\115"_0x69v43, true)
-    _0x69v43_0x69v43_0x69v43 then return false _0x69v43
-    _0x1b8v63.Container_0x69v43sg
+function _0xD16E.EnsureContainer()
+    if _0xD16E.Container and _0xD16E.Container.Parent then return true end
+    local _0xFA03 = _0xE472("VEIL_Visuals", 5, true)
+    if not _0xFA03 then return false end
+    _0xD16E.Container = _0xFA03
     return true
-_0x69v43
-function _0x1b8v63.CreateSkeletonLines(_0x1d7v66)
-    local _0x1b9v83_0x69v43player _0x69v43 _0x1d7v66.UserId_0x69v43 "\117\110\107\110\111\119\110"
-    local _0x118v66 = {}
-    _0x1b8v63.EnsureContainer()
-    _0x69v43_0x69v43 _0x1b8v63.Container then return _0x118v66 _0x69v43
-    local _0x1bav79_0x69v43Configuration.BoxColorMap_0x69v43 {}
-    local _0x1bbv47_0x69v43_0x69v43[_0x110v81._0x303v86] _0x69v43Palette._0x3aev24
-    _0x69v43 i_0x69v431_0x69v43Visuals.BoneConnections_0x69v43
-        local _0x193v63_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x193v63.Name_0x69v43string.format("\083\107\101\108\095\037\115\095\037\100", tostring(_0x69v43_0x69v43i)
-        _0x193v63.BackgroundColor3_0x69v43baseCol_0x69v43BorderSizePixel_0x69v430
-        _0x193v63.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-        _0x193v63.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43l.Position_0x69v43UDim2._0x69v43(0_0x69v439999_0x69v43_0x69v439999)
-        _0x193v63.Visible_0x69v43false_0x69v43ZIndex_0x69v43_0x69v43.Parent_0x69v43Visuals.Container
-        table.insert(lines_0x69v43)
-    _0x69v43
-    return _0x118v66
-_0x69v43
-function _0x1b8v63.CreateElements(_0x1d7v66)
-    local _0x1b9v83_0x69v43player _0x69v43 _0x1d7v66._0x3aav40
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x1b8v63.Objects[_0x69v43] then return _0x1b8v63.Objects[_0x69v43] _0x69v43
-    _0x1b8v63.EnsureContainer()
-    _0x69v43_0x69v43 _0x1b8v63.Container then return _0x69v43 _0x69v43
-    local _0x1bcv30_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Name_0x69v43"\079\118\101\114\108\097\121\095" .. tostring(_0x69v43)
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43, _0x69v43) _0x69v43Position_0x69v43UDim2._0x69v43(0_0x69v439999_0x69v43_0x69v439999)
-    _0x69v43BackgroundTransparency_0x69v431_0x69v43.BorderSizePixel_0x69v430_0x69v43.Visible_0x69v43false_0x69v43.Parent_0x69v43Visuals.Container
-    local _0x1bdv12_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43BackgroundTransparency_0x69v431_0x69v43.BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v432_0x69v43.Parent_0x69v43fr
-    local _0x1bev43_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x69v43.Color_0x69v43Palette._0x3adv91 _0x69v43.Thickness_0x69v43_0x69v43
-    _0x69v43.ApplyStrokeMode_0x69v43Enum.ApplyStrokeMode._0x3b7v35 _0x69v43.Parent_0x69v43bx
-    local _0x1bfv40_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4314) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v430_0x69v4316)
-    _0x69v43BackgroundTransparency_0x69v431_0x69v43.Font_0x69v43Enum.Font.Gotham_0x69v43.TextSize_0x69v4311
-    _0x69v43TextColor3_0x69v43Palette.Text_0x69v43.TextStrokeTransparency_0x69v43_0x69v43
-    _0x69v43TextStrokeColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v43_0x69v43_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Center
-    _0x69v43ZIndex_0x69v434_0x69v43.Parent_0x69v43fr
-    local _0x1c0v69_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v430)
-    _0x69v43BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0xe + 0xe), (0x16 + 0x16)) _0x69v43BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v432_0x69v43.Parent_0x69v43fr
-    local _0x1c1v69_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v43, _0x69v43) _0x69v43BorderSizePixel_0x69v430_0x69v43.Parent_0x69v43hb
-    local _0x1c2v46_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v4332_0x69v43, (0x6 + 0x6)) _0x69v43Position_0x69v43UDim2._0x69v43_0x69v43_0x69v4340_0x69v43_0x69v432)
-    _0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v43_0x69v43_0x69v43BackgroundTransparency_0x69v430_0x69v43
-    _0x69v43Font_0x69v43Enum.Font.Gotham_0x69v43.TextSize_0x69v439_0x69v43.TextColor3_0x69v43Palette._0x3b5v86
-    _0x69v43TextStrokeTransparency_0x69v43_0x69v43_0x69v43.TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43.ZIndex_0x69v434_0x69v43.Parent_0x69v43fr
-    local _0x1c3v59_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4312) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v432)
-    _0x69v43BackgroundTransparency_0x69v431_0x69v43.Font_0x69v43Enum.Font.Gotham_0x69v43.TextSize_0x69v439
-    _0x69v43TextColor3_0x69v43Palette.TextMuted_0x69v43.TextStrokeTransparency_0x69v43_0x69v43
-    _0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Center_0x69v43.ZIndex_0x69v434_0x69v43.Parent_0x69v43fr
-    local _0x1c4v64_0x69v43Visuals.CreateSkeletonLines(_0x1d7v66)
-    local _0x1c5v77 = { Container_0x69v43fr, _0x3bev32_0x69v43bx, _0x3bcv22_0x69v43_0x69v43, _0x36bv95_0x69v43nl, _0x3bfv94_0x69v43hb, _0x3c0v97_0x69v43hf, _0x3c1v18_0x69v43ht, _0x3c2v46_0x69v43dl, _0x3c3v87_0x69v43skel, _0x3c4v55_0x69v43player, _0x3a8v23_0x69v43_0x69v43 }
-    _0x1b8v63.Objects[_0x69v43] = _0x1c5v77
-    return_0x69v43
-_0x69v43
-function _0x1b8v63.UpdateSkeleton_0x69v43_0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43._0x3c3v87 then return _0x69v43
-    local _0x1c6v46_0x69v43false
-    _0x69v43_0x69v43 _0x110v81._0x302v93 then hide_0x69v43true _0x69v43
-    _0x69v43_0x69v43_0x69v43.Container_0x69v43 _0x69v43_0x69v43.Container._0x3d0v23 then hide_0x69v43true _0x69v43
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then hide_0x69v43true _0x69v43
-    _0x69v43hide then
-        _0x69v43 _0x69v43l_0x69v43 ipairs_0x69v43._0x3c3v87) _0x69v43_0x69v43l._0x3d0v23 then_0x69v43Visible_0x69v43false _0x69v43 _0x69v43
+end
+function _0xD16E.CreateSkeletonLines(_0xCE00)
+    local _0x7112 = _0xCE00 and _0xCE00.UserId or "unknown"
+    local _0x1844 = {}
+    _0xD16E.EnsureContainer()
+    if not _0xD16E.Container then return _0x1844 end
+    local _0x38A0 = _0x77AD.BoxColorMap or {}
+    local _0xF99E = _0x38A0[_0x77AD.SkeletonColor] or _0x3317.Accent3
+    for _0x9236 = 1, #_0xD16E.BoneConnections do
+        local _0x104C = Instance.new("Frame")
+        _0x104C.Name = string.format("Skel_%s_%d", tostring(_0x7112), _0x9236)
+        _0x104C.BackgroundColor3 = _0xF99E _0x104C.BorderSizePixel = 0
+        _0x104C.AnchorPoint = Vector2.new(0.5, 0.5)
+        _0x104C.Size = UDim2.new(0, 0, 0, 1) _0x104C.Position = UDim2.new(0, -9999, 0, -9999)
+        _0x104C.Visible = false _0x104C.ZIndex = 3 _0x104C.Parent = _0xD16E.Container
+        table.insert(_0x1844, _0x104C)
+    end
+    return _0x1844
+end
+function _0xD16E.CreateElements(_0xCE00)
+    local _0x7112 = _0xCE00 and _0xCE00.UserId
+    if not _0x7112 or _0xD16E.Objects[_0x7112] then return _0xD16E.Objects[_0x7112] end
+    _0xD16E.EnsureContainer()
+    if not _0xD16E.Container then return nil end
+    local _0x91A7 = Instance.new("Frame")
+    _0x91A7.Name = "Overlay_" .. tostring(_0x7112)
+    _0x91A7.Size = UDim2.new(0, 100, 0, 100) _0x91A7.Position = UDim2.new(0, -9999, 0, -9999)
+    _0x91A7.BackgroundTransparency = 1 _0x91A7.BorderSizePixel = 0 _0x91A7.Visible = false _0x91A7.Parent = _0xD16E.Container
+    local _0x9817 = Instance.new("Frame")
+    _0x9817.Size = UDim2.new(1, 0, 1, 0) _0x9817.BackgroundTransparency = 1 _0x9817.BorderSizePixel = 0 _0x9817.ZIndex = 2 _0x9817.Parent = _0x91A7
+    local _0xFFFC = Instance.new("UIStroke")
+    _0xFFFC.Color = _0x3317.Primary _0xFFFC.Thickness = 1.5
+    _0xFFFC.ApplyStrokeMode = Enum.ApplyStrokeMode.Border _0xFFFC.Parent = _0x9817
+    local _0x7C5C = Instance.new("TextLabel")
+    _0x7C5C.Size = UDim2.new(1, 0, 0, 14) _0x7C5C.Position = UDim2.new(0, 0, 0, -16)
+    _0x7C5C.BackgroundTransparency = 1 _0x7C5C.Font = Enum.Font.Gotham _0x7C5C.TextSize = 11
+    _0x7C5C.TextColor3 = _0x3317.Text _0x7C5C.TextStrokeTransparency = 0.4
+    _0x7C5C.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) _0x7C5C.TextXAlignment = Enum.TextXAlignment.Center
+    _0x7C5C.ZIndex = 4 _0x7C5C.Parent = _0x91A7
+    local _0x68A8 = Instance.new("Frame")
+    _0x68A8.Size = UDim2.new(0, 4, 1, 0) _0x68A8.Position = UDim2.new(-1, -6, 0, 0)
+    _0x68A8.BackgroundColor3 = Color3.fromRGB(30, 28, 44) _0x68A8.BorderSizePixel = 0 _0x68A8.ZIndex = 2 _0x68A8.Parent = _0x91A7
+    local _0xC421 = Instance.new("Frame")
+    _0xC421.Size = UDim2.new(1, 0, 1, 0) _0xC421.BackgroundColor3 = Color3.fromRGB(0, 255, 100) _0xC421.BorderSizePixel = 0 _0xC421.Parent = _0x68A8
+    local _0x906D = Instance.new("TextLabel")
+    _0x906D.Size = UDim2.new(0, 32, 0, 12) _0x906D.Position = UDim2.new(-1, -40, 0, -2)
+    _0x906D.BackgroundColor3 = Color3.fromRGB(0, 0, 0) _0x906D.BackgroundTransparency = 0.35
+    _0x906D.Font = Enum.Font.Gotham _0x906D.TextSize = 9 _0x906D.TextColor3 = _0x3317.Text
+    _0x906D.TextStrokeTransparency = 0.5 _0x906D.TextXAlignment = Enum.TextXAlignment.Left _0x906D.ZIndex = 4 _0x906D.Parent = _0x91A7
+    local _0x270D = Instance.new("TextLabel")
+    _0x270D.Size = UDim2.new(1, 0, 0, 12) _0x270D.Position = UDim2.new(0, 0, 1, 2)
+    _0x270D.BackgroundTransparency = 1 _0x270D.Font = Enum.Font.Gotham _0x270D.TextSize = 9
+    _0x270D.TextColor3 = _0x3317.TextMuted _0x270D.TextStrokeTransparency = 0.5
+    _0x270D.TextXAlignment = Enum.TextXAlignment.Center _0x270D.ZIndex = 4 _0x270D.Parent = _0x91A7
+    local _0xB315 = _0xD16E.CreateSkeletonLines(_0xCE00)
+    local _0x34B6 = { Container = _0x91A7, Box = _0x9817, Stroke = _0xFFFC, Name = _0x7C5C, HealthBar = _0x68A8, HealthFill = _0xC421, HealthText = _0x906D, Distance = _0x270D, SkeletonLines = _0xB315, Player = _0xCE00, Character = nil }
+    _0xD16E.Objects[_0x7112] = _0x34B6
+    return _0x34B6
+end
+function _0xD16E.UpdateSkeleton(_0x34B6, _0x3A4B)
+    if not _0x34B6 or not _0x34B6.SkeletonLines then return end
+    local _0xB888 = false
+    if not _0x77AD.ShowSkeleton then _0xB888 = true end
+    if not _0x34B6.Container or not _0x34B6.Container.Visible then _0xB888 = true end
+    if not _0x3A4B or not _0x3A4B.Parent then _0xB888 = true end
+    if _0xB888 then
+        for _, _0x104C in ipairs(_0x34B6.SkeletonLines) do if _0x104C.Visible then _0x104C.Visible = false end end
         return
-    _0x69v43
-    local _0x1bav79_0x69v43Configuration.BoxColorMap_0x69v43 {}
-    local _0x1c7v13_0x69v43_0x69v43[_0x110v81._0x303v86] _0x69v43Palette._0x3aev24
-    _0x69v43 _0x69v43pair_0x69v43 ipairs(_0x1b8v63.BoneConnections) do
-        local _0x193v63_0x69v43_0x69v43SkeletonLines[_0x1a6v30]
-        _0x69v43l then
-            _0x69v43l._0x3f5v45 ~= _0x1c7v13 then_0x69v43BackgroundColor3_0x69v43skelCol _0x69v43
-            local _0x1c8v97_0x69v43c:FindFirstChild(pair[1])
-            local _0x1c9v23_0x69v43c:FindFirstChild(pair[2])
-            local _0x1cav34_0x69v43false
-            _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43 then skip_0x69v43true _0x69v43
-            _0x69v43_0x69v43 _0x1cav34 then
-                local _0x1cbv80, _0x3c5v86_0x69v43Utility.WorldToViewport_0x69v43._0x381v33)
-                local _0x1cdv24, _0x3c6v99_0x69v43Utility.WorldToViewport_0x69v43._0x381v33)
-                _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43 then skip_0x69v43true _0x69v43
-                _0x69v43_0x69v43 _0x1cav34 then
-                    local _0x13ev29_0x69v43_0x69v43.X_0x69v43_0x69v43.X
-                    local _0x157v42_0x69v43_0x69v43.Y_0x69v43_0x69v43.Y
-                    local _0x158v12_0x69v43math.sqrt_0x69v43_0x69v43dx_0x69v43dy_0x69v43dy)
-                    _0x69v43_0x69v43_0x69v431 then skip_0x69v43true _0x69v43
-                    _0x69v43_0x69v43 _0x1cav34 then
-                        local _0xbdv91 = (_0x69v43.X_0x69v43_0x69v43.X) * _0x69v43
-                        local _0x1cfv54 = (_0x69v43.Y_0x69v43_0x69v43.Y) * _0x69v43
-                        local _0x159v27_0x69v43math._0x69v43(math.atan2_0x69v43, _0x13ev29))
-                        _0x193v63.Size_0x69v43UDim2._0x69v43(_0x69v43math.floor(_0x69v43_0x69v43_0x69v431)
-                        _0x193v63.Position_0x69v43UDim2._0x69v43(_0x69v43math.floor_0x69v43_0x69v43_0x69v43math.floor_0x69v43))
-                        _0x193v63.Rotation_0x69v43_0x69v43
-                        _0x69v43_0x69v43_0x69v43Visible then_0x69v43Visible_0x69v43true _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-            _0x69v43skip _0x69v43_0x69v43Visible then_0x69v43Visible_0x69v43false _0x69v43
-        _0x69v43
-    _0x69v43
-_0x69v43
-function _0x1b8v63.Step()
-    _0x69v43_0x69v43 _0x110v81._0x2fdv34 then
-        _0x69v43 _0x69v43, _0x69v43_0x69v43pairs(_0x1b8v63.Objects) do
-            _0x69v43_0x69v43Container then pcall(function_0x69v43_0x69v43Container:Destroy_0x69v43_0x69v43) _0x69v43
-            _0x69v43_0x69v43SkeletonLines then
-                _0x69v43 _0x69v43l_0x69v43 ipairs_0x69v43._0x3c3v87) _0x69v43_0x69v43l then pcall(function_0x69v43l:Destroy_0x69v43_0x69v43) _0x69v43 _0x69v43
-            _0x69v43
-        _0x69v43
-        _0x1b8v63.Objects = {}
-        _0x69v43Visuals.Container then
-            _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x1b8v63.Container:GetChildren()) do
-                _0x69v43_0x69v43Name:_0x69v43(_0x69v437) == "\079\118\101\114\108\097\121"_0x69v43_0x69v43._0x36bv95:_0x69v43(_0x69v435) == "\083\107\101\108\095" then pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43) _0x69v43
-            _0x69v43
-        _0x69v43
+    end
+    local _0x38A0 = _0x77AD.BoxColorMap or {}
+    local _0x8E2A = _0x38A0[_0x77AD.SkeletonColor] or _0x3317.Accent3
+    for _0x9236, pair in ipairs(_0xD16E.BoneConnections) do
+        local _0x104C = _0x34B6.SkeletonLines[_0x9236]
+        if _0x104C then
+            if _0x104C.BackgroundColor3 ~= _0x8E2A then _0x104C.BackgroundColor3 = _0x8E2A end
+            local _0x8015 = _0x3A4B:FindFirstChild(pair[1])
+            local _0x9281 = _0x3A4B:FindFirstChild(pair[2])
+            local _0x1215 = false
+            if not _0x8015 or not _0x9281 then _0x1215 = true end
+            if not _0x1215 then
+                local _0xED05, _0x09FA = _0xC036.WorldToViewport(_0x8015.Position)
+                local _0xE96A, _0x7005 = _0xC036.WorldToViewport(_0x9281.Position)
+                if not _0x09FA or not _0x7005 then _0x1215 = true end
+                if not _0x1215 then
+                    local _0x2912 = _0xE96A.X - _0xED05.X
+                    local _0x4CC4 = _0xE96A.Y - _0xED05.Y
+                    local _0x4845 = math.sqrt(_0x2912 * _0x2912 + _0x4CC4 * _0x4CC4)
+                    if _0x4845 < 1 then _0x1215 = true end
+                    if not _0x1215 then
+                        local _0xA856 = (_0xED05.X + _0xE96A.X) * 0.5
+                        local _0xE174 = (_0xED05.Y + _0xE96A.Y) * 0.5
+                        local _0x9755 = math.deg(math.atan2(_0x4CC4, _0x2912))
+                        _0x104C.Size = UDim2.new(0, math.floor(_0x4845), 0, 1)
+                        _0x104C.Position = UDim2.new(0, math.floor(_0xA856), 0, math.floor(_0xE174))
+                        _0x104C.Rotation = _0x9755
+                        if not _0x104C.Visible then _0x104C.Visible = true end
+                    end
+                end
+            end
+            if _0x1215 and _0x104C.Visible then _0x104C.Visible = false end
+        end
+    end
+end
+function _0xD16E.Step()
+    if not _0x77AD.VisualsEnabled then
+        for _0x7112, _0x34B6 in pairs(_0xD16E.Objects) do
+            if _0x34B6.Container then pcall(function() _0x34B6.Container:Destroy() end) end
+            if _0x34B6.SkeletonLines then
+                for _, _0x104C in ipairs(_0x34B6.SkeletonLines) do if _0x104C then pcall(function() _0x104C:Destroy() end) end end
+            end
+        end
+        _0xD16E.Objects = {}
+        if _0xD16E.Container then
+            for _, ch in ipairs(_0xD16E.Container:GetChildren()) do
+                if ch.Name:sub(1, 7) == "Overlay" or ch.Name:sub(1, 5) == "Skel_" then pcall(function() ch:Destroy() end) end
+            end
+        end
         return
-    _0x69v43
-    local _0x191v84_0x69v43tick()
-    local _0x1d0v79_0x69v43Visuals.LastVisibleCount_0x69v43 0
-    local _0x1d1v98
-    _0x69v43DeviceInfo.isMobile then
-        _0x69v43lastCount <= (0x3 + 0x3) then targetHz_0x69v4330
-        elseif _0x1d0v79 <= _0x69v43then targetHz_0x69v4322
-        elseif _0x1d0v79 <= _0x69v43then targetHz_0x69v4315
-        else targetHz_0x69v43_0x69v43_0x69v43
+    end
+    local _0x17DA = tick()
+    local _0xAFA8 = _0xD16E.LastVisibleCount or 0
+    local _0xDD3B
+    if _0x9A4D.isMobile then
+        if _0xAFA8 <= 6 then _0xDD3B = 30
+        elseif _0xAFA8 <= 12 then _0xDD3B = 22
+        elseif _0xAFA8 <= 24 then _0xDD3B = 15
+        else _0xDD3B = 10 end
     else
-        _0x69v43lastCount <= (0x3 + 0x3) then targetHz_0x69v43_0x69v43
-        elseif _0x1d0v79 <= _0x69v43then targetHz_0x69v43_0x69v43
-        elseif _0x1d0v79 <= _0x69v43then targetHz_0x69v4390
-        else targetHz_0x69v43_0x69v43_0x69v43
-    _0x69v43
-    local _0x1aev28_0x69v43_0x69v43_0x69v43targetHz
-    _0x69v43_0x69v43_0x69v43Visuals.LastUpdateTime_0x69v43interval then return _0x69v43
-    _0x1b8v63.LastUpdateTime_0x69v43_0x69v43
-    _0x69v43_0x69v43_0x69v43Visuals.LastPlayerListUpdate_0x69v43Configuration._0x34dv71 then
-        _0x1b8v63.LastPlayerListUpdate_0x69v43_0x69v43
-        _0x1b8v63.ValidPlayersCache_0x69v43Utility.GetValidPlayers()
-    _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then return _0x69v43
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43._0x3a8v23 then return _0x69v43
-    local _0x1d2v27_0x69v43_0x69v43Character:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-    local _0x1d3v48_0x69v43_0x69v43.ViewportSize.X
-    local _0x1d4v53_0x69v43_0x69v43.ViewportSize.Y
-    local _0x1d5v98 = {}
-    local _0x1d6v37_0x69v43Configuration.BoxColorMap_0x69v43 {}
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x1b8v63.ValidPlayersCache) do
-        local _0x1d7v66_0x69v43_0x69v43Player
-        local _0x127v13_0x69v43_0x69v43Character
-        local _0x112v65_0x69v43_0x69v43Humanoid
-        _0x69v43c _0x69v43_0x69v43Parent _0x69v43_0x69v43_0x69v43_0x69v43Parent then
-            _0x1d5v98[_0x1d7v66._0x3aav40] = true
-            local _0x1c5v77_0x69v43Visuals.Objects[_0x1d7v66._0x3aav40] _0x69v43Visuals.CreateElements(_0x1d7v66)
-            _0x69v43_0x69v43then
-                local _0x1d8v35_0x69v43c:FindFirstChild("\072\101\097\100")
-                local _0x1d9v94_0x69v43c:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-                local _0x1dav15_0x69v43false
-                _0x69v43head _0x69v43 _0x1d9v94 then
-                    local _0x1dbv89, _0x3c7v85_0x69v43Utility.WorldToViewport(_0x1d8v35._0x381v33)
-                    local _0x1ddv42, _0x3c8v57_0x69v43Utility.WorldToViewport(_0x1d9v94._0x381v33)
-                    _0x69v43_0x69v43 _0x69v43 _0x69v43 then
-                        local _0x1dfv39_0x69v43_0x69v43Y_0x69v43_0x69v43Y
-                        _0x69v43halfH <= 0 then _0x1dfv39 = -_0x1dfv39 _0x69v43
-                        local _0x1c2v46_0x69v43math._0x69v43(math.floor(halfH_0x69v432_0x69v43_0x69v43_0x69v43_0x69v43_0x69v4330)
-                        local _0x1e0v86_0x69v43math._0x69v43(math.floor_0x69v43_0x69v430_0x69v43_0x69v43_0x69v43_0x69v4315)
-                        local _0x15av90_0x69v43math.floor_0x69v43.X_0x69v43wd_0x69v43_0x69v43_0x69v43_0x69v43)
-                        local _0x15bv92_0x69v43math.floor_0x69v43.Y_0x69v43halfH_0x69v43ht_0x69v43_0x69v43_0x69v43_0x69v43)
-                        _0x69v43cx > -_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43 > -_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43 then
-                            _0x69v43Container.Position_0x69v43UDim2._0x69v43(_0x69v43cx_0x69v43, _0x15bv92)
-                            _0x69v43Container.Size_0x69v43UDim2._0x69v43(_0x69v43wd_0x69v43, _0x1c2v46)
-                            _0x69v43_0x69v43.Visible_0x69v43Configuration._0x2fev45
-                            _0x69v43Stroke.Enabled_0x69v43Configuration._0x2fev45
-                            _0x69v43Stroke.Color_0x69v43_0x69v43[_0x110v81._0x304v72] _0x69v43Palette._0x3adv91
-                            _0x69v43Name.Visible_0x69v43Configuration._0x2ffv44
-                            _0x69v43Name.TextColor3_0x69v43_0x69v43[_0x110v81._0x305v77] _0x69v43Palette._0x3b5v86
-                            local _0x1e1v48_0x69v43player.Name_0x69v43 "\063"
-                            _0x69v43_0x69v43Name._0x3b5v86 ~= _0x69v43then_0x69v43._0x36bv95.Text_0x69v43_0x69v43_0x69v43
-                            _0x69v43Configuration._0x300v87 then
-                                _0x69v43HealthBar.Visible_0x69v43true
-                                _0x69v43HealthText.Visible_0x69v43true
-                                local _0x1e2v15_0x69v43h.Health_0x69v43math._0x69v43_0x69v43MaxHealth_0x69v43)
-                                _0x69v43HealthFill.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43hp_0x69v43)
-                                local _0x1e3v84_0x69v43tostring(math.floor_0x69v43Health))
-                                _0x69v43_0x69v43HealthText._0x3b5v86 ~= _0x69v43 then_0x69v43._0x3c1v18.Text_0x69v43_0x69v43 _0x69v43
-                                local _0x176v65
-                                _0x69v43hp_0x69v43_0x69v43 then_0x69v43_0x69v43Color3.fromRGB(_0x69v43_0x69v43, _0x69v43)
-                                elseif_0x69v43_0x69v43_0x69v43 then_0x69v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43_0x69v43)
-                                else_0x69v43_0x69v43Color3.fromRGB(_0x69v43_0x69v43_0x69v43) _0x69v43
-                                _0x69v43_0x69v43HealthFill._0x3f5v45 ~= _0x69v43then_0x69v43._0x3c0v97.BackgroundColor3_0x69v43_0x69v43_0x69v43
+        if _0xAFA8 <= 6 then _0xDD3B = 240
+        elseif _0xAFA8 <= 12 then _0xDD3B = 144
+        elseif _0xAFA8 <= 24 then _0xDD3B = 90
+        else _0xDD3B = 60 end
+    end
+    local _0x2D85 = 1.0 / _0xDD3B
+    if _0x17DA - _0xD16E.LastUpdateTime < _0x2D85 then return end
+    _0xD16E.LastUpdateTime = _0x17DA
+    if _0x17DA - _0xD16E.LastPlayerListUpdate > _0x77AD.PlayerListUpdateInterval then
+        _0xD16E.LastPlayerListUpdate = _0x17DA
+        _0xD16E.ValidPlayersCache = _0xC036.GetValidPlayers()
+    end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 or not _0x7458.Parent then return end
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if not _0x1A90 or not _0x1A90.Character then return end
+    local _0x03BB = _0x1A90.Character:FindFirstChild("HumanoidRootPart")
+    local _0xD6D2 = _0x7458.ViewportSize.X
+    local _0xF50E = _0x7458.ViewportSize.Y
+    local _0x4DDE = {}
+    local _0xB12A = _0x77AD.BoxColorMap or {}
+    for _, _0xB680 in ipairs(_0xD16E.ValidPlayersCache) do
+        local _0xCE00 = _0xB680.Player
+        local _0x3A4B = _0xB680.Character
+        local _0x830D = _0xB680.Humanoid
+        if _0x3A4B and _0x3A4B.Parent and _0x830D and _0x830D.Parent then
+            _0x4DDE[_0xCE00.UserId] = true
+            local _0x34B6 = _0xD16E.Objects[_0xCE00.UserId] or _0xD16E.CreateElements(_0xCE00)
+            if _0x34B6 then
+                local _0xAC0E = _0x3A4B:FindFirstChild("Head")
+                local _0xA43B = _0x3A4B:FindFirstChild("HumanoidRootPart")
+                local _0xC2AA = false
+                if _0xAC0E and _0xA43B then
+                    local _0x463D, _0x4FFE = _0xC036.WorldToViewport(_0xAC0E.Position)
+                    local _0x2639, _0x4FE2 = _0xC036.WorldToViewport(_0xA43B.Position)
+                    if _0x4FFE and _0x4FE2 then
+                        local _0xB00C = _0x2639.Y - _0x463D.Y
+                        if _0xB00C <= 0 then _0xB00C = -_0xB00C end
+                        local _0x906D = math.max(math.floor(_0xB00C * 2 * 1.5 + 0.5), 30)
+                        local _0xDA50 = math.max(math.floor(_0x906D * 0.45 + 0.5), 15)
+                        local _0x5B90 = math.floor(_0x463D.X - _0xDA50 * 0.5 + 0.5)
+                        local _0xD238 = math.floor(_0x463D.Y + _0xB00C - _0x906D * 0.5 + 0.5)
+                        if _0x5B90 > -_0xDA50 and _0x5B90 < _0xD6D2 and _0xD238 > -_0x906D and _0xD238 < _0xF50E then
+                            _0x34B6.Container.Position = UDim2.new(0, _0x5B90, 0, _0xD238)
+                            _0x34B6.Container.Size = UDim2.new(0, _0xDA50, 0, _0x906D)
+                            _0x34B6.Box.Visible = _0x77AD.ShowBoxes
+                            _0x34B6.Stroke.Enabled = _0x77AD.ShowBoxes
+                            _0x34B6.Stroke.Color = _0xB12A[_0x77AD.BoxColor] or _0x3317.Primary
+                            _0x34B6.Name.Visible = _0x77AD.ShowNames
+                            _0x34B6.Name.TextColor3 = _0xB12A[_0x77AD.NameColor] or _0x3317.Text
+                            local _0x8E0F = _0xCE00.Name or "?"
+                            if _0x34B6.Name.Text ~= _0x8E0F then _0x34B6.Name.Text = _0x8E0F end
+                            if _0x77AD.ShowHealth then
+                                _0x34B6.HealthBar.Visible = true
+                                _0x34B6.HealthText.Visible = true
+                                local _0xDE6D = _0x830D.Health / math.max(_0x830D.MaxHealth, 1)
+                                _0x34B6.HealthFill.Size = UDim2.new(1, 0, _0xDE6D, 0)
+                                local _0x43D1 = tostring(math.floor(_0x830D.Health))
+                                if _0x34B6.HealthText.Text ~= _0x43D1 then _0x34B6.HealthText.Text = _0x43D1 end
+                                local _0xA771
+                                if _0xDE6D > 0.6 then _0xA771 = Color3.fromRGB(0, 255, 100)
+                                elseif _0xDE6D > 0.3 then _0xA771 = Color3.fromRGB(255, 255, 0)
+                                else _0xA771 = Color3.fromRGB(255, 0, 0) end
+                                if _0x34B6.HealthFill.BackgroundColor3 ~= _0xA771 then _0x34B6.HealthFill.BackgroundColor3 = _0xA771 end
                             else
-                                _0x69v43_0x69v43HealthBar._0x3d0v23 then_0x69v43._0x3bfv94.Visible_0x69v43false _0x69v43
-                                _0x69v43_0x69v43HealthText._0x3d0v23 then_0x69v43._0x3c1v18.Visible_0x69v43false _0x69v43
-                            _0x69v43
-                            _0x69v43Configuration._0x301v93 _0x69v43 _0x1d2v27 then
-                                _0x69v43_0x69v43_0x69v43._0x3c2v46._0x3d0v23 then_0x69v43._0x3c2v46.Visible_0x69v43true _0x69v43
-                                local _0x37dv81 = (_0x1d2v27.Position_0x69v43root._0x381v33).Magnitude
-                                _0x69v43_0x66v80_0x69v43Configuration._0x34ev82 then
-                                    local _0x8fv91_0x69v43string.format("\037\100\109", math.floor(_0x37dv81))
-                                    _0x69v43_0x69v43Distance._0x3b5v86 ~= _0x69v43then_0x69v43._0x3c2v46.Text_0x69v43_0x69v43_0x69v43
+                                if _0x34B6.HealthBar.Visible then _0x34B6.HealthBar.Visible = false end
+                                if _0x34B6.HealthText.Visible then _0x34B6.HealthText.Visible = false end
+                            end
+                            if _0x77AD.ShowDistance and _0x03BB then
+                                if not _0x34B6.Distance.Visible then _0x34B6.Distance.Visible = true end
+                                local _0x3748 = (_0x03BB.Position - _0xA43B.Position).Magnitude
+                                if _0x3748 < _0x77AD.MaxRenderDistance then
+                                    local _0x154F = string.format("%dm", math.floor(_0x3748))
+                                    if _0x34B6.Distance.Text ~= _0x154F then _0x34B6.Distance.Text = _0x154F end
                                 else
-                                    _0x69v43_0x69v43Distance._0x3d0v23 then_0x69v43._0x3c2v46.Visible_0x69v43false _0x69v43
-                                _0x69v43
+                                    if _0x34B6.Distance.Visible then _0x34B6.Distance.Visible = false end
+                                end
                             else
-                                _0x69v43_0x69v43Distance._0x3d0v23 then_0x69v43._0x3c2v46.Visible_0x69v43false _0x69v43
-                            _0x69v43
- _0x1dav15_0x69v43true
-                        _0x69v43
-                    _0x69v43
-                _0x69v43
-                _0x69v43_0x69v43 then
-                    _0x1b8v63.UpdateSkeleton_0x69v43_0x69v43)
-                    _0x69v43_0x69v43_0x69v43.Container._0x3d0v23 then_0x69v43.Container.Visible_0x69v43true _0x69v43
+                                if _0x34B6.Distance.Visible then _0x34B6.Distance.Visible = false end
+                            end
+                            _0xC2AA = true
+                        end
+                    end
+                end
+                if _0xC2AA then
+                    _0xD16E.UpdateSkeleton(_0x34B6, _0x3A4B)
+                    if not _0x34B6.Container.Visible then _0x34B6.Container.Visible = true end
                 else
-                    _0x69v43_0x69v43Container._0x3d0v23 then_0x69v43.Container.Visible_0x69v43false _0x69v43
-                    _0x69v43_0x69v43SkeletonLines then
-                        _0x69v43 _0x69v43l_0x69v43 ipairs_0x69v43._0x3c3v87) _0x69v43_0x69v43l._0x3d0v23 then_0x69v43Visible_0x69v43false _0x69v43 _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43 _0x69v43, _0x69v43_0x69v43pairs(_0x1b8v63.Objects) do
-        _0x69v43_0x69v43 _0x1d5v98[_0x69v43] then
-            _0x69v43_0x69v43Container then pcall(function_0x69v43_0x69v43Container:Destroy_0x69v43_0x69v43) _0x69v43
-            _0x69v43_0x69v43SkeletonLines then
-                _0x69v43 _0x69v43l_0x69v43 ipairs_0x69v43._0x3c3v87) _0x69v43_0x69v43l then pcall(function_0x69v43l:Destroy_0x69v43_0x69v43) _0x69v43 _0x69v43
-            _0x69v43
-            _0x1b8v63.Objects[_0x69v43] = _0x69v43
-        _0x69v43
-    _0x69v43
-    local _0xd6v18_0x69v430
-    _0x69v43_0x69v43_0x69v43pairs(_0x1d5v98) _0x69v43n_0x69v43n_0x69v431 _0x69v43
-    _0x1b8v63.LastVisibleCount_0x69v43n
-_0x69v43
-function _0x1b8v63.OnPlayerRemoving(_0x1d7v66)
-    local _0x89v20_0x69v43Visuals.Objects[_0x1d7v66 _0x69v43 _0x1d7v66._0x3aav40]
-    _0x69v43v then
-        _0x69v43v.Container then pcall(function_0x69v43v.Container:Destroy_0x69v43_0x69v43) _0x69v43
-        _0x69v43v._0x3c3v87 then
-            _0x69v43 _0x69v43l_0x69v43 ipairs_0x69v43SkeletonLines) _0x69v43_0x69v43l then pcall(function_0x69v43l:Destroy_0x69v43_0x69v43) _0x69v43 _0x69v43
-        _0x69v43
-        _0x1b8v63.Objects[_0x1d7v66._0x3aav40] = _0x69v43
-    _0x69v43
-_0x69v43
+                    if _0x34B6.Container.Visible then _0x34B6.Container.Visible = false end
+                    if _0x34B6.SkeletonLines then
+                        for _, _0x104C in ipairs(_0x34B6.SkeletonLines) do if _0x104C.Visible then _0x104C.Visible = false end end
+                    end
+                end
+            end
+        end
+    end
+    for _0x7112, _0x34B6 in pairs(_0xD16E.Objects) do
+        if not _0x4DDE[_0x7112] then
+            if _0x34B6.Container then pcall(function() _0x34B6.Container:Destroy() end) end
+            if _0x34B6.SkeletonLines then
+                for _, _0x104C in ipairs(_0x34B6.SkeletonLines) do if _0x104C then pcall(function() _0x104C:Destroy() end) end end
+            end
+            _0xD16E.Objects[_0x7112] = nil
+        end
+    end
+    local _0xB877 = 0
+    for _ in pairs(_0x4DDE) do _0xB877 = _0xB877 + 1 end
+    _0xD16E.LastVisibleCount = _0xB877
+end
+function _0xD16E.OnPlayerRemoving(_0xCE00)
+    local _0x8C41 = _0xD16E.Objects[_0xCE00 and _0xCE00.UserId]
+    if _0x8C41 then
+        if _0x8C41.Container then pcall(function() _0x8C41.Container:Destroy() end) end
+        if _0x8C41.SkeletonLines then
+            for _, _0x104C in ipairs(_0x8C41.SkeletonLines) do if _0x104C then pcall(function() _0x104C:Destroy() end) end end
+        end
+        _0xD16E.Objects[_0xCE00.UserId] = nil
+    end
+end
 
+-- ============================================================
+-- CameraAssist
+-- ============================================================
+local _0x1996 = {}
+_0x1996.Lock = nil _0x1996.Bound = false
+_0x1996.BindName = "VEIL_Aim_" .. tostring(math.random(1, 999999))
+_0x1996.KeyHeld = false _0x1996.ShuttingDown = false
+_0x1996.LastLockUserId = nil
+_0x1996.SavedPostFX = {}
+_0x1996.MouseAccumX = 0 _0x1996.MouseAccumY = 0
+_0x1996.PingEstimate = 0.06 _0x1996.LastPingUpdate = 0
+_0x1996.WasScoped = false _0x1996.PreferUserId = nil _0x1996.PreferUntil = 0
+_0x1996.MissGrace = 12 _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil
+_0x1996.CamSignalConn = nil _0x1996.CamSwapConn = nil
+_0x1996.WasAirborne = false _0x1996.AirborneUntil = 0
+_0x1996.LockedTargetWorldPos = nil
+_0x1996.LastLockSwitchTime = 0 _0x1996.AimState = nil _0x1996.AimStateChar = nil
+_0x1996.LastFactor = 0 _0x1996.LastEffSmoothing = 0
+_0x1996.LastTargetPos = nil _0x1996.LastTargetPosTime = 0
+_0x1996._deflectCooldownUntil = 0 _0x1996._deflectCooldownUser = nil
+_0x1996.ViewFOVBindName = "VEIL_ViewFOV_" .. tostring(math.random(1, 999999))
+_0x1996.ViewFOVBound = false
+_0x1996.ControllerFireHeld = false _0x1996.LastInputWasController = false
+_0x1996.BlockFireTarget = nil
+_0x1996.SavedAutoRotate = nil
+_0x1996._preRenderConn = nil
+_0x1996._pendingNCF = nil
+_0x1996._lastCamWrite = 0
+_0x1996._neckJoint = nil
+_0x1996._neckC0 = nil
 
+local _0xE0A8 = math.rad(85)
+local _0x9546 = math.sin(_0xE0A8)
 
-
-local _0x1e4v40 = {}
-_0x1e4v40.Lock_0x69v43_0x69v43 _0x1e4v40.Bound_0x69v43false
-_0x1e4v40.BindName_0x69v43"\086\069\073\076\095\065\105\109\095" .. tostring(math.random(_0x69v43999999))
-_0x1e4v40.KeyHeld_0x69v43false _0x1e4v40.ShuttingDown_0x69v43false
-_0x1e4v40.LastLockUserId_0x69v43_0x69v43
-_0x1e4v40.SavedPostFX = {}
-_0x1e4v40.MouseAccumX_0x69v430 _0x1e4v40.MouseAccumY_0x69v430
-_0x1e4v40.PingEstimate_0x69v430_0x69v43 _0x1e4v40.LastPingUpdate_0x69v430
-_0x1e4v40.WasScoped_0x69v43false _0x1e4v40.PreferUserId_0x69v43_0x69v43 _0x1e4v40.PreferUntil_0x69v430
-_0x1e4v40.MissGrace_0x69v43_0x69v43CameraAssist.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43
-_0x1e4v40.CamSignalConn_0x69v43_0x69v43 _0x1e4v40.CamSwapConn_0x69v43_0x69v43
-_0x1e4v40.WasAirborne_0x69v43false _0x1e4v40.AirborneUntil_0x69v430
-_0x1e4v40.LockedTargetWorldPos_0x69v43_0x69v43
-_0x1e4v40.LastLockSwitchTime_0x69v430 _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43
-_0x1e4v40.LastFactor_0x69v430 _0x1e4v40.LastEffSmoothing_0x69v430
-_0x1e4v40.LastTargetPos_0x69v43_0x69v43 _0x1e4v40.LastTargetPosTime_0x69v430
-_0x1e4v40._deflectCooldownUntil_0x69v430 _0x1e4v40._deflectCooldownUser_0x69v43_0x69v43
-_0x1e4v40.ViewFOVBindName_0x69v43"\086\069\073\076\095\086\105\101\119\070\079\086\095" .. tostring(math.random(_0x69v43999999))
-_0x1e4v40.ViewFOVBound_0x69v43false
-_0x1e4v40.ControllerFireHeld_0x69v43false _0x1e4v40.LastInputWasController_0x69v43false
-_0x1e4v40.BlockFireTarget_0x69v43_0x69v43
-_0x1e4v40.SavedAutoRotate_0x69v43_0x69v43
-_0x1e4v40._preRenderConn_0x69v43_0x69v43
-_0x1e4v40._pendingNCF_0x69v43_0x69v43
-_0x1e4v40._lastCamWrite_0x69v430
-_0x1e4v40._neckJoint_0x69v43_0x69v43
-_0x1e4v40._neckC0_0x69v43_0x69v43
-
-local _0x1e5v81_0x69v43math._0x69v43_0x69v43)
-local _0x1e6v29_0x69v43math._0x69v43(_0x1e5v81)
-
-local function _0x88v22(_0x2f3v60)
-    _0x69v43_0x69v43_0x69v43_0x69v43v.Magnitude_0x69v43_0x69v434 then return_0x69v43_0x69v43
-    v_0x69v43v.Unit
-    local _0x1e7v12_0x69v43math.clamp_0x69v43Y_0x69v43SIN_MAX, _0x1e6v29)
-    local _0x1e8v63_0x69v43math.sqrt(math._0x69v43(_0x69v431_0x69v43y_0x69v43y))
-    local _0x1e9v91_0x69v43math.sqrt_0x69v43X_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43)
-    _0x69v43hl_0x69v43_0x69v434 then return Vector3._0x69v43(_0x69v43y_0x69v43hm) _0x69v43
-    local _0x83v25_0x69v43hm_0x69v43hl
-    return Vector3._0x69v43_0x69v43X_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43s)
-_0x69v43
-local function _0x8av56(_0x8bv25, _0x8cv55, _0x8dv60)
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43.Magnitude_0x69v43_0x69v434 then return _0x69v43 _0x69v43
- _0x8bv25_0x69v43_0x69v43.Unit
-    local _0x1eav86_0x69v43math.atan2(-_0x69v43.X_0x69v43_0x69v43.Z)
-    local _0x1ebv80_0x69v43math.asin(math.clamp(_0x69v43.Y_0x69v43_0x69v431))
- _0x1eav86_0x69v43_0x69v43_0x69v43math._0x69v43(_0x8cv55)
- _0x1ebv80_0x69v43math.clamp(pitch_0x69v43math._0x69v43(_0x8dv60), -_0x1e5v81, _0x1e5v81)
-    local _0x15bv92_0x69v43math._0x69v43(_0x1ebv80)
-    return Vector3._0x69v43(-math._0x69v43(_0x69v43) * _0x15bv92, math._0x69v43(_0x1ebv80), -math._0x69v43(_0x69v43) * _0x15bv92).Unit
-_0x69v43
-local function _0x8ev47(_0x83v25, _0x8fv91)
-    _0x69v43s <= 2 then return_0x69v43_0x69v43
-    local _0xdev83
-    _0x69v43s <= (0x3 + 0x4) then rate_0x69v438 + (7_0x69v43s) * 4 else rate_0x69v4360_0x69v43s _0x69v43
-    local _0x65v40_0x69v431_0x69v43math._0x69v43(-rate_0x69v43dt)
-    return math.clamp(_0x65v40_0x69v43_0x69v43)
-_0x69v43
-function _0x1e4v40.BindViewFOV()
-    _0x69v43CameraAssist.ViewFOVBound then return _0x69v43
-    _0x1e4v40.ViewFOVBound_0x69v43true
-    pcall(function_0x69v43RunService:UnbindFromRenderStep(_0x1e4v40.ViewFOVBindName) _0x69v43)
+local function _0x8466(_0x8C41)
+    if not _0x8C41 or _0x8C41.Magnitude < 1e-4 then return _0x8C41 end
+    _0x8C41 = _0x8C41.Unit
+    local _0xF8D5 = math.clamp(_0x8C41.Y, -_0x9546, _0x9546)
+    local _0xFC8F = math.sqrt(math.max(0, 1 - _0xF8D5 * _0xF8D5))
+    local _0xEB0E = math.sqrt(_0x8C41.X * _0x8C41.X + _0x8C41.Z * _0x8C41.Z)
+    if _0xEB0E < 1e-4 then return Vector3.new(0, _0xF8D5, -_0xFC8F) end
+    local _0x0404 = _0xFC8F / _0xEB0E
+    return Vector3.new(_0x8C41.X * _0x0404, _0xF8D5, _0x8C41.Z * _0x0404)
+end
+local function _0x0E67(_0xB0D1, dyaw, dpitch)
+    if not _0xB0D1 or _0xB0D1.Magnitude < 1e-4 then return _0xB0D1 end
+    _0xB0D1 = _0xB0D1.Unit
+    local _0xF66B = math.atan2(-_0xB0D1.X, -_0xB0D1.Z)
+    local _0xC172 = math.asin(math.clamp(_0xB0D1.Y, -1, 1))
+    _0xF66B = _0xF66B + math.rad(dyaw)
+    _0xC172 = math.clamp(_0xC172 + math.rad(dpitch), -_0xE0A8, _0xE0A8)
+    local _0xD238 = math.cos(_0xC172)
+    return Vector3.new(-math.sin(_0xF66B) * _0xD238, math.sin(_0xC172), -math.cos(_0xF66B) * _0xD238).Unit
+end
+local function _0x56C5(_0x0404, _0x154F)
+    if _0x0404 <= 2 then return 1 end
+    local _0x245B
+    if _0x0404 <= 7 then _0x245B = 8 + (7 - _0x0404) * 4 else _0x245B = 60 / _0x0404 end
+    local _0x6EA8 = 1 - math.exp(-_0x245B * _0x154F)
+    return math.clamp(_0x6EA8, 0, 1)
+end
+function _0x1996.BindViewFOV()
+    if _0x1996.ViewFOVBound then return end
+    _0x1996.ViewFOVBound = true
+    pcall(function() _0xB932:UnbindFromRenderStep(_0x1996.ViewFOVBindName) end)
     pcall(function()
-        _0xefv37:BindToRenderStep(_0x1e4v40.ViewFOVBindName, Enum.RenderPriority.Camera.Value_0x69v4310050, function()
-            _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-            _0x69v43_0x69v43 _0x110v81._0x327v45 then return _0x69v43
-            _0x69v43CameraAssist.Lock then return _0x69v43
-            _0x69v43CameraAssist.WasScoped then return _0x69v43
-            local _0x127v13_0x69v43Workspace.CurrentCamera
-            _0x69v43_0x69v43_0x69v43then return _0x69v43
-            local _0xe7v97_0x69v43Configuration.ViewFOV_0x69v43_0x69v43
-            _0x69v43math._0x69v43_0x69v43FieldOfView_0x69v43t) > _0x69v43 then pcall(function_0x69v43c.FieldOfView_0x69v43t _0x69v43) _0x69v43
-        _0x69v43)
-    _0x69v43)
-    _0x69v43__VEIL_viewfov_bind_0x69v43CameraAssist.ViewFOVBindName
-_0x69v43
-function _0x1e4v40.UnbindViewFOV()
-    _0x69v43_0x69v43 _0x1e4v40.ViewFOVBound then return _0x69v43
-    _0x1e4v40.ViewFOVBound_0x69v43false
-    pcall(function_0x69v43RunService:UnbindFromRenderStep(_0x1e4v40.ViewFOVBindName) _0x69v43)
-_0x69v43
-function _0x1e4v40.AttachCamWatcher()
-    _0x69v43CameraAssist.CamSignalConn then
-        pcall(function_0x69v43CameraAssist.CamSignalConn:Disconnect_0x69v43_0x69v43)
-        _0x1e4v40.CamSignalConn_0x69v43_0x69v43
-    _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43
+        _0xB932:BindToRenderStep(_0x1996.ViewFOVBindName, Enum.RenderPriority.Camera.Value + 10050, function()
+            if _0x1996.ShuttingDown then return end
+            if not _0x77AD.ViewFOVEnabled then return end
+            if _0x1996.Lock then return end
+            if _0x1996.WasScoped then return end
+            local _0x3A4B = _0x3BA1.CurrentCamera
+            if not _0x3A4B then return end
+            local _0xD871 = _0x77AD.ViewFOV or 90
+            if math.abs(_0x3A4B.FieldOfView - _0xD871) > 0.5 then pcall(function() _0x3A4B.FieldOfView = _0xD871 end) end
+        end)
+    end)
+    _G.__VEIL_viewfov_bind = _0x1996.ViewFOVBindName
+end
+function _0x1996.UnbindViewFOV()
+    if not _0x1996.ViewFOVBound then return end
+    _0x1996.ViewFOVBound = false
+    pcall(function() _0xB932:UnbindFromRenderStep(_0x1996.ViewFOVBindName) end)
+end
+function _0x1996.AttachCamWatcher()
+    if _0x1996.CamSignalConn then
+        pcall(function() _0x1996.CamSignalConn:Disconnect() end)
+        _0x1996.CamSignalConn = nil
+    end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 then return end
     pcall(function()
-        _0x1e4v40.CamSignalConn_0x69v43_0x69v43:GetPropertyChangedSignal("\067\070\114\097\109\101"):Connect(function()
-            _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-            _0x69v43_0x69v43 _0x1e4v40.Lock then return _0x69v43
-            _0x69v43_0x69v43 _0x1e4v40.DesiredLook then return _0x69v43
-            local _0x100v77_0x69v43CameraAssist.Lock
-            _0x69v43_0x69v43_0x69v43.Character_0x69v43 _0x69v43_0x69v43._0x3a8v23.Parent then return _0x69v43
-            local _0x1ecv15_0x69v43_0x69v43.CFrame
-            _0x69v43CameraAssist.LastWrittenCF _0x69v43 _0x69v43 == _0x1e4v40.LastWrittenCF then return _0x69v43
-            local _0xf2v80, _0x3c9v26_0x69v43pcall(function_0x69v43return CFrame.lookAt(_0x69v43._0x381v33, _0x69v43.Position_0x69v43CameraAssist.DesiredLook, Vector3._0x69v43(_0x69v43_0x69v430_0x69v43_0x69v43)
-            _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43 then return _0x69v43
-            _0x1e4v40.LastWrittenCF_0x69v43cf
-            _0x1e4v40._lastCamWrite_0x69v43tick()
-            pcall(function_0x69v43_0x69v43.CFrame_0x69v43_0x69v43_0x69v43)
-        _0x69v43)
-    _0x69v43)
-_0x69v43
-function _0x1e4v40.AttachCameraSwapHook()
-    _0x69v43CameraAssist.CamSwapConn then
-        pcall(function_0x69v43CameraAssist.CamSwapConn:Disconnect_0x69v43_0x69v43)
-        _0x1e4v40.CamSwapConn_0x69v43_0x69v43
-    _0x69v43
+        _0x1996.CamSignalConn = _0x7458:GetPropertyChangedSignal("CFrame"):Connect(function()
+            if _0x1996.ShuttingDown then return end
+            if not _0x1996.Lock then return end
+            if not _0x1996.DesiredLook then return end
+            local _0x3135 = _0x1996.Lock
+            if not _0x3135.Character or not _0x3135.Character.Parent then return end
+            local _0x3A64 = _0x7458.CFrame
+            if _0x1996.LastWrittenCF and _0x3A64 == _0x1996.LastWrittenCF then return end
+            local _0xDF7B, _0x0B43 = pcall(function() return CFrame.lookAt(_0x3A64.Position, _0x3A64.Position + _0x1996.DesiredLook, Vector3.new(0, 1, 0)) end)
+            if not _0xDF7B or not _0x0B43 then return end
+            _0x1996.LastWrittenCF = _0x0B43
+            _0x1996._lastCamWrite = tick()
+            pcall(function() _0x7458.CFrame = _0x0B43 end)
+        end)
+    end)
+end
+function _0x1996.AttachCameraSwapHook()
+    if _0x1996.CamSwapConn then
+        pcall(function() _0x1996.CamSwapConn:Disconnect() end)
+        _0x1996.CamSwapConn = nil
+    end
     pcall(function()
-        _0x1e4v40.CamSwapConn_0x69v43Workspace:GetPropertyChangedSignal("\067\117\114\114\101\110\116\067\097\109\101\114\097"):Connect(function()
-            task.wait_0x69v4305)
-            _0x1e4v40.AttachCamWatcher()
-        _0x69v43)
-    _0x69v43)
-_0x69v43
-function _0x1e4v40.InitFocusTracking()
+        _0x1996.CamSwapConn = _0x3BA1:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
+            task.wait(0.05)
+            _0x1996.AttachCamWatcher()
+        end)
+    end)
+end
+function _0x1996.InitFocusTracking()
     pcall(function()
-        _0x18fv80.Track(_0x69v43.InputChanged:Connect(function(_0x90v85)
-            _0x69v43input.UserInputType == Enum.UserInputType.MouseMovement then
-                _0x1e4v40.MouseAccumX_0x69v43CameraAssist.MouseAccumX_0x69v43input.Delta.X
-                _0x1e4v40.MouseAccumY_0x69v43CameraAssist.MouseAccumY_0x69v43input.Delta.Y
-            _0x69v43
-        _0x69v43))
-    _0x69v43)
+        _0x55FF.Track(_0xA548.InputChanged:Connect(function(_0xAE2A)
+            if _0xAE2A.UserInputType == Enum.UserInputType.MouseMovement then
+                _0x1996.MouseAccumX = _0x1996.MouseAccumX + _0xAE2A.Delta.X
+                _0x1996.MouseAccumY = _0x1996.MouseAccumY + _0xAE2A.Delta.Y
+            end
+        end))
+    end)
     pcall(function()
-        _0x18fv80.Track(_0x69v43.InputBegan:Connect(function(_0x90v85)
-            _0x69v43Configuration._0x34av13 == "\077\111\117\115\101" then
-                _0x69v43input.UserInputType == _0x110v81._0x34bv15 then _0x1e4v40.KeyHeld_0x69v43true _0x69v43
+        _0x55FF.Track(_0xA548.InputBegan:Connect(function(_0xAE2A)
+            if _0x77AD.AimBindType == "Mouse" then
+                if _0xAE2A.UserInputType == _0x77AD.AimMouseButton then _0x1996.KeyHeld = true end
             else
-                _0x69v43input.UserInputType == Enum.UserInputType.Keyboard _0x69v43 _0x90v85.KeyCode == _0x110v81._0x34cv82 then _0x1e4v40.KeyHeld_0x69v43true _0x69v43
-            _0x69v43
-        _0x69v43))
-    _0x69v43)
+                if _0xAE2A.UserInputType == Enum.UserInputType.Keyboard and _0xAE2A.KeyCode == _0x77AD.AimKeyCode then _0x1996.KeyHeld = true end
+            end
+        end))
+    end)
     pcall(function()
-        _0x18fv80.Track(_0x69v43.InputEnded:Connect(function(_0x90v85)
-            _0x69v43Configuration._0x34av13 == "\077\111\117\115\101" then
-                _0x69v43input.UserInputType == _0x110v81._0x34bv15 then _0x1e4v40.KeyHeld_0x69v43false _0x69v43
+        _0x55FF.Track(_0xA548.InputEnded:Connect(function(_0xAE2A)
+            if _0x77AD.AimBindType == "Mouse" then
+                if _0xAE2A.UserInputType == _0x77AD.AimMouseButton then _0x1996.KeyHeld = false end
             else
-                _0x69v43input.UserInputType == Enum.UserInputType.Keyboard _0x69v43 _0x90v85.KeyCode == _0x110v81._0x34cv82 then _0x1e4v40.KeyHeld_0x69v43false _0x69v43
-            _0x69v43
-        _0x69v43))
-    _0x69v43)
+                if _0xAE2A.UserInputType == Enum.UserInputType.Keyboard and _0xAE2A.KeyCode == _0x77AD.AimKeyCode then _0x1996.KeyHeld = false end
+            end
+        end))
+    end)
     pcall(function()
-        _0x18fv80.Track(_0x69v43.InputBegan:Connect(function(_0x90v85)
-            local _0x1eev90_0x69v43input.UserInputType
-            local _0x1efv51_0x69v43_0x69v43 == Enum.UserInputType.Gamepad1_0x69v43 _0x69v43 == Enum.UserInputType.Gamepad2_0x69v43 _0x69v43 == Enum.UserInputType.Gamepad3_0x69v43 _0x69v43 == Enum.UserInputType.Gamepad4
-            _0x69v43isPad then
-                _0x1e4v40.LastInputWasController_0x69v43true
-                _0x69v43input.KeyCode == _0x110v81._0x344v38 then _0x1e4v40.KeyHeld_0x69v43true _0x69v43
-                _0x69v43input.KeyCode == _0x110v81._0x345v21 then _0x1e4v40.ControllerFireHeld_0x69v43true _0x69v43
-            elseif _0x69v43 == Enum.UserInputType.MouseButton1_0x69v43 _0x69v43 == Enum.UserInputType.MouseMovement_0x69v43 _0x69v43 == Enum.UserInputType.Keyboard then
-                _0x1e4v40.LastInputWasController_0x69v43false
-            _0x69v43
-        _0x69v43))
-    _0x69v43)
+        _0x55FF.Track(_0xA548.InputBegan:Connect(function(_0xAE2A)
+            local _0xA43F = _0xAE2A.UserInputType
+            local _0xDA45 = _0xA43F == Enum.UserInputType.Gamepad1 or _0xA43F == Enum.UserInputType.Gamepad2 or _0xA43F == Enum.UserInputType.Gamepad3 or _0xA43F == Enum.UserInputType.Gamepad4
+            if _0xDA45 then
+                _0x1996.LastInputWasController = true
+                if _0xAE2A.KeyCode == _0x77AD.AimControllerButton then _0x1996.KeyHeld = true end
+                if _0xAE2A.KeyCode == _0x77AD.AutoFireControllerButton then _0x1996.ControllerFireHeld = true end
+            elseif _0xA43F == Enum.UserInputType.MouseButton1 or _0xA43F == Enum.UserInputType.MouseMovement or _0xA43F == Enum.UserInputType.Keyboard then
+                _0x1996.LastInputWasController = false
+            end
+        end))
+    end)
     pcall(function()
-        _0x18fv80.Track(_0x69v43.InputEnded:Connect(function(_0x90v85)
-            local _0x1eev90_0x69v43input.UserInputType
-            local _0x1efv51_0x69v43_0x69v43 == Enum.UserInputType.Gamepad1_0x69v43 _0x69v43 == Enum.UserInputType.Gamepad2_0x69v43 _0x69v43 == Enum.UserInputType.Gamepad3_0x69v43 _0x69v43 == Enum.UserInputType.Gamepad4
-            _0x69v43isPad then
-                _0x69v43input.KeyCode == _0x110v81._0x344v38 then _0x1e4v40.KeyHeld_0x69v43false _0x69v43
-                _0x69v43input.KeyCode == _0x110v81._0x345v21 then _0x1e4v40.ControllerFireHeld_0x69v43false _0x69v43
-            _0x69v43
-        _0x69v43))
-    _0x69v43)
-_0x69v43
-function _0x1e4v40.MutePostFX()
-    _0x1e4v40.SavedPostFX = {}
-    _0x69v43 _0x69v43inst_0x69v43 ipairs(_0xf1v69:GetChildren()) do
-        _0x69v43inst:_0x69v43("\066\108\117\114\069\102\102\101\099\116") _0x69v43inst:_0x69v43("\068\101\112\116\104\079\102\070\105\101\108\100\069\102\102\101\099\116") then
-            _0x69v43inst.Enabled then
-                _0x1e4v40.SavedPostFX[_0xd9v87] = true
-                pcall(function_0x69v43inst.Enabled_0x69v43false _0x69v43)
-            _0x69v43
-        _0x69v43
-    _0x69v43
-_0x69v43
-function _0x1e4v40.RestorePostFX()
-    local _0x83v25_0x69v43CameraAssist.SavedPostFX
-    _0x1e4v40.SavedPostFX = {}
-    _0x69v43 inst_0x69v43_0x69v43 pairs(_0x69v43_0x69v43_0x69v43inst _0x69v43 _0xd9v87.Parent then pcall(function_0x69v43inst.Enabled_0x69v43true _0x69v43) _0x69v43 _0x69v43
-_0x69v43
-function _0x1e4v40.ClearLock()
-    _0x69v43_0x69v43 _0xfbv71 _0x69v43 _0x10av39 _0x69v43 _0x10av39.SetRotation then
-        local _0x102v57_0x69v43Workspace.CurrentCamera
-        _0x69v43_0x69v43 then pcall(function_0x69v43CamControls:SetRotation(_0x69v43.CFrame) _0x69v43) _0x69v43
-    _0x69v43
-    _0x69v43CameraAssist.Lock _0x69v43 _0x1e4v40.Lock._0x3aav40 then
-        _0x1e4v40.PreferUserId_0x69v43CameraAssist.Lock._0x3aav40
-        _0x1e4v40.PreferUntil_0x69v43tick() + _0x69v43
-    _0x69v43
-    _0x1e4v40.Lock_0x69v43_0x69v43 _0x1e4v40.LastLockUserId_0x69v43_0x69v43
-    _0x1e4v40.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43
-    _0x1e4v40.LockedTargetWorldPos_0x69v43_0x69v43 _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43
-    _0x1e4v40.LastTargetPos_0x69v43_0x69v43 _0x1e4v40.LastTargetPosTime_0x69v430
-    _0x1e4v40._pendingNCF_0x69v43_0x69v43
+        _0x55FF.Track(_0xA548.InputEnded:Connect(function(_0xAE2A)
+            local _0xA43F = _0xAE2A.UserInputType
+            local _0xDA45 = _0xA43F == Enum.UserInputType.Gamepad1 or _0xA43F == Enum.UserInputType.Gamepad2 or _0xA43F == Enum.UserInputType.Gamepad3 or _0xA43F == Enum.UserInputType.Gamepad4
+            if _0xDA45 then
+                if _0xAE2A.KeyCode == _0x77AD.AimControllerButton then _0x1996.KeyHeld = false end
+                if _0xAE2A.KeyCode == _0x77AD.AutoFireControllerButton then _0x1996.ControllerFireHeld = false end
+            end
+        end))
+    end)
+end
+function _0x1996.MutePostFX()
+    _0x1996.SavedPostFX = {}
+    for _, inst in ipairs(_0x18A8:GetChildren()) do
+        if inst:IsA("BlurEffect") or inst:IsA("DepthOfFieldEffect") then
+            if inst.Enabled then
+                _0x1996.SavedPostFX[inst] = true
+                pcall(function() inst.Enabled = false end)
+            end
+        end
+    end
+end
+function _0x1996.RestorePostFX()
+    local _0x0404 = _0x1996.SavedPostFX
+    _0x1996.SavedPostFX = {}
+    for inst, _ in pairs(_0x0404) do if inst and inst.Parent then pcall(function() inst.Enabled = true end) end end
+end
+function _0x1996.ClearLock()
+    if not _0x0E63 and _0x1857 and _0x1857.SetRotation then
+        local _0x7458 = _0x3BA1.CurrentCamera
+        if _0x7458 then pcall(function() _0x1857:SetRotation(_0x7458.CFrame) end) end
+    end
+    if _0x1996.Lock and _0x1996.Lock.UserId then
+        _0x1996.PreferUserId = _0x1996.Lock.UserId
+        _0x1996.PreferUntil = tick() + 0.6
+    end
+    _0x1996.Lock = nil _0x1996.LastLockUserId = nil
+    _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil
+    _0x1996.LockedTargetWorldPos = nil _0x1996.AimState = nil _0x1996.AimStateChar = nil
+    _0x1996.LastTargetPos = nil _0x1996.LastTargetPosTime = 0
+    _0x1996._pendingNCF = nil
     task.defer(function()
         pcall(function()
-            local _0x113v64_0x69v43Players.LocalPlayer
-            local _0x13cv60_0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23
-            _0x69v43_0x69v43then
-                local _0x1f0v25_0x69v43_0x69v43FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-                local _0x1cfv54_0x69v43_0x69v43FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-                _0x69v43_0x69v43 _0x69v43 _0x1e4v40.SavedAutoRotate ~= _0x69v43 then
-                    _0x69v43.AutoRotate_0x69v43CameraAssist.SavedAutoRotate
-                    _0x1e4v40.SavedAutoRotate_0x69v43_0x69v43
-                _0x69v43
-                _0x69v43_0x69v43then
-                    local _0xa7v98_0x69v43_0x69v43FindFirstChild("\086\069\073\076\095\065\105\109\071\121\114\111")
-                    _0x69v43g then_0x69v43Destroy_0x69v43_0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43)
-    _0x69v43)
-_0x69v43
-function _0x1e4v40.IsTargetSticky_0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43.Character_0x69v43 _0x69v43_0x69v43._0x3a8v23.Parent then return false _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43 then return true _0x69v43
-    local _0x19cv79_0x69v43Utility.GetHitboxPosition_0x69v43._0x3a8v23, _0x69v43ResolvedHitbox, _0x69v43HitboxPart)
-    _0x69v43_0x69v43 _0x69v43 then return false _0x69v43
-    local _0x1f1v44_0x69v43_0x69v43.CFrame._0x381v33
-    local _0x1f2v85_0x69v43_0x69v43.CFrame.LookVector
-    local _0x1c3v59_0x69v43_0x69v43_0x69v43cp
-    local _0x1a2v36_0x69v43_0x69v43Magnitude
-    _0x69v43dist_0x69v43_0x69v43 then return true _0x69v43
-    local _0x8bv25_0x69v43dl_0x69v43dist
-    local _0x1f3v57_0x69v43math._0x69v43(math.acos(math.clamp(_0x1f2v85:_0x69v43(_0x69v43), -_0x69v431)))
-    local _0x1f4v17_0x69v43Configuration._0x34fv85
-    local _0x1f5v10_0x69v43silentActive _0x69v43 (_0x110v81.SilentAimFOV_0x69v43 _0x69v43) or (_0x110v81.CameraAssistFOV_0x69v43_0x69v43)
-    local _0x1f6v68_0x69v43_0x69v43 - (math._0x69v43(_0x110v81.CameraAssistSmoothing_0x69v43 _0x69v4320) / (0xa + 0xa)) * _0x69v43
-    local _0x1f7v83_0x69v43math._0x69v43(activeFov_0x69v43_0x69v43, (0x9 + 0x9)) * _0x69v43_0x69v43ss
-    _0x69v43Utility.IsLocalAirborne_0x69v43then_0x69v43_0x69v43sa_0x69v43_0x69v43 _0x69v43
-    return_0x69v43 <= _0x1f7v83
-_0x69v43
-function _0x1e4v40.MakeLock_0x69v43, resolvedMode)
-    local _0x1f8v40_0x69v43Configuration._0x34fv85
-    local _0x1f9v94_0x69v43silent _0x69v43 (_0x110v81.SilentAimHitbox_0x69v43 "\072\101\097\100") or (_0x110v81.CameraAssistHitboxMode_0x69v43 "\072\101\097\100")
-    local _0x130v59_0x69v43resolvedMode_0x69v43 _0x190v27.ResolveHitboxMode_0x69v43)
-    local _0x19cv79, _0x3cav51_0x69v43Utility.GetHitboxPosition_0x69v43._0x3a8v23, _0x69v43)
-    _0x69v43_0x69v43 _0x69v43 _0x69v43 == "\072\101\097\100" _0x69v43 _0x10ev39 ~= 0 then
- _0x19cv79_0x69v43_0x69v43_0x69v43Vector3._0x69v43(_0x69v43HEAD_AIM_OFFSET_0x69v43)
-    _0x69v43
-    local _0x191v84_0x69v43tick()
-    return_0x69v43UserId_0x69v43_0x69v43UserId, _0x3c4v55_0x69v43_0x69v43Player, _0x3a8v23_0x69v43_0x69v43Character, _0x3cbv48_0x69v43um, _0x3ccv92_0x69v43_0x69v43, _0x3cdv28_0x69v43part, _0x3cev12_0x69v43_0x69v43, _0x3cfv50_0x69v43_0x69v43 _0x69v43 _0x69v43_0x69v43 _0x69v43_0x3d0v23_0x69v43true, _0x3d1v35_0x69v43_0x69v43_0x3d2v51_0x69v43_0x69v43 }
-_0x69v43
-function _0x1e4v40.UpdateLock_0x69v43)
-    _0x69v43_0x69v43_0x69v43 then return false _0x69v43
-    local _0x1f8v40_0x69v43Configuration._0x34fv85
-    local _0x1fbv74_0x69v43silent _0x69v43 (_0x110v81.SilentAimHitbox_0x69v43 "\072\101\097\100") or (_0x110v81.CameraAssistHitboxMode_0x69v43 "\072\101\097\100")
-    _0x69v43_0x69v43UserMode ~= _0x1fbv74 then return false _0x69v43
-    local _0xdcv26_0x69v43_0x69v43Player
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then return false _0x69v43
-    local _0x127v13_0x69v43_0x69v43Character
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then return false _0x69v43
-    local _0x112v65_0x69v43c:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-    _0x69v43_0x69v43_0x69v43_0x69v43h.Health <= 0 then return false _0x69v43
-    _0x69v43Utility.IsTargetDeflecting(_0x69v43then
-        _0x1e4v40._deflectCooldownUntil_0x69v43tick() + 0_0x69v43
-        _0x1e4v40._deflectCooldownUser_0x69v43p._0x3aav40
+            local _0x1A90 = _0xE1FF.LocalPlayer
+            local _0x7B5B = _0x1A90 and _0x1A90.Character
+            if _0x7B5B then
+                local _0x44C9 = _0x7B5B:FindFirstChildOfClass("Humanoid")
+                local _0xE174 = _0x7B5B:FindFirstChild("HumanoidRootPart")
+                if _0x44C9 and _0x1996.SavedAutoRotate ~= nil then
+                    _0x44C9.AutoRotate = _0x1996.SavedAutoRotate
+                    _0x1996.SavedAutoRotate = nil
+                end
+                if _0xE174 then
+                    local _0x8377 = _0xE174:FindFirstChild("VEIL_AimGyro")
+                    if _0x8377 then _0x8377:Destroy() end
+                end
+            end
+        end)
+    end)
+end
+function _0x1996.IsTargetSticky(_0x3135)
+    if not _0x3135 or not _0x3135.Character or not _0x3135.Character.Parent then return false end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 then return true end
+    local _0x3694 = _0xC036.GetHitboxPosition(_0x3135.Character, _0x3135.ResolvedHitbox, _0x3135.HitboxPart)
+    if not _0x3694 then return false end
+    local _0xE958 = _0x7458.CFrame.Position
+    local _0x44BC = _0x7458.CFrame.LookVector
+    local _0x270D = _0x3694 - _0xE958
+    local _0xAFA9 = _0x270D.Magnitude
+    if _0xAFA9 < 0.1 then return true end
+    local _0xB0D1 = _0x270D / _0xAFA9
+    local _0x920D = math.deg(math.acos(math.clamp(_0x44BC:Dot(_0xB0D1), -1, 1)))
+    local _0xFEB3 = _0x77AD.SilentAimEnabled
+    local _0x8818 = _0xFEB3 and (_0x77AD.SilentAimFOV or 200) or (_0x77AD.CameraAssistFOV or 35)
+    local _0x3990 = 1.0 - (math.min(_0x77AD.CameraAssistSmoothing or 0, 20) / 20) * 0.5
+    local _0xC23D = math.max(_0x8818 * 0.9, 18) * 1.6 * _0x3990
+    if _0xC036.IsLocalAirborne() then _0xC23D = _0xC23D * 2.2 end
+    return _0x920D <= _0xC23D
+end
+function _0x1996.MakeLock(_0xB680, resolvedMode)
+    local _0x4950 = _0x77AD.SilentAimEnabled
+    local _0xB645 = _0x4950 and (_0x77AD.SilentAimHitbox or "Head") or (_0x77AD.CameraAssistHitboxMode or "Head")
+    local _0xBE70 = resolvedMode or _0xC036.ResolveHitboxMode(_0xB645)
+    local _0x3694, _0x7AA7 = _0xC036.GetHitboxPosition(_0xB680.Character, _0xBE70)
+    if _0x3694 and _0xBE70 == "Head" and _0x6B84 ~= 0 then
+        _0x3694 = _0x3694 + Vector3.new(0, _0x6B84, 0)
+    end
+    local _0x17DA = tick()
+    return { UserId = _0xB680.UserId, Player = _0xB680.Player, Character = _0xB680.Character,
+             UserMode = _0xB645, ResolvedHitbox = _0xBE70, HitboxPart = _0x7AA7,
+             LastPos = _0x3694, LastPosTime = _0x3694 and _0x17DA or 0, Visible = true, MissFrames = 0,
+             FirstLockTime = _0x17DA }
+end
+function _0x1996.UpdateLock(_0x3135)
+    if not _0x3135 then return false end
+    local _0x4950 = _0x77AD.SilentAimEnabled
+    local _0x0372 = _0x4950 and (_0x77AD.SilentAimHitbox or "Head") or (_0x77AD.CameraAssistHitboxMode or "Head")
+    if _0x3135.UserMode ~= _0x0372 then return false end
+    local _0x938C = _0x3135.Player
+    if not _0x938C or not _0x938C.Parent then return false end
+    local _0x3A4B = _0x3135.Character
+    if not _0x3A4B or not _0x3A4B.Parent then return false end
+    local _0x830D = _0x3A4B:FindFirstChildOfClass("Humanoid")
+    if not _0x830D or _0x830D.Health <= 0 then return false end
+    if _0xC036.IsTargetDeflecting(_0x938C) then
+        _0x1996._deflectCooldownUntil = tick() + 0.40
+        _0x1996._deflectCooldownUser = _0x938C.UserId
         return false
-    _0x69v43
-    _0x69v43CameraAssist._deflectCooldownUser == _0xdcv26._0x3aav40 _0x69v43 tick() < (_0x1e4v40._deflectCooldownUntil_0x69v43 _0x69v43then
+    end
+    if _0x1996._deflectCooldownUser == _0x938C.UserId and tick() < (_0x1996._deflectCooldownUntil or 0) then
         return false
-    _0x69v43
-    _0x69v43_0x69v43HitboxPart _0x69v43_0x69v43._0x3cdv28.Parent then
-        local _0x1fcv59_0x69v43Utility.HitboxModes_0x69v43._0x3ccv92] _0x69v43Utility.HitboxModes._0x396v25
-        local _0x1fdv64_0x69v43false
-        _0x69v43 _0x69v43n_0x69v43 ipairs(_0x1fcv59) _0x69v43_0x69v43_0x69v43HitboxPart._0x36bv95 == _0xd6v18 then okname_0x69v43true break _0x69v43 _0x69v43
-        _0x69v43_0x69v43 _0x1fdv64 then_0x69v43.HitboxPart_0x69v43_0x69v43 _0x69v43
+    end
+    if _0x3135.HitboxPart and _0x3135.HitboxPart.Parent then
+        local _0x089E = _0xC036.HitboxModes[_0x3135.ResolvedHitbox] or _0xC036.HitboxModes.Head
+        local _0xC317 = false
+        for _, _0xB877 in ipairs(_0x089E) do if _0x3135.HitboxPart.Name == _0xB877 then _0xC317 = true break end end
+        if not _0xC317 then _0x3135.HitboxPart = nil end
     else
-        _0x69v43HitboxPart_0x69v43_0x69v43
-    _0x69v43
-    local _0x19cv79, _0x3cav51_0x69v43Utility.GetHitboxPosition(_0x69v43_0x69v43ResolvedHitbox, _0x69v43HitboxPart)
-    _0x69v43_0x69v43 then
-        _0x69v43_0x69v43ResolvedHitbox == "\072\101\097\100" _0x69v43 _0x10ev39 ~= 0 then
- _0x19cv79_0x69v43_0x69v43_0x69v43Vector3._0x69v43(_0x69v43HEAD_AIM_OFFSET_0x69v43)
-        _0x69v43
-        _0x69v43LastPos_0x69v43_0x69v43_0x69v43.LastPosTime_0x69v43tick()
-        _0x69v43part then_0x69v43.HitboxPart_0x69v43part _0x69v43
-    _0x69v43
-    _0x69v43Configuration._0x31dv76 _0x69v43_0x69v43._0x3cev12 then
-        _0x69v43Visible_0x69v43Utility.IsPositionVisible_0x69v43.LastPos_0x69v43c_0x69v43tostring_0x69v43.UserId_0x69v43_0x69v43HitboxPart)
-    else_0x69v43.Visible_0x69v43true _0x69v43
+        _0x3135.HitboxPart = nil
+    end
+    local _0x3694, _0x7AA7 = _0xC036.GetHitboxPosition(_0x3A4B, _0x3135.ResolvedHitbox, _0x3135.HitboxPart)
+    if _0x3694 then
+        if _0x3135.ResolvedHitbox == "Head" and _0x6B84 ~= 0 then
+            _0x3694 = _0x3694 + Vector3.new(0, _0x6B84, 0)
+        end
+        _0x3135.LastPos = _0x3694 _0x3135.LastPosTime = tick()
+        if _0x7AA7 then _0x3135.HitboxPart = _0x7AA7 end
+    end
+    if _0x77AD.CameraAssistVisibleCheck and _0x3135.LastPos then
+        _0x3135.Visible = _0xC036.IsPositionVisible(_0x3135.LastPos, {_0x3A4B}, tostring(_0x3135.UserId), _0x3135.HitboxPart)
+    else _0x3135.Visible = true end
     return true
-_0x69v43
-function _0x1e4v40.AcquireLock()
-    _0x69v43Configuration._0x329v24 _0x69v43 _0x69v43 _0x190v27.IsInGame_0x69v43then return _0x69v43 _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then return _0x69v43 _0x69v43
-    local _0x15av90_0x69v43_0x69v43.ViewportSize.X_0x69v43_0x69v43
-    local _0x15bv92_0x69v43_0x69v43.ViewportSize.Y_0x69v43_0x69v43
-    local _0x12av20_0x69v43Utility.ViewportScale()
-    local _0x1f8v40_0x69v43Configuration._0x34fv85
-    local _0x1f5v10_0x69v43silent _0x69v43 (_0x110v81.SilentAimFOV_0x69v43 _0x69v43) or (_0x110v81.CameraAssistFOV_0x69v43_0x69v43)
-    local _0x1fev45_0x69v43math._0x69v43(activeFov_0x69v4310_0x69v43sc, _0x69v43_0x69v43sc)
-    _0x69v43_0x69v43 _0x1f8v40 then
-        local _0x1ffv11 = (_0x110v81.CameraAssistAcquisitionRadius_0x69v43 _0x69v43) * _0x12av20
-        _0x69v43_0x69v43_0x69v430 _0x69v43_0x69v43_0x69v43_0x69v43 then_0x69v43_0x69v43_0x69v43 _0x69v43
-    _0x69v43
-    local _0x200v19_0x69v43br_0x69v43br
-    local _0x1b9v83_0x69v43CameraAssist.PreferUserId
-    local _0x1c8v97_0x69v43_0x69v43 _0x69v43 tick() < (_0x1e4v40.PreferUntil_0x69v43 0)
-    local _0x201v15 = (br_0x69v43_0x69v43) * (br_0x69v43_0x69v43)
-    local _0x202v29, _0x3d3v90_0x69v43_0x69v43, math.huge
-    local _0x15dv31, _0x3d4v40_0x69v43_0x69v43, math.huge
-    local _0x3d7v42, _0x3d5v78_0x69v43_0x69v43, _0x69v43
-    local _0x19av59_0x69v43silent _0x69v43 (_0x110v81.SilentAimHitbox_0x69v43 "\072\101\097\100") or (_0x110v81.CameraAssistHitboxMode_0x69v43 "\072\101\097\100")
-    local _0x207v89_0x69v43_0x69v43
-    _0x69v43silent then
-        local _0x208v40_0x69v43Players.LocalPlayer _0x69v43 _0xeev16.LocalPlayer._0x3a8v23
-        _0x69v43_0x69v43 then
-            local _0xa8v58_0x69v43_0x69v43:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-            _0x69v43r then lpPos_0x69v43r._0x381v33 _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x190v27.GetValidPlayers()) do
-        local _0x127v13_0x69v43_0x69v43Character
-        _0x69v43c _0x69v43_0x69v43Parent then
-            local _0x1cav34_0x69v43false
-            _0x69v43CameraAssist._deflectCooldownUser == _0x69v43UserId _0x69v43 tick() < (_0x1e4v40._deflectCooldownUntil_0x69v43 _0x69v43then
- _0x1cav34_0x69v43true
-            elseif _0x190v27.IsTargetDeflecting_0x69v43._0x3c4v55) then skip_0x69v43true _0x69v43
-            _0x69v43_0x69v43 _0x1cav34 then
-                local _0x209v41_0x69v43mode
-                _0x69v43mode == "\082\097\110\100\111\109" then_0x69v43_0x69v43Utility.ResolveHitboxMode("\082\097\110\100\111\109") _0x69v43
-                local _0x19cv79, _0x3cav51_0x69v43Utility.GetHitboxPosition(_0x69v43rm)
-                _0x69v43_0x69v43 then
-                    local _0x20av67_0x69v43true
-                    _0x69v43Configuration._0x31dv76 _0x69v43 _0x69v43 _0x1f8v40 then
-                        _0x69v43_0x69v43 _0x190v27.IsPositionVisible(_0x69v43_0x69v43c_0x69v43_0x69v43, _0x3cav51) then_0x69v43_0x69v43false _0x69v43
-                    _0x69v43
-                    _0x69v43_0x69v43then
-                        local _0x20bv51, _0x3d6v96_0x69v43Utility.WorldToViewport(_0x69v43)
-                        _0x69v43_0x69v43then
-                            local _0x13ev29_0x69v43_0x69v43X_0x69v43cx
-                            local _0x157v42_0x69v43_0x69v43Y_0x69v43cy
-                            local _0x20cv90_0x69v43dx_0x69v43dx_0x69v43dy_0x69v43dy
-                            _0x69v43_0x69v43 <= _0x200v19 then
-                                _0x69v43silent _0x69v43 _0x207v89 then
-                                    local _0x20dv35 = (_0x69v43_0x69v43lpPos).Magnitude
-                                    local _0x20ev50_0x69v43d3_0x69v43d3
-                                    _0x69v43_0x69v43_0x69v43_0x69v43._0x3aav40 == _0x69v43 _0x69v43 _0x69v43 <= _0x201v15 then
-                                        _0x69v43d3sq_0x69v43bpdSq then bpdSq_0x69v43d3sq_0x69v43_0x69v43_0x69v43bpres_0x69v43_0x69v43_0x69v43
-                                    _0x69v43
-                                    _0x69v43d3sq_0x69v43bdSq then bdSq_0x69v43d3sq best_0x69v43_0x69v43bres_0x69v43_0x69v43_0x69v43
+end
+function _0x1996.AcquireLock()
+    if _0x77AD.LobbyGuardEnabled and not _0xC036.IsInGame() then return nil end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 or not _0x7458.Parent then return nil end
+    local _0x5B90 = _0x7458.ViewportSize.X * 0.5
+    local _0xD238 = _0x7458.ViewportSize.Y * 0.5
+    local _0x9649 = _0xC036.ViewportScale()
+    local _0x4950 = _0x77AD.SilentAimEnabled
+    local _0x8818 = _0x4950 and (_0x77AD.SilentAimFOV or 200) or (_0x77AD.CameraAssistFOV or 35)
+    local _0x824F = math.max(_0x8818 * 10 * _0x9649, 110 * _0x9649)
+    if not _0x4950 then
+        local _0xB0D5 = (_0x77AD.CameraAssistAcquisitionRadius or 300) * _0x9649
+        if _0xB0D5 > 0 and _0x824F > _0xB0D5 then _0x824F = _0xB0D5 end
+    end
+    local _0x819D = _0x824F * _0x824F
+    local _0x7112 = _0x1996.PreferUserId
+    local _0x8015 = _0x7112 and tick() < (_0x1996.PreferUntil or 0)
+    local _0xB29F = (_0x824F * 1.8) * (_0x824F * 1.8)
+    local _0x26C9, _0xC10D = nil, math.huge
+    local _0x70B7, _0x5E21 = nil, math.huge
+    local _0xBBA2, _0xC733 = nil, nil
+    local _0xC1D0 = _0x4950 and (_0x77AD.SilentAimHitbox or "Head") or (_0x77AD.CameraAssistHitboxMode or "Head")
+    local _0x40C2 = nil
+    if _0x4950 then
+        local _0xD753 = _0xE1FF.LocalPlayer and _0xE1FF.LocalPlayer.Character
+        if _0xD753 then
+            local _0x3FCC = _0xD753:FindFirstChild("HumanoidRootPart")
+            if _0x3FCC then _0x40C2 = _0x3FCC.Position end
+        end
+    end
+    for _, _0xB680 in ipairs(_0xC036.GetValidPlayers()) do
+        local _0x3A4B = _0xB680.Character
+        if _0x3A4B and _0x3A4B.Parent then
+            local _0x1215 = false
+            if _0x1996._deflectCooldownUser == _0xB680.UserId and tick() < (_0x1996._deflectCooldownUntil or 0) then
+                _0x1215 = true
+            elseif _0xC036.IsTargetDeflecting(_0xB680.Player) then _0x1215 = true end
+            if not _0x1215 then
+                local _0xE060 = _0xC1D0
+                if _0xC1D0 == "Random" then _0xE060 = _0xC036.ResolveHitboxMode("Random") end
+                local _0x3694, _0x7AA7 = _0xC036.GetHitboxPosition(_0x3A4B, _0xE060)
+                if _0x3694 then
+                    local _0x5D8C = true
+                    if _0x77AD.CameraAssistVisibleCheck and not _0x4950 then
+                        if not _0xC036.IsPositionVisible(_0x3694, {_0x3A4B}, nil, _0x7AA7) then _0x5D8C = false end
+                    end
+                    if _0x5D8C then
+                        local _0xF894, _0x0207 = _0xC036.WorldToViewport(_0x3694)
+                        if _0x0207 then
+                            local _0x2912 = _0xF894.X - _0x5B90
+                            local _0x4CC4 = _0xF894.Y - _0xD238
+                            local _0x69E4 = _0x2912 * _0x2912 + _0x4CC4 * _0x4CC4
+                            if _0x69E4 <= _0x819D then
+                                if _0x4950 and _0x40C2 then
+                                    local _0x06E6 = (_0x3694 - _0x40C2).Magnitude
+                                    local _0x538A = _0x06E6 * _0x06E6
+                                    if _0x8015 and _0xB680.UserId == _0x7112 and _0x69E4 <= _0xB29F then
+                                        if _0x538A < _0x5E21 then _0x5E21 = _0x538A _0x70B7 = _0xB680 _0xC733 = _0xE060 end
+                                    end
+                                    if _0x538A < _0xC10D then _0xC10D = _0x538A _0x26C9 = _0xB680 _0xBBA2 = _0xE060 end
                                 else
-                                    _0x69v43_0x69v43_0x69v43_0x69v43._0x3aav40 == _0x69v43 _0x69v43 _0x69v43 <= _0x201v15 then
-                                        _0x69v43_0x69v43_0x69v43bpdSq then bpdSq_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43bpres_0x69v43_0x69v43_0x69v43
-                                    _0x69v43
-                                    _0x69v43_0x69v43_0x69v43bdSq then bdSq_0x69v43_0x69v43 best_0x69v43_0x69v43bres_0x69v43_0x69v43_0x69v43
-                                _0x69v43
-                            _0x69v43
-                        _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43_0x69v43then best_0x69v43_0x69v43bres_0x69v43bpres _0x69v43
-    _0x69v43_0x69v43 _0x202v29 then return _0x69v43 _0x69v43
-    _0x69v43silent _0x69v43 _0x69v43 _0x1e4v40.Lock then
-        local _0x20fv11_0x69v43math.clamp(_0x110v81.SilentAimHitChance_0x69v43 _0x69v43_0x69v43, _0x69v43)
-        _0x69v43chance_0x69v43_0x69v43 _0x69v43 math.random() * _0x69v43_0x69v43chance then return _0x69v43 _0x69v43
-    _0x69v43
-    return _0x1e4v40.MakeLock(_0x202v29, _0x3d7v42)
-_0x69v43
-function _0x1e4v40.FindCloserTarget_0x69v43)
-    _0x69v43_0x69v43 _0x110v81.CameraAssistFOVPriority_0x69v43 _0x69v43_0x69v43 then return _0x69v43 _0x69v43
-    _0x69v43tick() - (_0x1e4v40.LastLockSwitchTime_0x69v43 0) < _0x69v43 then return _0x69v43 _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then return _0x69v43 _0x69v43
-    local _0x15av90_0x69v43_0x69v43.ViewportSize.X_0x69v43_0x69v43
-    local _0x15bv92_0x69v43_0x69v43.ViewportSize.Y_0x69v43_0x69v43
-    local _0x12av20_0x69v43Utility.ViewportScale()
-    local _0x1fev45_0x69v43math._0x69v43(_0x110v81.CameraAssistFOV_0x69v4310_0x69v43sc, _0x69v43_0x69v43sc)
-    local _0x1ffv11 = (_0x110v81.CameraAssistAcquisitionRadius_0x69v43 _0x69v43) * _0x12av20
-    _0x69v43_0x69v43_0x69v430 _0x69v43_0x69v43_0x69v43_0x69v43 then_0x69v43_0x69v43_0x69v43 _0x69v43
-    local _0x200v19_0x69v43br_0x69v43br
-    local _0x19av59_0x69v43Configuration.CameraAssistHitboxMode_0x69v43 "\072\101\097\100"
-    local _0x210v43_0x69v43math.huge
-    _0x69v43_0x69v43Character _0x69v43_0x69v43._0x3a8v23.Parent then
-        local _0x19cv79_0x69v43Utility.GetHitboxPosition_0x69v43._0x3a8v23, _0x69v43ResolvedHitbox, _0x69v43HitboxPart)
-        _0x69v43_0x69v43 then
-            local _0x20bv51, _0x3d6v96_0x69v43Utility.WorldToViewport(_0x69v43)
-            _0x69v43_0x69v43then
-                local _0x13ev29_0x69v43_0x69v43X_0x69v43cx
-                local _0x157v42_0x69v43_0x69v43Y_0x69v43cy
- _0x210v43_0x69v43dx_0x69v43dx_0x69v43dy_0x69v43dy
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    local _0x202v29, _0x3d3v90, _0x3d7v42_0x69v43_0x69v43, math.huge, _0x69v43
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x190v27.GetValidPlayers()) do
-        _0x69v43_0x69v43UserId ~= _0x69v43UserId then
-            local _0x127v13_0x69v43_0x69v43Character
-            _0x69v43c _0x69v43_0x69v43Parent then
-                local _0x19cv79, _0x3cav51_0x69v43Utility.GetHitboxPosition(_0x69v43mode)
-                _0x69v43_0x69v43 then
-                    local _0x20av67_0x69v43true
-                    _0x69v43Configuration._0x31dv76 then
-                        _0x69v43_0x69v43 _0x190v27.IsPositionVisible(_0x69v43_0x69v43c_0x69v43_0x69v43, _0x3cav51) then_0x69v43_0x69v43false _0x69v43
-                    _0x69v43
-                    _0x69v43_0x69v43then
-                        local _0x20bv51, _0x3d6v96_0x69v43Utility.WorldToViewport(_0x69v43)
-                        _0x69v43_0x69v43then
-                            local _0x13ev29_0x69v43_0x69v43X_0x69v43cx
-                            local _0x157v42_0x69v43_0x69v43Y_0x69v43cy
-                            local _0x20cv90_0x69v43dx_0x69v43dx_0x69v43dy_0x69v43dy
-                            _0x69v43_0x69v43 <= _0x200v19 _0x69v43 _0x69v43_0x69v43bdSq then bdSq_0x69v43_0x69v43 best_0x69v43_0x69v43bres_0x69v43mode _0x69v43
-                        _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43best _0x69v43 bdSq_0x69v43cdSq_0x69v430_0x69v43 then return _0x1e4v40.MakeLock(_0x202v29, _0x3d7v42) _0x69v43
-    return _0x69v43
-_0x69v43
-function _0x1e4v40.Apply_0x69v43)
-    _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-    _0x69v43_0x69v43 _0x110v81._0x314v90 _0x69v43 _0x69v43 _0x110v81._0x34fv85 then return _0x69v43
-    _0x69v43_0x69v43 _0xfbv71 _0x69v43 _0x69v43 _0x10av39 then
+                                    if _0x8015 and _0xB680.UserId == _0x7112 and _0x69E4 <= _0xB29F then
+                                        if _0x69E4 < _0x5E21 then _0x5E21 = _0x69E4 _0x70B7 = _0xB680 _0xC733 = _0xE060 end
+                                    end
+                                    if _0x69E4 < _0xC10D then _0xC10D = _0x69E4 _0x26C9 = _0xB680 _0xBBA2 = _0xE060 end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    if _0x70B7 then _0x26C9 = _0x70B7 _0xBBA2 = _0xC733 end
+    if not _0x26C9 then return nil end
+    if _0x4950 and not _0x1996.Lock then
+        local _0xB576 = math.clamp(_0x77AD.SilentAimHitChance or 100, 0, 100)
+        if _0xB576 < 100 and math.random() * 100 > _0xB576 then return nil end
+    end
+    return _0x1996.MakeLock(_0x26C9, _0xBBA2)
+end
+function _0x1996.FindCloserTarget(_0x3060)
+    if not _0x77AD.CameraAssistFOVPriority or not _0x3060 then return nil end
+    if tick() - (_0x1996.LastLockSwitchTime or 0) < 0.1 then return nil end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 or not _0x7458.Parent then return nil end
+    local _0x5B90 = _0x7458.ViewportSize.X * 0.5
+    local _0xD238 = _0x7458.ViewportSize.Y * 0.5
+    local _0x9649 = _0xC036.ViewportScale()
+    local _0x824F = math.max(_0x77AD.CameraAssistFOV * 10 * _0x9649, 110 * _0x9649)
+    local _0xB0D5 = (_0x77AD.CameraAssistAcquisitionRadius or 300) * _0x9649
+    if _0xB0D5 > 0 and _0x824F > _0xB0D5 then _0x824F = _0xB0D5 end
+    local _0x819D = _0x824F * _0x824F
+    local _0xC1D0 = _0x77AD.CameraAssistHitboxMode or "Head"
+    local _0x419A = math.huge
+    if _0x3060.Character and _0x3060.Character.Parent then
+        local _0x3694 = _0xC036.GetHitboxPosition(_0x3060.Character, _0x3060.ResolvedHitbox, _0x3060.HitboxPart)
+        if _0x3694 then
+            local _0xF894, _0x0207 = _0xC036.WorldToViewport(_0x3694)
+            if _0x0207 then
+                local _0x2912 = _0xF894.X - _0x5B90
+                local _0x4CC4 = _0xF894.Y - _0xD238
+                _0x419A = _0x2912 * _0x2912 + _0x4CC4 * _0x4CC4
+            end
+        end
+    end
+    local _0x26C9, _0xC10D, _0xBBA2 = nil, math.huge, nil
+    for _, _0xB680 in ipairs(_0xC036.GetValidPlayers()) do
+        if _0xB680.UserId ~= _0x3060.UserId then
+            local _0x3A4B = _0xB680.Character
+            if _0x3A4B and _0x3A4B.Parent then
+                local _0x3694, _0x7AA7 = _0xC036.GetHitboxPosition(_0x3A4B, _0xC1D0)
+                if _0x3694 then
+                    local _0x5D8C = true
+                    if _0x77AD.CameraAssistVisibleCheck then
+                        if not _0xC036.IsPositionVisible(_0x3694, {_0x3A4B}, nil, _0x7AA7) then _0x5D8C = false end
+                    end
+                    if _0x5D8C then
+                        local _0xF894, _0x0207 = _0xC036.WorldToViewport(_0x3694)
+                        if _0x0207 then
+                            local _0x2912 = _0xF894.X - _0x5B90
+                            local _0x4CC4 = _0xF894.Y - _0xD238
+                            local _0x69E4 = _0x2912 * _0x2912 + _0x4CC4 * _0x4CC4
+                            if _0x69E4 <= _0x819D and _0x69E4 < _0xC10D then _0xC10D = _0x69E4 _0x26C9 = _0xB680 _0xBBA2 = _0xC1D0 end
+                        end
+                    end
+                end
+            end
+        end
+    end
+    if _0x26C9 and _0xC10D < _0x419A * 0.90 then return _0x1996.MakeLock(_0x26C9, _0xBBA2) end
+    return nil
+end
+function _0x1996.Apply(_0x154F)
+    if _0x1996.ShuttingDown then return end
+    if not _0x77AD.CameraAssistEnabled and not _0x77AD.SilentAimEnabled then return end
+    if not _0x0E63 and not _0x1857 then
         pcall(function()
-            local _0x113v64_0x69v43Players.LocalPlayer
-            _0x69v43_0x69v43_0x69v43 then return _0x69v43
-            local _0xf4v48_0x69v43_0x69v43FindFirstChild("\080\108\097\121\101\114\083\099\114\105\112\116\115")
-            _0x69v43_0x69v43_0x69v43 then return _0x69v43
-            local _0x10cv50_0x69v43_0x69v43FindFirstChild("\080\108\097\121\101\114\077\111\100\117\108\101")
-            _0x69v43_0x69v43_0x69v43 then return _0x69v43
-            local _0xf7v47_0x69v43require_0x69v43)
-            _0x69v43m _0x69v43_0x69v43GetControls then
- _0x10av39_0x69v43m:GetControls()
-                _0x69v43__VEIL_CamControls_0x69v43CamControls
-            _0x69v43
-        _0x69v43)
-    _0x69v43
-    local _0x211v35_0x69v43CameraAssist.MouseAccumX_0x69v43 0
-    local _0x212v30_0x69v43CameraAssist.MouseAccumY_0x69v43 0
-    _0x1e4v40.MouseAccumX_0x69v430 _0x1e4v40.MouseAccumY_0x69v430
-    local _0x213v78_0x69v43Utility.IsLocalAirborne()
-    _0x69v43_0x69v43 then _0x1e4v40.AirborneUntil_0x69v43tick() + 0_0x69v43 _0x69v43
-    local _0x214v37_0x69v43_0x69v43_0x69v43 tick() < (_0x1e4v40.AirborneUntil_0x69v43 0)
-    local _0x215v92_0x69v43CameraAssist.KeyHeld_0x69v43 (_0x110v81._0x315v83 _0x69v43 _0x110v81._0x314v90)
-    local _0x216v42_0x69v43false
-    pcall(function_0x69v43typing_0x69v43_0x69v43:GetFocusedTextBox() ~= _0x69v43 _0x69v43)
-    _0x69v43typing then_0x69v43_0x69v43false _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then return _0x69v43
-    local _0x113v64_0x69v43Players.LocalPlayer
-    local _0x13cv60_0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43.Parent then return _0x69v43
-    _0x69v43Configuration._0x329v24 _0x69v43 _0x69v43 _0x190v27.IsInGame_0x69v43then
-        _0x69v43CameraAssist.Lock then _0x1e4v40.ClearLock_0x69v43_0x69v43
-        _0x69v43next(_0x1e4v40.SavedPostFX) then _0x1e4v40.RestorePostFX_0x69v43_0x69v43
-        _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43 _0x1e4v40.BlockFireTarget_0x69v43_0x69v43
+            local _0x1A90 = _0xE1FF.LocalPlayer
+            if not _0x1A90 then return end
+            local _0xA21A = _0x1A90:FindFirstChild("PlayerScripts")
+            if not _0xA21A then return end
+            local _0xBC37 = _0xA21A:FindFirstChild("PlayerModule")
+            if not _0xBC37 then return end
+            local _0x4D37 = require(_0xBC37)
+            if _0x4D37 and _0x4D37.GetControls then
+                _0x1857 = _0x4D37:GetControls()
+                _G.__VEIL_CamControls = _0x1857
+            end
+        end)
+    end
+    local _0xBDC8 = _0x1996.MouseAccumX or 0
+    local _0x31AD = _0x1996.MouseAccumY or 0
+    _0x1996.MouseAccumX = 0 _0x1996.MouseAccumY = 0
+    local _0x27F4 = _0xC036.IsLocalAirborne()
+    if _0x27F4 then _0x1996.AirborneUntil = tick() + 0.35 end
+    local _0xE95E = _0x27F4 or tick() < (_0x1996.AirborneUntil or 0)
+    local _0x2E25 = _0x1996.KeyHeld or (_0x77AD.CameraAssistAlwaysOn and _0x77AD.CameraAssistEnabled)
+    local _0xF875 = false
+    pcall(function() _0xF875 = _0xA548:GetFocusedTextBox() ~= nil end)
+    if _0xF875 then _0x2E25 = false end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 or not _0x7458.Parent then return end
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    local _0x7B5B = _0x1A90 and _0x1A90.Character
+    if not _0x7B5B or not _0x7B5B.Parent then return end
+    if _0x77AD.LobbyGuardEnabled and not _0xC036.IsInGame() then
+        if _0x1996.Lock then _0x1996.ClearLock() end
+        if next(_0x1996.SavedPostFX) then _0x1996.RestorePostFX() end
+        _0x1996.AimState = nil _0x1996.AimStateChar = nil _0x1996.BlockFireTarget = nil
         return
-    _0x69v43
-    local _0x217v11_0x69v43_0x69v43FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-    local _0x218v81_0x69v43_0x69v43.CameraSubject
-    local _0x219v30_0x69v43false
-    _0x69v43_0x69v43 myHum_0x69v43 _0x217v11.Health <= 0 then spectating_0x69v43true
-    elseif _0x218v81 _0x69v43 _0x218v81:_0x69v43("\072\117\109\097\110\111\105\100") _0x69v43 _0x218v81 ~= _0x217v11 then spectating_0x69v43true _0x69v43
-    _0x69v43spectating then
-        _0x69v43CameraAssist.Lock then _0x1e4v40.ClearLock_0x69v43_0x69v43
-        _0x69v43next(_0x1e4v40.SavedPostFX) then _0x1e4v40.RestorePostFX_0x69v43_0x69v43
-        _0x1e4v40.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43 _0x1e4v40.BlockFireTarget_0x69v43_0x69v43
+    end
+    local _0x4422 = _0x7B5B:FindFirstChildOfClass("Humanoid")
+    local _0x1AF0 = _0x7458.CameraSubject
+    local _0x26C5 = false
+    if not _0x4422 or _0x4422.Health <= 0 then _0x26C5 = true
+    elseif _0x1AF0 and _0x1AF0:IsA("Humanoid") and _0x1AF0 ~= _0x4422 then _0x26C5 = true end
+    if _0x26C5 then
+        if _0x1996.Lock then _0x1996.ClearLock() end
+        if next(_0x1996.SavedPostFX) then _0x1996.RestorePostFX() end
+        _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil _0x1996.BlockFireTarget = nil
         return
-    _0x69v43
-    _0x69v43CameraAssist.Lock _0x69v43 _0x1e4v40.Lock._0x3c4v55 then
-        local _0x21av48_0x69v43CameraAssist.Lock._0x3c4v55
-        _0x69v43Utility.IsTargetDeflecting(_0x69v43) then
-            _0x1e4v40._deflectCooldownUntil_0x69v43tick() + 0_0x69v43
-            _0x1e4v40._deflectCooldownUser_0x69v43_0x69v43._0x3aav40
-            _0x1e4v40.ClearLock()
-            _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43
-            _0x1e4v40.BlockFireTarget_0x69v43_0x69v43 _0x1e4v40.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43
+    end
+    if _0x1996.Lock and _0x1996.Lock.Player then
+        local _0x3196 = _0x1996.Lock.Player
+        if _0xC036.IsTargetDeflecting(_0x3196) then
+            _0x1996._deflectCooldownUntil = tick() + 0.40
+            _0x1996._deflectCooldownUser = _0x3196.UserId
+            _0x1996.ClearLock()
+            _0x1996.AimState = nil _0x1996.AimStateChar = nil
+            _0x1996.BlockFireTarget = nil _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil
             return
-        _0x69v43
-        _0x69v43CameraAssist._deflectCooldownUser == _0x69v43._0x3aav40 _0x69v43 tick() < (_0x1e4v40._deflectCooldownUntil_0x69v43 _0x69v43then
-            _0x1e4v40.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43 _0x1e4v40.BlockFireTarget_0x69v43_0x69v43
+        end
+        if _0x1996._deflectCooldownUser == _0x3196.UserId and tick() < (_0x1996._deflectCooldownUntil or 0) then
+            _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil _0x1996.BlockFireTarget = nil
             return
-        _0x69v43
-    _0x69v43
-    local _0x21bv38_0x69v43false
-    local _0x21cv85_0x69v43_0x69v43.FieldOfView
-    _0x69v43_0x69v43 _0x69v43 _0x69v43 >= 5 then
-        local _0x21dv96_0x69v43tick()
-        _0x69v43_0x69v43_0x69v43Utility.RecentMaxFOV then _0x190v27.RecentMaxFOV_0x69v43_0x69v43 _0x190v27.RecentMaxFOVTime_0x69v43now2
-        elseif (now2_0x69v43Utility.RecentMaxFOVTime) > _0x69v43 then
-            _0x190v27.RecentMaxFOV_0x69v43math._0x69v43(_0x190v27.RecentMaxFOV_0x69v430._0x69v43, (0x14 + 0x14))
-            _0x190v27.RecentMaxFOVTime_0x69v43now2
-        _0x69v43
-        local _0x21ev21_0x69v43math._0x69v43(_0x190v27.RecentMaxFOV, (0x14 + 0x14))
-        _0x69v43CameraAssist.WasScoped then scoped_0x69v43_0x69v43 < (base_0x69v430_0x69v43) else scoped_0x69v43_0x69v43 < (base_0x69v430_0x69v43) _0x69v43
-    _0x69v43
-    _0x1e4v40.WasScoped_0x69v43scoped
-    _0x69v43Utility.IsReloading_0x69v43then
-        _0x69v43CameraAssist.Lock then _0x1e4v40.ClearLock_0x69v43_0x69v43
-        _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43 _0x1e4v40.BlockFireTarget_0x69v43_0x69v43
+        end
+    end
+    local _0x2060 = false
+    local _0xA93D = _0x7458.FieldOfView
+    if _0xA93D and _0xA93D >= 5 then
+        local _0xF822 = tick()
+        if _0xA93D > _0xC036.RecentMaxFOV then _0xC036.RecentMaxFOV = _0xA93D _0xC036.RecentMaxFOVTime = _0xF822
+        elseif (_0xF822 - _0xC036.RecentMaxFOVTime) > 2.0 then
+            _0xC036.RecentMaxFOV = math.max(_0xC036.RecentMaxFOV * 0.997, 40)
+            _0xC036.RecentMaxFOVTime = _0xF822
+        end
+        local _0x33FF = math.max(_0xC036.RecentMaxFOV, 40)
+        if _0x1996.WasScoped then _0x2060 = _0xA93D < (_0x33FF * 0.92) else _0x2060 = _0xA93D < (_0x33FF * 0.80) end
+    end
+    _0x1996.WasScoped = _0x2060
+    if _0xC036.IsReloading() then
+        if _0x1996.Lock then _0x1996.ClearLock() end
+        _0x1996.AimState = nil _0x1996.AimStateChar = nil _0x1996.BlockFireTarget = nil
         return
-    _0x69v43
-    _0x69v43_0x69v43_0x69v43 then
-        _0x69v43CameraAssist.Lock then _0x1e4v40.ClearLock_0x69v43_0x69v43
-        _0x69v43next(_0x1e4v40.SavedPostFX) then _0x1e4v40.RestorePostFX_0x69v43_0x69v43
-        _0x1e4v40.LockedTargetWorldPos_0x69v43_0x69v43 _0x1e4v40.AimState_0x69v43_0x69v43
-        _0x1e4v40.AimStateChar_0x69v43_0x69v43 _0x1e4v40.BlockFireTarget_0x69v43_0x69v43
+    end
+    if not _0x2E25 then
+        if _0x1996.Lock then _0x1996.ClearLock() end
+        if next(_0x1996.SavedPostFX) then _0x1996.RestorePostFX() end
+        _0x1996.LockedTargetWorldPos = nil _0x1996.AimState = nil
+        _0x1996.AimStateChar = nil _0x1996.BlockFireTarget = nil
         return
-    _0x69v43
-    _0x69v43Configuration._0x326v20 _0x69v43 _0x1e4v40.Lock _0x69v43 _0x69v43 _0x214v37 _0x69v43 _0x69v43 _0x110v81._0x34fv85 then
-        local _0x21fv84_0x69v43CameraAssist.FindCloserTarget(_0x1e4v40.Lock)
-        _0x69v43_0x69v43then
-            _0x1e4v40.Lock_0x69v43cl
-            _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43
-            _0x1e4v40.LastLockSwitchTime_0x69v43tick()
-            _0x1e4v40.UpdateLock_0x69v43)
-        _0x69v43
-    _0x69v43
-    _0x69v43CameraAssist.Lock then
-        local _0x100v77_0x69v43CameraAssist.Lock
-        local _0x89v20_0x69v43CameraAssist.UpdateLock_0x69v43)
-        _0x69v43_0x69v43_0x69v43then _0x1e4v40.ClearLock()
+    end
+    if _0x77AD.CameraAssistFOVPriority and _0x1996.Lock and not _0xE95E and not _0x77AD.SilentAimEnabled then
+        local _0x3060 = _0x1996.FindCloserTarget(_0x1996.Lock)
+        if _0x3060 then
+            _0x1996.Lock = _0x3060
+            _0x1996.AimState = nil _0x1996.AimStateChar = nil
+            _0x1996.LastLockSwitchTime = tick()
+            _0x1996.UpdateLock(_0x3060)
+        end
+    end
+    if _0x1996.Lock then
+        local _0x3135 = _0x1996.Lock
+        local _0x8C41 = _0x1996.UpdateLock(_0x3135)
+        if not _0x8C41 then _0x1996.ClearLock()
         else
-            local _0x128v45_0x69v43CameraAssist.IsTargetSticky_0x69v43)
-            local _0x220v24_0x69v43false
-            _0x69v43Configuration._0x31dv76 _0x69v43_0x69v43._0x3d0v23 == false then_0x69v43_0x69v43true _0x69v43
-            _0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43 then_0x69v43.MissFrames_0x69v430
+            local _0x48A3 = _0x1996.IsTargetSticky(_0x3135)
+            local _0x8180 = false
+            if _0x77AD.CameraAssistVisibleCheck and _0x3135.Visible == false then _0x8180 = true end
+            if _0x48A3 and not _0x8180 then _0x3135.MissFrames = 0
             else
-                _0x69v43inAir then_0x69v43.MissFrames_0x69v430_0x69v43.Visible_0x69v43true
+                if _0xE95E then _0x3135.MissFrames = 0 _0x3135.Visible = true
                 else
-                    _0x1e4v40.DesiredLook_0x69v43_0x69v43
-                    _0x69v43MissFrames = (_0x69v43MissFrames_0x69v43 0) + 1
-                    local _0x221v96_0x69v43CameraAssist.MissGrace
-                    if (_0x110v81.CameraAssistSmoothing_0x69v43 (0x4 + 0x4)) <= 4 then base_grace_0x69v43base_grace_0x69v436 _0x69v43
-                    _0x69v43_0x69v43MissFrames > (_0x69v43_0x69v43_0x69v43_0x69v43base_grace) then _0x1e4v40.ClearLock_0x69v43_0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43_0x69v43 _0x1e4v40.Lock then
-        local _0x1bfv40_0x69v43CameraAssist.AcquireLock()
-        _0x69v43_0x69v43then
-            _0x1e4v40.Lock_0x69v43nl
-            _0x1e4v40.LastLockUserId_0x69v43_0x69v43UserId
-            _0x1e4v40.AimState_0x69v43_0x69v43 _0x1e4v40.AimStateChar_0x69v43_0x69v43
-            _0x1e4v40.LastLockSwitchTime_0x69v43tick()
-            _0x1e4v40.MutePostFX()
-            _0x1e4v40.UpdateLock_0x69v43)
-        _0x69v43
-        _0x69v43_0x69v43 _0x1e4v40.Lock then
-            _0x1e4v40.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43
-            _0x1e4v40.LockedTargetWorldPos_0x69v43_0x69v43 _0x1e4v40.AimState_0x69v43_0x69v43
-            _0x1e4v40.AimStateChar_0x69v43_0x69v43 _0x1e4v40.BlockFireTarget_0x69v43_0x69v43
-            _0x69v43next(_0x1e4v40.SavedPostFX) then _0x1e4v40.RestorePostFX_0x69v43_0x69v43
+                    _0x1996.DesiredLook = nil
+                    _0x3135.MissFrames = (_0x3135.MissFrames or 0) + 1
+                    local _0x942D = _0x1996.MissGrace
+                    if (_0x77AD.CameraAssistSmoothing or 8) <= 4 then _0x942D = _0x942D + 6 end
+                    if _0x3135.MissFrames > (_0x8180 and 4 or _0x942D) then _0x1996.ClearLock() end
+                end
+            end
+        end
+    end
+    if not _0x1996.Lock then
+        local _0x7C5C = _0x1996.AcquireLock()
+        if _0x7C5C then
+            _0x1996.Lock = _0x7C5C
+            _0x1996.LastLockUserId = _0x7C5C.UserId
+            _0x1996.AimState = nil _0x1996.AimStateChar = nil
+            _0x1996.LastLockSwitchTime = tick()
+            _0x1996.MutePostFX()
+            _0x1996.UpdateLock(_0x7C5C)
+        end
+        if not _0x1996.Lock then
+            _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil
+            _0x1996.LockedTargetWorldPos = nil _0x1996.AimState = nil
+            _0x1996.AimStateChar = nil _0x1996.BlockFireTarget = nil
+            if next(_0x1996.SavedPostFX) then _0x1996.RestorePostFX() end
             return
-        _0x69v43
-    _0x69v43
-    local _0x100v77_0x69v43CameraAssist.Lock
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43._0x3cev12 then return _0x69v43
-    local _0x127v13_0x69v43_0x69v43Character
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then
-        _0x1e4v40.ClearLock_0x69v43CameraAssist.BlockFireTarget_0x69v43_0x69v43
+        end
+    end
+    local _0x3135 = _0x1996.Lock
+    if not _0x3135 or not _0x3135.LastPos then return end
+    local _0x3A4B = _0x3135.Character
+    if not _0x3A4B or not _0x3A4B.Parent then
+        _0x1996.ClearLock() _0x1996.BlockFireTarget = nil
         return
-    _0x69v43
-    _0x1e4v40.BlockFireTarget_0x69v43_0x69v43Player
-    _0x69v43_0x69v43LastPos then _0x1e4v40.LockedTargetWorldPos_0x69v43_0x69v43LastPos _0x69v43
-    local _0x222v88_0x69v43_0x69v43.CFrame
-    local _0x1f1v44_0x69v43_0x69v43._0x381v33
-    _0x69v43_0x69v43 _0x190v27.IsValidVector_0x69v43) then return _0x69v43
-    local _0x223v35_0x69v43_0x69v43.LookVector
-    _0x69v43_0x69v43 _0x190v27.IsValidVector(_0x223v35) _0x69v43baseLook.Magnitude_0x69v43_0x69v434 then baseLook_0x69v43Vector3._0x69v43(_0x69v430_0x69v43_0x69v43_0x69v43
- _0x223v35_0x69v43baseLook.Unit
-    _0x69v43_0x69v43 _0x1e4v40.AimState_0x69v43 _0x1e4v40.AimStateChar ~= _0x127v13 then
-        _0x1e4v40.AimState_0x69v43clampPitch(_0x223v35)
-        _0x1e4v40.AimStateChar_0x69v43c
-    _0x69v43
-    local _0x224v75_0x69v43Configuration._0x316v56 == true
-        _0x69v43 (_0x110v81.CameraAssistSmoothing_0x69v43 (0x4 + 0x4)) > 3
-    _0x69v43useMouse _0x69v43 (_0x69v43 ~= 0_0x69v43 _0x69v43 ~= _0x69v43then
- _0x223v35_0x69v43applyMouseDelta(baseLook_0x69v43_0x69v43_0x69v430_0x69v43_0x69v43_0x69v43_0x69v430_0x69v43)
-    _0x69v43
-    local _0x191v84_0x69v43tick()
-    _0x69v43_0x69v43 _0xfbv71 _0x69v43 _0x69v43 - (_0x1e4v40.LastPingUpdate_0x69v43 0) > _0x69v43 then
-        _0x1e4v40.LastPingUpdate_0x69v43_0x69v43
+    end
+    _0x1996.BlockFireTarget = _0x3135.Player
+    if _0x3135.LastPos then _0x1996.LockedTargetWorldPos = _0x3135.LastPos end
+    local _0x3E2F = _0x7458.CFrame
+    local _0xE958 = _0x3E2F.Position
+    if not _0xC036.IsValidVector(_0xE958) then return end
+    local _0x4402 = _0x3E2F.LookVector
+    if not _0xC036.IsValidVector(_0x4402) or _0x4402.Magnitude < 1e-4 then _0x4402 = Vector3.new(0, 0, -1) end
+    _0x4402 = _0x4402.Unit
+    if not _0x1996.AimState or _0x1996.AimStateChar ~= _0x3A4B then
+        _0x1996.AimState = _0x8466(_0x4402)
+        _0x1996.AimStateChar = _0x3A4B
+    end
+    local _0xF12D = _0x77AD.CameraAssistUseMouseWhileLocking == true
+        and (_0x77AD.CameraAssistSmoothing or 8) > 3
+    if _0xF12D and (_0xBDC8 ~= 0 or _0x31AD ~= 0) then
+        _0x4402 = _0x0E67(_0x4402, -_0xBDC8 * 0.15, -_0x31AD * 0.15)
+    end
+    local _0x17DA = tick()
+    if not _0x0E63 and _0x17DA - (_0x1996.LastPingUpdate or 0) > 3.0 then
+        _0x1996.LastPingUpdate = _0x17DA
         pcall(function()
-            local _0x225v48_0x69v43game:GetService("\083\116\097\116\115").Network.ServerStatsItem["\068\097\116\097\032\080\105\110\103"]:GetValue()
-            _0x69v43ping _0x69v43 ping_0x69v430 then _0x1e4v40.PingEstimate_0x69v43math.clamp(ping_0x69v431000_0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43
-        _0x69v43)
-    _0x69v43
-    local _0x226v33_0x69v43_0x69v43LastPos
-    local _0x116v72_0x69v430
-    local _0x227v44_0x69v43_0x69v43
-    local _0x197v11_0x69v43c:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-    _0x69v43_0x69v43then
-        pcall(function_0x69v43tv_0x69v43_0x69v43AssemblyLinearVelocity _0x69v43)
-        _0x69v43_0x69v43_0x69v43 then pcall(function_0x69v43tv_0x69v43_0x69v43Velocity _0x69v43) _0x69v43
-        _0x69v43_0x69v43_0x69v43 _0x190v27.IsValidVector_0x69v43) then_0x69v43_0x69v43_0x69v43Magnitude _0x69v43
-        _0x69v43ts_0x69v43_0x69v43 then
-            local _0x228v84_0x69v43_0x69v43Position
-            _0x69v43CameraAssist.LastTargetPos _0x69v43 _0x1e4v40.LastTargetPosTime_0x69v430 then
-                local _0x229v10_0x69v43_0x69v43_0x69v43CameraAssist.LastTargetPosTime
-                _0x69v43_0x69v43_0x69v430._0x69v43 _0x69v43 _0x69v43_0x69v43_0x69v43 then
-                    local _0x22av10 = (cpos_0x69v43CameraAssist.LastTargetPos) / _0x69v43
-                    _0x69v43Utility.IsValidVector(_0x22av10) then_0x69v43_0x69v43diff_0x69v43_0x69v43diff.Magnitude _0x69v43
-                _0x69v43
-            _0x69v43
-            _0x1e4v40.LastTargetPos_0x69v43cpos _0x1e4v40.LastTargetPosTime_0x69v43_0x69v43
+            local _0x8F06 = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue()
+            if _0x8F06 and _0x8F06 > 0 then _0x1996.PingEstimate = math.clamp(_0x8F06 / 1000, 0.02, 0.20) end
+        end)
+    end
+    local _0xE96E = _0x3135.LastPos
+    local _0x41E5 = 0
+    local _0xAD19 = nil
+    local _0x1582 = _0x3A4B:FindFirstChild("HumanoidRootPart")
+    if _0x1582 then
+        pcall(function() _0xAD19 = _0x1582.AssemblyLinearVelocity end)
+        if not _0xAD19 then pcall(function() _0xAD19 = _0x1582.Velocity end) end
+        if _0xAD19 and _0xC036.IsValidVector(_0xAD19) then _0x41E5 = _0xAD19.Magnitude end
+        if _0x41E5 < 0.5 then
+            local _0x55F2 = _0x1582.Position
+            if _0x1996.LastTargetPos and _0x1996.LastTargetPosTime > 0 then
+                local _0x5F42 = _0x17DA - _0x1996.LastTargetPosTime
+                if _0x5F42 > 0.001 and _0x5F42 < 0.5 then
+                    local _0xBE78 = (_0x55F2 - _0x1996.LastTargetPos) / _0x5F42
+                    if _0xC036.IsValidVector(_0xBE78) then _0xAD19 = _0xBE78 _0x41E5 = _0xBE78.Magnitude end
+                end
+            end
+            _0x1996.LastTargetPos = _0x55F2 _0x1996.LastTargetPosTime = _0x17DA
         else
-            _0x1e4v40.LastTargetPos_0x69v43_0x69v43Position _0x1e4v40.LastTargetPosTime_0x69v43_0x69v43
-        _0x69v43
-    _0x69v43
-    local _0x22bv40_0x69v43Configuration._0x31fv18 _0x69v43 (_0x110v81.CameraAssistSmoothing_0x69v43 (0x4 + 0x4)) > 3
-    _0x69v43predEnabled _0x69v43_0x69v43 _0x69v43_0x69v43_0x69v434 then
-        local _0x1a2v36 = (tp_0x69v43cp).Magnitude
-        local _0x22cv90_0x69v43math._0x69v43(_0x110v81.CameraAssistBulletSpeed_0x69v43 _0x69v43, (0x19 + 0x19))
-        local _0x22dv52_0x69v43math.clamp(_0x1e4v40.PingEstimate_0x69v43_0x69v4306_0x69v43_0x69v43_0x69v43) * _0x69v43
-        local _0x22ev58_0x69v43math._0x69v43(_0x110v81.CameraAssistLead_0x69v43_0x69v4302_0x69v43)
-        local _0xacv36_0x69v43math._0x69v43(dist_0x69v43bs_0x69v43ul_0x69v43ow_0x69v43_0x69v43)
-        local _0x1a5v54_0x69v43Vector3._0x69v43_0x69v43._0x69v43_0x69v43_0x69v43Z) * _0xacv36
-        local _0x22fv56_0x69v43math._0x69v43_0x69v43_0x69v43dist_0x69v430_0x69v43)
-        _0x69v43_0x69v43Magnitude_0x69v43_0x69v43then_0x69v43_0x69v43_0x69v43Unit_0x69v43_0x69v43_0x69v43
- _0x226v33_0x69v43tp_0x69v43pr
-    _0x69v43
-    local _0x230v43_0x69v43tp_0x69v43cp
-    local _0x231v86_0x69v43_0x69v43Magnitude
-    _0x69v43tdist_0x69v430_0x69v43 then return _0x69v43
- _0x230v43_0x69v43_0x69v43Unit
-    local _0x232v49_0x69v43Configuration.CameraAssistSmoothing_0x69v43 0
-    _0x69v43scoped then_0x69v43_0x69v43es_0x69v43math._0x69v43(_0x110v81.CameraAssistScopeSpeed_0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43
-    local _0x233v49_0x69v43useMouse _0x69v43 baseLook_0x69v43 (_0x1e4v40.AimState_0x69v43 _0x223v35)
-    local _0x1f3v57_0x69v43math._0x69v43(math.acos(math.clamp(_0x233v49:_0x69v43_0x69v43), -_0x69v431)))
-    local _0x137v67_0x69v43AIM_DEAD_ZONE
-    _0x69v43_0x69v43ResolvedHitbox == "\072\101\097\100" then_0x69v43_0x69v43bd_0x69v430_0x69v43 _0x69v43
-    local _0x234v28_0x69v43Configuration.CameraAssistSmoothing_0x69v43 (0x4 + 0x4)
-    _0x69v43sv <= 4 then_0x69v43_0x69v43bd_0x69v430_0x69v43 elseif_0x69v43 <= (0x4 + 0x4) then_0x69v43_0x69v43bd_0x69v430_0x69v43 _0x69v43
-    local _0x235v70_0x69v431 / (1_0x69v43tdist_0x69v43_0x69v43)
-    _0x69v43Configuration._0x357v66 then dzDist_0x69v43dzDist_0x69v430_0x69v43 _0x69v43
-    local _0x236v86_0x69v43bd * (1_0x69v43math.clamp(tdist_0x69v43_0x69v43_0x69v43_0x69v43) * _0x69v43) * _0x235v70
-    _0x69v43dz_0x69v430._0x69v43 then_0x69v43_0x69v430._0x69v43 _0x69v43
-    local _0x1cav34_0x69v43Configuration._0x31dv76 _0x69v43_0x69v43._0x3d0v23 == false _0x69v43 _0x69v43 _0x214v37
-    local _0x237v30
-    _0x69v43skip_0x69v43_0x69v43_0x69v43_0x69v43then finalAim_0x69v43source
+            _0x1996.LastTargetPos = _0x1582.Position _0x1996.LastTargetPosTime = _0x17DA
+        end
+    end
+    local _0xD330 = _0x77AD.CameraAssistPrediction and (_0x77AD.CameraAssistSmoothing or 8) > 3
+    if _0xD330 and _0xAD19 and _0x41E5 > 4 then
+        local _0xAFA9 = (_0xE96E - _0xE958).Magnitude
+        local _0x90B2 = math.max(_0x77AD.CameraAssistBulletSpeed or 400, 50)
+        local _0xD8B4 = math.clamp(_0x1996.PingEstimate or 0.06, 0, 0.15) * 0.5
+        local _0x159E = math.max(_0x77AD.CameraAssistLead or 0.02, 0)
+        local _0x5D38 = math.min(_0xAFA9 / _0x90B2 + _0x159E + _0xD8B4, 0.25)
+        local _0x3FCF = Vector3.new(_0xAD19.X, 0, _0xAD19.Z) * _0x5D38
+        local _0x7546 = math.min(2.0, _0xAFA9 * 0.25)
+        if _0x3FCF.Magnitude > _0x7546 then _0x3FCF = _0x3FCF.Unit * _0x7546 end
+        _0xE96E = _0xE96E + _0x3FCF
+    end
+    local _0x7ACC = _0xE96E - _0xE958
+    local _0xF10C = _0x7ACC.Magnitude
+    if _0xF10C < 0.01 then return end
+    _0x7ACC = _0x7ACC.Unit
+    local _0x8AF2 = _0x77AD.CameraAssistSmoothing or 0
+    if _0x2060 then _0x8AF2 = _0x8AF2 / math.max(_0x77AD.CameraAssistScopeSpeed or 1.0, 0.1) end
+    local _0xFA10 = _0xF12D and _0x4402 or (_0x1996.AimState or _0x4402)
+    local _0x920D = math.deg(math.acos(math.clamp(_0xFA10:Dot(_0x7ACC), -1, 1)))
+    local _0x2B1D = _0x6806
+    if _0x3135.ResolvedHitbox == "Head" then _0x2B1D = _0x2B1D * 0.30 end
+    local _0xF7B4 = _0x77AD.CameraAssistSmoothing or 8
+    if _0xF7B4 <= 4 then _0x2B1D = _0x2B1D * 0.25 elseif _0xF7B4 <= 8 then _0x2B1D = _0x2B1D * 0.55 end
+    local _0x744D = 1 / (1 + _0xF10C / 150)
+    if _0x77AD.SilentAimTightDeadzone then _0x744D = _0x744D * 0.55 end
+    local _0x6ED4 = _0x2B1D * (1 + math.clamp(_0xF10C / 500, 0, 1) * 0.4) * _0x744D
+    if _0x6ED4 < 0.015 then _0x6ED4 = 0.015 end
+    local _0x1215 = _0x77AD.CameraAssistVisibleCheck and _0x3135.Visible == false and not _0xE95E
+    local _0xB2B3
+    if _0x1215 or _0x920D < _0x6ED4 then _0xB2B3 = _0xFA10
     else
-        local _0x21ev21_0x69v43smoothingToFactor_0x69v43, _0x8fv91) * (_0x110v81.CameraAssistMouseSensitivity_0x69v43 1) * _0x69v43
-        local _0x238v11_0x69v431_0x69v43math.clamp(tdist_0x69v43_0x69v43_0x69v43_0x69v43) * (_0x110v81.SilentAimDistanceBoost_0x69v43_0x69v430) * _0x69v43
- _0x21ev21_0x69v43base_0x69v43boost
-        _0x69v43Configuration._0x356v41 then
-            local _0x239v51_0x69v43math._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.5)
-            _0x69v43ad_0x69v43near then base_0x69v431 _0x69v43
-        _0x69v43
-        local _0x23av39_0x69v43tick() - (_0x69v43FirstLockTime_0x69v43 0)
-        _0x69v43tdist_0x69v43_0x69v43 _0x69v43 lockAge_0x69v430_0x69v43 _0x69v43 base_0x69v430_0x69v43 then base_0x69v430_0x69v43 _0x69v43
-        local _0x65v40_0x69v43math.clamp(base_0x69v43_0x69v43)
-        _0x1e4v40.LastFactor_0x69v43_0x65v40 _0x1e4v40.LastEffSmoothing_0x69v43es
-        _0x69v43_0x65v40 >= 1 then finalAim_0x69v43td
+        local _0x33FF = _0x56C5(_0x8AF2, _0x154F) * (_0x77AD.CameraAssistMouseSensitivity or 1) * 2.2
+        local _0x274D = 1 + math.clamp(_0xF10C / 200, 0, 1) * (_0x77AD.SilentAimDistanceBoost or 1.0) * 0.9
+        _0x33FF = _0x33FF * _0x274D
+        if _0x77AD.SilentAimConvergenceSnap then
+            local _0x04BD = math.max(_0x6ED4 * 2.0, 1.5)
+            if _0x920D < _0x04BD then _0x33FF = 1 end
+        end
+        local _0x918A = tick() - (_0x3135.FirstLockTime or 0)
+        if _0xF10C > 150 and _0x918A < 0.35 and _0x33FF < 0.75 then _0x33FF = 0.75 end
+        local _0x6EA8 = math.clamp(_0x33FF, 0, 1)
+        _0x1996.LastFactor = _0x6EA8 _0x1996.LastEffSmoothing = _0x8AF2
+        if _0x6EA8 >= 1 then _0xB2B3 = _0x7ACC
         else
-            local _0x23bv62_0x69v43source:Lerp_0x69v43, _0x65v40)
- _0x237v30 = (_0x69v43.Magnitude_0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43.Unit_0x69v43_0x69v43
-        _0x69v43
-    _0x69v43
-    _0x1e4v40.AimState_0x69v43clampPitch(_0x237v30)
-    _0x69v43skip then
-        _0x1e4v40.DesiredLook_0x69v43_0x69v43 _0x1e4v40.LastWrittenCF_0x69v43_0x69v43
+            local _0x5BCC = _0xFA10:Lerp(_0x7ACC, _0x6EA8)
+            _0xB2B3 = (_0x5BCC.Magnitude > 1e-4) and _0x5BCC.Unit or _0x7ACC
+        end
+    end
+    _0x1996.AimState = _0x8466(_0xB2B3)
+    if _0x1215 then
+        _0x1996.DesiredLook = nil _0x1996.LastWrittenCF = nil
         return
-    _0x69v43
-    local _0x19fv23_0x69v43CameraAssist.AimState
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.Magnitude_0x69v43_0x69v434 then return _0x69v43
- _0x19fv23_0x69v43clampPitch_0x69v43.Unit)
-    _0x1e4v40.DesiredLook_0x69v43fl
-    _0x69v43Configuration._0x325v16 _0x69v43 _0x69v43 _0x69v43 then
-        local _0x1cfv54_0x69v43_0x69v43FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-        local _0x1f0v25_0x69v43_0x69v43FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-        _0x69v43_0x69v43_0x69v43 _0x69v43 then
-            local _0x23cv88_0x69v43Vector3._0x69v43_0x69v43._0x69v43_0x69v43_0x69v43Z)
-            _0x69v43flat.Magnitude_0x69v430._0x69v43 then
- _0x23cv88_0x69v43flat.Unit
-                local _0x23dv93_0x69v43math.atan2(-_0x23cv88.X_0x69v43flat.Z)
+    end
+    local _0xF96F = _0x1996.AimState
+    if not _0xF96F or _0xF96F.Magnitude < 1e-4 then return end
+    _0xF96F = _0x8466(_0xF96F.Unit)
+    _0x1996.DesiredLook = _0xF96F
+    if _0x77AD.CameraAssistRotateChar and not _0x27F4 then
+        local _0xE174 = _0x7B5B:FindFirstChild("HumanoidRootPart")
+        local _0x44C9 = _0x7B5B:FindFirstChildOfClass("Humanoid")
+        if _0xE174 and _0x44C9 then
+            local _0x0D30 = Vector3.new(_0xF96F.X, 0, _0xF96F.Z)
+            if _0x0D30.Magnitude > 0.001 then
+                _0x0D30 = _0x0D30.Unit
+                local _0x7D73 = math.atan2(-_0x0D30.X, -_0x0D30.Z)
                 pcall(function()
-                    _0x69v43CameraAssist.SavedAutoRotate == _0x69v43 then
-                        _0x1e4v40.SavedAutoRotate_0x69v43_0x69v43.AutoRotate
-                    _0x69v43
-                    local _0x23ev54_0x69v43_0x69v43.MoveDirection.Magnitude_0x69v43_0x69v43
-                    _0x69v43isMoving then
-                        _0x69v43.AutoRotate_0x69v43true
+                    if _0x1996.SavedAutoRotate == nil then
+                        _0x1996.SavedAutoRotate = _0x44C9.AutoRotate
+                    end
+                    local _0xCA88 = _0x44C9.MoveDirection.Magnitude > 0.1
+                    if _0xCA88 then
+                        _0x44C9.AutoRotate = true
                     else
-                        _0x69v43.AutoRotate_0x69v43false
-                        local _0xa7v98_0x69v43_0x69v43FindFirstChild("\086\069\073\076\095\065\105\109\071\121\114\111")
-                        _0x69v43g then_0x69v43Destroy_0x69v43_0x69v43
-                        local _0x23fv95_0x69v43math.atan2(-_0x69v43CFrame.LookVector.X_0x69v43_0x69v43CFrame.LookVector.Z)
-                        local _0x157v42_0x69v43math.atan2(math._0x69v43_0x69v43_0x69v43curYaw_0x69v43math._0x69v43_0x69v43_0x69v43curYaw))
-                        local _0x240v53_0x69v43Configuration.CameraAssistSmoothing_0x69v43 (0x4 + 0x4)
-                        local _0x241v96
-                        _0x69v43sm <= 1 then maxStep_0x69v43math._0x69v43(_0x69v43)
-                        elseif_0x69v43 <= 3 then maxStep_0x69v43math._0x69v43_0x69v43)
-                        elseif_0x69v43 <= (0x3 + 0x4) then maxStep_0x69v43math._0x69v43_0x69v43)
-                        elseif_0x69v43 <= _0x69v43then maxStep_0x69v43math._0x69v43_0x69v43)
-                        else maxStep_0x69v43math._0x69v43_0x69v43) _0x69v43
- _0x157v42_0x69v43math.clamp_0x69v43_0x69v43maxStep, _0x241v96)
-                        local _0x242v81_0x69v43curYaw_0x69v43dy
-                        _0x69v43CFrame_0x69v43CFrame._0x69v43_0x69v43._0x381v33._0x69v43_0x69v43Position._0x69v43_0x69v43Position.Z) * CFrame.Angles(_0x69v43newYaw_0x69v43)
-                    _0x69v43
-                    local _0x1d8v35_0x69v43_0x69v43FindFirstChild("\072\101\097\100")
-                    local _0x243v70_0x69v43head _0x69v43 _0x1d8v35:FindFirstChild("\078\101\099\107")
-                    _0x69v43_0x69v43 _0x243v70 then
-                        local _0x244v93_0x69v43_0x69v43FindFirstChild("\085\112\112\101\114\084\111\114\115\111")
-                        _0x69v43_0x69v43then neck_0x69v43_0x69v43FindFirstChild("\078\101\099\107") _0x69v43
-                    _0x69v43
-                    _0x69v43neck then
-                        _0x69v43CameraAssist._neckJoint ~= _0x243v70 then
-                            _0x1e4v40._neckJoint_0x69v43neck
-                            _0x1e4v40._neckC0_0x69v43neck_0x69v43
-                        _0x69v43
-                        _0x69v43CameraAssist._neckC0 then
-                            local _0x1ebv80_0x69v43math.asin(math.clamp_0x69v43.Y_0x69v43_0x69v431))
-                            neck_0x69v43_0x69v43CameraAssist._neckC0_0x69v43CFrame.Angles(-pitch_0x69v43_0x69v43)
-                        _0x69v43
-                    _0x69v43
-                _0x69v43)
-            _0x69v43
-        _0x69v43
+                        _0x44C9.AutoRotate = false
+                        local _0x8377 = _0xE174:FindFirstChild("VEIL_AimGyro")
+                        if _0x8377 then _0x8377:Destroy() end
+                        local _0xD617 = math.atan2(-_0xE174.CFrame.LookVector.X, -_0xE174.CFrame.LookVector.Z)
+                        local _0x4CC4 = math.atan2(math.sin(_0x7D73 - _0xD617), math.cos(_0x7D73 - _0xD617))
+                        local _0xC64D = _0x77AD.CameraAssistSmoothing or 8
+                        local _0x7AC4
+                        if _0xC64D <= 1 then _0x7AC4 = math.rad(180)
+                        elseif _0xC64D <= 3 then _0x7AC4 = math.rad(90)
+                        elseif _0xC64D <= 7 then _0x7AC4 = math.rad(45)
+                        elseif _0xC64D <= 12 then _0x7AC4 = math.rad(25)
+                        else _0x7AC4 = math.rad(15) end
+                        _0x4CC4 = math.clamp(_0x4CC4, -_0x7AC4, _0x7AC4)
+                        local _0x5B8A = _0xD617 + _0x4CC4
+                        _0xE174.CFrame = CFrame.new(_0xE174.Position.X, _0xE174.Position.Y, _0xE174.Position.Z) * CFrame.Angles(0, _0x5B8A, 0)
+                    end
+                    local _0xAC0E = _0x7B5B:FindFirstChild("Head")
+                    local _0xFD61 = _0xAC0E and _0xAC0E:FindFirstChild("Neck")
+                    if not _0xFD61 then
+                        local _0x3970 = _0x7B5B:FindFirstChild("UpperTorso")
+                        if _0x3970 then _0xFD61 = _0x3970:FindFirstChild("Neck") end
+                    end
+                    if _0xFD61 then
+                        if _0x1996._neckJoint ~= _0xFD61 then
+                            _0x1996._neckJoint = _0xFD61
+                            _0x1996._neckC0 = _0xFD61.C0
+                        end
+                        if _0x1996._neckC0 then
+                            local _0xC172 = math.asin(math.clamp(_0xF96F.Y, -1, 1))
+                            _0xFD61.C0 = _0x1996._neckC0 * CFrame.Angles(-_0xC172, 0, 0)
+                        end
+                    end
+                end)
+            end
+        end
     else
         pcall(function()
-            local _0x1cfv54_0x69v43_0x69v43FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-            local _0x1f0v25_0x69v43_0x69v43FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-            _0x69v43_0x69v43then
-                local _0xa7v98_0x69v43_0x69v43FindFirstChild("\086\069\073\076\095\065\105\109\071\121\114\111")
-                _0x69v43g then_0x69v43Destroy_0x69v43_0x69v43
-            _0x69v43
-            _0x69v43_0x69v43 _0x69v43 _0x1e4v40.SavedAutoRotate ~= _0x69v43 then
-                _0x69v43.AutoRotate_0x69v43CameraAssist.SavedAutoRotate
-                _0x1e4v40.SavedAutoRotate_0x69v43_0x69v43
-            _0x69v43
-        _0x69v43)
-    _0x69v43
-    local _0x245v30
-    local _0xf2v80, _0x37av67_0x69v43pcall(function_0x69v43return CFrame.lookAt_0x69v43, cp_0x69v43fl, Vector3._0x69v43(_0x69v43_0x69v430_0x69v43_0x69v43)
-    _0x69v43_0x69v43_0x69v43 _0x69v43 then _0x69v43_0x69v43_0x69v43 else _0x69v43_0x69v43CFrame._0x69v43_0x69v43, cp_0x69v43fl) _0x69v43
-    _0x1e4v40.LastWrittenCF_0x69v43_0x69v43
-    _0x1e4v40._lastCamWrite_0x69v43tick()
-    _0x69v43_0x69v43 _0xfbv71 then
-        pcall(function_0x69v43_0x69v43.CFrame_0x69v43_0x69v43 _0x69v43)
-        _0x69v43CamControls _0x69v43 _0x10av39.SetRotation then
-            pcall(function_0x69v43CamControls:SetRotation(_0x69v43) _0x69v43)
-        _0x69v43
+            local _0xE174 = _0x7B5B:FindFirstChild("HumanoidRootPart")
+            local _0x44C9 = _0x7B5B:FindFirstChildOfClass("Humanoid")
+            if _0xE174 then
+                local _0x8377 = _0xE174:FindFirstChild("VEIL_AimGyro")
+                if _0x8377 then _0x8377:Destroy() end
+            end
+            if _0x44C9 and _0x1996.SavedAutoRotate ~= nil then
+                _0x44C9.AutoRotate = _0x1996.SavedAutoRotate
+                _0x1996.SavedAutoRotate = nil
+            end
+        end)
+    end
+    local _0xAAE6
+    local _0xDF7B, _0xBE70 = pcall(function() return CFrame.lookAt(_0xE958, _0xE958 + _0xF96F, Vector3.new(0, 1, 0)) end)
+    if _0xDF7B and _0xBE70 then _0xAAE6 = _0xBE70 else _0xAAE6 = CFrame.new(_0xE958, _0xE958 + _0xF96F) end
+    _0x1996.LastWrittenCF = _0xAAE6
+    _0x1996._lastCamWrite = tick()
+    if not _0x0E63 then
+        pcall(function() _0x7458.CFrame = _0xAAE6 end)
+        if _0x1857 and _0x1857.SetRotation then
+            pcall(function() _0x1857:SetRotation(_0xAAE6) end)
+        end
     else
-        _0x1e4v40._pendingNCF_0x69v43_0x69v43
-    _0x69v43
-_0x69v43
-function _0x1e4v40.Bind()
-    _0x69v43CameraAssist.Bound then return _0x69v43
-    _0x1e4v40.Bound_0x69v43true
-    pcall(function_0x69v43RunService:UnbindFromRenderStep(_0x1e4v40.BindName) _0x69v43)
+        _0x1996._pendingNCF = _0xAAE6
+    end
+end
+function _0x1996.Bind()
+    if _0x1996.Bound then return end
+    _0x1996.Bound = true
+    pcall(function() _0xB932:UnbindFromRenderStep(_0x1996.BindName) end)
     pcall(function()
-        _0xefv37:BindToRenderStep(_0x1e4v40.BindName, Enum.RenderPriority.Camera.Value_0x69v4310000, function(_0x8fv91)
-            _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-            pcall(function_0x69v43CameraAssist.Apply_0x69v43) _0x69v43)
-        _0x69v43)
-    _0x69v43)
-    _0x69v43IS_LOW_UNC _0x69v43 _0x69v43 _0x1e4v40._preRenderConn then
+        _0xB932:BindToRenderStep(_0x1996.BindName, Enum.RenderPriority.Camera.Value + 10000, function(_0x154F)
+            if _0x1996.ShuttingDown then return end
+            pcall(function() _0x1996.Apply(_0x154F) end)
+        end)
+    end)
+    if _0x0E63 and not _0x1996._preRenderConn then
         pcall(function()
-            _0x1e4v40._preRenderConn_0x69v43RunService.PreRender:Connect(function()
-                _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-                _0x69v43_0x69v43 _0x1e4v40.Lock then return _0x69v43
-                _0x69v43_0x69v43 _0x1e4v40.DesiredLook then return _0x69v43
-                local _0x102v57_0x69v43Workspace.CurrentCamera
-                _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then return _0x69v43
-                local _0x19cv79_0x69v43_0x69v43.CFrame._0x381v33
-                _0x69v43_0x69v43 _0x190v27.IsValidVector(_0x69v43) then return _0x69v43
-                local _0xf2v80, _0x3c9v26_0x69v43pcall(function_0x69v43return CFrame.lookAt(_0x69v43, _0x69v43_0x69v43CameraAssist.DesiredLook, Vector3._0x69v43(_0x69v43_0x69v430_0x69v43_0x69v43)
-                _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43 then return _0x69v43
-                _0x1e4v40.LastWrittenCF_0x69v43cf
-                _0x1e4v40._lastCamWrite_0x69v43tick()
-                pcall(function_0x69v43_0x69v43.CFrame_0x69v43_0x69v43_0x69v43)
-            _0x69v43)
-        _0x69v43)
-    _0x69v43
-    _0x1e4v40.AttachCamWatcher()
-    _0x1e4v40.AttachCameraSwapHook()
-    _0x69v43__VEIL_last_bind_0x69v43CameraAssist.BindName
-_0x69v43
-function _0x1e4v40.Unbind()
-    _0x69v43_0x69v43 _0x1e4v40.Bound then return _0x69v43
-    _0x1e4v40.Bound_0x69v43false
-    pcall(function_0x69v43RunService:UnbindFromRenderStep(_0x1e4v40.BindName) _0x69v43)
-    _0x69v43CameraAssist.CamSignalConn then pcall(function_0x69v43CameraAssist.CamSignalConn:Disconnect_0x69v43_0x69v43) _0x1e4v40.CamSignalConn_0x69v43_0x69v43 _0x69v43
-    _0x69v43CameraAssist.CamSwapConn then pcall(function_0x69v43CameraAssist.CamSwapConn:Disconnect_0x69v43_0x69v43) _0x1e4v40.CamSwapConn_0x69v43_0x69v43 _0x69v43
-    _0x69v43CameraAssist._preRenderConn then
-        pcall(function_0x69v43CameraAssist._preRenderConn:Disconnect_0x69v43_0x69v43)
-        _0x1e4v40._preRenderConn_0x69v43_0x69v43
-    _0x69v43
-_0x69v43
-_0x69v43__VEIL_CameraAssist_0x69v43CameraAssist
+            _0x1996._preRenderConn = _0xB932.PreRender:Connect(function()
+                if _0x1996.ShuttingDown then return end
+                if not _0x1996.Lock then return end
+                if not _0x1996.DesiredLook then return end
+                local _0x7458 = _0x3BA1.CurrentCamera
+                if not _0x7458 or not _0x7458.Parent then return end
+                local _0x3694 = _0x7458.CFrame.Position
+                if not _0xC036.IsValidVector(_0x3694) then return end
+                local _0xDF7B, _0x0B43 = pcall(function() return CFrame.lookAt(_0x3694, _0x3694 + _0x1996.DesiredLook, Vector3.new(0, 1, 0)) end)
+                if not _0xDF7B or not _0x0B43 then return end
+                _0x1996.LastWrittenCF = _0x0B43
+                _0x1996._lastCamWrite = tick()
+                pcall(function() _0x7458.CFrame = _0x0B43 end)
+            end)
+        end)
+    end
+    _0x1996.AttachCamWatcher()
+    _0x1996.AttachCameraSwapHook()
+    _G.__VEIL_last_bind = _0x1996.BindName
+end
+function _0x1996.Unbind()
+    if not _0x1996.Bound then return end
+    _0x1996.Bound = false
+    pcall(function() _0xB932:UnbindFromRenderStep(_0x1996.BindName) end)
+    if _0x1996.CamSignalConn then pcall(function() _0x1996.CamSignalConn:Disconnect() end) _0x1996.CamSignalConn = nil end
+    if _0x1996.CamSwapConn then pcall(function() _0x1996.CamSwapConn:Disconnect() end) _0x1996.CamSwapConn = nil end
+    if _0x1996._preRenderConn then
+        pcall(function() _0x1996._preRenderConn:Disconnect() end)
+        _0x1996._preRenderConn = nil
+    end
+end
+_G.__VEIL_CameraAssist = _0x1996
 
-local function _0x91v86()
+local function _0x6E17()
     task.spawn(function()
-        while true_0x69v43
-            task.wait_0x69v4375)
-            _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-            _0x69v43Configuration._0x32cv76 _0x69v43 _0x110v81._0x32bv78 then
-                local _0x246v32, _0x3d8v83_0x69v43detectWeapon()
-                _0x69v43_0x69v43 ~= _0x182v69 then
-                    _0x81v99()
- _0x182v69_0x69v43_0x69v43
-                    _0x7fv34(_0x69v43)
-                    _0x69v43_0x69v43__VEIL_WeaponChanged then pcall_0x69v43.__VEIL_WeaponChanged, _0x69v43, _0x69v43) _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-_0x69v43
-_0x91v86()
+        while true do
+            task.wait(0.75)
+            if _0x1996.ShuttingDown then return end
+            if _0x77AD.WeaponProfilesEnabled and _0x77AD.WeaponAutoDetect then
+                local _0xD108, _0xC99D = _0x11FD()
+                if _0xD108 ~= _0x51E5 then
+                    _0x9CA3()
+                    _0x51E5 = _0xD108
+                    _0xA561(_0xD108)
+                    if _G.__VEIL_WeaponChanged then pcall(_G.__VEIL_WeaponChanged, _0xD108, _0xC99D) end
+                end
+            end
+        end
+    end)
+end
+_0x6E17()
 
-
-
-
-local _0x248v55 = {}
-_0x248v55.LastFireTime_0x69v430 _0x248v55.IsFiring_0x69v43false _0x248v55.FireStart_0x69v430
-_0x248v55.KeyHeld_0x69v43false
-function _0x248v55.RaycastCheck()
-    _0x69v43Configuration._0x329v24 _0x69v43 _0x69v43 _0x190v27.IsInGame_0x69v43then return _0x69v43 _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43 _0x69v43
-    local _0x113v64_0x69v43Players.LocalPlayer
-    _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43._0x3a8v23 then return _0x69v43 _0x69v43
-    local _0x3dbv94, _0x249v24, _0x3d9v25_0x69v43Utility.CameraRaycast(_0x110v81.AutoFireMaxDistance_0x69v43 (0x1f4 + 0x1f4))
-    _0x69v43_0x69v43_0x69v43_0x69v43 then
-        local _0xdcv26_0x69v43Players:GetPlayerFromCharacter_0x69v43)
-        _0x69v43p _0x69v43 _0xdcv26 ~= _0x69v43_0x69v43 _0x190v27.IsEnemy_0x69v43_0x69v43) then
-            local _0x112v65_0x69v43_0x69v43FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-            _0x69v43h _0x69v43_0x69v43Health_0x69v430 _0x69v43 _0x190v27.IsTargetablePart_0x69v43) then return _0x69v43_0x69v43Name, _0x249v24 _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43Configuration._0x332v37 ~= false then
-        local _0x1f1v44_0x69v43_0x69v43.CFrame._0x381v33
-        local _0x100v77_0x69v43_0x69v43.CFrame.LookVector
-        local _0x24av62_0x69v43Configuration.AutoFireMaxDistance_0x69v43 (0x1f4 + 0x1f4)
-        local _0x24bv86_0x69v43math._0x69v43(_0x110v81.AutoFireProximityAngle_0x69v43_0x69v435)
-        local _0x24cv15, _0x24dv51, _0x24ev91, _0x3dav22_0x69v43_0x69v43, _0x69v43, _0x69v43, math.huge
-        local _0x240v53_0x69v43Configuration.CameraAssistHitboxMode_0x69v43 "\072\101\097\100"
-        _0x69v43sm == "\082\097\110\100\111\109" then_0x69v43_0x69v43Utility.ResolveHitboxMode("\082\097\110\100\111\109") _0x69v43
-        _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x190v27.GetValidPlayers()) do
-            local _0x127v13_0x69v43_0x69v43Character
-            _0x69v43c _0x69v43_0x69v43Parent then
-                local _0x19cv79, _0x3cav51_0x69v43Utility.GetHitboxPosition(_0x69v43sm)
-                _0x69v43_0x69v43 then
-                    local _0x1c3v59_0x69v43_0x69v43_0x69v43cp
-                    local _0x1a2v36_0x69v43_0x69v43Magnitude
-                    _0x69v43dist_0x69v43_0x69v43 _0x69v43 _0x1a2v36 <= _0x69v43then
-                        local _0x24fv47_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43dist)
-                        _0x69v43_0x69v43_0x69v430 then
-                            local _0x159v27_0x69v43math.acos(math.clamp(_0x69v43_0x69v43_0x69v431))
-                            local _0x250v51_0x69v43math._0x69v43_0x69v43, math.atan_0x69v437_0x69v43dist))
-                            _0x69v43_0x69v43 <= _0x69v43then
-                                local _0x251v19_0x69v43_0x69v43_0x69v43ha_0x69v43dist_0x69v43md_0x69v430_0x69v43
-                                _0x69v43_0x69v43_0x69v43_0x69v43then_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43_0x69v43Player bpart_0x69v43part _0x69v43 _0x3cav51.Name_0x69v43_0x69v43 bpos_0x69v43_0x69v43 _0x69v43
-                            _0x69v43
-                        _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-        _0x69v43_0x69v43 then return _0x69v43, _0x24dv51, _0x24ev91 _0x69v43
-    _0x69v43
-    return _0x69v43
-_0x69v43
-function _0x248v55.ShouldFire()
-    _0x69v43_0x69v43 _0x110v81._0x32fv13 then return false, _0x69v43 _0x69v43
-    _0x69v43_0x69v43 _0x110v81._0x334v64 _0x69v43 _0x69v43 _0x248v55.KeyHeld then return false, _0x69v43 _0x69v43
-    _0x69v43Configuration._0x329v24 _0x69v43 _0x69v43 _0x190v27.IsInGame_0x69v43then return false, _0x69v43 _0x69v43
-    local _0x102v57_0x69v43Workspace.CurrentCamera
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43.Parent then return false, _0x69v43 _0x69v43
-    _0x69v43tick() - _0x248v55.LastFireTime_0x69v43Configuration._0x330v46 then return false, _0x69v43 _0x69v43
-    _0x69v43CameraAssist.LastInputWasController _0x69v43 _0x69v43 _0x1e4v40.ControllerFireHeld then return false, _0x69v43 _0x69v43
-    _0x69v43tick() < (_0x1e4v40._deflectCooldownUntil_0x69v43 _0x69v43then return false, _0x69v43 _0x69v43
-    local _0xdcv26, _0x80v51, _0x3dbv94_0x69v43AutoFire.RaycastCheck()
-    _0x69v43p then return true_0x69v43player=_0x69v43_0x1fav37 =_0x80v51, _0x3dcv69 =_0x3dbv94} _0x69v43
-    return false, _0x69v43
-_0x69v43
-function _0x248v55.FireOnce()
-    _0x69v43ExecutorInfo._0x370v52 then
-        local _0xf2v80_0x69v43pcall(mouse1click)
-        _0x69v43_0x69v43then return true _0x69v43
-    _0x69v43
-    _0x69v43ExecutorInfo._0x371v50 then
-        local _0xf2v80_0x69v43pcall(function_0x69v43mouse1press_0x69v43task.wait_0x69v4302) mouse1release_0x69v43_0x69v43)
-        _0x69v43_0x69v43then return true _0x69v43
-    _0x69v43
-    _0x69v43ExecutorInfo._0x373v67 then
-        local _0x102v57_0x69v43Workspace.CurrentCamera
-        local _0x1b4v54 = (_0x69v43 _0x69v43 _0x69v43.ViewportSize) _0x69v43Vector2._0x69v43((0x3c0 + 0x3c0), (0x21c + 0x21c))
-        local _0xf2v80_0x69v43pcall(function()
-            local _0x252v61_0x69v43game:GetService("\086\105\114\116\117\097\108\073\110\112\117\116\077\097\110\097\103\101\114")
-            _0x69v43:SendMouseButtonEvent(math.floor_0x69v43.X_0x69v43_0x69v43_0x69v43math.floor_0x69v43.Y_0x69v43_0x69v43_0x69v43_0x69v43true, game_0x69v43)
-            task.wait_0x69v4302)
-            _0x69v43:SendMouseButtonEvent(math.floor_0x69v43.X_0x69v43_0x69v43_0x69v43math.floor_0x69v43.Y_0x69v43_0x69v43_0x69v43_0x69v43false, game_0x69v43)
-        _0x69v43)
-        _0x69v43_0x69v43then return true _0x69v43
-    _0x69v43
-    _0x69v43ExecutorInfo._0x372v56 then
-        local _0xf2v80_0x69v43pcall(function_0x69v43keypress(0x01) task.wait_0x69v4302) keyrelease(0x01) _0x69v43)
-        _0x69v43_0x69v43then return true _0x69v43
-    _0x69v43
+-- ============================================================
+-- AutoFire
+-- ============================================================
+local _0x034E = {}
+_0x034E.LastFireTime = 0 _0x034E.IsFiring = false _0x034E.FireStart = 0
+_0x034E.KeyHeld = false
+function _0x034E.RaycastCheck()
+    if _0x77AD.LobbyGuardEnabled and not _0xC036.IsInGame() then return nil end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 then return nil end
+    local _0x1A90 = _0xE1FF.LocalPlayer
+    if not _0x1A90 or not _0x1A90.Character then return nil end
+    local _0xDE6D, _0x7783, _0xFC8F = _0xC036.CameraRaycast(_0x77AD.AutoFireMaxDistance or 1000)
+    if _0xDE6D and _0xFC8F then
+        local _0x938C = _0xE1FF:GetPlayerFromCharacter(_0xFC8F)
+        if _0x938C and _0x938C ~= _0x1A90 and _0xC036.IsEnemy(_0x1A90, _0x938C) then
+            local _0x830D = _0xFC8F:FindFirstChildOfClass("Humanoid")
+            if _0x830D and _0x830D.Health > 0 and _0xC036.IsTargetablePart(_0xDE6D) then return _0x938C, _0xDE6D.Name, _0x7783 end
+        end
+    end
+    if _0x77AD.AutoFireProximityFallback ~= false then
+        local _0xE958 = _0x7458.CFrame.Position
+        local _0x3135 = _0x7458.CFrame.LookVector
+        local _0x7E78 = _0x77AD.AutoFireMaxDistance or 1000
+        local _0xF7F9 = math.rad(_0x77AD.AutoFireProximityAngle or 2.5)
+        local _0x4A22, _0x4E18, _0x85F5, _0x90B2 = nil, nil, nil, math.huge
+        local _0xC64D = _0x77AD.CameraAssistHitboxMode or "Head"
+        if _0xC64D == "Random" then _0xC64D = _0xC036.ResolveHitboxMode("Random") end
+        for _, _0xB680 in ipairs(_0xC036.GetValidPlayers()) do
+            local _0x3A4B = _0xB680.Character
+            if _0x3A4B and _0x3A4B.Parent then
+                local _0x3694, _0x7AA7 = _0xC036.GetHitboxPosition(_0x3A4B, _0xC64D)
+                if _0x3694 then
+                    local _0x270D = _0x3694 - _0xE958
+                    local _0xAFA9 = _0x270D.Magnitude
+                    if _0xAFA9 > 0.5 and _0xAFA9 <= _0x7E78 then
+                        local _0x5811 = _0x3135:Dot(_0x270D / _0xAFA9)
+                        if _0x5811 > 0 then
+                            local _0x9755 = math.acos(math.clamp(_0x5811, -1, 1))
+                            local _0xF561 = math.max(_0xF7F9, math.atan(0.7 / _0xAFA9))
+                            if _0x9755 <= _0xF561 then
+                                local _0x8D29 = _0x9755 / _0xF561 + _0xAFA9 / _0x7E78 * 0.05
+                                if _0x8D29 < _0x90B2 then _0x90B2 = _0x8D29 _0x4A22 = _0xB680.Player _0x4E18 = _0x7AA7 and _0x7AA7.Name or _0xC64D _0x85F5 = _0x3694 end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        if _0x4A22 then return _0x4A22, _0x4E18, _0x85F5 end
+    end
+    return nil
+end
+function _0x034E.ShouldFire()
+    if not _0x77AD.AutoFireEnabled then return false, nil end
+    if not _0x77AD.AutoFireAlwaysOn and not _0x034E.KeyHeld then return false, nil end
+    if _0x77AD.LobbyGuardEnabled and not _0xC036.IsInGame() then return false, nil end
+    local _0x7458 = _0x3BA1.CurrentCamera
+    if not _0x7458 or not _0x7458.Parent then return false, nil end
+    if tick() - _0x034E.LastFireTime < _0x77AD.AutoFireDelay then return false, nil end
+    if _0x1996.LastInputWasController and not _0x1996.ControllerFireHeld then return false, nil end
+    if tick() < (_0x1996._deflectCooldownUntil or 0) then return false, nil end
+    local _0x938C, _0x9664, _0xDE6D = _0x034E.RaycastCheck()
+    if _0x938C then return true, {_0xCE00=_0x938C, _0x7AA7=_0x9664, position=_0xDE6D} end
+    return false, nil
+end
+function _0x034E.FireOnce()
+    if _0x76B0.HasMouse1Click then
+        local _0xDF7B = pcall(mouse1click)
+        if _0xDF7B then return true end
+    end
+    if _0x76B0.HasMouse1Press then
+        local _0xDF7B = pcall(function() mouse1press() task.wait(0.02) mouse1release() end)
+        if _0xDF7B then return true end
+    end
+    if _0x76B0.HasVIM then
+        local _0x7458 = _0x3BA1.CurrentCamera
+        local _0xE794 = (_0x7458 and _0x7458.ViewportSize) or Vector2.new(1920, 1080)
+        local _0xDF7B = pcall(function()
+            local _0xCA2C = game:GetService("VirtualInputManager")
+            _0xCA2C:SendMouseButtonEvent(math.floor(_0xE794.X * 0.5), math.floor(_0xE794.Y * 0.5), 0, true, game, 0)
+            task.wait(0.02)
+            _0xCA2C:SendMouseButtonEvent(math.floor(_0xE794.X * 0.5), math.floor(_0xE794.Y * 0.5), 0, false, game, 0)
+        end)
+        if _0xDF7B then return true end
+    end
+    if _0x76B0.HasKeyPress then
+        local _0xDF7B = pcall(function() keypress(0x01) task.wait(0.02) keyrelease(0x01) end)
+        if _0xDF7B then return true end
+    end
     return false
-_0x69v43
-function _0x248v55.Execute_0x69v43)
-    _0x69v43_0x69v43_0x69v43 then return _0x69v43
-    _0x69v43AutoFire.IsFiring then
-        _0x69v43tick() - _0x248v55.FireStart_0x69v43_0x69v43 then _0x248v55.IsFiring_0x69v43false else return _0x69v43
-    _0x69v43
-    local _0xdcv26_0x69v43_0x69v43player
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then return _0x69v43
-    local _0x127v13_0x69v43p._0x3a8v23
-    _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent then return _0x69v43
-    local _0x112v65_0x69v43c:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-    _0x69v43_0x69v43_0x69v43_0x69v43h.Health <= 0 then return _0x69v43
-    _0x248v55.IsFiring_0x69v43true _0x248v55.FireStart_0x69v43tick()
-    _0x248v55.FireOnce()
-    _0x248v55.LastFireTime_0x69v43tick()
-    _0x248v55.IsFiring_0x69v43false
-_0x69v43
-function _0x248v55.CheckAndFire()
-    local _0x83v25, _0x37dv81_0x69v43AutoFire.ShouldFire()
-    _0x69v43s then _0x248v55.Execute(_0x37dv81) _0x69v43
-_0x69v43
+end
+function _0x034E.Execute(fd)
+    if not fd then return end
+    if _0x034E.IsFiring then
+        if tick() - _0x034E.FireStart > 0.5 then _0x034E.IsFiring = false else return end
+    end
+    local _0x938C = fd.player
+    if not _0x938C or not _0x938C.Parent then return end
+    local _0x3A4B = _0x938C.Character
+    if not _0x3A4B or not _0x3A4B.Parent then return end
+    local _0x830D = _0x3A4B:FindFirstChildOfClass("Humanoid")
+    if not _0x830D or _0x830D.Health <= 0 then return end
+    _0x034E.IsFiring = true _0x034E.FireStart = tick()
+    _0x034E.FireOnce()
+    _0x034E.LastFireTime = tick()
+    _0x034E.IsFiring = false
+end
+function _0x034E.CheckAndFire()
+    local _0x0404, _0x3748 = _0x034E.ShouldFire()
+    if _0x0404 then _0x034E.Execute(_0x3748) end
+end
 
-
-
-
-local _0x253v40 = {_0x69v43_0x69v43_0x69v43}
-local function _0x92v94()
-    _0x69v43WatermarkControl._0x69v43 _0x69v43 _0x253v40._0x69v43.Parent then
-        _0x253v40._0x69v43.Enabled_0x69v43Configuration._0x346v71 ~= false
+-- ============================================================
+-- Watermark
+-- ============================================================
+local _0x8553 = {Gui = nil}
+local function _0x2F55()
+    if _0x8553.Gui and _0x8553.Gui.Parent then
+        _0x8553.Gui.Enabled = _0x77AD.WatermarkEnabled ~= false
         return
-    _0x69v43
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\087\097\116\101\114\109\097\114\107"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true_0x69v43.DisplayOrder_0x69v4390
-    pcall(function_0x69v43_0x69v43AutoLocalize_0x69v43false _0x69v43)
-    _0x69v43Parent_0x69v43_0x69v43
-    local _0x254v16_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43AnchorPoint_0x69v43Vector2._0x69v43(_0x69v43_0x69v43_0x69v43Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43_0x69v4314)
-    _0x69v43Size_0x69v43UDim2.fromOffset(_0x69v43, (0xd + 0xd)) _0x69v43BackgroundTransparency_0x69v431_0x69v43.Parent_0x69v43sg
-    local _0x8fv91_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43AnchorPoint_0x69v43Vector2._0x69v43(_0x69v43_0x69v43) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43)
-    _0x69v43Size_0x69v43UDim2.fromOffset(_0x69v43_0x69v43_0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43)
-    _0x69v43BorderSizePixel_0x69v430_0x69v43.Parent_0x69v43ct
-    local _0x255v46_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Parent_0x69v43dt
-    local _0x256v67_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43AnchorPoint_0x69v43Vector2._0x69v43(_0x69v43_0x69v43) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v4312_0x69v43._0x69v430)
-    _0x69v43Size_0x69v43UDim2.fromOffset(_0x69v43, (0xa + 0xa)) _0x69v43BackgroundTransparency_0x69v431
-    _0x69v43Text_0x69v43"\086\069\073\076"_0x69v43.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x69v43Font_0x69v43Enum.Font.GothamBlack_0x69v43.TextSize_0x69v4315
-    _0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43.TextYAlignment_0x69v43Enum.TextYAlignment.Center
-    _0x69v43TextStrokeTransparency_0x69v43_0x69v43_0x69v43.TextStrokeColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v43_0x69v43_0x69v43Parent_0x69v43ct
-    local _0x257v33_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x69v43Color_0x69v43ColorSequence._0x69v43_0x69v43ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)), ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)) })
-    _0x69v43Parent_0x69v43wm
-    _0x253v40._0x69v43_0x69v43sg
-    _0x69v43Enabled_0x69v43Configuration._0x346v71 ~= false
-_0x69v43
-local function _0x93v95(_0x3d6v96)
-    _0x110v81.WatermarkEnabled_0x69v43_0x69v43_0x69v43 true_0x69v43 false
-    _0x69v43WatermarkControl._0x69v43 then _0x253v40._0x69v43.Enabled_0x69v43Configuration._0x346v71
-    else makeWatermark_0x69v43_0x69v43
-_0x69v43
+    end
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then return end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = "VEIL_Watermark" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true _0xFA03.DisplayOrder = 90
+    pcall(function() _0xFA03.AutoLocalize = false end)
+    _0xFA03.Parent = _0x14E4
+    local _0x5237 = Instance.new("Frame")
+    _0x5237.AnchorPoint = Vector2.new(0, 1) _0x5237.Position = UDim2.new(0, 14, 1, -14)
+    _0x5237.Size = UDim2.fromOffset(180, 26) _0x5237.BackgroundTransparency = 1 _0x5237.Parent = _0xFA03
+    local _0x154F = Instance.new("Frame")
+    _0x154F.AnchorPoint = Vector2.new(0, 0.5) _0x154F.Position = UDim2.new(0, 0, 0.5, 0)
+    _0x154F.Size = UDim2.fromOffset(6, 6) _0x154F.BackgroundColor3 = Color3.fromRGB(139, 92, 246)
+    _0x154F.BorderSizePixel = 0 _0x154F.Parent = _0x5237
+    local _0x4087 = Instance.new("UICorner") _0x4087.CornerRadius = UDim.new(0.5, 0) _0x4087.Parent = _0x154F
+    local _0xF864 = Instance.new("TextLabel")
+    _0xF864.AnchorPoint = Vector2.new(0, 0.5) _0xF864.Position = UDim2.new(0, 12, 0.5, 0)
+    _0xF864.Size = UDim2.fromOffset(150, 20) _0xF864.BackgroundTransparency = 1
+    _0xF864.Text = "VEIL" _0xF864.TextColor3 = Color3.fromRGB(245, 243, 255)
+    _0xF864.Font = Enum.Font.GothamBlack _0xF864.TextSize = 15
+    _0xF864.TextXAlignment = Enum.TextXAlignment.Left _0xF864.TextYAlignment = Enum.TextYAlignment.Center
+    _0xF864.TextStrokeTransparency = 0.6 _0xF864.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) _0xF864.Parent = _0x5237
+    local _0x6B50 = Instance.new("UIGradient")
+    _0x6B50.Color = ColorSequence.new({ ColorSequenceKeypoint.new(0, Color3.fromRGB(245, 243, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(99, 102, 241)) })
+    _0x6B50.Parent = _0xF864
+    _0x8553.Gui = _0xFA03
+    _0xFA03.Enabled = _0x77AD.WatermarkEnabled ~= false
+end
+local function _0x8977(_0x0207)
+    _0x77AD.WatermarkEnabled = _0x0207 and true or false
+    if _0x8553.Gui then _0x8553.Gui.Enabled = _0x77AD.WatermarkEnabled
+    else _0x2F55() end
+end
 
+-- ============================================================
+-- Startup animation
+-- ============================================================
+local function _0xB5D3(onReveal)
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then if onReveal then pcall(onReveal) end return end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = "VEIL_Startup" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true _0xFA03.DisplayOrder = 9999
+    _0xFA03.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    local _0x61A0 = pcall(function() _0xFA03.Parent = _0x14E4 end)
+    if not _0x61A0 or not _0xFA03.Parent then
+        pcall(function() _0xFA03.Parent = game:GetService("CoreGui") end)
+    end
+    if not _0xFA03.Parent then if onReveal then pcall(onReveal) end return end
 
+    local _0x0EDC = false
+    local _0x50EE = Instance.new("Frame")
+    _0x50EE.Size = UDim2.fromScale(1, 1) _0x50EE.BackgroundTransparency = 1 _0x50EE.ZIndex = 5 _0x50EE.Parent = _0xFA03
 
-
-local function _0x95v56(_0x96v34)
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then_0x69v43 _0x96v34 then pcall(_0x96v34) _0x69v43 return _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\083\116\097\114\116\117\112"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true_0x69v43.DisplayOrder_0x69v439999
-    _0x69v43ZIndexBehavior_0x69v43Enum.ZIndexBehavior.Sibling
-    local _0x258v46_0x69v43pcall(function_0x69v43_0x69v43Parent_0x69v43_0x69v43 _0x69v43)
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43_0x69v43.Parent then
-        pcall(function_0x69v43_0x69v43Parent_0x69v43game:GetService("\067\111\114\101\071\117\105") _0x69v43)
-    _0x69v43
-    _0x69v43_0x69v43_0x69v43.Parent then_0x69v43 _0x96v34 then pcall(_0x96v34) _0x69v43 return _0x69v43
-
-    local _0x259v45_0x69v43false
-    local _0x167v98_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2.fromScale(_0x69v43_0x69v43_0x69v43BackgroundTransparency_0x69v431_0x69v43.ZIndex_0x69v435_0x69v43.Parent_0x69v43sg
-
-    local function _0x97v80()
-        _0x69v43dead then return _0x69v43
- _0x259v45_0x69v43true
+    local function _0xE0D9()
+        if _0x0EDC then return end
+        _0x0EDC = true
         pcall(function()
-            _0x69v43 _0x69v43_0x69v43_0x69v43ipairs_0x69v43:GetChildren()) do
-                _0x69v43_0x69v43_0x69v43("\070\114\097\109\101") then_0x69v43:Destroy_0x69v43_0x69v43
-            _0x69v43
-        _0x69v43)
-        pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43)
-    _0x69v43
-    task.delay_0x69v43, _0x97v80)
+            for _, ch in ipairs(_0x50EE:GetChildren()) do
+                if ch:IsA("Frame") then ch:Destroy() end
+            end
+        end)
+        pcall(function() _0xFA03:Destroy() end)
+    end
+    task.delay(10, _0xE0D9)
 
-    local _0x137v67_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2.fromScale(_0x69v43_0x69v43_0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v430)
-    _0x69v43BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v431_0x69v43.Parent_0x69v43sg
+    local _0x2B1D = Instance.new("Frame")
+    _0x2B1D.Size = UDim2.fromScale(1, 1) _0x2B1D.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    _0x2B1D.BorderSizePixel = 0 _0x2B1D.ZIndex = 1 _0x2B1D.Parent = _0xFA03
 
-    local _0x25av34_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x25av34.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x25av34.Position_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43)
-    _0x25av34.Size_0x69v43UDim2.fromOffset(_0x69v43, _0x69v43)
-    _0x25av34.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, (0x19 + 0x19), _0x69v43)
-    _0x25av34.BackgroundTransparency_0x69v430_0x69v43
-    _0x25av34.BorderSizePixel_0x69v430 _0x25av34.ZIndex_0x69v432 _0x25av34.Parent_0x69v43sg
-    local _0x176v65_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43halo
+    local _0x470B = Instance.new("Frame")
+    _0x470B.AnchorPoint = Vector2.new(0.5, 0.5) _0x470B.Position = UDim2.fromScale(0.5, 0.42)
+    _0x470B.Size = UDim2.fromOffset(900, 900)
+    _0x470B.BackgroundColor3 = Color3.fromRGB(110, 50, 220)
+    _0x470B.BackgroundTransparency = 0.86
+    _0x470B.BorderSizePixel = 0 _0x470B.ZIndex = 2 _0x470B.Parent = _0xFA03
+    local _0xA771 = Instance.new("UICorner") _0xA771.CornerRadius = UDim.new(1, 0) _0xA771.Parent = _0x470B
 
-    local function _0x98v76()
-        _0x69v43dead then return _0x69v43
-        local _0x13bv32_0x69v43math.random(_0x69v435)
-        local _0x25bv49_0x69v43math.random_0x69v43, (0x2d + 0x2d)) / _0x69v43
-        local _0x25cv10_0x69v43_0x69v43_0x69v43math.random() * 0_0x69v43
-        local _0x13ev29_0x69v43sx + (math.random() - _0x69v43) * 0_0x69v43
-        local _0x161v37 = -0_0x69v43_0x69v43math.random() * 0_0x69v43
-        local _0x25dv74_0x69v434_0x69v43math.random() * _0x69v43
-        local _0xdcv26_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0xdcv26.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2.fromScale_0x69v43, _0x25cv10)
-        _0xdcv26.Size_0x69v43UDim2.fromOffset_0x69v43, sz_0x69v43.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-        _0xdcv26.BackgroundTransparency_0x69v43_0x69v43.BorderSizePixel_0x69v43_0x69v43.ZIndex_0x69v43_0x69v43.Parent_0x69v43pc
-        _0xedv83:Create(_0x69v43TweenInfo._0x69v43_0x69v435), {BackgroundTransparency_0x69v43_0x69v43_0x69v43Play()
-        _0xedv83:Create(_0x69v43TweenInfo._0x69v43_0x69v43, Enum.EasingStyle.Linear), {Position_0x69v43UDim2.fromScale_0x69v43, _0x161v37)}):Play()
-        task.delay_0x69v43_0x69v43_0x69v43, function()
-            _0x69v43p.Parent then _0xedv83:Create(_0x69v43TweenInfo._0x69v43_0x69v438), {BackgroundTransparency_0x69v431_0x69v43Play_0x69v43_0x69v43
-        _0x69v43)
-        task.delay_0x69v43_0x69v43_0x69v43, function_0x69v43_0x69v43p.Parent then_0x69v43Destroy_0x69v43_0x69v43 _0x69v43)
-    _0x69v43
+    local function _0x8096()
+        if _0x0EDC then return end
+        local _0x4FF3 = math.random(2, 5)
+        local _0xE3EF = math.random(10, 90) / 100
+        local _0xF5B6 = 1.1 + math.random() * 0.15
+        local _0x2912 = _0xE3EF + (math.random() - 0.5) * 0.15
+        local _0x8CE9 = -0.15 - math.random() * 0.08
+        local _0xB753 = 4 + math.random() * 2.5
+        local _0x938C = Instance.new("Frame")
+        _0x938C.AnchorPoint = Vector2.new(0.5, 0.5) _0x938C.Position = UDim2.fromScale(_0xE3EF, _0xF5B6)
+        _0x938C.Size = UDim2.fromOffset(_0x4FF3, _0x4FF3) _0x938C.BackgroundColor3 = Color3.fromRGB(200, 160, 255)
+        _0x938C.BackgroundTransparency = 1 _0x938C.BorderSizePixel = 0 _0x938C.ZIndex = 6 _0x938C.Parent = _0x50EE
+        _0x27A5:Create(_0x938C, TweenInfo.new(0.5), {BackgroundTransparency = 0.4}):Play()
+        _0x27A5:Create(_0x938C, TweenInfo.new(_0xB753, Enum.EasingStyle.Linear), {Position = UDim2.fromScale(_0x2912, _0x8CE9)}):Play()
+        task.delay(_0xB753 - 0.8, function()
+            if _0x938C.Parent then _0x27A5:Create(_0x938C, TweenInfo.new(0.8), {BackgroundTransparency = 1}):Play() end
+        end)
+        task.delay(_0xB753 + 0.1, function() if _0x938C.Parent then _0x938C:Destroy() end end)
+    end
 
-    local _0x25ev53_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Name_0x69v43"\086\072\111\108\100\101\114"
-    _0x69v43AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-    _0x69v43Position_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43)
-    _0x69v43Size_0x69v43UDim2.fromOffset(_0x69v43, _0x69v43)
-    _0x69v43BackgroundTransparency_0x69v431_0x69v43.ZIndex_0x69v43_0x69v43_0x69v43Parent_0x69v43sg
+    local _0x2BA5 = Instance.new("Frame")
+    _0x2BA5.Name = "VHolder"
+    _0x2BA5.AnchorPoint = Vector2.new(0.5, 0.5)
+    _0x2BA5.Position = UDim2.fromScale(0.5, 0.30)
+    _0x2BA5.Size = UDim2.fromOffset(900, 900)
+    _0x2BA5.BackgroundTransparency = 1 _0x2BA5.ZIndex = 30 _0x2BA5.Parent = _0xFA03
 
-    local _0x25fv93_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x25fv93.Size_0x69v43UDim2.fromScale(_0x69v431)
-    _0x25fv93.Position_0x69v43UDim2.fromOffset_0x69v43, (0x6 + 0x6))
-    _0x25fv93.BackgroundTransparency_0x69v431
-    _0x25fv93.Font_0x69v43Enum.Font.GothamBlack _0x25fv93.Text_0x69v43"\086" _0x25fv93.TextSize_0x69v43_0x69v43
-    _0x25fv93.TextColor3_0x69v43Color3.fromRGB_0x69v43, (0x7 + 0x8), (0x2d + 0x2d)) _0x25fv93.TextTransparency_0x69v43_0x69v43
-    _0x25fv93.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0x25fv93.TextYAlignment_0x69v43Enum.TextYAlignment.Center
-    _0x25fv93.ZIndex_0x69v43_0x69v43shadow.Parent_0x69v43lh
+    local _0x126D = Instance.new("TextLabel")
+    _0x126D.Size = UDim2.fromScale(1, 1)
+    _0x126D.Position = UDim2.fromOffset(10, 12)
+    _0x126D.BackgroundTransparency = 1
+    _0x126D.Font = Enum.Font.GothamBlack _0x126D.Text = "V" _0x126D.TextSize = 700
+    _0x126D.TextColor3 = Color3.fromRGB(40, 15, 90) _0x126D.TextTransparency = 0.4
+    _0x126D.TextXAlignment = Enum.TextXAlignment.Center _0x126D.TextYAlignment = Enum.TextYAlignment.Center
+    _0x126D.ZIndex = 30 _0x126D.Parent = _0x2BA5
 
-    local _0x260v62_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43Size_0x69v43UDim2.fromScale(_0x69v43_0x69v43_0x69v43BackgroundTransparency_0x69v431
-    _0x69v43Font_0x69v43Enum.Font.GothamBlack_0x69v43.Text_0x69v43"\086"_0x69v43.TextSize_0x69v43_0x69v43
-    _0x69v43TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Center_0x69v43.TextYAlignment_0x69v43Enum.TextYAlignment.Center
-    _0x69v43ZIndex_0x69v43_0x69v43_0x69v43Parent_0x69v43lh
+    local _0xE600 = Instance.new("TextLabel")
+    _0xE600.Size = UDim2.fromScale(1, 1) _0xE600.BackgroundTransparency = 1
+    _0xE600.Font = Enum.Font.GothamBlack _0xE600.Text = "V" _0xE600.TextSize = 700
+    _0xE600.TextColor3 = Color3.fromRGB(255, 255, 255)
+    _0xE600.TextXAlignment = Enum.TextXAlignment.Center _0xE600.TextYAlignment = Enum.TextYAlignment.Center
+    _0xE600.ZIndex = 31 _0xE600.Parent = _0x2BA5
 
-    local _0x261v89_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x69v43Color_0x69v43ColorSequence._0x69v43{
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v4345, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)),
+    local _0x9EDE = Instance.new("UIGradient")
+    _0x9EDE.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(235, 205, 255)),
+        ColorSequenceKeypoint.new(0.45, Color3.fromRGB(160, 100, 250)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(85, 130, 245)),
     }
-    _0x69v43Rotation_0x69v43_0x69v43_0x69v43Parent_0x69v43vm
+    _0x9EDE.Rotation = 90 _0x9EDE.Parent = _0xE600
 
-    local _0x262v75_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x69v43Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43Thickness_0x69v434_0x69v43.Transparency_0x69v430_0x69v43_0x69v43.Parent_0x69v43vm
+    local _0x254E = Instance.new("UIStroke")
+    _0x254E.Color = Color3.fromRGB(210, 160, 255) _0x254E.Thickness = 4 _0x254E.Transparency = 0.15 _0x254E.Parent = _0xE600
 
-    local _0x263v80_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x263v80.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x263v80.Position_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43)
-    _0x263v80.Size_0x69v43UDim2.fromOffset(_0x69v43, (0x1e + 0x1e)) _0x263v80.BackgroundTransparency_0x69v431
-    _0x263v80.Font_0x69v43Enum.Font.GothamBlack _0x263v80.Text_0x69v43"\086\069\073\076" _0x263v80.TextSize_0x69v4358
-    _0x263v80.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x263v80.TextXAlignment_0x69v43Enum.TextXAlignment.Center
-    _0x263v80.ZIndex_0x69v43_0x69v43title.Parent_0x69v43sg
-    local _0x264v16_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x69v43Color_0x69v43ColorSequence._0x69v43{
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v4355, Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
+    local _0xEFCA = Instance.new("TextLabel")
+    _0xEFCA.AnchorPoint = Vector2.new(0.5, 0.5) _0xEFCA.Position = UDim2.fromScale(0.5, 0.70)
+    _0xEFCA.Size = UDim2.fromOffset(600, 60) _0xEFCA.BackgroundTransparency = 1
+    _0xEFCA.Font = Enum.Font.GothamBlack _0xEFCA.Text = "VEIL" _0xEFCA.TextSize = 58
+    _0xEFCA.TextColor3 = Color3.fromRGB(255, 255, 255) _0xEFCA.TextXAlignment = Enum.TextXAlignment.Center
+    _0xEFCA.ZIndex = 32 _0xEFCA.Parent = _0xFA03
+    local _0x40A4 = Instance.new("UIGradient")
+    _0x40A4.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(235, 210, 255)),
+        ColorSequenceKeypoint.new(0.55, Color3.fromRGB(180, 130, 255)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 160, 255)),
     }
-    _0x69v43Parent_0x69v43title
-    local _0x265v50_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x69v43.Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43.Thickness_0x69v43_0x69v43 _0x69v43.Transparency_0x69v43_0x69v43 _0x69v43.Parent_0x69v43title
-    _0x263v80.TextTransparency_0x69v431 _0x69v43.Transparency_0x69v431
+    _0x40A4.Parent = _0xEFCA
+    local _0x9746 = Instance.new("UIStroke")
+    _0x9746.Color = Color3.fromRGB(170, 120, 255) _0x9746.Thickness = 1.5 _0x9746.Transparency = 0.4 _0x9746.Parent = _0xEFCA
+    _0xEFCA.TextTransparency = 1 _0x9746.Transparency = 1
 
-    local _0x16ev71_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43.Position_0x69v43UDim2.fromScale_0x69v43_0x69v430._0x69v43)
-    _0x69v43.Size_0x69v43UDim2.fromOffset(_0x69v43, (0xa + 0xa)) _0x69v43.BackgroundTransparency_0x69v431
-    _0x69v43.Font_0x69v43Enum.Font.GothamBold _0x69v43.Text_0x69v43"\083\032\069\032\067\032\085\032\082\032\073\032\084\032\089\032\032\032\083\032\085\032\073\032\084\032\069"
-    _0x69v43.TextSize_0x69v43_0x69v43_0x69v43.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x69v43.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0x69v43.TextTransparency_0x69v431 _0x69v43.ZIndex_0x69v43_0x69v43_0x69v43.Parent_0x69v43sg
+    local _0xFC58 = Instance.new("TextLabel")
+    _0xFC58.AnchorPoint = Vector2.new(0.5, 0.5) _0xFC58.Position = UDim2.fromScale(0.5, 0.765)
+    _0xFC58.Size = UDim2.fromOffset(600, 20) _0xFC58.BackgroundTransparency = 1
+    _0xFC58.Font = Enum.Font.GothamBold _0xFC58.Text = "S E C U R I T Y   S U I T E"
+    _0xFC58.TextSize = 12 _0xFC58.TextColor3 = Color3.fromRGB(180, 145, 255)
+    _0xFC58.TextXAlignment = Enum.TextXAlignment.Center _0xFC58.TextTransparency = 1 _0xFC58.ZIndex = 32 _0xFC58.Parent = _0xFA03
 
-    local _0x266v57_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x266v57.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x266v57.Position_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43)
-    _0x266v57.Size_0x69v43UDim2.fromOffset(_0x69v43, (0x8 + 0x8)) _0x266v57.BackgroundTransparency_0x69v431
-    _0x266v57.Font_0x69v43Enum.Font.GothamMedium _0x266v57.Text_0x69v43"\082\105\103\104\116\032\083\104\105\102\116\032\084\111\032\079\112\101\110\032\077\101\110\117"
-    _0x266v57.TextSize_0x69v43_0x69v43hint.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x266v57.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0x266v57.TextTransparency_0x69v431 _0x266v57.ZIndex_0x69v43_0x69v43hint.Parent_0x69v43sg
+    local _0x3A26 = Instance.new("TextLabel")
+    _0x3A26.AnchorPoint = Vector2.new(0.5, 0.5) _0x3A26.Position = UDim2.fromScale(0.5, 0.80)
+    _0x3A26.Size = UDim2.fromOffset(600, 16) _0x3A26.BackgroundTransparency = 1
+    _0x3A26.Font = Enum.Font.GothamMedium _0x3A26.Text = "Right Shift To Open Menu"
+    _0x3A26.TextSize = 11 _0x3A26.TextColor3 = Color3.fromRGB(200, 170, 255)
+    _0x3A26.TextXAlignment = Enum.TextXAlignment.Center _0x3A26.TextTransparency = 1 _0x3A26.ZIndex = 32 _0x3A26.Parent = _0xFA03
 
-    local _0x267v24_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43Position_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43)
-    _0x69v43Size_0x69v43UDim2.fromOffset(_0x69v43, (0x6 + 0x6)) _0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, (0x28 + 0x28), _0x69v43)
-    _0x69v43BackgroundTransparency_0x69v430_0x69v43_0x69v43.BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v43_0x69v43_0x69v43Parent_0x69v43sg
-    local _0x268v60_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43.Parent_0x69v43bg
+    local _0x734C = Instance.new("Frame")
+    _0x734C.AnchorPoint = Vector2.new(0.5, 0.5) _0x734C.Position = UDim2.fromScale(0.5, 0.88)
+    _0x734C.Size = UDim2.fromOffset(340, 12) _0x734C.BackgroundColor3 = Color3.fromRGB(140, 80, 255)
+    _0x734C.BackgroundTransparency = 0.85 _0x734C.BorderSizePixel = 0 _0x734C.ZIndex = 31 _0x734C.Parent = _0xFA03
+    local _0x98F0 = Instance.new("UICorner") _0x98F0.CornerRadius = UDim.new(1, 0) _0x98F0.Parent = _0x734C
 
-    local _0x269v46_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43Position_0x69v43UDim2.fromScale_0x69v43_0x69v430_0x69v43)
-    _0x69v43Size_0x69v43UDim2.fromOffset(_0x69v43_0x69v43) _0x69v43BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0xc + 0xd), (0x23 + 0x23))
-    _0x69v43BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v43_0x69v43_0x69v43Parent_0x69v43sg
-    local _0x26av25_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43.Parent_0x69v43bt
-    local _0x26bv90_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x69v43BorderSizePixel_0x69v430_0x69v43.ZIndex_0x69v43_0x69v43_0x69v43Parent_0x69v43bt
-    local _0x26cv38_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43.Parent_0x69v43bf
-    local _0x26dv38_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x69v43.Color_0x69v43ColorSequence._0x69v43{
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, (0x28 + 0x28), _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
+    local _0xFA67 = Instance.new("Frame")
+    _0xFA67.AnchorPoint = Vector2.new(0.5, 0.5) _0xFA67.Position = UDim2.fromScale(0.5, 0.88)
+    _0xFA67.Size = UDim2.fromOffset(300, 3) _0xFA67.BackgroundColor3 = Color3.fromRGB(40, 25, 70)
+    _0xFA67.BorderSizePixel = 0 _0xFA67.ZIndex = 32 _0xFA67.Parent = _0xFA03
+    local _0xD147 = Instance.new("UICorner") _0xD147.CornerRadius = UDim.new(1, 0) _0xD147.Parent = _0xFA67
+    local _0x91BE = Instance.new("Frame")
+    _0x91BE.Size = UDim2.new(0, 0, 1, 0) _0x91BE.BackgroundColor3 = Color3.fromRGB(180, 120, 255)
+    _0x91BE.BorderSizePixel = 0 _0x91BE.ZIndex = 33 _0x91BE.Parent = _0xFA67
+    local _0x18D8 = Instance.new("UICorner") _0x18D8.CornerRadius = UDim.new(1, 0) _0x18D8.Parent = _0x91BE
+    local _0x8C49 = Instance.new("UIGradient")
+    _0x8C49.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(140, 80, 255)),
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(230, 170, 255)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(140, 200, 255)),
     }
-    _0x69v43.Parent_0x69v43bf
+    _0x8C49.Parent = _0x91BE
 
     task.spawn(function()
-        while _0x69v43 dead_0x69v43
-            _0x98v76()
-            task.wait_0x69v4312_0x69v43math.random() * 0_0x69v43)
-        _0x69v43
-    _0x69v43)
+        while not _0x0EDC do
+            _0x8096()
+            task.wait(0.12 + math.random() * 0.06)
+        end
+    end)
 
     task.spawn(function()
         pcall(function()
-            _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Back, Enum.EasingDirection._0x69v43), {TextSize_0x69v43_0x69v43_0x69v43Play()
-            _0xedv83:Create(_0x25fv93, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Back, Enum.EasingDirection._0x69v43), {TextSize_0x69v43_0x69v43_0x69v43Play()
-            task.wait_0x69v4335)
-            _0xedv83:Create(_0x263v80, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43), {TextTransparency_0x69v430_0x69v43Play()
-            _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43), {Transparency_0x69v43_0x69v43_0x69v43Play()
-            task.wait_0x69v4322)
-            _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43), {TextTransparency_0x69v43_0x69v43_0x69v43Play()
-            _0xedv83:Create(_0x266v57, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43), {TextTransparency_0x69v43_0x69v43_0x69v43Play()
+            _0x27A5:Create(_0xE600, TweenInfo.new(0.9, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextSize = 850}):Play()
+            _0x27A5:Create(_0x126D, TweenInfo.new(0.9, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {TextSize = 850}):Play()
+            task.wait(0.35)
+            _0x27A5:Create(_0xEFCA, TweenInfo.new(0.6, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+            _0x27A5:Create(_0x9746, TweenInfo.new(0.6, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Transparency = 0.4}):Play()
+            task.wait(0.22)
+            _0x27A5:Create(_0xFC58, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {TextTransparency = 0.1}):Play()
+            _0x27A5:Create(_0x3A26, TweenInfo.new(0.5, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {TextTransparency = 0.2}):Play()
 
-            local _0x26ev23_0x69v43_0x69v43
-            _0xedv83:Create_0x69v43, TweenInfo._0x69v43(_0x26ev23, Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43), {Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v430)}):Play()
-            _0xedv83:Create_0x69v43, TweenInfo._0x69v43(_0x26ev23, Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43), {Size_0x69v43UDim2.fromOffset(_0x69v43_0x69v43_0x69v43_0x380v57_0x69v43_0x69v43_0x69v43Play()
+            local _0x0B1B = 2.8
+            _0x27A5:Create(_0x91BE, TweenInfo.new(_0x0B1B, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(1, 0, 1, 0)}):Play()
+            _0x27A5:Create(_0x734C, TweenInfo.new(_0x0B1B, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.fromOffset(344, 5), BackgroundTransparency = 0.9}):Play()
 
-            task.wait(barDur_0x69v430_0x69v43)
-            _0x69v43onReveal then pcall(_0x96v34) _0x69v43
- _0x259v45_0x69v43true
+            task.wait(_0x0B1B + 0.25)
+            if onReveal then pcall(onReveal) end
+            _0x0EDC = true
 
-            _0x69v43 _0x69v43p_0x69v43 ipairs_0x69v43:GetChildren()) do
-                _0x69v43p:_0x69v43("\070\114\097\109\101") then
-                    _0xedv83:Create(_0x69v43TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43), {BackgroundTransparency_0x69v431_0x69v43Play()
-                _0x69v43
-            _0x69v43
+            for _, _0x938C in ipairs(_0x50EE:GetChildren()) do
+                if _0x938C:IsA("Frame") then
+                    _0x27A5:Create(_0x938C, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+                end
+            end
 
-            _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v4355, Enum.EasingStyle.Quart, Enum.EasingDirection_0x69v43), {TextSize_0x69v43_0x69v43, _0x378v94_0x69v43_0x69v43_0x69v43Play()
-            _0xedv83:Create(_0x25fv93, TweenInfo._0x69v43_0x69v4355, Enum.EasingStyle.Quart, Enum.EasingDirection_0x69v43), {TextSize_0x69v43_0x69v43, _0x378v94_0x69v431_0x69v43Play()
+            _0x27A5:Create(_0xE600, TweenInfo.new(0.55, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {TextSize = 980, TextTransparency = 0.5}):Play()
+            _0x27A5:Create(_0x126D, TweenInfo.new(0.55, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {TextSize = 980, TextTransparency = 1}):Play()
 
-            task.delay_0x69v4308, function()
-                _0xedv83:Create(_0x263v80, TweenInfo._0x69v43_0x69v434), {TextTransparency_0x69v431_0x69v43Play()
-                _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v434), {Transparency_0x69v431_0x69v43Play()
-                _0xedv83:Create(_0x69v43, TweenInfo._0x69v43_0x69v434), {TextTransparency_0x69v431_0x69v43Play()
-                _0xedv83:Create(_0x266v57, TweenInfo._0x69v43_0x69v434), {TextTransparency_0x69v431_0x69v43Play()
-                _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v435), {TextTransparency_0x69v431_0x69v43Play()
-                _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v435), {Transparency_0x69v431_0x69v43Play()
-                _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v435), {BackgroundTransparency_0x69v431_0x69v43Play()
-                _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v435), {BackgroundTransparency_0x69v431_0x69v43Play()
-                _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v435), {BackgroundTransparency_0x69v431_0x69v43Play()
-            _0x69v43)
+            task.delay(0.08, function()
+                _0x27A5:Create(_0xEFCA, TweenInfo.new(0.4), {TextTransparency = 1}):Play()
+                _0x27A5:Create(_0x9746, TweenInfo.new(0.4), {Transparency = 1}):Play()
+                _0x27A5:Create(_0xFC58, TweenInfo.new(0.4), {TextTransparency = 1}):Play()
+                _0x27A5:Create(_0x3A26, TweenInfo.new(0.4), {TextTransparency = 1}):Play()
+                _0x27A5:Create(_0xE600, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+                _0x27A5:Create(_0x254E, TweenInfo.new(0.5), {Transparency = 1}):Play()
+                _0x27A5:Create(_0x734C, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+                _0x27A5:Create(_0x91BE, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+                _0x27A5:Create(_0xFA67, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+            end)
 
-            _0xedv83:Create(_0x25av34, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection_0x69v43), {
- _0x380v57_0x69v43_0x69v43_0x3ddv15_0x69v43UDim2.fromOffset(_0x69v43, _0x69v43),
+            _0x27A5:Create(_0x470B, TweenInfo.new(0.7, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {
+                BackgroundTransparency = 1, Size = UDim2.fromOffset(400, 400),
             }):Play()
 
-            task.wait_0x69v4355)
-            _0xedv83:Create_0x69v43, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43), {BackgroundTransparency_0x69v431_0x69v43Play()
-            task.wait_0x69v437)
-        _0x69v43)
-        pcall(_0x97v80)
-    _0x69v43)
-_0x69v43
-_0x69v43__VEIL_ShowStartup_0x69v43function_0x69v43pcall(_0x95v56) _0x69v43
+            task.wait(0.55)
+            _0x27A5:Create(_0x2B1D, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+            task.wait(0.7)
+        end)
+        pcall(_0xE0D9)
+    end)
+end
+_G.__VEIL_ShowStartup = function() pcall(_0xB5D3) end
 
+-- ============================================================
+-- Discord popup
+-- ============================================================
+local function _0x0AE1()
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then return end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = "VEIL_Discord" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true _0xFA03.DisplayOrder = 95 _0xFA03.Parent = _0x14E4
+    local _0xE9B8 = "Join our discord for updates. Bug reports go in the same server."
+    local _0x16A9 = 14
+    local _0x163E = 340 - _0x16A9 * 2
+    local _0x929D = _0x9261(_0xE9B8, Enum.Font.Gotham, 11, _0x163E)
+    _0x929D = math.max(_0x929D, 14)
+    local _0xCAD6 = 36
+    local _0x78A4 = 22
+    local _0x198D = 14
+    local _0x9781 = _0xCAD6 + _0x929D + 8 + _0x78A4 + _0x198D
+    local _0x41F6 = Instance.new("Frame")
+    _0x41F6.AnchorPoint = Vector2.new(0, 1) _0x41F6.Position = UDim2.new(0, 14, 1, -50)
+    _0x41F6.Size = UDim2.fromOffset(340, _0x9781) _0x41F6.BackgroundColor3 = Color3.fromRGB(22, 20, 34)
+    _0x41F6.BackgroundTransparency = 0.05 _0x41F6.BorderSizePixel = 0 _0x41F6.Parent = _0xFA03
+    local _0x3A4B = Instance.new("UICorner") _0x3A4B.CornerRadius = UDim.new(0, 10) _0x3A4B.Parent = _0x41F6
+    local _0x48A3 = Instance.new("UIStroke") _0x48A3.Color = Color3.fromRGB(88, 101, 242) _0x48A3.Thickness = 1.5 _0x48A3.Transparency = 0.3 _0x48A3.Parent = _0x41F6
+    local _0x85ED = Instance.new("TextLabel")
+    _0x85ED.Size = UDim2.new(1, -80, 0, 22) _0x85ED.Position = UDim2.new(0, 14, 0, 10)
+    _0x85ED.BackgroundTransparency = 1 _0x85ED.Font = Enum.Font.GothamBold _0x85ED.TextSize = 12
+    _0x85ED.TextColor3 = Color3.fromRGB(180, 170, 255) _0x85ED.TextXAlignment = Enum.TextXAlignment.Left
+    _0x85ED.Text = "VEIL - Community" _0x85ED.Parent = _0x41F6
+    local _0x2CBA = Instance.new("TextButton")
+    _0x2CBA.Size = UDim2.fromOffset(22, 22) _0x2CBA.Position = UDim2.new(1, -32, 0, 10)
+    _0x2CBA.BackgroundColor3 = Color3.fromRGB(40, 30, 60) _0x2CBA.BorderSizePixel = 0
+    _0x2CBA.Font = Enum.Font.GothamBold _0x2CBA.TextSize = 14 _0x2CBA.TextColor3 = Color3.fromRGB(220, 210, 255)
+    _0x2CBA.Text = "x" _0x2CBA.AutoButtonColor = false _0x2CBA.Parent = _0x41F6
+    local _0xA792 = Instance.new("UICorner") _0xA792.CornerRadius = UDim.new(0, 5) _0xA792.Parent = _0x2CBA
+    local _0xC5D8 = Instance.new("TextLabel")
+    _0xC5D8.Size = UDim2.new(1, -_0x16A9 * 2, 0, _0x929D) _0xC5D8.Position = UDim2.new(0, _0x16A9, 0, _0xCAD6)
+    _0xC5D8.BackgroundTransparency = 1 _0xC5D8.Font = Enum.Font.Gotham _0xC5D8.TextSize = 11
+    _0xC5D8.TextColor3 = Color3.fromRGB(220, 215, 235) _0xC5D8.TextXAlignment = Enum.TextXAlignment.Left
+    _0xC5D8.TextYAlignment = Enum.TextYAlignment.Top _0xC5D8.TextWrapped = true
+    _0xC5D8.Text = _0xE9B8 _0xC5D8.Parent = _0x41F6
+    local _0x4A2C = Instance.new("TextButton")
+    _0x4A2C.Size = UDim2.new(1, -_0x16A9 * 2, 0, _0x78A4) _0x4A2C.Position = UDim2.new(0, _0x16A9, 1, -(_0x78A4 + _0x198D))
+    _0x4A2C.BackgroundColor3 = Color3.fromRGB(88, 101, 242) _0x4A2C.BorderSizePixel = 0
+    _0x4A2C.Font = Enum.Font.GothamBold _0x4A2C.TextSize = 11 _0x4A2C.TextColor3 = Color3.fromRGB(255, 255, 255)
+    _0x4A2C.Text = "discord.gg/K3vgcVsCsS - tap to copy" _0x4A2C.AutoButtonColor = false _0x4A2C.Parent = _0x41F6
+    local _0x9C8D = Instance.new("UICorner") _0x9C8D.CornerRadius = UDim.new(0, 6) _0x9C8D.Parent = _0x4A2C
+    local _0xFC09 = "https://discord.gg/K3vgcVsCsS"
+    _0x4A2C.MouseButton1Click:Connect(function()
+        if type(setclipboard) == "function" then pcall(setclipboard, _0xFC09) _0x4A2C.Text = "Copied"
+        else _0x4A2C.Text = "discord.gg/K3vgcVsCsS" end
+        task.delay(1.5, function() if _0x4A2C and _0x4A2C.Parent then _0x4A2C.Text = "discord.gg/K3vgcVsCsS - tap to copy" end end)
+    end)
+    _0x2CBA.MouseButton1Click:Connect(function() pcall(function() _0xFA03:Destroy() end) end)
+end
 
-
-
-local function _0x99v27()
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\068\105\115\099\111\114\100"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true_0x69v43.DisplayOrder_0x69v43_0x69v43_0x69v43Parent_0x69v43_0x69v43
-    local _0x26fv46_0x69v43"\074\111\105\110\032\111\117\114\032\100\105\115\099\111\114\100\032\102\111\114\032\117\112\100\097\116\101\115\046\032\066\117\103\032\114\101\112\111\114\116\115\032\103\111\032\105\110\032\116\104\101\032\115\097\109\101\032\115\101\114\118\101\114\046"
-    local _0x270v22_0x69v4314
-    local _0x271v26_0x69v43_0x69v43_0x69v43_0x69v43_0x69v432
-    local _0x272v97_0x69v43measureText(_0x26fv46, Enum.Font.Gotham, (0x5 + 0x6), _0x271v26)
- _0x272v97_0x69v43math._0x69v43(_0x272v97, (0x7 + 0x7))
-    local _0x273v43_0x69v4336
-    local _0x274v43_0x69v4322
-    local _0x275v24_0x69v4314
-    local _0x125v40_0x69v43msgTop_0x69v43msgH_0x69v438_0x69v43btnH_0x69v43bottomPad
-    local _0x126v27_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43.AnchorPoint_0x69v43Vector2._0x69v43(_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43_0x69v4350)
-    _0x69v43.Size_0x69v43UDim2.fromOffset(_0x69v43, _0x125v40) _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0xa + 0xa), (0x11 + 0x11))
-    _0x69v43.BackgroundTransparency_0x69v430_0x69v43 _0x69v43.BorderSizePixel_0x69v430 _0x69v43.Parent_0x69v43sg
-    local _0x127v13_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114"_0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v4310_0x69v43.Parent_0x69v43_0x69v43
-    local _0x128v45_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101") _0x69v43Color_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43) _0x69v43Thickness_0x69v43_0x69v43_0x69v43.Transparency_0x69v43_0x69v43_0x69v43.Parent_0x69v43_0x69v43
-    local _0x276v47_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43Size_0x69v43UDim2._0x69v43(1_0x69v4380_0x69v43, (0xb + 0xb)) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43, (0x5 + 0x5))
-    _0x69v43BackgroundTransparency_0x69v431_0x69v43.Font_0x69v43Enum.Font.GothamBold_0x69v43.TextSize_0x69v4312
-    _0x69v43TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left
-    _0x69v43Text_0x69v43"\086\069\073\076\032\045\032\067\111\109\109\117\110\105\116\121"_0x69v43.Parent_0x69v43_0x69v43
-    local _0xb4v49_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43Size_0x69v43UDim2.fromOffset_0x69v43, (0xb + 0xb)) _0x69v43Position_0x69v43UDim2._0x69v43(1_0x69v4332_0x69v43, (0x5 + 0x5))
-    _0x69v43BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, (0xf + 0xf), (0x1e + 0x1e)) _0x69v43BorderSizePixel_0x69v430
-    _0x69v43Font_0x69v43Enum.Font.GothamBold_0x69v43.TextSize_0x69v43_0x69v43_0x69v43TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x69v43Text_0x69v43"\120"_0x69v43.AutoButtonColor_0x69v43false_0x69v43.Parent_0x69v43_0x69v43
-    local _0x199v52_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43cb
-    local _0x180v72_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43msgH) _0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43, _0x273v43)
-    _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Font_0x69v43Enum.Font.Gotham _0x69v43.TextSize_0x69v4311
-    _0x69v43.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43.TextXAlignment_0x69v43Enum.TextXAlignment.Left
-    _0x69v43.TextYAlignment_0x69v43Enum.TextYAlignment._0x69v43 _0x69v43.TextWrapped_0x69v43true
-    _0x69v43.Text_0x69v43msgText _0x69v43.Parent_0x69v43_0x69v43
-    local _0x277v22_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43Size_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43btnH) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43, -(btnH_0x69v43bottomPad))
-    _0x69v43BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43) _0x69v43BorderSizePixel_0x69v430
-    _0x69v43Font_0x69v43Enum.Font.GothamBold_0x69v43.TextSize_0x69v43_0x69v43_0x69v43TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0x69v43Text_0x69v43"\100\105\115\099\111\114\100\046\103\103\047\075\051\118\103\099\086\115\067\115\083\032\045\032\116\097\112\032\116\111\032\099\111\112\121"_0x69v43.AutoButtonColor_0x69v43false_0x69v43.Parent_0x69v43_0x69v43
-    local _0x278v94_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114") _0x69v43CornerRadius_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43lb
-    local _0x279v38_0x69v43"\104\116\116\112\115\058\047\047\100\105\115\099\111\114\100\046\103\103\047\075\051\118\103\099\086\115\067\115\083"
-    _0x69v43MouseButton1Click:Connect(function()
-        _0x69v43type(setclipboard) == "\102\117\110\099\116\105\111\110" then pcall(setclipboard, _0x279v38) _0x69v43Text_0x69v43"\067\111\112\105\101\100"
-        else_0x69v43.Text_0x69v43"\100\105\115\099\111\114\100\046\103\103\047\075\051\118\103\099\086\115\067\115\083" _0x69v43
-        task.delay_0x69v43_0x69v43function_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.Parent then_0x69v43.Text_0x69v43"\100\105\115\099\111\114\100\046\103\103\047\075\051\118\103\099\086\115\067\115\083\032\045\032\116\097\112\032\116\111\032\099\111\112\121" _0x69v43 _0x69v43)
-    _0x69v43)
-    _0x69v43MouseButton1Click:Connect(function_0x69v43pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43) _0x69v43)
-_0x69v43
-
-
-
-
-local _0x27av94 = {Active_0x69v43false, _0x3dev62_0x69v43_0x69v43, _0x3dfv74_0x69v43_0x69v43}
-local function _0x9av70()
-    _0x69v43NightVision.Active then return _0x69v43
-    _0x27av94.Active_0x69v43true
-    _0x27av94._0x3dev62 = { Ambient_0x69v43Lighting.Ambient, _0x3e0v65_0x69v43Lighting._0x3e0v65, _0x3e1v54_0x69v43Lighting._0x3e1v54, _0x3e2v71_0x69v43Lighting._0x3e2v71, _0x3e3v53_0x69v43Lighting._0x3e3v53, _0x3e4v56_0x69v43Lighting._0x3e4v56 }
+-- ============================================================
+-- NightVision
+-- ============================================================
+local _0x0CF8 = {Active = false, Saved = nil, Effect = nil}
+local function _0x6ADF()
+    if _0x0CF8.Active then return end
+    _0x0CF8.Active = true
+    _0x0CF8.Saved = { Ambient = _0x18A8.Ambient, OutdoorAmbient = _0x18A8.OutdoorAmbient, Brightness = _0x18A8.Brightness, GlobalShadows = _0x18A8.GlobalShadows, FogEnd = _0x18A8.FogEnd, FogStart = _0x18A8.FogStart }
     pcall(function()
-        _0xf1v69.Ambient_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-        _0xf1v69.OutdoorAmbient_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-        _0xf1v69.Brightness_0x69v433 _0xf1v69.GlobalShadows_0x69v43false
-        _0xf1v69.FogEnd_0x69v43math._0x69v43(_0xf1v69._0x3e3v53, (0x3e8 + 0x3e8)) _0xf1v69.FogStart_0x69v43math._0x69v43(_0xf1v69._0x3e4v56, _0x69v43)
-    _0x69v43)
-    _0x69v43NightVision._0x3dfv74 _0x69v43 _0x27av94._0x3dfv74.Parent then _0x27av94._0x3dfv74:Destroy_0x69v43_0x69v43
-    local _0x199v52_0x69v43Instance._0x69v43("\067\111\108\111\114\067\111\114\114\101\099\116\105\111\110\069\102\102\101\099\116")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\078\105\103\104\116\086\105\115\105\111\110"_0x69v43.Brightness_0x69v430_0x69v43_0x69v43.Contrast_0x69v43_0x69v43_0x69v43.Saturation_0x69v430_0x69v43
-    _0x69v43TintColor_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43Parent_0x69v43Lighting
-    _0x27av94.Effect_0x69v43cc
-_0x69v43
-local function _0x9bv53()
-    _0x69v43_0x69v43 _0x27av94.Active then return _0x69v43
-    _0x27av94.Active_0x69v43false
-    _0x69v43NightVision._0x3dev62 then
-        _0x69v43 _0x69v43v_0x69v43 pairs(_0x27av94._0x3dev62) _0x69v43pcall(function_0x69v43Lighting[_0xf6v96] = _0x2f3v60 _0x69v43) _0x69v43
-        _0x27av94.Saved_0x69v43_0x69v43
-    _0x69v43
-    _0x69v43NightVision._0x3dfv74 _0x69v43 _0x27av94._0x3dfv74.Parent then _0x27av94._0x3dfv74:Destroy_0x69v43_0x69v43
-    _0x27av94.Effect_0x69v43_0x69v43
-_0x69v43
-local function _0x9cv16_0x69v43_0x69v43Configuration._0x33dv34 then NVEnable_0x69v43else NVDisable_0x69v43_0x69v43 _0x69v43
+        _0x18A8.Ambient = Color3.fromRGB(170, 175, 180)
+        _0x18A8.OutdoorAmbient = Color3.fromRGB(180, 185, 190)
+        _0x18A8.Brightness = 3 _0x18A8.GlobalShadows = false
+        _0x18A8.FogEnd = math.max(_0x18A8.FogEnd, 2000) _0x18A8.FogStart = math.max(_0x18A8.FogStart, 500)
+    end)
+    if _0x0CF8.Effect and _0x0CF8.Effect.Parent then _0x0CF8.Effect:Destroy() end
+    local _0xA792 = Instance.new("ColorCorrectionEffect")
+    _0xA792.Name = "VEIL_NightVision" _0xA792.Brightness = 0.25 _0xA792.Contrast = 0.1 _0xA792.Saturation = 0.05
+    _0xA792.TintColor = Color3.fromRGB(210, 230, 210) _0xA792.Parent = _0x18A8
+    _0x0CF8.Effect = _0xA792
+end
+local function _0xDC48()
+    if not _0x0CF8.Active then return end
+    _0x0CF8.Active = false
+    if _0x0CF8.Saved then
+        for _0xE7BF, _0x8C41 in pairs(_0x0CF8.Saved) do pcall(function() _0x18A8[_0xE7BF] = _0x8C41 end) end
+        _0x0CF8.Saved = nil
+    end
+    if _0x0CF8.Effect and _0x0CF8.Effect.Parent then _0x0CF8.Effect:Destroy() end
+    _0x0CF8.Effect = nil
+end
+local function _0x6EEB() if _0x77AD.NightVisionEnabled then _0x6ADF() else _0xDC48() end end
 
-
-
-
-local _0x27bv64 = {}
-_0x27bv64._0x3dev62 = {}
-local _0x27cv27 = {
- _0x3e5v61_0x69v43true, _0x3e6v16_0x69v43true, _0x3e7v42_0x69v43true, _0x3e8v83_0x69v43true, _0x3e9v81_0x69v43true, _0x3eav32_0x69v43true, _0x3ebv18_0x69v43true, _0x3ecv92_0x69v43true, _0x3edv61_0x69v43true,
+-- ============================================================
+-- Performance
+-- ============================================================
+local _0xE5C4 = {}
+_0xE5C4.Saved = {}
+local _0xD27D = {
+    ParticleEmitter = true, Beam = true, Trail = true, Fire = true, Smoke = true, Sparkles = true,
+    PointLight = true, SpotLight = true, SurfaceLight = true,
 }
-function _0x27bv64.EnableFPSBoost()
-    _0x27bv64._0x3dev62._0xf1v69 = {
- _0x3e2v71_0x69v43Lighting._0x3e2v71, _0x3e1v54_0x69v43Lighting._0x3e1v54, _0x3eev66_0x69v43Lighting._0x3eev66, _0x3efv30_0x69v43Lighting._0x3efv30, _0x3e3v53_0x69v43Lighting._0x3e3v53, _0x3e4v56_0x69v43Lighting._0x3e4v56,
+function _0xE5C4.EnableFPSBoost()
+    _0xE5C4.Saved.Lighting = {
+        GlobalShadows = _0x18A8.GlobalShadows, Brightness = _0x18A8.Brightness,
+        EnvironmentDiffuseScale = _0x18A8.EnvironmentDiffuseScale,
+        EnvironmentSpecularScale = _0x18A8.EnvironmentSpecularScale,
+        FogEnd = _0x18A8.FogEnd, FogStart = _0x18A8.FogStart,
     }
     pcall(function()
-        _0xf1v69.GlobalShadows_0x69v43false
-        _0xf1v69.Brightness_0x69v43math._0x69v43(_0xf1v69.Brightness_0x69v43)
-        _0xf1v69.EnvironmentDiffuseScale_0x69v430
-        _0xf1v69.EnvironmentSpecularScale_0x69v430
-        _0xf1v69.FogEnd_0x69v43100000 _0xf1v69.FogStart_0x69v43100000
-    _0x69v43)
-    _0x27bv64._0x3dev62.PostFX = {}
-    _0x69v43 _0x69v43e_0x69v43 ipairs(_0xf1v69:GetChildren()) do
-        _0x69v43e:_0x69v43("\080\111\115\116\069\102\102\101\099\116") _0x69v43_0x69v43Name ~= "\086\069\073\076\095\078\105\103\104\116\086\105\115\105\111\110" then
-            _0x27bv64._0x3dev62.PostFX[e] = e.Enabled
-            pcall(function_0x69v43e.Enabled_0x69v43false _0x69v43)
-        _0x69v43
-    _0x69v43
-    _0x27bv64._0x3dev62.WorkspaceEffects = {}
-    _0x69v43 _0x69v43_0x66v80_0x69v43 ipairs(_0xf0v60:GetDescendants()) do
-        _0x69v43EFFECT_CLASSES[_0x37dv81.ClassName] then
-            local _0xf2v80, _0x3f0v99_0x69v43pcall(function_0x69v43return _0x37dv81.Enabled _0x69v43)
-            _0x69v43_0x69v43then
-                _0x27bv64._0x3dev62.WorkspaceEffects[_0x37dv81] = _0x3f0v99
-                pcall(function_0x69v43_0x66v80.Enabled_0x69v43false _0x69v43)
-            _0x69v43
-        _0x69v43
-    _0x69v43
-_0x69v43
-function _0x27bv64.DisableFPSBoost()
-    local _0x27ev55_0x69v43PerformanceTools._0x3dev62
-    _0x69v43saved._0xf1v69 then
-        _0x69v43 _0x69v43v_0x69v43 pairs(_0x27ev55._0xf1v69) _0x69v43pcall(function_0x69v43Lighting[_0xf6v96] = _0x2f3v60 _0x69v43) _0x69v43
-        _0x27ev55.Lighting_0x69v43_0x69v43
-    _0x69v43
-    _0x69v43saved.PostFX then
-        _0x69v43 _0xd9v87, state_0x69v43 pairs(_0x27ev55.PostFX) do
-            _0x69v43inst _0x69v43 _0xd9v87.Parent then pcall(function_0x69v43inst.Enabled_0x69v43state _0x69v43) _0x69v43
-        _0x69v43
-        _0x27ev55.PostFX_0x69v43_0x69v43
-    _0x69v43
-    _0x69v43saved.WorkspaceEffects then
-        _0x69v43 _0xd9v87, state_0x69v43 pairs(_0x27ev55.WorkspaceEffects) do
-            _0x69v43inst _0x69v43 _0xd9v87.Parent then pcall(function_0x69v43inst.Enabled_0x69v43state _0x69v43) _0x69v43
-        _0x69v43
-        _0x27ev55.WorkspaceEffects_0x69v43_0x69v43
-    _0x69v43
-    _0x27bv64._0x3dev62 = {}
-_0x69v43
+        _0x18A8.GlobalShadows = false
+        _0x18A8.Brightness = math.max(_0x18A8.Brightness, 1)
+        _0x18A8.EnvironmentDiffuseScale = 0
+        _0x18A8.EnvironmentSpecularScale = 0
+        _0x18A8.FogEnd = 100000 _0x18A8.FogStart = 100000
+    end)
+    _0xE5C4.Saved.PostFX = {}
+    for _, e in ipairs(_0x18A8:GetChildren()) do
+        if e:IsA("PostEffect") and e.Name ~= "VEIL_NightVision" then
+            _0xE5C4.Saved.PostFX[e] = e.Enabled
+            pcall(function() e.Enabled = false end)
+        end
+    end
+    _0xE5C4.Saved.WorkspaceEffects = {}
+    for _, _0x3748 in ipairs(_0x3BA1:GetDescendants()) do
+        if _0xD27D[_0x3748.ClassName] then
+            local _0xDF7B, _0xA382 = pcall(function() return _0x3748.Enabled end)
+            if _0xDF7B then
+                _0xE5C4.Saved.WorkspaceEffects[_0x3748] = _0xA382
+                pcall(function() _0x3748.Enabled = false end)
+            end
+        end
+    end
+end
+function _0xE5C4.DisableFPSBoost()
+    local _0x5F94 = _0xE5C4.Saved
+    if _0x5F94.Lighting then
+        for _0xE7BF, _0x8C41 in pairs(_0x5F94.Lighting) do pcall(function() _0x18A8[_0xE7BF] = _0x8C41 end) end
+        _0x5F94.Lighting = nil
+    end
+    if _0x5F94.PostFX then
+        for inst, state in pairs(_0x5F94.PostFX) do
+            if inst and inst.Parent then pcall(function() inst.Enabled = state end) end
+        end
+        _0x5F94.PostFX = nil
+    end
+    if _0x5F94.WorkspaceEffects then
+        for inst, state in pairs(_0x5F94.WorkspaceEffects) do
+            if inst and inst.Parent then pcall(function() inst.Enabled = state end) end
+        end
+        _0x5F94.WorkspaceEffects = nil
+    end
+    _0xE5C4.Saved = {}
+end
 
-local _0x27fv72 = {}
-local function _0x9dv23(_0x9ev49, _0x9fv87, _0xa0v59)
-    _0x69v43_0x69v43 FeatureState_0x69v43] then FeatureState_0x69v43] = { wasOn_0x69v43false, _0x27ev55 = {} } _0x69v43
-    local _0x128v45_0x69v43FeatureState_0x69v43]
-    _0x69v43snapshot.enabled _0x69v43 _0x69v43_0x69v43.wasOn then
-        _0x69v43wasOn_0x69v43true_0x69v43._0x27ev55 = {}
-        _0x69v43 _0x69v43__0x69v43 pairs(_0x9fv87._0x69v43) _0x69v43_0x69v43saved[_0xf6v96] = _0x110v81[_0x69v43_0x69v43
-        _0x69v43 _0x69v43v_0x69v43 pairs(_0x9fv87._0x69v43) _0x69v43Configuration[_0xf6v96] = _0x2f3v60 _0x69v43
-        _0x69v43onChange then pcall(_0xa0v59, true) _0x69v43
-    elseif _0x69v43 _0x9fv87.enabled _0x69v43_0x69v43.wasOn then
-        _0x69v43wasOn_0x69v43false
-        _0x69v43 _0x69v43v_0x69v43 pairs_0x69v43._0x27ev55) _0x69v43Configuration[_0xf6v96] = _0x2f3v60 _0x69v43
-        _0x69v43saved = {}
-        _0x69v43onChange then pcall(_0xa0v59, false) _0x69v43
-    _0x69v43
-_0x69v43
+local _0x4C3F = {}
+local function _0xDC8F(id, snapshot, onChange)
+    if not _0x4C3F[id] then _0x4C3F[id] = { wasOn = false, _0x5F94 = {} } end
+    local _0x48A3 = _0x4C3F[id]
+    if snapshot.enabled and not _0x48A3.wasOn then
+        _0x48A3.wasOn = true _0x48A3.saved = {}
+        for _0xE7BF, _ in pairs(snapshot.set) do _0x48A3.saved[_0xE7BF] = _0x77AD[_0xE7BF] end
+        for _0xE7BF, _0x8C41 in pairs(snapshot.set) do _0x77AD[_0xE7BF] = _0x8C41 end
+        if onChange then pcall(onChange, true) end
+    elseif not snapshot.enabled and _0x48A3.wasOn then
+        _0x48A3.wasOn = false
+        for _0xE7BF, _0x8C41 in pairs(_0x48A3.saved) do _0x77AD[_0xE7BF] = _0x8C41 end
+        _0x48A3.saved = {}
+        if onChange then pcall(onChange, false) end
+    end
+end
 
-
-
-
-local _0x280v16 = { Namespace_0x69v43"\118\101\105\108\045\055\120\057\107\051\109\045\112\114\111\100", _0x3f1v67_0x69v43_0x69v43, _0x3f2v88_0x69v43_0x69v43 }
-local function _0xa1v46(_0x71v82)
-    local _0xa3v45_0x69v43_0x69v43
+-- ============================================================
+-- Presence
+-- ============================================================
+local _0x6C2B = { Namespace = "veil-7x9k3m-prod", BucketWindow = 300, LastBucket = nil }
+local function _0xAEDD(url)
+    local _0x2413 = nil
     task.spawn(function()
-        local _0xf2v80, _0x37av67
-        _0x69v43type(request) == "\102\117\110\099\116\105\111\110" then_0x69v43, _0x130v59_0x69v43pcall(request, { _0x69v43_0x69v43_0x69v43, _0x37bv68_0x69v43"\071\069\084" })
-        elseif type(http_request) == "\102\117\110\099\116\105\111\110" then_0x69v43, _0x130v59_0x69v43pcall(http_request, { _0x69v43_0x69v43_0x69v43, _0x37bv68_0x69v43"\071\069\084" })
-        elseif type(_0x69v43) == "\116\097\098\108\101" _0x69v43 type(_0x69v43.request) == "\102\117\110\099\116\105\111\110" then_0x69v43, _0x130v59_0x69v43pcall(_0x69v43.request, { _0x69v43_0x69v43_0x69v43, _0x37bv68_0x69v43"\071\069\084" }) _0x69v43
-        _0x69v43_0x69v43_0x69v43 _0x69v43 then body_0x69v43_0x69v43.Body_0x69v43 _0x69v43._0xa3v45 _0x69v43
-    _0x69v43)
-    local _0x281v47_0x69v430
-    while _0xa3v45 == _0x69v43 _0x69v43 waited_0x69v431_0x69v43 task.wait_0x69v4305) waited_0x69v43waited_0x69v430_0x69v43 _0x69v43
-    return _0xa3v45
-_0x69v43
-local function _0xa2v48(_0xa3v45)
-    _0x69v43_0x69v43 body_0x69v43 _0xa3v45 == "" then return _0x69v43 _0x69v43
-    local _0xf2v80, _0x3f3v82_0x69v43pcall(function_0x69v43return _0xecv49:JSONDecode(_0xa3v45) _0x69v43)
-    _0x69v43_0x69v43_0x69v43_0x69v43 type(_0x3f3v82) ~= "\116\097\098\108\101" then return _0x69v43 _0x69v43
-    return _0x3f3v82.value
-_0x69v43
-local function _0xa4v99(_0xa5v89)
-    return _0xa2v48(_0xa1v46("\104\116\116\112\115\058\047\047\097\098\097\099\117\115\046\106\097\115\111\110\099\097\109\101\114\111\110\046\100\101\118\047\104\105\116\047" .. _0x280v16.Namespace .. "\047" .. _0x69v43))
-_0x69v43
-function _0x280v16.Tick()
-    local _0x282v17_0x69v43math.floor_0x69v43.time() / _0x280v16._0x3f1v67)
-    _0x69v43Presence._0x3f2v88 ~= _0x282v17 then
-        _0x280v16.LastBucket_0x69v43bucket
-        task.spawn(function_0x69v43presenceHit("\097\099\116\105\118\101\095" .. _0x282v17) _0x69v43)
-    _0x69v43
-_0x69v43
-function _0x280v16.Register()
-    task.delay(_0x69v43function()
-        task.spawn(function_0x69v43pcall(function_0x69v43presenceHit("\117\115\101\114\115\095\116\111\116\097\108") _0x69v43) _0x69v43)
-        task.spawn(function_0x69v43pcall(function_0x69v43Presence.Tick_0x69v43_0x69v43) _0x69v43)
-    _0x69v43)
+        local _0xDF7B, _0xBE70
+        if type(request) == "function" then _0xDF7B, _0xBE70 = pcall(request, { Url = url, Method = "GET" })
+        elseif type(http_request) == "function" then _0xDF7B, _0xBE70 = pcall(http_request, { Url = url, Method = "GET" })
+        elseif type(syn) == "table" and type(syn.request) == "function" then _0xDF7B, _0xBE70 = pcall(syn.request, { Url = url, Method = "GET" }) end
+        if _0xDF7B and _0xBE70 then _0x2413 = _0xBE70.Body or _0xBE70.body end
+    end)
+    local _0xFB05 = 0
+    while _0x2413 == nil and _0xFB05 < 1 do task.wait(0.05) _0xFB05 = _0xFB05 + 0.05 end
+    return _0x2413
+end
+local function _0xB6C1(_0x2413)
+    if not _0x2413 or _0x2413 == "" then return nil end
+    local _0xDF7B, _0xD2FF = pcall(function() return _0xFC99:JSONDecode(_0x2413) end)
+    if not _0xDF7B or type(_0xD2FF) ~= "table" then return nil end
+    return _0xD2FF.value
+end
+local function _0x614F(_0x6260)
+    return _0xB6C1(_0xAEDD("https://abacus.jasoncameron.dev/hit/" .. _0x6C2B.Namespace .. "/" .. _0x6260))
+end
+function _0x6C2B.Tick()
+    local _0x1E14 = math.floor(os.time() / _0x6C2B.BucketWindow)
+    if _0x6C2B.LastBucket ~= _0x1E14 then
+        _0x6C2B.LastBucket = _0x1E14
+        task.spawn(function() _0x614F("active_" .. _0x1E14) end)
+    end
+end
+function _0x6C2B.Register()
+    task.delay(6, function()
+        task.spawn(function() pcall(function() _0x614F("users_total") end) end)
+        task.spawn(function() pcall(function() _0x6C2B.Tick() end) end)
+    end)
     task.spawn(function()
-        while _0x69v43 _0x1e4v40.ShuttingDown_0x69v43 task.wait(_0x69v43) pcall(function_0x69v43Presence.Tick_0x69v43_0x69v43) _0x69v43
-    _0x69v43)
-_0x69v43
-
-
-
-local _0x283v55 = {}
-_0x283v55.ScreenGui_0x69v43_0x69v43 _0x283v55.MainFrame_0x69v43_0x69v43
-_0x283v55.TabContents = {} _0x283v55.TabButtons = {} _0x283v55.CurrentTab_0x69v43_0x69v43
-local _0x284v26_0x69v43Palette
-local _0x285v66_0x69v43TweenService
-local function _0xa6v90(_0xa7v98, _0x3a7v85) local _0x127v13_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114"_0x69v43.CornerRadius_0x69v43UDim._0x69v43(_0x69v43r_0x69v43 _0x69v43c.Parent_0x69v43g return_0x69v43_0x69v43
-local function _0xa9v60(_0xa7v98, _0xaav64, _0xabv72, _0xacv36) local _0x83v25_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101"_0x69v43.Color_0x69v43_0x69v43_0x69v43_0x69v43Border_0x69v43Thickness_0x69v43_0x69v43_0x69v43_0x69v43.Transparency_0x69v43_0x69v43_0x69v43_0x69v43.Parent_0x69v43g return_0x69v43_0x69v43
-local function _0xadv50(_0xaev68, _0x6cv32)
-    local _0x83v25_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x83v25.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4324_0x69v43.BackgroundTransparency_0x69v43_0x69v43.Parent_0x69v43parent
-    local _0x286v53_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x286v53.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4312_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v436)
-    _0x286v53.BackgroundColor3_0x69v43C.Accent_0x69v43BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43s
-    _0xa6v90(_0x69v432)
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43(1_0x69v4314_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43_0x69v43)
-    _0x193v63.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.GothamBold
-    _0x193v63.Text_0x69v43tostring(_0x6cv32):upper_0x69v43l.TextSize_0x69v43_0x69v43l.TextColor3_0x69v43C._0x3aev24
-    _0x193v63.TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43s
-    return _0x83v25
-_0x69v43
-local function _0xafv71(_0xaev68, _0x6cv32)
-    local _0x83v25_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x83v25.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4324_0x69v43.BackgroundTransparency_0x69v43_0x69v43.Parent_0x69v43parent
-    local _0x286v53_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x286v53.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4312_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v436)
-    _0x286v53.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 40_0x69v43.BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43s
-    _0xa6v90(_0x69v432)
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43(1_0x69v4314_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43_0x69v43)
-    _0x193v63.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.GothamBold
-    _0x193v63.Text_0x69v43"\092\050\050\054\092\049\053\050\092\049\051\051\032" .. tostring(_0x6cv32):upper_0x69v43l.TextSize_0x69v4310
-    _0x193v63.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 40_0x69v43.TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43s
-    return _0x83v25
-_0x69v43
-local _0x287v83_0x69v43false
-local _0x288v62_0x69v430
-local function _0xb0v24(_0xb1v49, _0xb2v29)
-    local _0x191v84_0x69v43tick()
-    _0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43LastPremShown_0x69v43_0x69v43 then return _0x69v43
- _0x288v62_0x69v43_0x69v43 _0x69v43_0x69v43true
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 _0x69v43 then _0x69v43_0x69v43false return _0x69v43
-    local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-    _0x69v43Name_0x69v43"\086\069\073\076\095\080\114\101\109\105\117\109"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true_0x69v43.DisplayOrder_0x69v4397
-    pcall(function_0x69v43_0x69v43Parent_0x69v43_0x69v43 _0x69v43)
-    local _0x289v65_0x69v43customTitle_0x69v43 "\080\082\069\077\073\085\077\032\082\069\081\085\073\082\069\068"
-    local _0x28av11_0x69v43customBody_0x69v43 "\084\104\105\115\032\102\101\097\116\117\114\101\032\105\115\032\114\101\115\101\114\118\101\100\032\102\111\114\032\086\069\073\076\032\080\114\101\109\105\117\109\046\092\110\085\110\108\111\099\107\032\105\116\032\105\110\032\111\117\114\032\068\105\115\099\111\114\100\046"
-    local _0x28bv40_0x69v4310
-    local _0x28cv87_0x69v4354
-    local _0x28dv15_0x69v434
-    local _0x28ev15_0x69v4316
-    local _0x28fv26_0x69v436
-    local _0x290v77_0x69v4312
-    local _0x291v50_0x69v4326
-    local _0x292v19_0x69v4314
-    local _0x11cv62_0x69v4314
-    local _0x293v37_0x69v43_0x69v43
-    local _0x294v88_0x69v43CARD_W_0x69v43PAD_X_0x69v432
-    local _0x295v45_0x69v43STAR_TOP_0x69v43STAR_H_0x69v43STAR_GAP
-    local _0x296v25_0x69v43headerY_0x69v43HEADER_H_0x69v43BODY_GAP
-    local _0x297v15_0x69v43math._0x69v43(_0x6bv74(_0x28av11, Enum.Font.Gotham, (0x5 + 0x6), INNER_W_0x69v4316)
-    local _0x298v90_0x69v43bodyY_0x69v43bodyH_0x69v43CTA_TOP_GAP_0x69v43CTA_H_0x69v43BOTTOM_PAD
-    local _0x299v53_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x299v53.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43card.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v430_0x69v43_0x69v43)
-    _0x299v53.Size_0x69v43UDim2.fromOffset(_0x293v37, _0x298v90) _0x299v53.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, 14_0x69v43)
-    _0x299v53.BackgroundTransparency_0x69v431 _0x299v53.BorderSizePixel_0x69v430 _0x299v53.Parent_0x69v43sg
-    _0xa6v90(_0x299v53, (0x7 + 0x7))
-    local _0x29av83_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x29av83.Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x14 + 0x14)) _0x29av83.Thickness_0x69v43_0x69v43 _0x29av83.Transparency_0x69v430_0x69v43 _0x29av83.Parent_0x69v43card
-    local _0x29bv22_0x69v43Instance._0x69v43("\085\073\083\099\097\108\101") _0x29bv22.Scale_0x69v43_0x69v43 _0x29bv22.Parent_0x69v43card
-    local _0x29cv10_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x29cv10.Size_0x69v43UDim2.fromOffset(_0x28cv87, _0x28cv87)
-    _0x29cv10.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v430)
-    _0x29cv10.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43STAR_TOP)
-    _0x29cv10.BackgroundTransparency_0x69v431 _0x29cv10.Parent_0x69v43card
-    local _0x29dv66_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x29dv66.Size_0x69v43UDim2.fromScale(_0x69v43_0x69v43star.BackgroundTransparency_0x69v431
-    _0x29dv66.Font_0x69v43Enum.Font.GothamBlack _0x29dv66.Text_0x69v43"\092\050\050\054\092\049\053\050\092\049\051\051"
-    _0x29dv66.TextSize_0x69v43_0x69v43star.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x1e + 0x1e))
-    _0x29dv66.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0x29dv66.TextYAlignment_0x69v43Enum.TextYAlignment.Center
-    _0x29dv66.Parent_0x69v43starHolder
-    local _0x29ev81_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-    _0x29ev81.Color_0x69v43ColorSequence._0x69v43{
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)),
-        ColorSequenceKeypoint._0x69v43_0x69v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x14 + 0x14))),
-        ColorSequenceKeypoint._0x69v43(_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0xa + 0xa))),
+        while not _0x1996.ShuttingDown do task.wait(240) pcall(function() _0x6C2B.Tick() end) end
+    end)
+end
+-- ============================================================
+-- Interface
+-- ============================================================
+local _0xB457 = {}
+_0xB457.ScreenGui = nil _0xB457.MainFrame = nil
+_0xB457.TabContents = {} _0xB457.TabButtons = {} _0xB457.CurrentTab = nil
+local _0x97CF = _0x3317
+local _0xFB97 = _0x27A5
+local function _0xE1D1(_0x8377, _0x3FCC) local _0x3A4B = Instance.new("UICorner") _0x3A4B.CornerRadius = UDim.new(0, _0x3FCC or 8) _0x3A4B.Parent = _0x8377 return _0x3A4B end
+local function _0x80E5(_0x8377, _0xE798, th, _0x5D38) local _0x0404 = Instance.new("UIStroke") _0x0404.Color = _0xE798 or _0x97CF.Border _0x0404.Thickness = th or 1 _0x0404.Transparency = _0x5D38 or 0 _0x0404.Parent = _0x8377 return _0x0404 end
+local function _0x9E48(parent, text)
+    local _0x0404 = Instance.new("Frame")
+    _0x0404.Size = UDim2.new(1, 0, 0, 24) _0x0404.BackgroundTransparency = 1 _0x0404.Parent = parent
+    local _0x2EAC = Instance.new("Frame")
+    _0x2EAC.Size = UDim2.new(0, 3, 0, 12) _0x2EAC.Position = UDim2.new(0, 0, 0.5, -6)
+    _0x2EAC.BackgroundColor3 = _0x97CF.Accent _0x2EAC.BorderSizePixel = 0 _0x2EAC.Parent = _0x0404
+    _0xE1D1(_0x2EAC, 2)
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(1, -14, 1, 0) _0x104C.Position = UDim2.new(0, 14, 0, 0)
+    _0x104C.BackgroundTransparency = 1 _0x104C.Font = Enum.Font.GothamBold
+    _0x104C.Text = tostring(text):upper() _0x104C.TextSize = 10 _0x104C.TextColor3 = _0x97CF.Accent3
+    _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0x0404
+    return _0x0404
+end
+local function _0x6C63(parent, text)
+    local _0x0404 = Instance.new("Frame")
+    _0x0404.Size = UDim2.new(1, 0, 0, 24) _0x0404.BackgroundTransparency = 1 _0x0404.Parent = parent
+    local _0x2EAC = Instance.new("Frame")
+    _0x2EAC.Size = UDim2.new(0, 3, 0, 12) _0x2EAC.Position = UDim2.new(0, 0, 0.5, -6)
+    _0x2EAC.BackgroundColor3 = Color3.fromRGB(255, 200, 40) _0x2EAC.BorderSizePixel = 0 _0x2EAC.Parent = _0x0404
+    _0xE1D1(_0x2EAC, 2)
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(1, -14, 1, 0) _0x104C.Position = UDim2.new(0, 14, 0, 0)
+    _0x104C.BackgroundTransparency = 1 _0x104C.Font = Enum.Font.GothamBold
+    _0x104C.Text = "\226\152\133 " .. tostring(text):upper() _0x104C.TextSize = 10
+    _0x104C.TextColor3 = Color3.fromRGB(255, 200, 40) _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0x0404
+    return _0x0404
+end
+local _0x0912 = false
+local _0x04E8 = 0
+local function _0x6E22(customTitle, customBody)
+    local _0x17DA = tick()
+    if _0x0912 or _0x17DA - _0x04E8 < 0.4 then return end
+    _0x04E8 = _0x17DA _0x0912 = true
+    local _0x14E4 = _0xB27C()
+    if not _0x14E4 then _0x0912 = false return end
+    local _0xFA03 = Instance.new("ScreenGui")
+    _0xFA03.Name = "VEIL_Premium" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true _0xFA03.DisplayOrder = 97
+    pcall(function() _0xFA03.Parent = _0x14E4 end)
+    local _0xA176 = customTitle or "PREMIUM REQUIRED"
+    local _0x6652 = customBody or "This feature is reserved for VEIL Premium.\nUnlock it in our Discord."
+    local _0xA1C7 = 10
+    local _0xC661 = 54
+    local _0x8C3F = 4
+    local _0xED4D = 16
+    local _0x3B1B = 6
+    local _0x61C4 = 12
+    local _0x4B37 = 26
+    local _0x2DE5 = 14
+    local _0xBAB4 = 14
+    local _0xFA91 = 380
+    local _0x4CEB = _0xFA91 - _0xBAB4 * 2
+    local _0xF25D = _0xA1C7 + _0xC661 + _0x8C3F
+    local _0x34E3 = _0xF25D + _0xED4D + _0x3B1B
+    local _0x8079 = math.max(_0x9261(_0x6652, Enum.Font.Gotham, 11, _0x4CEB), 16)
+    local _0x1B61 = _0x34E3 + _0x8079 + _0x61C4 + _0x4B37 + _0x2DE5
+    local _0xC028 = Instance.new("Frame")
+    _0xC028.AnchorPoint = Vector2.new(0.5, 0) _0xC028.Position = UDim2.new(0.5, 0, 0, -100)
+    _0xC028.Size = UDim2.fromOffset(_0xFA91, _0x1B61) _0xC028.BackgroundColor3 = Color3.fromRGB(18, 14, 8)
+    _0xC028.BackgroundTransparency = 1 _0xC028.BorderSizePixel = 0 _0xC028.Parent = _0xFA03
+    _0xE1D1(_0xC028, 14)
+    local _0xCAF8 = Instance.new("UIStroke")
+    _0xCAF8.Color = Color3.fromRGB(255, 200, 40) _0xCAF8.Thickness = 1.5 _0xCAF8.Transparency = 0.15 _0xCAF8.Parent = _0xC028
+    local _0x4BBC = Instance.new("UIScale") _0x4BBC.Scale = 0.7 _0x4BBC.Parent = _0xC028
+    local _0xC6B3 = Instance.new("Frame")
+    _0xC6B3.Size = UDim2.fromOffset(_0xC661, _0xC661)
+    _0xC6B3.AnchorPoint = Vector2.new(0.5, 0)
+    _0xC6B3.Position = UDim2.new(0.5, 0, 0, _0xA1C7)
+    _0xC6B3.BackgroundTransparency = 1 _0xC6B3.Parent = _0xC028
+    local _0x09BF = Instance.new("TextLabel")
+    _0x09BF.Size = UDim2.fromScale(1, 1) _0x09BF.BackgroundTransparency = 1
+    _0x09BF.Font = Enum.Font.GothamBlack _0x09BF.Text = "\226\152\133"
+    _0x09BF.TextSize = 38 _0x09BF.TextColor3 = Color3.fromRGB(255, 215, 60)
+    _0x09BF.TextXAlignment = Enum.TextXAlignment.Center _0x09BF.TextYAlignment = Enum.TextYAlignment.Center
+    _0x09BF.Parent = _0xC6B3
+    local _0x4B0A = Instance.new("UIGradient")
+    _0x4B0A.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 245, 180)),
+        ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 215, 40)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(215, 150, 20)),
     }
-    _0x29ev81.Rotation_0x69v43_0x69v43starGrad.Parent_0x69v43star
-    local _0x29fv82_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-    _0x29fv82.Color_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x29fv82.Thickness_0x69v432 _0x29fv82.Transparency_0x69v43_0x69v43 _0x29fv82.Parent_0x69v43star
+    _0x4B0A.Rotation = 45 _0x4B0A.Parent = _0x09BF
+    local _0x6765 = Instance.new("UIStroke")
+    _0x6765.Color = Color3.fromRGB(255, 240, 150) _0x6765.Thickness = 2 _0x6765.Transparency = 0.3 _0x6765.Parent = _0x09BF
     task.spawn(function()
-        local _0x2a0v59_0x69v430
-        while _0x29dv66.Parent _0x69v43 _0x29cv10.Parent_0x69v43
-            _0xedv83:Create(_0x29dv66, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Linear), {Rotation_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Play()
-            task.wait_0x69v434)
- _0x2a0v59 = (_0x69v43_0x69v43_0x69v43) % _0x69v43
-            pcall(function_0x69v43star.Rotation_0x69v43_0x69v43 _0x69v43)
-        _0x69v43
-    _0x69v43)
+        local _0xFE70 = 0
+        while _0x09BF.Parent and _0xC6B3.Parent do
+            _0x27A5:Create(_0x09BF, TweenInfo.new(3.4, Enum.EasingStyle.Linear), {Rotation = _0xFE70 + 360}):Play()
+            task.wait(3.4)
+            _0xFE70 = (_0xFE70 + 360) % 360
+            pcall(function() _0x09BF.Rotation = _0xFE70 end)
+        end
+    end)
     task.spawn(function()
-        while _0x29fv82.Parent_0x69v43
-            _0xedv83:Create(_0x29fv82, TweenInfo._0x69v43_0x69v4385, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {Transparency_0x69v430_0x69v43, _0x3f4v80_0x69v434_0x69v43Play()
-            task.wait_0x69v4385)
-            _0xedv83:Create(_0x29fv82, TweenInfo._0x69v43_0x69v4385, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {Transparency_0x69v430_0x69v43, _0x3f4v80_0x69v432_0x69v43Play()
-            task.wait_0x69v4385)
-        _0x69v43
-    _0x69v43)
+        while _0x6765.Parent do
+            _0x27A5:Create(_0x6765, TweenInfo.new(0.85, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {Transparency = 0.75, Thickness = 4}):Play()
+            task.wait(0.85)
+            _0x27A5:Create(_0x6765, TweenInfo.new(0.85, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {Transparency = 0.25, Thickness = 2}):Play()
+            task.wait(0.85)
+        end
+    end)
     task.spawn(function()
-        while _0x29cv10.Parent_0x69v43
-            _0xedv83:Create(_0x29dv66, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {TextSize_0x69v4344_0x69v43Play()
-            task.wait_0x69v434)
-            _0xedv83:Create(_0x29dv66, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {TextSize_0x69v4336_0x69v43Play()
-            task.wait_0x69v434)
-        _0x69v43
-    _0x69v43)
-    local _0x2a1v85_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x2a1v85.Size_0x69v43UDim2._0x69v43(1_0x69v43PAD_X_0x69v43_0x69v43_0x69v43HEADER_H)
-    _0x2a1v85.Position_0x69v43UDim2._0x69v43(_0x69v43PAD_X_0x69v43, _0x295v45)
-    _0x2a1v85.BackgroundTransparency_0x69v431 _0x2a1v85.Font_0x69v43Enum.Font.GothamBlack
-    _0x2a1v85.Text_0x69v43headerText _0x2a1v85.TextSize_0x69v4312
-    _0x2a1v85.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x23 + 0x23))
-    _0x2a1v85.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0x2a1v85.Parent_0x69v43card
-    local _0xa3v45_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0xa3v45.Size_0x69v43UDim2._0x69v43(1_0x69v43PAD_X_0x69v43_0x69v43_0x69v43bodyH)
-    _0xa3v45.Position_0x69v43UDim2._0x69v43(_0x69v43PAD_X_0x69v43, _0x296v25)
-    _0xa3v45.BackgroundTransparency_0x69v431 _0xa3v45.Font_0x69v43Enum.Font.Gotham
-    _0xa3v45.Text_0x69v43bodyText
-    _0xa3v45.TextSize_0x69v43_0x69v43body.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    _0xa3v45.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0xa3v45.TextYAlignment_0x69v43Enum.TextYAlignment._0x69v43
-    _0xa3v45.TextWrapped_0x69v43true _0xa3v45.Parent_0x69v43card
-    local _0x2a2v48_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(1_0x69v43PAD_X_0x69v43_0x69v43_0x69v43CTA_H)
-    _0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43PAD_X_0x69v43, -(CTA_H_0x69v43BOTTOM_PAD))
-    _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x14 + 0x14)) _0x69v43.BorderSizePixel_0x69v430
-    _0x69v43.Font_0x69v43Enum.Font.GothamBold _0x69v43.Text_0x69v43"\084\065\080\032\084\079\032\067\079\080\089\032\068\073\083\067\079\082\068\032\073\078\086\073\084\069" _0x69v43.TextSize_0x69v4311
-    _0x69v43.TextColor3_0x69v43Color3.fromRGB_0x69v43, (0xb + 0xb), (0x5 + 0x5)) _0x69v43.AutoButtonColor_0x69v43false _0x69v43.Parent_0x69v43card
-    _0xa6v90(_0x69v43_0x69v43)
-    local _0x279v38_0x69v43"\104\116\116\112\115\058\047\047\100\105\115\099\111\114\100\046\103\103\047\075\051\118\103\099\086\115\067\115\083"
-    _0x69v43.MouseButton1Click:Connect(function()
-        _0x69v43type(setclipboard) == "\102\117\110\099\116\105\111\110" then
-            pcall(setclipboard, _0x279v38)
-            _0x69v43.Text_0x69v43"\067\079\080\073\069\068\032\084\079\032\067\076\073\080\066\079\065\082\068"
-            _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)
-            task.delay_0x69v43_0x69v43function()
-                _0x69v43_0x69v43.Parent then
-                    _0x69v43.Text_0x69v43"\084\065\080\032\084\079\032\067\079\080\089\032\068\073\083\067\079\082\068\032\073\078\086\073\084\069"
-                    _0x69v43.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x14 + 0x14))
-                _0x69v43
-            _0x69v43)
+        while _0xC6B3.Parent do
+            _0x27A5:Create(_0x09BF, TweenInfo.new(1.4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {TextSize = 44}):Play()
+            task.wait(1.4)
+            _0x27A5:Create(_0x09BF, TweenInfo.new(1.4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {TextSize = 36}):Play()
+            task.wait(1.4)
+        end
+    end)
+    local _0xAB9E = Instance.new("TextLabel")
+    _0xAB9E.Size = UDim2.new(1, -_0xBAB4 * 2, 0, _0xED4D)
+    _0xAB9E.Position = UDim2.new(0, _0xBAB4, 0, _0xF25D)
+    _0xAB9E.BackgroundTransparency = 1 _0xAB9E.Font = Enum.Font.GothamBlack
+    _0xAB9E.Text = _0xA176 _0xAB9E.TextSize = 12
+    _0xAB9E.TextColor3 = Color3.fromRGB(255, 210, 70)
+    _0xAB9E.TextXAlignment = Enum.TextXAlignment.Center _0xAB9E.Parent = _0xC028
+    local _0x2413 = Instance.new("TextLabel")
+    _0x2413.Size = UDim2.new(1, -_0xBAB4 * 2, 0, _0x8079)
+    _0x2413.Position = UDim2.new(0, _0xBAB4, 0, _0x34E3)
+    _0x2413.BackgroundTransparency = 1 _0x2413.Font = Enum.Font.Gotham
+    _0x2413.Text = _0x6652
+    _0x2413.TextSize = 11 _0x2413.TextColor3 = Color3.fromRGB(230, 220, 200)
+    _0x2413.TextXAlignment = Enum.TextXAlignment.Center _0x2413.TextYAlignment = Enum.TextYAlignment.Top
+    _0x2413.TextWrapped = true _0x2413.Parent = _0xC028
+    local _0x3AD0 = Instance.new("TextButton")
+    _0x3AD0.Size = UDim2.new(1, -_0xBAB4 * 2, 0, _0x4B37)
+    _0x3AD0.Position = UDim2.new(0, _0xBAB4, 1, -(_0x4B37 + _0x2DE5))
+    _0x3AD0.BackgroundColor3 = Color3.fromRGB(255, 200, 40) _0x3AD0.BorderSizePixel = 0
+    _0x3AD0.Font = Enum.Font.GothamBold _0x3AD0.Text = "TAP TO COPY DISCORD INVITE" _0x3AD0.TextSize = 11
+    _0x3AD0.TextColor3 = Color3.fromRGB(28, 22, 10) _0x3AD0.AutoButtonColor = false _0x3AD0.Parent = _0xC028
+    _0xE1D1(_0x3AD0, 7)
+    local _0xFC09 = "https://discord.gg/K3vgcVsCsS"
+    _0x3AD0.MouseButton1Click:Connect(function()
+        if type(setclipboard) == "function" then
+            pcall(setclipboard, _0xFC09)
+            _0x3AD0.Text = "COPIED TO CLIPBOARD"
+            _0x3AD0.BackgroundColor3 = Color3.fromRGB(80, 220, 130)
+            task.delay(1.8, function()
+                if _0x3AD0.Parent then
+                    _0x3AD0.Text = "TAP TO COPY DISCORD INVITE"
+                    _0x3AD0.BackgroundColor3 = Color3.fromRGB(255, 200, 40)
+                end
+            end)
         else
-            _0x69v43.Text_0x69v43DU
-            task.delay_0x69v43_0x69v43function_0x69v43_0x69v43_0x69v43.Parent then _0x69v43.Text_0x69v43"\084\065\080\032\084\079\032\067\079\080\089\032\068\073\083\067\079\082\068\032\073\078\086\073\084\069" _0x69v43 _0x69v43)
-        _0x69v43
-    _0x69v43)
-    _0xedv83:Create(_0x29bv22, TweenInfo._0x69v43_0x69v4355, Enum.EasingStyle.Back, Enum.EasingDirection._0x69v43), {Scale_0x69v431_0x69v43Play()
-    _0xedv83:Create(_0x299v53, TweenInfo._0x69v43_0x69v43_0x69v43Enum.EasingStyle.Quad, Enum.EasingDirection._0x69v43), {Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v4314_0x69v43_0x380v57_0x69v430_0x69v43Play()
-    task.delay_0x69v43, function()
-        _0xedv83:Create(_0x299v53, TweenInfo._0x69v43_0x69v4335, Enum.EasingStyle.Quad, Enum.EasingDirection_0x69v43), {Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v430_0x69v43_0x69v43_0x69v43_0x380v57_0x69v431_0x69v43Play()
-        task.delay_0x69v43_0x69v43function_0x69v43pcall(function_0x69v43_0x69v43Destroy_0x69v43_0x69v43) _0x69v43_0x69v43false _0x69v43)
-    _0x69v43)
-_0x69v43
-local _0x2a3v26 = {
- _0x34fv85_0x69v43true, _0x350v62_0x69v43true, _0x351v22_0x69v43true, _0x352v78_0x69v43true, _0x353v42_0x69v43true, _0x354v63_0x69v43true, _0x363v56_0x69v43true, _0x364v94_0x69v43true, _0x366v24_0x69v43true, _0x33ev54_0x69v43true, _0x33fv11_0x69v43true, _0x35dv18_0x69v43true, _0x35av47_0x69v43true, _0x35bv37_0x69v43true, _0x35cv51_0x69v43true, _0x35ev14_0x69v43true, _0x35fv45_0x69v43true, _0x361v78_0x69v43true, _0x33dv34_0x69v43true, _0x358v55_0x69v43true, _0x359v49_0x69v43true, _0x355v79_0x69v43true, _0x356v41_0x69v43true, _0x357v66_0x69v43true,
+            _0x3AD0.Text = _0xFC09
+            task.delay(2.2, function() if _0x3AD0.Parent then _0x3AD0.Text = "TAP TO COPY DISCORD INVITE" end end)
+        end
+    end)
+    _0x27A5:Create(_0x4BBC, TweenInfo.new(0.55, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {Scale = 1}):Play()
+    _0x27A5:Create(_0xC028, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, 0, 0, 14), BackgroundTransparency = 0}):Play()
+    task.delay(10, function()
+        _0x27A5:Create(_0xC028, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Position = UDim2.new(0.5, 0, 0, -100), BackgroundTransparency = 1}):Play()
+        task.delay(0.5, function() pcall(function() _0xFA03:Destroy() end) _0x0912 = false end)
+    end)
+end
+local _0x21BE = {
+    SilentAimEnabled = true, SilentAimHitChance = true, SilentAimFOV = true, SilentAimHitbox = true,
+    SilentAimDrawFOV = true, SilentAimFOVColor = true, HitSoundsEnabled = true, HitSoundChoice = true,
+    CustomCrosshairEnabled = true, HitboxExpanderEnabled = true, HitboxExpanderSize = true,
+    SpinbotEnabled = true, RapidFireEnabled = true, MaxAccuracyEnabled = true, NoSpreadEnabled = true,
+    ESPTargetVisEnabled = true, ViewmodelChamsEnabled = true, FlyNoclipEnabled = true,
+    NightVisionEnabled = true, AimLockEnabled = true, RagebotEnabled = true,
+    SilentAimDistanceBoost = true, SilentAimConvergenceSnap = true, SilentAimTightDeadzone = true,
 }
-local _0x2a4v46 = {}
-local function _0xb3v74(_0xaev68, _0x6cv32, _0xa5v89, _0xb4v49)
-    local _0x2a5v67_0x69v43PREMIUM_KEYS[_0x69v43] == true
-    local _0x2a6v89_0x69v43isPrem _0x69v43 _0x69v43 _0x110v81._0x367v66
-    local _0x2a7v29_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4334) _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Parent_0x69v43parent
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43(1_0x69v4360_0x69v43_0x69v43)
-    _0x69v43isPrem then_0x69v43Position_0x69v43UDim2._0x69v43(_0x69v4316_0x69v43_0x69v43) _0x69v43
-    _0x193v63.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.Gotham
-    _0x193v63.Text_0x69v43tostring(text_0x69v43.TextSize_0x69v43_0x69v43l.TextColor3_0x69v43C._0x3b5v86
-    _0x193v63.TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43_0x69v43
-    _0x69v43isPrem then
-        local _0x83v25_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-        _0x83v25.Size_0x69v43UDim2.fromOffset_0x69v43, 14_0x69v43.Position_0x69v43UDim2._0x69v43(0_0x69v43_0x69v43_0x69v43_0x69v437)
-        _0x83v25.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.GothamBold
-        _0x83v25.Text_0x69v43"\092\050\050\054\092\049\053\050\092\049\051\051"_0x69v43TextSize_0x69v43_0x69v43s.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, 40_0x69v43.Parent_0x69v43_0x69v43
-    _0x69v43
-    local _0xdcv26_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0xdcv26.Size_0x69v43UDim2._0x69v43(_0x69v4340_0x69v43, 20_0x69v43.Position_0x69v43UDim2._0x69v43(1_0x69v4340_0x69v43.5_0x69v4310)
-    _0xdcv26.BackgroundColor3_0x69v43locked _0x69v43 Color3.fromRGB_0x69v43, (0xf + 0xf), (0x7 + 0x8)) _0x69v43C._0x3b1v66
-    _0xdcv26.BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43_0x69v43
-    _0xa6v90(_0x69v4310)
-    _0xa9v60(_0x69v43locked _0x69v43 Color3.fromRGB(_0x69v43, (0x2d + 0x2d), (0x14 + 0x14)) _0x69v43C.Border_0x69v43_0x69v43.3)
-    local _0xf6v96_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0xf6v96.Size_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43, 14_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v437)
-    _0xf6v96.BackgroundColor3_0x69v43locked _0x69v43 Color3.fromRGB(_0x69v43, (0x2d + 0x2d), (0x14 + 0x14)) _0x69v43C._0x3b6v43
-    _0xf6v96.BorderSizePixel_0x69v43_0x69v43.ZIndex_0x69v43_0x69v43.Parent_0x69v43p
-    _0xa6v90(_0x69v437)
-    local _0xd1v47_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Text_0x69v43"" _0x69v43.Parent_0x69v43p
-    local function _0xb5v96(_0x3d6v96, _0xb6v32)
-        _0x69v43locked then return _0x69v43
-        local _0x131v86_0x69v43TweenInfo._0x69v43_0x69v43 _0x69v43_0x69v432_0x69v43 _0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43)
-        _0x69v43_0x69v43then
-            _0x285v66:Create(_0x69v43info_0x69v43BackgroundColor3_0x69v43C.Accent_0x69v43Play()
-            _0x285v66:Create(_0x69v43info_0x69v43Position_0x69v43UDim2._0x69v43(1_0x69v4317_0x69v43.5_0x69v437_0x69v43_0x3f5v45_0x69v43C.Text_0x69v43Play()
+local _0x22B6 = {}
+local function _0x4201(parent, text, _0x6260, _0x2CBA)
+    local _0xEB70 = _0x21BE[_0x6260] == true
+    local _0xF9E8 = _0xEB70 and not _0x77AD.IsPremium
+    local _0xA100 = Instance.new("Frame")
+    _0xA100.Size = UDim2.new(1, 0, 0, 34) _0xA100.BackgroundTransparency = 1 _0xA100.Parent = parent
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(1, -60, 1, 0)
+    if _0xEB70 then _0x104C.Position = UDim2.new(0, 16, 0, 0) end
+    _0x104C.BackgroundTransparency = 1 _0x104C.Font = Enum.Font.Gotham
+    _0x104C.Text = tostring(text) _0x104C.TextSize = 12 _0x104C.TextColor3 = _0x97CF.Text
+    _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0xA100
+    if _0xEB70 then
+        local _0x0404 = Instance.new("TextLabel")
+        _0x0404.Size = UDim2.fromOffset(16, 14) _0x0404.Position = UDim2.new(0, -2, 0.5, -7)
+        _0x0404.BackgroundTransparency = 1 _0x0404.Font = Enum.Font.GothamBold
+        _0x0404.Text = "\226\152\133" _0x0404.TextSize = 12 _0x0404.TextColor3 = Color3.fromRGB(255, 200, 40) _0x0404.Parent = _0xA100
+    end
+    local _0x938C = Instance.new("Frame")
+    _0x938C.Size = UDim2.new(0, 40, 0, 20) _0x938C.Position = UDim2.new(1, -40, 0.5, -10)
+    _0x938C.BackgroundColor3 = _0xF9E8 and Color3.fromRGB(40, 30, 15) or _0x97CF.PanelLight
+    _0x938C.BorderSizePixel = 0 _0x938C.Parent = _0xA100
+    _0xE1D1(_0x938C, 10)
+    _0x80E5(_0x938C, _0xF9E8 and Color3.fromRGB(120, 90, 40) or _0x97CF.Border, 1, 0.3)
+    local _0xE7BF = Instance.new("Frame")
+    _0xE7BF.Size = UDim2.new(0, 14, 0, 14) _0xE7BF.Position = UDim2.new(0, 3, 0.5, -7)
+    _0xE7BF.BackgroundColor3 = _0xF9E8 and Color3.fromRGB(120, 90, 40) or _0x97CF.TextMuted
+    _0xE7BF.BorderSizePixel = 0 _0xE7BF.ZIndex = 2 _0xE7BF.Parent = _0x938C
+    _0xE1D1(_0xE7BF, 7)
+    local _0x78ED = Instance.new("TextButton")
+    _0x78ED.Size = UDim2.new(1, 0, 1, 0) _0x78ED.BackgroundTransparency = 1 _0x78ED.Text = "" _0x78ED.Parent = _0x938C
+    local function _0x96C1(_0x0207, an)
+        if _0xF9E8 then return end
+        local _0x05AC = TweenInfo.new(an and 0.2 or 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+        if _0x0207 then
+            _0xFB97:Create(_0x938C, _0x05AC, {BackgroundColor3 = _0x97CF.Accent}):Play()
+            _0xFB97:Create(_0xE7BF, _0x05AC, {Position = UDim2.new(1, -17, 0.5, -7), BackgroundColor3 = _0x97CF.Text}):Play()
         else
-            _0x285v66:Create(_0x69v43info_0x69v43BackgroundColor3_0x69v43C.PanelLight_0x69v43Play()
-            _0x285v66:Create(_0x69v43info_0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v437_0x69v43_0x3f5v45_0x69v43C.TextMuted_0x69v43Play()
-        _0x69v43
-    _0x69v43
-    _0x69v43.MouseButton1Click:Connect(function()
-        _0x69v43locked then pcall(_0xb0v24) return _0x69v43
-        _0x110v81[_0x69v43] = _0x69v43 _0x110v81[_0x69v43]
-        _0xb5v96(_0x110v81[_0x69v43_0x69v43true)
-        _0x69v43_0x69v43then pcall_0x69v43, _0x110v81[_0x69v43_0x69v43_0x69v43
-        _0x69v43_0x69v43 == "\083\105\108\101\110\116\065\105\109\069\110\097\098\108\101\100" then
-            _0x69v43Configuration._0x34fv85 then
-                _0x69v43SILENT.InstallHook then pcall(_0xfcv64.InstallHook) _0x69v43
-                _0x69v43_0x69v43 _0xfbv71 then
-                    _0x69v43__VEIL_AimbotBeforeSilent_0x69v43Configuration._0x314v90
-                    _0x110v81.CameraAssistEnabled_0x69v43false
-                    _0x69v43ToggleRegistry["\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100"] then _0x2a4v46["\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100"](false, true) _0x69v43
+            _0xFB97:Create(_0x938C, _0x05AC, {BackgroundColor3 = _0x97CF.PanelLight}):Play()
+            _0xFB97:Create(_0xE7BF, _0x05AC, {Position = UDim2.new(0, 3, 0.5, -7), BackgroundColor3 = _0x97CF.TextMuted}):Play()
+        end
+    end
+    _0x78ED.MouseButton1Click:Connect(function()
+        if _0xF9E8 then pcall(_0x6E22) return end
+        _0x77AD[_0x6260] = not _0x77AD[_0x6260]
+        _0x96C1(_0x77AD[_0x6260], true)
+        if _0x2CBA then pcall(_0x2CBA, _0x77AD[_0x6260]) end
+        if _0x6260 == "SilentAimEnabled" then
+            if _0x77AD.SilentAimEnabled then
+                if _0x2D8B.InstallHook then pcall(_0x2D8B.InstallHook) end
+                if not _0x0E63 then
+                    _G.__VEIL_AimbotBeforeSilent = _0x77AD.CameraAssistEnabled
+                    _0x77AD.CameraAssistEnabled = false
+                    if _0x22B6["CameraAssistEnabled"] then _0x22B6["CameraAssistEnabled"](false, true) end
                 else
-                    _0x110v81.CameraAssistEnabled_0x69v43true
-                    _0x69v43ToggleRegistry["\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100"] then _0x2a4v46["\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100"](true, true) _0x69v43
-                _0x69v43
+                    _0x77AD.CameraAssistEnabled = true
+                    if _0x22B6["CameraAssistEnabled"] then _0x22B6["CameraAssistEnabled"](true, true) end
+                end
             else
-                _0x69v43SILENT.UninstallHook then pcall(_0xfcv64.UninstallHook) _0x69v43
-                _0x69v43_0x69v43 _0xfbv71 then
-                    _0x69v43_0x69v43__VEIL_AimbotBeforeSilent then
-                        _0x110v81.CameraAssistEnabled_0x69v43true
-                        _0x69v43ToggleRegistry["\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100"] then _0x2a4v46["\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100"](true, true) _0x69v43
-                    _0x69v43
-                    _0x69v43__VEIL_AimbotBeforeSilent_0x69v43false
-                _0x69v43
-                pcall(_0x7fv34, _0x182v69)
-            _0x69v43
-        elseif _0x69v43 == "\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100" _0x69v43 _0x110v81._0x314v90 then
-            _0x69v43_0x69v43 _0xfbv71 then
-                _0x110v81.SilentAimEnabled_0x69v43false
-                _0x69v43ToggleRegistry["\083\105\108\101\110\116\065\105\109\069\110\097\098\108\101\100"] then _0x2a4v46["\083\105\108\101\110\116\065\105\109\069\110\097\098\108\101\100"](false, true) _0x69v43
-            _0x69v43
-            pcall(_0x7fv34, _0x182v69)
-        _0x69v43
-        _0x190v27.InvalidateLobbyCache()
-        _0x81v99()
-    _0x69v43)
-    _0x2a4v46[_0x69v43] = _0xb5v96
-    _0xb5v96(_0x110v81[_0x69v43_0x69v43false)
-    return _0x69v43
-_0x69v43
-local function _0xb7v15(_0xaev68, _0x6cv32, _0xb8v46, _0xb9v16, _0xb4v49)
-    local _0x2a7v29_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4334) _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Parent_0x69v43parent
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.BackgroundTransparency_0x69v431
-    _0x193v63.Font_0x69v43Enum.Font.Gotham_0x69v43Text_0x69v43tostring(text_0x69v43.TextSize_0x69v4312
-    _0x193v63.TextColor3_0x69v43C.Text_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43_0x69v43
-    local _0x2a8v48_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43, (0xb + 0xb)) _0x69v43.Position_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43.5_0x69v4311)
-    _0x69v43.BackgroundColor3_0x69v43C._0x3b2v44 _0x69v43.BorderSizePixel_0x69v430
-    _0x69v43.Font_0x69v43Enum.Font.GothamMedium _0x69v43.TextSize_0x69v43_0x69v43_0x69v43.TextColor3_0x69v43C._0x3b5v86
-    _0x69v43.Text_0x69v43"\067\104\097\110\103\101\032\099\111\108\111\117\114" _0x69v43.AutoButtonColor_0x69v43false _0x69v43.Parent_0x69v43_0x69v43
-    _0xa6v90(_0x69v43_0x69v43) _0xa9v60(_0x69v43_0x69v43.Border_0x69v43_0x69v43.4)
-    _0x69v43.MouseButton1Click:Connect(function()
-        local _0x2a9v72 = {
-            {_0x79v33="\080\117\114\112\108\101", _0xaav64 =Color3.fromRGB(_0x69v43, (0x2e + 0x2e), _0x69v43)}, {_0x79v33="\082\101\100", _0xaav64 =Color3.fromRGB(_0x69v43, (0x1e + 0x1e), (0x1e + 0x1e))},
-            {_0x79v33="\066\108\117\101", _0xaav64 =Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)}, {_0x79v33="\071\114\101\101\110", _0xaav64 =Color3.fromRGB_0x69v43, _0x69v43, (0x2d + 0x2d))},
-            {_0x79v33="\089\101\108\108\111\119", _0xaav64 =Color3.fromRGB(_0x69v43, _0x69v43, (0x1e + 0x1e))}, {_0x79v33="\087\104\105\116\101", _0xaav64 =Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)},
-            {_0x79v33="\066\108\097\099\107", _0xaav64 =Color3.fromRGB_0x69v43, (0xc + 0xd), (0xf + 0xf))}, {_0x79v33="\067\121\097\110", _0xaav64 =Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)},
-            {_0x79v33="\079\114\097\110\103\101", _0xaav64 =Color3.fromRGB(_0x69v43, _0x69v43, (0x1e + 0x1e))}, {_0x79v33="\080\105\110\107", _0xaav64 =Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)},
-            {_0x79v33="\076\105\109\101", _0xaav64 =Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)}, {_0x79v33="\084\101\097\108", _0xaav64 =Color3.fromRGB_0x69v43, _0x69v43, _0x69v43)},
+                if _0x2D8B.UninstallHook then pcall(_0x2D8B.UninstallHook) end
+                if not _0x0E63 then
+                    if _G.__VEIL_AimbotBeforeSilent then
+                        _0x77AD.CameraAssistEnabled = true
+                        if _0x22B6["CameraAssistEnabled"] then _0x22B6["CameraAssistEnabled"](true, true) end
+                    end
+                    _G.__VEIL_AimbotBeforeSilent = false
+                end
+                pcall(_0xA561, _0x51E5)
+            end
+        elseif _0x6260 == "CameraAssistEnabled" and _0x77AD.CameraAssistEnabled then
+            if not _0x0E63 then
+                _0x77AD.SilentAimEnabled = false
+                if _0x22B6["SilentAimEnabled"] then _0x22B6["SilentAimEnabled"](false, true) end
+            end
+            pcall(_0xA561, _0x51E5)
+        end
+        _0xC036.InvalidateLobbyCache()
+        _0x9CA3()
+    end)
+    _0x22B6[_0x6260] = _0x96C1
+    _0x96C1(_0x77AD[_0x6260], false)
+    return _0xA100
+end
+local function _0x7F2D(parent, text, toggleKey, colorKey, _0x2CBA)
+    local _0xA100 = Instance.new("Frame")
+    _0xA100.Size = UDim2.new(1, 0, 0, 34) _0xA100.BackgroundTransparency = 1 _0xA100.Parent = parent
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(1, -200, 1, 0) _0x104C.BackgroundTransparency = 1
+    _0x104C.Font = Enum.Font.Gotham _0x104C.Text = tostring(text) _0x104C.TextSize = 12
+    _0x104C.TextColor3 = _0x97CF.Text _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0xA100
+    local _0xCA90 = Instance.new("TextButton")
+    _0xCA90.Size = UDim2.new(0, 100, 0, 22) _0xCA90.Position = UDim2.new(1, -146, 0.5, -11)
+    _0xCA90.BackgroundColor3 = _0x97CF.Card _0xCA90.BorderSizePixel = 0
+    _0xCA90.Font = Enum.Font.GothamMedium _0xCA90.TextSize = 10 _0xCA90.TextColor3 = _0x97CF.Text
+    _0xCA90.Text = "Change colour" _0xCA90.AutoButtonColor = false _0xCA90.Parent = _0xA100
+    _0xE1D1(_0xCA90, 6) _0x80E5(_0xCA90, _0x97CF.Border, 1, 0.4)
+    _0xCA90.MouseButton1Click:Connect(function()
+        local _0x9794 = {
+            {_0x4BFF="Purple", _0xE798=Color3.fromRGB(139, 92, 246)}, {_0x4BFF="Red", _0xE798=Color3.fromRGB(255, 60, 60)},
+            {_0x4BFF="Blue", _0xE798=Color3.fromRGB(99, 102, 241)}, {_0x4BFF="Green", _0xE798=Color3.fromRGB(60, 220, 90)},
+            {_0x4BFF="Yellow", _0xE798=Color3.fromRGB(255, 220, 60)}, {_0x4BFF="White", _0xE798=Color3.fromRGB(245, 243, 255)},
+            {_0x4BFF="Black", _0xE798=Color3.fromRGB(25, 25, 30)}, {_0x4BFF="Cyan", _0xE798=Color3.fromRGB(80, 220, 240)},
+            {_0x4BFF="Orange", _0xE798=Color3.fromRGB(255, 140, 60)}, {_0x4BFF="Pink", _0xE798=Color3.fromRGB(255, 100, 200)},
+            {_0x4BFF="Lime", _0xE798=Color3.fromRGB(120, 255, 120)}, {_0x4BFF="Teal", _0xE798=Color3.fromRGB(60, 200, 180)},
         }
-        local _0xeav74_0x69v43safeGuiParent()
-        _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-        local _0x2aav10_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-        _0x69v43.Name_0x69v43"\086\069\073\076\095\080\105\099\107\101\114" _0x69v43.ResetOnSpawn_0x69v43false _0x69v43.IgnoreGuiInset_0x69v43true
-        _0x69v43.DisplayOrder_0x69v436000 _0x69v43.Parent_0x69v43_0x69v43
-        local _0x2abv80_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-        _0x69v43.Size_0x69v43UDim2.fromScale(_0x69v43_0x69v43_0x69v43.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v430)
-        _0x69v43.BackgroundTransparency_0x69v43_0x69v43 _0x69v43.BorderSizePixel_0x69v430 _0x69v43.Text_0x69v43"" _0x69v43.AutoButtonColor_0x69v43false _0x69v43.Parent_0x69v43_0x69v43
-        local _0x166v14_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x166v14.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x166v14.Position_0x69v43UDim2.fromScale_0x69v43_0x69v43_0x69v43)
-        _0x166v14.Size_0x69v43UDim2.fromOffset(_0x69v43, _0x69v43) _0x166v14.BackgroundColor3_0x69v43C._0x3b0v88
-        _0x166v14.BorderSizePixel_0x69v430 _0x166v14.Parent_0x69v43_0x69v43
-        _0xa6v90(_0x166v14, (0x5 + 0x5)) _0xa9v60(panel_0x69v43.Border_0x69v43_0x69v43)
-        local _0x263v80_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-        _0x263v80.Size_0x69v43UDim2._0x69v43(1_0x69v4340_0x69v43, (0xc + 0xc)) _0x263v80.Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43, (0x5 + 0x5))
-        _0x263v80.BackgroundTransparency_0x69v431 _0x263v80.Font_0x69v43Enum.Font.GothamBold
-        _0x263v80.TextSize_0x69v43_0x69v43title.TextColor3_0x69v43C._0x3b5v86
-        _0x263v80.TextXAlignment_0x69v43Enum.TextXAlignment.Left _0x263v80.Text_0x69v43"\080\105\099\107\032\097\032\099\111\108\111\114" _0x263v80.Parent_0x69v43panel
-        local _0x2acv38_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-        _0x2acv38.Size_0x69v43UDim2.fromOffset_0x69v43, (0xb + 0xb)) _0x2acv38.Position_0x69v43UDim2._0x69v43(1_0x69v4332_0x69v43, (0x5 + 0x5))
-        _0x2acv38.BackgroundColor3_0x69v43C._0x3b1v66 _0x2acv38.BorderSizePixel_0x69v430
-        _0x2acv38.Font_0x69v43Enum.Font.GothamBold _0x2acv38.TextSize_0x69v43_0x69v43closeB.TextColor3_0x69v43C._0x3b5v86
-        _0x2acv38.Text_0x69v43"\120" _0x2acv38.AutoButtonColor_0x69v43false _0x2acv38.Parent_0x69v43panel
-        _0xa6v90(closeB_0x69v43)
-        local _0x2adv50_0x69v43Instance._0x69v43("\070\114\097\109\101")
-        _0x2adv50.Size_0x69v43UDim2._0x69v43(1_0x69v4328_0x69v43_0x69v4352) _0x2adv50.Position_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43, (0x15 + 0x15))
-        _0x2adv50.BackgroundTransparency_0x69v431 _0x2adv50.Parent_0x69v43panel
-        local _0x2aev87_0x69v43Instance._0x69v43("\085\073\071\114\105\100\076\097\121\111\117\116")
-        _0x69v43CellSize_0x69v43UDim2.fromOffset_0x69v43, (0x11 + 0x11)) _0x69v43CellPadding_0x69v43UDim2.fromOffset(_0x69v436)
-        _0x69v43SortOrder_0x69v43Enum.SortOrder.LayoutOrder_0x69v43.Parent_0x69v43grid
-        local function _0xbav32_0x69v43pcall(function_0x69v43_0x69v43:Destroy_0x69v43_0x69v43) _0x69v43
-        _0x69v43.MouseButton1Click:Connect(_0xbav32)
-        _0x2acv38.MouseButton1Click:Connect(_0xbav32)
-        _0x69v43 _0x69v43info_0x69v43 ipairs(_0x2a9v72) do
-            local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-            _0x286v53.BackgroundColor3_0x69v43info._0x69v43_0x69v43BorderSizePixel_0x69v43_0x69v43.Text_0x69v43""_0x69v43AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43grid
-            _0xa6v90(_0x69v43_0x69v43stroke(_0x69v43C.Border_0x69v43_0x69v43.3)
-            _0x286v53.MouseButton1Click:Connect(function()
-                _0x110v81[_0xb9v16] = _0x37cv19._0x79v33
-                _0x81v99()
-                _0xbav32()
-            _0x69v43)
-        _0x69v43
-    _0x69v43)
-    local _0xdcv26_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0xdcv26.Size_0x69v43UDim2._0x69v43(_0x69v4340_0x69v43, 20_0x69v43.Position_0x69v43UDim2._0x69v43(1_0x69v4340_0x69v43.5_0x69v4310)
-    _0xdcv26.BackgroundColor3_0x69v43C.PanelLight_0x69v43BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43_0x69v43
-    _0xa6v90(_0x69v4310) _0xa9v60(_0x69v43C.Border_0x69v43_0x69v43.3)
-    local _0xf6v96_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0xf6v96.Size_0x69v43UDim2._0x69v43(_0x69v4314_0x69v43, 14_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v437)
-    _0xf6v96.BackgroundColor3_0x69v43C.TextMuted_0x69v43BorderSizePixel_0x69v43_0x69v43.ZIndex_0x69v43_0x69v43.Parent_0x69v43p
-    _0xa6v90(_0x69v437)
-    local _0xd1v47_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Text_0x69v43"" _0x69v43.Parent_0x69v43p
-    local function _0xb5v96(_0x3d6v96, _0xb6v32)
-        local _0x131v86_0x69v43TweenInfo._0x69v43_0x69v43 _0x69v43_0x69v432_0x69v43 _0x69v43Enum.EasingStyle.Quart, Enum.EasingDirection._0x69v43)
-        _0x69v43_0x69v43then
-            _0x285v66:Create(_0x69v43info_0x69v43BackgroundColor3_0x69v43C.Accent_0x69v43Play()
-            _0x285v66:Create(_0x69v43info_0x69v43Position_0x69v43UDim2._0x69v43(1_0x69v4317_0x69v43.5_0x69v437_0x69v43_0x3f5v45_0x69v43C.Text_0x69v43Play()
+        local _0x14E4 = _0xB27C()
+        if not _0x14E4 then return end
+        local _0x65E1 = Instance.new("ScreenGui")
+        _0x65E1.Name = "VEIL_Picker" _0x65E1.ResetOnSpawn = false _0x65E1.IgnoreGuiInset = true
+        _0x65E1.DisplayOrder = 6000 _0x65E1.Parent = _0x14E4
+        local _0x94DC = Instance.new("TextButton")
+        _0x94DC.Size = UDim2.fromScale(1, 1) _0x94DC.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        _0x94DC.BackgroundTransparency = 0.5 _0x94DC.BorderSizePixel = 0 _0x94DC.Text = "" _0x94DC.AutoButtonColor = false _0x94DC.Parent = _0x65E1
+        local _0xA05F = Instance.new("Frame")
+        _0xA05F.AnchorPoint = Vector2.new(0.5, 0.5) _0xA05F.Position = UDim2.fromScale(0.5, 0.5)
+        _0xA05F.Size = UDim2.fromOffset(300, 220) _0xA05F.BackgroundColor3 = _0x97CF.Panel
+        _0xA05F.BorderSizePixel = 0 _0xA05F.Parent = _0x65E1
+        _0xE1D1(_0xA05F, 10) _0x80E5(_0xA05F, _0x97CF.Border, 1, 0)
+        local _0xEFCA = Instance.new("TextLabel")
+        _0xEFCA.Size = UDim2.new(1, -40, 0, 24) _0xEFCA.Position = UDim2.new(0, 14, 0, 10)
+        _0xEFCA.BackgroundTransparency = 1 _0xEFCA.Font = Enum.Font.GothamBold
+        _0xEFCA.TextSize = 12 _0xEFCA.TextColor3 = _0x97CF.Text
+        _0xEFCA.TextXAlignment = Enum.TextXAlignment.Left _0xEFCA.Text = "Pick a color" _0xEFCA.Parent = _0xA05F
+        local _0x1B59 = Instance.new("TextButton")
+        _0x1B59.Size = UDim2.fromOffset(22, 22) _0x1B59.Position = UDim2.new(1, -32, 0, 10)
+        _0x1B59.BackgroundColor3 = _0x97CF.PanelLight _0x1B59.BorderSizePixel = 0
+        _0x1B59.Font = Enum.Font.GothamBold _0x1B59.TextSize = 13 _0x1B59.TextColor3 = _0x97CF.Text
+        _0x1B59.Text = "x" _0x1B59.AutoButtonColor = false _0x1B59.Parent = _0xA05F
+        _0xE1D1(_0x1B59, 5)
+        local _0x7891 = Instance.new("Frame")
+        _0x7891.Size = UDim2.new(1, -28, 1, -52) _0x7891.Position = UDim2.new(0, 14, 0, 42)
+        _0x7891.BackgroundTransparency = 1 _0x7891.Parent = _0xA05F
+        local _0xADB5 = Instance.new("UIGridLayout")
+        _0xADB5.CellSize = UDim2.fromOffset(60, 34) _0xADB5.CellPadding = UDim2.fromOffset(6, 6)
+        _0xADB5.SortOrder = Enum.SortOrder.LayoutOrder _0xADB5.Parent = _0x7891
+        local function _0x17EC() pcall(function() _0x65E1:Destroy() end) end
+        _0x94DC.MouseButton1Click:Connect(_0x17EC)
+        _0x1B59.MouseButton1Click:Connect(_0x17EC)
+        for _, _0x05AC in ipairs(_0x9794) do
+            local _0x2EAC = Instance.new("TextButton")
+            _0x2EAC.BackgroundColor3 = _0x05AC.col _0x2EAC.BorderSizePixel = 0 _0x2EAC.Text = "" _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0x7891
+            _0xE1D1(_0x2EAC, 6) _0x80E5(_0x2EAC, _0x97CF.Border, 1, 0.3)
+            _0x2EAC.MouseButton1Click:Connect(function()
+                _0x77AD[colorKey] = _0x05AC.name
+                _0x9CA3()
+                _0x17EC()
+            end)
+        end
+    end)
+    local _0x938C = Instance.new("Frame")
+    _0x938C.Size = UDim2.new(0, 40, 0, 20) _0x938C.Position = UDim2.new(1, -40, 0.5, -10)
+    _0x938C.BackgroundColor3 = _0x97CF.PanelLight _0x938C.BorderSizePixel = 0 _0x938C.Parent = _0xA100
+    _0xE1D1(_0x938C, 10) _0x80E5(_0x938C, _0x97CF.Border, 1, 0.3)
+    local _0xE7BF = Instance.new("Frame")
+    _0xE7BF.Size = UDim2.new(0, 14, 0, 14) _0xE7BF.Position = UDim2.new(0, 3, 0.5, -7)
+    _0xE7BF.BackgroundColor3 = _0x97CF.TextMuted _0xE7BF.BorderSizePixel = 0 _0xE7BF.ZIndex = 2 _0xE7BF.Parent = _0x938C
+    _0xE1D1(_0xE7BF, 7)
+    local _0x78ED = Instance.new("TextButton")
+    _0x78ED.Size = UDim2.new(1, 0, 1, 0) _0x78ED.BackgroundTransparency = 1 _0x78ED.Text = "" _0x78ED.Parent = _0x938C
+    local function _0x96C1(_0x0207, an)
+        local _0x05AC = TweenInfo.new(an and 0.2 or 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
+        if _0x0207 then
+            _0xFB97:Create(_0x938C, _0x05AC, {BackgroundColor3 = _0x97CF.Accent}):Play()
+            _0xFB97:Create(_0xE7BF, _0x05AC, {Position = UDim2.new(1, -17, 0.5, -7), BackgroundColor3 = _0x97CF.Text}):Play()
         else
-            _0x285v66:Create(_0x69v43info_0x69v43BackgroundColor3_0x69v43C.PanelLight_0x69v43Play()
-            _0x285v66:Create(_0x69v43info_0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v437_0x69v43_0x3f5v45_0x69v43C.TextMuted_0x69v43Play()
-        _0x69v43
-    _0x69v43
-    _0x69v43.MouseButton1Click:Connect(function()
-        _0x110v81[_0xb8v46] = _0x69v43 _0x110v81[_0xb8v46]
-        _0xb5v96(_0x110v81[toggleKey_0x69v43true)
-        _0x69v43_0x69v43then pcall_0x69v43, _0x110v81[toggleKey_0x69v43_0x69v43
-        _0x81v99()
-    _0x69v43)
-    _0xb5v96(_0x110v81[toggleKey_0x69v43false)
-    return _0x69v43
-_0x69v43
-local function _0xbbv91(_0xaev68, _0x6cv32, _0xa5v89, _0xbcv16, _0xbdv91, _0xbev25, _0xbfv96)
-    local _0x2a5v67_0x69v43PREMIUM_KEYS[_0x69v43] == true
-    local _0x2a6v89_0x69v43isPrem _0x69v43 _0x69v43 _0x110v81._0x367v66
-    local _0x127v13_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x127v13.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.BackgroundTransparency_0x69v43_0x69v43.Parent_0x69v43parent
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v4316)
-    _0x69v43isPrem then_0x69v43Position_0x69v43UDim2._0x69v43(_0x69v4316_0x69v43_0x69v43) _0x69v43
-    _0x193v63.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.Gotham_0x69v43Text_0x69v43tostring(_0x6cv32)
-    _0x193v63.TextSize_0x69v43_0x69v43l.TextColor3_0x69v43C.Text_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43c
-    local _0x89v20_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x2f3v60.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v4316_0x69v43.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v430)
-    _0x2f3v60.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.GothamBold_0x69v43TextSize_0x69v4311
-    _0x2f3v60.TextColor3_0x69v43C.Accent3_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Right_0x69v43Parent_0x69v43c
-    local _0xacv36_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4326)
-    _0x69v43BackgroundColor3_0x69v43C.PanelLight_0x69v43.BorderSizePixel_0x69v430_0x69v43.Parent_0x69v43c
-    corner_0x69v43_0x69v43)
-    local _0x65v40_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x65v40.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x65v40.BackgroundColor3_0x69v43C._0x3b3v27 _0x65v40.BorderSizePixel_0x69v430 _0x65v40.Parent_0x69v43tr
-    _0xa6v90(_0x65v40_0x69v43)
-    local _0x112v65_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x374v21.Size_0x69v43UDim2._0x69v43(_0x69v4312_0x69v43, 12_0x69v43.Position_0x69v43UDim2._0x69v43(0_0x69v43_0x69v43_0x69v43_0x69v436)
-    _0x374v21.BackgroundColor3_0x69v43C.Text_0x69v43BorderSizePixel_0x69v43_0x69v43.ZIndex_0x69v43_0x69v43.Parent_0x69v43tr
-    _0xa6v90(_0x69v43_0x69v43stroke(_0x69v43C.Accent_0x69v43_0x69v43)
-    local _0x2afv66_0x69v43"\037\046\048\102"
-    _0x69v43step _0x69v43 step_0x69v431 then_0x69v43_0x69v43"\037\046\050\102" _0x69v43
-    local _0x2b0v33_0x69v43false
-    local function _0xc0v98(_0xc1v73)
-        _0x69v43locked then return _0x69v43
-        local _0x226v33_0x69v43_0x69v43AbsolutePosition.X
-        local _0x116v72_0x69v43_0x69v43AbsoluteSize.X
-        _0x69v43ts <= 0 then return _0x69v43
-        local _0x2b1v38_0x69v43math.clamp_0x69v43_0x69v43tp) / ts_0x69v43_0x69v43)
-        local _0x19ev78_0x69v43mn + (mx_0x69v43mn) * _0x69v43
-        _0x69v43step _0x69v43 step_0x69v430 then _0x69v43_0x69v43math.round(_0x69v43_0x69v43step) * _0xbev25 _0x69v43
-        _0x110v81[_0x69v43] = _0x69v43
-        _0x2f3v60.Text_0x69v43string.format_0x69v43, _0x69v43)
-        _0x65v40.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43)
-        _0x374v21.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43_0x69v436)
-        _0x69v43_0x69v43 then
-            local _0xf2v80, _0x3acv42_0x69v43pcall(_0x69v43, _0x69v43)
-            _0x69v43_0x69v43_0x69v43_0x69v43then_0x69v43Text_0x69v43tostring(_0x69v43_0x69v43
-        _0x69v43
-        _0x81v99()
-    _0x69v43
-    local _0xd1v47_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4316) _0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4320)
-    _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Text_0x69v43"" _0x69v43.Parent_0x69v43c
-    _0x69v43.InputBegan:Connect(function(_0x90v85)
-        _0x69v43locked then pcall(_0xb0v24) return _0x69v43
-        _0x69v43input.UserInputType == Enum.UserInputType.MouseButton1_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.Touch then
- _0x2b0v33_0x69v43true _0x69v43(_0x90v85._0x381v33.X)
-        _0x69v43
-    _0x69v43)
-    _0x18fv80.Track(_0x69v43.InputChanged:Connect(function(_0x90v85)
-        _0x69v43_0x69v43_0x69v43 (_0x90v85.UserInputType == Enum.UserInputType.MouseMovement_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.Touch) then _0x69v43(_0x90v85._0x381v33._0x69v43_0x69v43
-    _0x69v43))
-    _0x18fv80.Track(_0x69v43.InputEnded:Connect(function(_0x90v85)
-        _0x69v43input.UserInputType == Enum.UserInputType.MouseButton1_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.Touch then_0x69v43_0x69v43false _0x69v43
-    _0x69v43))
-    local _0x2b2v54_0x69v43math.clamp((_0x110v81[_0x69v43] - _0xbcv16) / (mx_0x69v43mn_0x69v43_0x69v431)
-    _0x2f3v60.Text_0x69v43string.format_0x69v43, _0x110v81[_0x69v43])
-    _0x65v40.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43)
-    _0x374v21.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v436)
-    _0x69v43_0x69v43 then
-        local _0xf2v80, _0x3acv42_0x69v43pcall(_0x69v43, _0x110v81[_0x69v43])
-        _0x69v43_0x69v43_0x69v43_0x69v43then_0x69v43Text_0x69v43tostring(_0x69v43_0x69v43
-    _0x69v43
-    return _0x127v13
-_0x69v43
-local function _0xc2v97(_0xaev68, _0x6cv32, _0xb4v49, _0xc3v55)
- _0xc3v55_0x69v43styl_0x69v43 "\100\101\102\097\117\108\116"
-    local _0x171v92, _0x176v65, _0x3f6v39_0x69v43C.Card_0x69v43.PanelLight_0x69v43._0x3b5v86
-    _0x69v43styl == "\100\097\110\103\101\114" then_0x69v43_0x69v43Color3.fromRGB_0x69v43, (0xb + 0xb), (0xe + 0xe)) hc_0x69v43Color3.fromRGB_0x69v43, (0xf + 0xf), (0x13 + 0x13)) tc_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-    elseif _0xc3v55 == "\097\099\099\101\110\116" then_0x69v43_0x69v43C.Accent_0x69v43_0x69v43C._0x3b3v27:Lerp(Color3._0x69v43(_0x69v43_0x69v431_0x69v430_0x69v43)
-    elseif _0xc3v55 == "\100\105\115\099\111\114\100" then_0x69v43_0x69v43C.Discord_0x69v43_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) tc_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43
-    local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x286v53.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4330_0x69v43.BackgroundColor3_0x69v43_0x69v43b.BorderSizePixel_0x69v430
-    _0x286v53.Font_0x69v43Enum.Font.GothamMedium_0x69v43Text_0x69v43tostring(text_0x69v43.TextSize_0x69v4312
-    _0x286v53.TextColor3_0x69v43_0x69v43b.AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43parent
-    _0xa6v90(_0x69v438)
-    _0x69v43styl ~= "\097\099\099\101\110\116" _0x69v43 _0xc3v55 ~= "\100\105\115\099\111\114\100" then _0xa9v60(_0x69v43C.Border_0x69v43_0x69v43._0x69v43_0x69v43
-    _0x286v53.MouseEnter:Connect(function_0x69v43T:Create(_0x69v43TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43hc_0x69v43Play_0x69v43_0x69v43)
-    _0x286v53.MouseLeave:Connect(function_0x69v43T:Create(_0x69v43TweenInfo._0x69v43_0x69v4315), {BackgroundColor3_0x69v43bc_0x69v43Play_0x69v43_0x69v43)
-    _0x286v53.MouseButton1Click:Connect(function_0x69v43_0x69v43_0x69v43then_0x69v43(_0x69v43_0x69v43 _0x69v43)
-    return _0x286v53
-_0x69v43
-local function _0xc4v40(_0xaev68, _0xc5v48, _0xa5v89, _0xc6v51)
-    local _0x127v13_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x127v13.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4348_0x69v43.BackgroundTransparency_0x69v43_0x69v43.Parent_0x69v43parent
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4316_0x69v43.BackgroundTransparency_0x69v431
-    _0x193v63.Font_0x69v43Enum.Font.Gotham_0x69v43Text_0x69v43tostring(_0x69v43_0x69v43.TextSize_0x69v4311
-    _0x193v63.TextColor3_0x69v43C.Text_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43c
-    local _0x112v65_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x374v21.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4324_0x69v43.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4320)
-    _0x374v21.BackgroundColor3_0x69v43C.Card_0x69v43BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43c
-    _0xa6v90(_0x69v43_0x69v43stroke(_0x69v43C.Border_0x69v43_0x69v43.4)
-    local _0x11av28_0x69v431 / #_0xc6v51
-    local _0x2b3v53 = {}
-    _0x69v43 _0x69v43_0x69v43_0x69v43 ipairs(_0xc6v51) do
-        local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-        _0x286v53.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2._0x69v43_0x69v43 * (i_0x69v431_0x69v43_0x69v43_0x69v430)
-        _0x286v53.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.GothamMedium_0x69v43TextSize_0x69v4310
-        _0x286v53.TextColor3_0x69v43C.TextMuted_0x69v43Text_0x69v43tostring(_0x69v43_0x69v43.AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43h
-        _0x286v53.MouseButton1Click:Connect(function()
-            _0x110v81[_0x69v43] = _0x69v43
-            _0x69v43 _0x69v43_0x69v43_0x69v43pairs(_0x2b3v53) do
-                _0x69v43o == _0x69v43 then_0x69v43.TextColor3_0x69v43C._0x3b5v86 else_0x69v43.TextColor3_0x69v43C._0x3b6v43 _0x69v43
-            _0x69v43
-            _0x81v99()
-        _0x69v43)
-        _0x2b3v53[_0x69v43] = _0x286v53
-        _0x69v43Configuration[_0x69v43] == _0x69v43 then_0x69v43TextColor3_0x69v43C._0x3b5v86 _0x69v43
-    _0x69v43
-    return _0x127v13
-_0x69v43
-local function _0xc7v40(_0xaev68, _0xc5v48, _0xa5v89, _0x7av29, _0xc8v15)
-    local _0x2a7v29_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4334) _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Parent_0x69v43parent
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43l.BackgroundTransparency_0x69v431
-    _0x193v63.Font_0x69v43Enum.Font.Gotham_0x69v43Text_0x69v43tostring(_0x69v43_0x69v43.TextSize_0x69v4312
-    _0x193v63.TextColor3_0x69v43C.Text_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43_0x69v43
-    local _0x112v65_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x374v21.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43h.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v430)
-    _0x374v21.BackgroundTransparency_0x69v43_0x69v43.Parent_0x69v43_0x69v43
-    local _0x2b4v27_0x69v43Instance._0x69v43("\085\073\076\105\115\116\076\097\121\111\117\116")
-    _0x69v43FillDirection_0x69v43Enum.FillDirection.Horizontal
-    _0x69v43HorizontalAlignment_0x69v43Enum.HorizontalAlignment.Right
-    _0x69v43VerticalAlignment_0x69v43Enum.VerticalAlignment.Center
-    _0x69v43Padding_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43h
-    local _0x2b3v53 = {}
-    local function _0xc9v55()
-        _0x69v43_0x69v43_0x69v43_0x69v43 pairs(_0x2b3v53) do
-            local _0x2b5v11_0x69v43b:FindFirstChildOfClass("\085\073\083\116\114\111\107\101")
-            _0x69v43_0x69v43 then
-                _0x69v43Configuration[_0x69v43] == _0x69v43then _0x69v43.Thickness_0x69v432 _0x69v43.Color_0x69v43C._0x3b3v27 _0x69v43.Transparency_0x69v430
-                else _0x69v43.Thickness_0x69v431 _0x69v43.Color_0x69v43C._0x3b7v35 _0x69v43.Transparency_0x69v43_0x69v43 _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x7av29) do
-        local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-        _0x286v53.Size_0x69v43UDim2._0x69v43(_0x69v4316_0x69v43, 16_0x69v43.BackgroundColor3_0x69v43cmap_0x69v43] _0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43)
-        _0x286v53.BorderSizePixel_0x69v43_0x69v43.Text_0x69v43""_0x69v43AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43h
-        _0xa6v90(_0x69v438)
-        _0x69v43nm == "\082\071\066" then
-            local _0x2b6v76_0x69v43Instance._0x69v43("\085\073\071\114\097\100\105\101\110\116")
-            _0x2b6v76.Color_0x69v43ColorSequence._0x69v43{
-                ColorSequenceKeypoint._0x69v43_0x69v4300, Color3.fromRGB(_0x69v43_0x69v43_0x69v43)),
-                ColorSequenceKeypoint._0x69v43_0x69v4316, Color3.fromRGB(_0x69v43, _0x69v43_0x69v43)),
-                ColorSequenceKeypoint._0x69v43_0x69v4333, Color3.fromRGB(_0x69v43_0x69v43_0x69v43)),
-                ColorSequenceKeypoint._0x69v43_0x69v4350, Color3.fromRGB(_0x69v43_0x69v43, _0x69v43)),
-                ColorSequenceKeypoint._0x69v43_0x69v4366, Color3.fromRGB(_0x69v43_0x69v43_0x69v43)),
-                ColorSequenceKeypoint._0x69v43_0x69v4383, Color3.fromRGB(_0x69v43_0x69v43, _0x69v43)),
-                ColorSequenceKeypoint._0x69v43_0x69v4300, Color3.fromRGB(_0x69v43_0x69v43_0x69v43)),
+            _0xFB97:Create(_0x938C, _0x05AC, {BackgroundColor3 = _0x97CF.PanelLight}):Play()
+            _0xFB97:Create(_0xE7BF, _0x05AC, {Position = UDim2.new(0, 3, 0.5, -7), BackgroundColor3 = _0x97CF.TextMuted}):Play()
+        end
+    end
+    _0x78ED.MouseButton1Click:Connect(function()
+        _0x77AD[toggleKey] = not _0x77AD[toggleKey]
+        _0x96C1(_0x77AD[toggleKey], true)
+        if _0x2CBA then pcall(_0x2CBA, _0x77AD[toggleKey]) end
+        _0x9CA3()
+    end)
+    _0x96C1(_0x77AD[toggleKey], false)
+    return _0xA100
+end
+local function _0xE17A(parent, text, _0x6260, mn, _0xA856, step, bfn)
+    local _0xEB70 = _0x21BE[_0x6260] == true
+    local _0xF9E8 = _0xEB70 and not _0x77AD.IsPremium
+    local _0x3A4B = Instance.new("Frame")
+    _0x3A4B.Size = UDim2.new(1, 0, 0, bfn and 64 or 44) _0x3A4B.BackgroundTransparency = 1 _0x3A4B.Parent = parent
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(0.7, 0, 0, 16)
+    if _0xEB70 then _0x104C.Position = UDim2.new(0, 16, 0, 0) end
+    _0x104C.BackgroundTransparency = 1 _0x104C.Font = Enum.Font.Gotham _0x104C.Text = tostring(text)
+    _0x104C.TextSize = 11 _0x104C.TextColor3 = _0x97CF.Text _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0x3A4B
+    local _0x8C41 = Instance.new("TextLabel")
+    _0x8C41.Size = UDim2.new(0.3, 0, 0, 16) _0x8C41.Position = UDim2.new(0.7, 0, 0, 0)
+    _0x8C41.BackgroundTransparency = 1 _0x8C41.Font = Enum.Font.GothamBold _0x8C41.TextSize = 11
+    _0x8C41.TextColor3 = _0x97CF.Accent3 _0x8C41.TextXAlignment = Enum.TextXAlignment.Right _0x8C41.Parent = _0x3A4B
+    local _0x5D38 = Instance.new("Frame")
+    _0x5D38.Size = UDim2.new(1, 0, 0, 4) _0x5D38.Position = UDim2.new(0, 0, 0, 26)
+    _0x5D38.BackgroundColor3 = _0x97CF.PanelLight _0x5D38.BorderSizePixel = 0 _0x5D38.Parent = _0x3A4B
+    _0xE1D1(_0x5D38, 2)
+    local _0x6EA8 = Instance.new("Frame")
+    _0x6EA8.Size = UDim2.new(0, 0, 1, 0) _0x6EA8.BackgroundColor3 = _0x97CF.Accent _0x6EA8.BorderSizePixel = 0 _0x6EA8.Parent = _0x5D38
+    _0xE1D1(_0x6EA8, 2)
+    local _0x830D = Instance.new("Frame")
+    _0x830D.Size = UDim2.new(0, 12, 0, 12) _0x830D.Position = UDim2.new(0, -6, 0.5, -6)
+    _0x830D.BackgroundColor3 = _0x97CF.Text _0x830D.BorderSizePixel = 0 _0x830D.ZIndex = 3 _0x830D.Parent = _0x5D38
+    _0xE1D1(_0x830D, 6) _0x80E5(_0x830D, _0x97CF.Accent, 2, 0)
+    local _0x70E0 = "%.0f"
+    if step and step < 1 then _0x70E0 = "%.2f" end
+    local _0xB8C8 = false
+    local function _0x582D(x)
+        if _0xF9E8 then return end
+        local _0xE96E = _0x5D38.AbsolutePosition.X
+        local _0x41E5 = _0x5D38.AbsoluteSize.X
+        if _0x41E5 <= 0 then return end
+        local _0xA616 = math.clamp((x - _0xE96E) / _0x41E5, 0, 1)
+        local _0xD392 = mn + (_0xA856 - mn) * _0xA616
+        if step and step > 0 then _0xD392 = math.round(_0xD392 / step) * step end
+        _0x77AD[_0x6260] = _0xD392
+        _0x8C41.Text = string.format(_0x70E0, _0xD392)
+        _0x6EA8.Size = UDim2.new(_0xA616, 0, 1, 0)
+        _0x830D.Position = UDim2.new(_0xA616, -6, 0.5, -6)
+        if bfn then
+            local _0xDF7B, _0xD871 = pcall(bfn, _0xD392)
+            if _0xDF7B and _0xD871 then _0x8C41.Text = tostring(_0xD871) end
+        end
+        _0x9CA3()
+    end
+    local _0x78ED = Instance.new("TextButton")
+    _0x78ED.Size = UDim2.new(1, 0, 0, 16) _0x78ED.Position = UDim2.new(0, 0, 0, 20)
+    _0x78ED.BackgroundTransparency = 1 _0x78ED.Text = "" _0x78ED.Parent = _0x3A4B
+    _0x78ED.InputBegan:Connect(function(_0xAE2A)
+        if _0xF9E8 then pcall(_0x6E22) return end
+        if _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 or _0xAE2A.UserInputType == Enum.UserInputType.Touch then
+            _0xB8C8 = true _0x582D(_0xAE2A.Position.X)
+        end
+    end)
+    _0x55FF.Track(_0xA548.InputChanged:Connect(function(_0xAE2A)
+        if _0xB8C8 and (_0xAE2A.UserInputType == Enum.UserInputType.MouseMovement or _0xAE2A.UserInputType == Enum.UserInputType.Touch) then _0x582D(_0xAE2A.Position.X) end
+    end))
+    _0x55FF.Track(_0xA548.InputEnded:Connect(function(_0xAE2A)
+        if _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 or _0xAE2A.UserInputType == Enum.UserInputType.Touch then _0xB8C8 = false end
+    end))
+    local _0xF1C9 = math.clamp((_0x77AD[_0x6260] - mn) / (_0xA856 - mn), 0, 1)
+    _0x8C41.Text = string.format(_0x70E0, _0x77AD[_0x6260])
+    _0x6EA8.Size = UDim2.new(_0xF1C9, 0, 1, 0)
+    _0x830D.Position = UDim2.new(_0xF1C9, -6, 0.5, -6)
+    if bfn then
+        local _0xDF7B, _0xD871 = pcall(bfn, _0x77AD[_0x6260])
+        if _0xDF7B and _0xD871 then _0x8C41.Text = tostring(_0xD871) end
+    end
+    return _0x3A4B
+end
+local function _0xAA0B(parent, text, _0x2CBA, styl)
+    styl = styl or "default"
+    local _0x3A50, _0xA771, _0x9C04 = _0x97CF.Card, _0x97CF.PanelLight, _0x97CF.Text
+    if styl == "danger" then _0x3A50 = Color3.fromRGB(60, 22, 28) _0xA771 = Color3.fromRGB(90, 30, 38) _0x9C04 = Color3.fromRGB(255, 200, 200)
+    elseif styl == "accent" then _0x3A50 = _0x97CF.Accent _0xA771 = _0x97CF.Accent:Lerp(Color3.new(1, 1, 1), 0.15)
+    elseif styl == "discord" then _0x3A50 = _0x97CF.Discord _0xA771 = Color3.fromRGB(110, 122, 255) _0x9C04 = Color3.fromRGB(255, 255, 255) end
+    local _0x2EAC = Instance.new("TextButton")
+    _0x2EAC.Size = UDim2.new(1, 0, 0, 30) _0x2EAC.BackgroundColor3 = _0x3A50 _0x2EAC.BorderSizePixel = 0
+    _0x2EAC.Font = Enum.Font.GothamMedium _0x2EAC.Text = tostring(text) _0x2EAC.TextSize = 12
+    _0x2EAC.TextColor3 = _0x9C04 _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = parent
+    _0xE1D1(_0x2EAC, 8)
+    if styl ~= "accent" and styl ~= "discord" then _0x80E5(_0x2EAC, _0x97CF.Border, 1, 0.4) end
+    _0x2EAC.MouseEnter:Connect(function() _0xFB97:Create(_0x2EAC, TweenInfo.new(0.15), {BackgroundColor3 = _0xA771}):Play() end)
+    _0x2EAC.MouseLeave:Connect(function() _0xFB97:Create(_0x2EAC, TweenInfo.new(0.15), {BackgroundColor3 = _0x3A50}):Play() end)
+    _0x2EAC.MouseButton1Click:Connect(function() if _0x2CBA then _0x2CBA(_0x2EAC) end end)
+    return _0x2EAC
+end
+local function _0xC3F2(parent, _0x57CD, _0x6260, _0x9D43)
+    local _0x3A4B = Instance.new("Frame")
+    _0x3A4B.Size = UDim2.new(1, 0, 0, 48) _0x3A4B.BackgroundTransparency = 1 _0x3A4B.Parent = parent
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(1, 0, 0, 16) _0x104C.BackgroundTransparency = 1
+    _0x104C.Font = Enum.Font.Gotham _0x104C.Text = tostring(_0x57CD) _0x104C.TextSize = 11
+    _0x104C.TextColor3 = _0x97CF.Text _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0x3A4B
+    local _0x830D = Instance.new("Frame")
+    _0x830D.Size = UDim2.new(1, 0, 0, 24) _0x830D.Position = UDim2.new(0, 0, 0, 20)
+    _0x830D.BackgroundColor3 = _0x97CF.Card _0x830D.BorderSizePixel = 0 _0x830D.Parent = _0x3A4B
+    _0xE1D1(_0x830D, 6) _0x80E5(_0x830D, _0x97CF.Border, 1, 0.4)
+    local _0xFA03 = 1 / #_0x9D43
+    local _0x2D92 = {}
+    for _0x9236, opt in ipairs(_0x9D43) do
+        local _0x2EAC = Instance.new("TextButton")
+        _0x2EAC.Size = UDim2.new(_0xFA03, 0, 1, 0) _0x2EAC.Position = UDim2.new(_0xFA03 * (_0x9236 - 1), 0, 0, 0)
+        _0x2EAC.BackgroundTransparency = 1 _0x2EAC.Font = Enum.Font.GothamMedium _0x2EAC.TextSize = 10
+        _0x2EAC.TextColor3 = _0x97CF.TextMuted _0x2EAC.Text = tostring(opt) _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0x830D
+        _0x2EAC.MouseButton1Click:Connect(function()
+            _0x77AD[_0x6260] = opt
+            for _0x5B5D, bb in pairs(_0x2D92) do
+                if _0x5B5D == opt then bb.TextColor3 = _0x97CF.Text else bb.TextColor3 = _0x97CF.TextMuted end
+            end
+            _0x9CA3()
+        end)
+        _0x2D92[opt] = _0x2EAC
+        if _0x77AD[_0x6260] == opt then _0x2EAC.TextColor3 = _0x97CF.Text end
+    end
+    return _0x3A4B
+end
+local function _0x3169(parent, _0x57CD, _0x6260, order, cmap)
+    local _0xA100 = Instance.new("Frame")
+    _0xA100.Size = UDim2.new(1, 0, 0, 34) _0xA100.BackgroundTransparency = 1 _0xA100.Parent = parent
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(0.4, 0, 1, 0) _0x104C.BackgroundTransparency = 1
+    _0x104C.Font = Enum.Font.Gotham _0x104C.Text = tostring(_0x57CD) _0x104C.TextSize = 12
+    _0x104C.TextColor3 = _0x97CF.Text _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0xA100
+    local _0x830D = Instance.new("Frame")
+    _0x830D.Size = UDim2.new(0.6, 0, 1, 0) _0x830D.Position = UDim2.new(0.4, 0, 0, 0)
+    _0x830D.BackgroundTransparency = 1 _0x830D.Parent = _0xA100
+    local _0x2900 = Instance.new("UIListLayout")
+    _0x2900.FillDirection = Enum.FillDirection.Horizontal
+    _0x2900.HorizontalAlignment = Enum.HorizontalAlignment.Right
+    _0x2900.VerticalAlignment = Enum.VerticalAlignment.Center
+    _0x2900.Padding = UDim.new(0, 6) _0x2900.Parent = _0x830D
+    local _0x2D92 = {}
+    local function _0x843F()
+        for _0x8E0F, _0x2EAC in pairs(_0x2D92) do
+            local _0xD94A = _0x2EAC:FindFirstChildOfClass("UIStroke")
+            if _0xD94A then
+                if _0x77AD[_0x6260] == _0x8E0F then _0xD94A.Thickness = 2 _0xD94A.Color = _0x97CF.Accent _0xD94A.Transparency = 0
+                else _0xD94A.Thickness = 1 _0xD94A.Color = _0x97CF.Border _0xD94A.Transparency = 0.4 end
+            end
+        end
+    end
+    for _, _0x8E0F in ipairs(order) do
+        local _0x2EAC = Instance.new("TextButton")
+        _0x2EAC.Size = UDim2.new(0, 16, 0, 16) _0x2EAC.BackgroundColor3 = cmap[_0x8E0F] or Color3.fromRGB(255, 255, 255)
+        _0x2EAC.BorderSizePixel = 0 _0x2EAC.Text = "" _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0x830D
+        _0xE1D1(_0x2EAC, 8)
+        if _0x8E0F == "RGB" then
+            local _0x1AA4 = Instance.new("UIGradient")
+            _0x1AA4.Color = ColorSequence.new{
+                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 0)),
+                ColorSequenceKeypoint.new(0.16, Color3.fromRGB(255, 255, 0)),
+                ColorSequenceKeypoint.new(0.33, Color3.fromRGB(0, 255, 0)),
+                ColorSequenceKeypoint.new(0.50, Color3.fromRGB(0, 255, 255)),
+                ColorSequenceKeypoint.new(0.66, Color3.fromRGB(0, 0, 255)),
+                ColorSequenceKeypoint.new(0.83, Color3.fromRGB(255, 0, 255)),
+                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 0)),
             }
-            _0x2b6v76.Parent_0x69v43b
-        _0x69v43
-        local _0x2b5v11_0x69v43Instance._0x69v43("\085\073\083\116\114\111\107\101")
-        _0x69v43.Thickness_0x69v431 _0x69v43.Color_0x69v43C._0x3b7v35 _0x69v43.Transparency_0x69v43_0x69v43 _0x69v43.Parent_0x69v43b
-        _0x286v53.MouseButton1Click:Connect(function_0x69v43Configuration[_0x69v43] = _0x69v43rf_0x69v43_0x69v43)
-        btns_0x69v43] = _0x286v53
-    _0x69v43
-    _0xc9v55()
-    return _0x69v43
-_0x69v43
-local function _0xcav59(_0xaev68, _0xc5v48, _0xcbv13, _0xccv76, _0xcdv66)
-    local _0x2a7v29_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x69v43.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4330) _0x69v43.BackgroundTransparency_0x69v431 _0x69v43.Parent_0x69v43parent
-    local _0x193v63_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x193v63.Size_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.BackgroundTransparency_0x69v431
-    _0x193v63.Font_0x69v43Enum.Font.Gotham_0x69v43Text_0x69v43tostring(_0x69v43_0x69v43.TextSize_0x69v4312
-    _0x193v63.TextColor3_0x69v43C.Text_0x69v43TextXAlignment_0x69v43Enum.TextXAlignment.Left_0x69v43Parent_0x69v43_0x69v43
-    local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x286v53.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43, 22_0x69v43.Position_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43.5_0x69v4311)
-    _0x286v53.BackgroundColor3_0x69v43C.Card_0x69v43BorderSizePixel_0x69v430
-    _0x286v53.Font_0x69v43Enum.Font.GothamMedium_0x69v43TextSize_0x69v43_0x69v43b.TextColor3_0x69v43C._0x3b5v86
-    _0x286v53.AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43_0x69v43
-    _0xa6v90(_0x69v43_0x69v43stroke(_0x69v43C.Border_0x69v43_0x69v43.4)
-    local function _0xcev69()
-        _0x69v43Configuration[_0xcbv13] == "\077\111\117\115\101" then return tostring(_0x110v81[mKey_0x69v43gsub("\069\110\117\109\046\085\115\101\114\073\110\112\117\116\084\121\112\101\046", "") _0x69v43
-        return tostring(_0x110v81[cKey_0x69v43gsub("\069\110\117\109\046\075\101\121\067\111\100\101\046", "")
-    _0x69v43
-    local _0x1ffv11_0x69v43false
-    local _0x199v52_0x69v43_0x69v43
-    _0x286v53.MouseButton1Click:Connect(function()
-        _0x69v43_0x69v43 then _0x69v43_0x69v43false_0x69v43Text_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43then pcall(function_0x69v43_0x69v43Disconnect_0x69v43_0x69v43) cc_0x69v43_0x69v43 _0x69v43 return _0x69v43
- _0x1ffv11_0x69v43true_0x69v43Text_0x69v43"\112\114\101\115\115\032\097\110\121\032\107\101\121\046\046\046"_0x69v43BackgroundColor3_0x69v43C._0x3b3v27
- _0x199v52_0x69v43_0x69v43.InputBegan:Connect(function(_0x90v85)
-            _0x69v43input.UserInputType == Enum.UserInputType.MouseButton1 then return _0x69v43
-            _0x69v43input.UserInputType == Enum.UserInputType.MouseButton2_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.MouseButton3 then
-                _0x110v81[_0xcbv13] = "\077\111\117\115\101" _0x110v81[_0xcdv66] = _0x90v85.UserInputType
-            elseif _0x90v85.UserInputType == Enum.UserInputType.Keyboard then
-                _0x110v81[_0xcbv13] = "\075\101\121" _0x110v81[_0xccv76] = _0x90v85.KeyCode
-            else return _0x69v43
- _0x1ffv11_0x69v43false_0x69v43Text_0x69v43_0x69v43_0x69v43b.BackgroundColor3_0x69v43C._0x3b2v44
-            _0x69v43_0x69v43then pcall(function_0x69v43_0x69v43Disconnect_0x69v43_0x69v43) cc_0x69v43_0x69v43 _0x69v43
-        _0x69v43)
-    _0x69v43)
-    _0x286v53.Text_0x69v43_0x69v43()
-    return _0x69v43
-_0x69v43
-local function _0xcfv39(_0xd0v45)
-    _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 <= 0 then return "\069\120\112\105\114\101\100" _0x69v43
-    local _0x66v80_0x69v43math.floor(_0x69v43_0x69v4386400)
-    local _0x112v65_0x69v43math.floor((_0x69v43_0x69v4386400) / (0x708 + 0x708))
-    local _0xf7v47_0x69v43math.floor((_0x69v43_0x69v433600) / (0x1e + 0x1e))
-    local _0x83v25_0x69v43math.floor(_0x69v43_0x69v4360)
-    _0x69v43_0x66v80_0x69v430 then return string.format("\037\100\100\032\037\100\104", _0x66v80_0x69v43) _0x69v43
-    _0x69v43h_0x69v430 then return string.format("\037\100\104\032\037\100\109"_0x69v43_0x69v43) _0x69v43
-    return string.format("\037\100\109\032\037\100\115"_0x69v43_0x69v43)
-_0x69v43
+            _0x1AA4.Parent = _0x2EAC
+        end
+        local _0xD94A = Instance.new("UIStroke")
+        _0xD94A.Thickness = 1 _0xD94A.Color = _0x97CF.Border _0xD94A.Transparency = 0.4 _0xD94A.Parent = _0x2EAC
+        _0x2EAC.MouseButton1Click:Connect(function() _0x77AD[_0x6260] = _0x8E0F _0x843F() end)
+        _0x2D92[_0x8E0F] = _0x2EAC
+    end
+    _0x843F()
+    return _0xA100
+end
+local function _0x6A58(parent, _0x57CD, tKey, cKey, mKey)
+    local _0xA100 = Instance.new("Frame")
+    _0xA100.Size = UDim2.new(1, 0, 0, 30) _0xA100.BackgroundTransparency = 1 _0xA100.Parent = parent
+    local _0x104C = Instance.new("TextLabel")
+    _0x104C.Size = UDim2.new(1, -130, 1, 0) _0x104C.BackgroundTransparency = 1
+    _0x104C.Font = Enum.Font.Gotham _0x104C.Text = tostring(_0x57CD) _0x104C.TextSize = 12
+    _0x104C.TextColor3 = _0x97CF.Text _0x104C.TextXAlignment = Enum.TextXAlignment.Left _0x104C.Parent = _0xA100
+    local _0x2EAC = Instance.new("TextButton")
+    _0x2EAC.Size = UDim2.new(0, 110, 0, 22) _0x2EAC.Position = UDim2.new(1, -110, 0.5, -11)
+    _0x2EAC.BackgroundColor3 = _0x97CF.Card _0x2EAC.BorderSizePixel = 0
+    _0x2EAC.Font = Enum.Font.GothamMedium _0x2EAC.TextSize = 11 _0x2EAC.TextColor3 = _0x97CF.Text
+    _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0xA100
+    _0xE1D1(_0x2EAC, 6) _0x80E5(_0x2EAC, _0x97CF.Border, 1, 0.4)
+    local function _0x7BF5()
+        if _0x77AD[tKey] == "Mouse" then return tostring(_0x77AD[mKey]):gsub("Enum.UserInputType.", "") end
+        return tostring(_0x77AD[cKey]):gsub("Enum.KeyCode.", "")
+    end
+    local _0xB0D5 = false
+    local _0xA792 = nil
+    _0x2EAC.MouseButton1Click:Connect(function()
+        if _0xB0D5 then _0xB0D5 = false _0x2EAC.Text = _0x7BF5() if _0xA792 then pcall(function() _0xA792:Disconnect() end) _0xA792 = nil end return end
+        _0xB0D5 = true _0x2EAC.Text = "press any key..." _0x2EAC.BackgroundColor3 = _0x97CF.Accent
+        _0xA792 = _0xA548.InputBegan:Connect(function(_0xAE2A)
+            if _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 then return end
+            if _0xAE2A.UserInputType == Enum.UserInputType.MouseButton2 or _0xAE2A.UserInputType == Enum.UserInputType.MouseButton3 then
+                _0x77AD[tKey] = "Mouse" _0x77AD[mKey] = _0xAE2A.UserInputType
+            elseif _0xAE2A.UserInputType == Enum.UserInputType.Keyboard then
+                _0x77AD[tKey] = "Key" _0x77AD[cKey] = _0xAE2A.KeyCode
+            else return end
+            _0xB0D5 = false _0x2EAC.Text = _0x7BF5() _0x2EAC.BackgroundColor3 = _0x97CF.Card
+            if _0xA792 then pcall(function() _0xA792:Disconnect() end) _0xA792 = nil end
+        end)
+    end)
+    _0x2EAC.Text = _0x7BF5()
+    return _0xA100
+end
+local function _0xE439(sec)
+    if not sec or sec <= 0 then return "Expired" end
+    local _0x3748 = math.floor(sec / 86400)
+    local _0x830D = math.floor((sec % 86400) / 3600)
+    local _0x4D37 = math.floor((sec % 3600) / 60)
+    local _0x0404 = math.floor(sec % 60)
+    if _0x3748 > 0 then return string.format("%dd %dh", _0x3748, _0x830D) end
+    if _0x830D > 0 then return string.format("%dh %dm", _0x830D, _0x4D37) end
+    return string.format("%dm %ds", _0x4D37, _0x0404)
+end
 
-function _0x283v55.BuildVisualsTab(_0xaev68)
-    _0x69v43(_0xaev68, "\069\083\080")
-    _0xb3v74(_0xaev68, "\069\110\097\098\108\101\032\086\105\115\117\097\108\115", "\086\105\115\117\097\108\115\069\110\097\098\108\101\100")
-    _0xb7v15(_0xaev68, "\083\104\111\119\032\066\111\120\101\115", "\083\104\111\119\066\111\120\101\115", "\066\111\120\067\111\108\111\114")
-    _0xb3v74(_0xaev68, "\083\104\111\119\032\078\097\109\101\115", "\083\104\111\119\078\097\109\101\115")
-    _0xb3v74(_0xaev68, "\083\104\111\119\032\072\101\097\108\116\104", "\083\104\111\119\072\101\097\108\116\104")
-    _0xb3v74(_0xaev68, "\083\104\111\119\032\068\105\115\116\097\110\099\101", "\083\104\111\119\068\105\115\116\097\110\099\101")
-    _0xb7v15(_0xaev68, "\083\104\111\119\032\083\107\101\108\101\116\111\110", "\083\104\111\119\083\107\101\108\101\116\111\110", "\083\107\101\108\101\116\111\110\067\111\108\111\114")
-    _0xafv71(_0xaev68, "\069\120\116\114\097\115")
-    _0xb3v74(_0xaev68, "\083\107\121\032\067\104\097\110\103\101\114", "\083\107\121\067\104\097\110\103\101\114\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\069\083\080\032\084\097\114\103\101\116\032\086\105\115\105\098\105\108\105\116\121", "\069\083\080\084\097\114\103\101\116\086\105\115\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\086\105\101\119\109\111\100\101\108\032\067\104\097\109\115", "\086\105\101\119\109\111\100\101\108\067\104\097\109\115\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\078\105\103\104\116\032\086\105\115\105\111\110", "\078\105\103\104\116\086\105\115\105\111\110\069\110\097\098\108\101\100", _0x9cv16)
-    _0x69v43(_0xaev68, "\073\110\116\101\114\102\097\099\101")
-    _0xb3v74(_0xaev68, "\083\104\111\119\032\087\097\116\101\114\109\097\114\107", "\087\097\116\101\114\109\097\114\107\069\110\097\098\108\101\100", function(_0x3d6v96) pcall(_0x93v95, _0x3d6v96) _0x69v43)
-_0x69v43
+function _0xB457.BuildVisualsTab(parent)
+    _0x9E48(parent, "ESP")
+    _0x4201(parent, "Enable Visuals", "VisualsEnabled")
+    _0x7F2D(parent, "Show Boxes", "ShowBoxes", "BoxColor")
+    _0x4201(parent, "Show Names", "ShowNames")
+    _0x4201(parent, "Show Health", "ShowHealth")
+    _0x4201(parent, "Show Distance", "ShowDistance")
+    _0x7F2D(parent, "Show Skeleton", "ShowSkeleton", "SkeletonColor")
+    _0x6C63(parent, "Extras")
+    _0x4201(parent, "Sky Changer", "SkyChangerEnabled")
+    _0x4201(parent, "ESP Target Visibility", "ESPTargetVisEnabled")
+    _0x4201(parent, "Viewmodel Chams", "ViewmodelChamsEnabled")
+    _0x4201(parent, "Night Vision", "NightVisionEnabled", _0x6EEB)
+    _0x9E48(parent, "Interface")
+    _0x4201(parent, "Show Watermark", "WatermarkEnabled", function(_0x0207) pcall(_0x8977, _0x0207) end)
+end
 
-function _0x283v55.BuildCombatTab(_0xaev68)
-    _0x69v43(_0xaev68, "\065\105\109\098\111\116")
-    _0xb3v74(_0xaev68, "\069\110\097\098\108\101\032\065\105\109\098\111\116", "\067\097\109\101\114\097\065\115\115\105\115\116\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\065\108\119\097\121\115\032\079\110", "\067\097\109\101\114\097\065\115\115\105\115\116\065\108\119\097\121\115\079\110")
-    _0xb3v74(_0xaev68, "\085\115\101\032\077\111\117\115\101\032\087\104\105\108\101\032\076\111\099\107\105\110\103", "\067\097\109\101\114\097\065\115\115\105\115\116\085\115\101\077\111\117\115\101\087\104\105\108\101\076\111\099\107\105\110\103")
-    _0xb3v74(_0xaev68, "\082\111\116\097\116\101\032\067\104\097\114\097\099\116\101\114", "\067\097\109\101\114\097\065\115\115\105\115\116\082\111\116\097\116\101\067\104\097\114")
-    _0xafv71(_0xaev68, "\077\111\100\101\115")
-    _0xb3v74(_0xaev68, "\067\097\109\101\114\097\032\065\115\115\105\115\116", "\065\105\109\076\111\099\107\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\082\097\103\101\098\111\116", "\082\097\103\101\098\111\116\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\065\105\109\032\070\079\086")
-    _0x69v43(_0xaev68, "\065\105\109\032\070\079\086", "\067\097\109\101\114\097\065\115\115\105\115\116\070\079\086"_0x69v43, 65_0x69v43)
-    _0xb3v74(_0xaev68, "\068\114\097\119\032\070\079\086\032\067\105\114\099\108\101", "\067\097\109\101\114\097\065\115\115\105\115\116\068\114\097\119\070\079\086")
-    _0x69v43(_0xaev68, "\070\079\086\032\067\111\108\111\114", "\067\097\109\101\114\097\065\115\115\105\115\116\070\079\086\067\111\108\111\114"_0x69v43"\087\104\105\116\101", "\082\101\100", "\089\101\108\108\111\119", "\066\108\117\101", "\071\114\101\101\110", "\066\108\097\099\107", "\067\121\097\110", "\082\071\066"_0x69v43FOVCircle.ColorMap)
-    _0x69v43(_0xaev68, "\075\101\121\098\105\110\100")
-    _0x69v43(_0xaev68, "\065\105\109\032\075\101\121", "\065\105\109\066\105\110\100\084\121\112\101", "\065\105\109\075\101\121\067\111\100\101", "\065\105\109\077\111\117\115\101\066\117\116\116\111\110")
-    _0x69v43(_0xaev68, "\083\109\111\111\116\104\105\110\103")
-    _0x69v43(_0xaev68, "\083\109\111\111\116\104\105\110\103", "\067\097\109\101\114\097\065\115\115\105\115\116\083\109\111\111\116\104\105\110\103"_0x69v43, 20_0x69v43)
-    _0x69v43(_0xaev68, "\084\097\114\103\101\116")
-    _0xc4v40(_0xaev68, "\072\105\116\098\111\120\032\077\111\100\101", "\067\097\109\101\114\097\065\115\115\105\115\116\072\105\116\098\111\120\077\111\100\101"_0x69v43"\072\101\097\100", "\085\112\112\101\114\084\111\114\115\111", "\067\104\101\115\116", "\082\097\110\100\111\109"})
-    _0x69v43(_0xaev68, "\070\105\108\116\101\114\115")
-    _0xb3v74(_0xaev68, "\084\101\097\109\032\067\104\101\099\107", "\084\101\097\109\067\104\101\099\107")
-    _0xb3v74(_0xaev68, "\086\105\115\105\098\108\101\032\067\104\101\099\107", "\067\097\109\101\114\097\065\115\115\105\115\116\086\105\115\105\098\108\101\067\104\101\099\107")
-    _0xb3v74(_0xaev68, "\070\079\086\032\080\114\105\111\114\105\116\121", "\067\097\109\101\114\097\065\115\115\105\115\116\070\079\086\080\114\105\111\114\105\116\121")
-    _0xb3v74(_0xaev68, "\065\117\116\111\032\083\116\111\112\032\111\110\032\075\097\116\097\110\097\032\068\101\102\108\101\099\116", "\065\117\116\111\083\116\111\112\079\110\075\097\116\097\110\097\068\101\102\108\101\099\116")
-    _0x69v43(_0xaev68, "\087\101\097\112\111\110")
-    _0xb3v74(_0xaev68, "\065\117\116\111\045\068\101\116\101\099\116\032\087\101\097\112\111\110", "\087\101\097\112\111\110\065\117\116\111\068\101\116\101\099\116")
-    _0xb3v74(_0xaev68, "\085\115\101\032\087\101\097\112\111\110\032\080\114\111\102\105\108\101\115", "\087\101\097\112\111\110\080\114\111\102\105\108\101\115\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\086\105\101\119\032\070\079\086")
-    _0xb3v74(_0xaev68, "\067\117\115\116\111\109\032\086\105\101\119\032\070\079\086", "\086\105\101\119\070\079\086\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\086\105\101\119\032\070\079\086", "\086\105\101\119\070\079\086", (0x23 + 0x23), _0x69v43_0x69v43)
-_0x69v43
+function _0xB457.BuildCombatTab(parent)
+    _0x9E48(parent, "Aimbot")
+    _0x4201(parent, "Enable Aimbot", "CameraAssistEnabled")
+    _0x4201(parent, "Always On", "CameraAssistAlwaysOn")
+    _0x4201(parent, "Use Mouse While Locking", "CameraAssistUseMouseWhileLocking")
+    _0x4201(parent, "Rotate Character", "CameraAssistRotateChar")
+    _0x6C63(parent, "Modes")
+    _0x4201(parent, "Camera Assist", "AimLockEnabled")
+    _0x4201(parent, "Ragebot", "RagebotEnabled")
+    _0x9E48(parent, "Aim FOV")
+    _0xE17A(parent, "Aim FOV", "CameraAssistFOV", 5, 65, 1)
+    _0x4201(parent, "Draw FOV Circle", "CameraAssistDrawFOV")
+    _0x3169(parent, "FOV Color", "CameraAssistFOVColor", {"White", "Red", "Yellow", "Blue", "Green", "Black", "Cyan", "RGB"}, _0xA3FC.ColorMap)
+    _0x9E48(parent, "Keybind")
+    _0x6A58(parent, "Aim Key", "AimBindType", "AimKeyCode", "AimMouseButton")
+    _0x9E48(parent, "Smoothing")
+    _0xE17A(parent, "Smoothing", "CameraAssistSmoothing", 0, 20, 1)
+    _0x9E48(parent, "Target")
+    _0xC3F2(parent, "Hitbox Mode", "CameraAssistHitboxMode", {"Head", "UpperTorso", "Chest", "Random"})
+    _0x9E48(parent, "Filters")
+    _0x4201(parent, "Team Check", "TeamCheck")
+    _0x4201(parent, "Visible Check", "CameraAssistVisibleCheck")
+    _0x4201(parent, "FOV Priority", "CameraAssistFOVPriority")
+    _0x4201(parent, "Auto Stop on Katana Deflect", "AutoStopOnKatanaDeflect")
+    _0x9E48(parent, "Weapon")
+    _0x4201(parent, "Auto-Detect Weapon", "WeaponAutoDetect")
+    _0x4201(parent, "Use Weapon Profiles", "WeaponProfilesEnabled")
+    _0x9E48(parent, "View FOV")
+    _0x4201(parent, "Custom View FOV", "ViewFOVEnabled")
+    _0xE17A(parent, "View FOV", "ViewFOV", 70, 120, 1)
+end
 
-function _0x283v55.BuildSilentTab(_0xaev68)
-    _0xafv71(_0xaev68, "\083\105\108\101\110\116\032\065\105\109")
-    _0xb3v74(_0xaev68, "\069\110\097\098\108\101\032\083\105\108\101\110\116\032\065\105\109", "\083\105\108\101\110\116\065\105\109\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\072\105\116\032\067\104\097\110\099\101\032\040\037\041", "\083\105\108\101\110\116\065\105\109\072\105\116\067\104\097\110\099\101"_0x69v43, _0x69v43_0x69v43)
-    _0xc4v40(_0xaev68, "\072\105\116\098\111\120\032\077\111\100\101", "\083\105\108\101\110\116\065\105\109\072\105\116\098\111\120"_0x69v43"\072\101\097\100", "\085\112\112\101\114\084\111\114\115\111", "\067\104\101\115\116", "\082\097\110\100\111\109"})
+function _0xB457.BuildSilentTab(parent)
+    _0x6C63(parent, "Silent Aim")
+    _0x4201(parent, "Enable Silent Aim", "SilentAimEnabled")
+    _0xE17A(parent, "Hit Chance (%)", "SilentAimHitChance", 0, 100, 1)
+    _0xC3F2(parent, "Hitbox Mode", "SilentAimHitbox", {"Head", "UpperTorso", "Chest", "Random"})
 
-    _0xafv71(_0xaev68, "\083\105\108\101\110\116\032\070\079\086")
-    _0x69v43(_0xaev68, "\083\105\108\101\110\116\032\070\079\086", "\083\105\108\101\110\116\065\105\109\070\079\086"_0x69v43, _0x69v43_0x69v43)
-    _0xb3v74(_0xaev68, "\068\114\097\119\032\083\105\108\101\110\116\032\070\079\086", "\083\105\108\101\110\116\065\105\109\068\114\097\119\070\079\086")
-    _0x69v43(_0xaev68, "\070\079\086\032\067\111\108\111\114", "\083\105\108\101\110\116\065\105\109\070\079\086\067\111\108\111\114"_0x69v43"\087\104\105\116\101", "\082\101\100", "\089\101\108\108\111\119", "\066\108\117\101", "\071\114\101\101\110", "\066\108\097\099\107", "\067\121\097\110", "\082\071\066"_0x69v43FOVCircle.ColorMap)
+    _0x6C63(parent, "Silent FOV")
+    _0xE17A(parent, "Silent FOV", "SilentAimFOV", 5, 400, 1)
+    _0x4201(parent, "Draw Silent FOV", "SilentAimDrawFOV")
+    _0x3169(parent, "FOV Color", "SilentAimFOVColor", {"White", "Red", "Yellow", "Blue", "Green", "Black", "Cyan", "RGB"}, _0xA3FC.ColorMap)
 
-    _0xafv71(_0xaev68, "\083\110\105\112\101\114\032\047\032\076\111\110\103\032\082\097\110\103\101")
-    _0x69v43(_0xaev68, "\068\105\115\116\097\110\099\101\032\066\111\111\115\116", "\083\105\108\101\110\116\065\105\109\068\105\115\116\097\110\099\101\066\111\111\115\116"_0x69v43._0x69v43_0x69v43_0x69v43._0x69v43function(_0x2f3v60)
-        _0x69v43v <= _0x69v43 then return "\079\070\070", Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43
-        _0x69v43v <= _0x69v43 then return "\076\079\087", Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43) _0x69v43
-        _0x69v43v <= _0x69v43 then return "\077\073\068", Color3.fromRGB(_0x69v43, _0x69v43, (0x1e + 0x1e)) _0x69v43
-        return "\077\065\088", Color3.fromRGB(_0x69v43, _0x69v43, (0x2d + 0x2d))
-    _0x69v43)
-    _0xb3v74(_0xaev68, "\067\111\110\118\101\114\103\101\110\099\101\032\083\110\097\112", "\083\105\108\101\110\116\065\105\109\067\111\110\118\101\114\103\101\110\099\101\083\110\097\112")
-    _0xb3v74(_0xaev68, "\084\105\103\104\116\032\068\101\097\100\122\111\110\101\032\040\102\097\114\032\116\097\114\103\101\116\115\041", "\083\105\108\101\110\116\065\105\109\084\105\103\104\116\068\101\097\100\122\111\110\101")
+    _0x6C63(parent, "Sniper / Long Range")
+    _0xE17A(parent, "Distance Boost", "SilentAimDistanceBoost", 0.0, 2.0, 0.1, function(_0x8C41)
+        if _0x8C41 <= 0.2 then return "OFF", Color3.fromRGB(180, 180, 180) end
+        if _0x8C41 <= 0.8 then return "LOW", Color3.fromRGB(120, 200, 255) end
+        if _0x8C41 <= 1.4 then return "MID", Color3.fromRGB(255, 190, 60) end
+        return "MAX", Color3.fromRGB(255, 120, 90)
+    end)
+    _0x4201(parent, "Convergence Snap", "SilentAimConvergenceSnap")
+    _0x4201(parent, "Tight Deadzone (far targets)", "SilentAimTightDeadzone")
 
-    _0xafv71(_0xaev68, "\073\110\102\111")
-    local _0x131v86_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x37cv19.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4360) _0x37cv19.BackgroundTransparency_0x69v431
-    _0x37cv19.Font_0x69v43Enum.Font.Gotham _0x37cv19.TextSize_0x69v4310
-    _0x37cv19.TextColor3_0x69v43C._0x3b6v43 _0x37cv19.TextWrapped_0x69v43true
-    _0x37cv19.TextXAlignment_0x69v43Enum.TextXAlignment.Left
-    _0x37cv19.TextYAlignment_0x69v43Enum.TextYAlignment._0x69v43
-    _0x37cv19.Text_0x69v43"\068\105\115\116\097\110\099\101\032\066\111\111\115\116\032\114\097\105\115\101\115\032\112\117\108\108\032\115\116\114\101\110\103\116\104\032\111\110\032\102\097\114\032\116\097\114\103\101\116\115\046\032\067\111\110\118\101\114\103\101\110\099\101\032\083\110\097\112\032\099\111\109\109\105\116\115\032\116\104\101\032\097\105\109\032\105\110\115\105\100\101\032\116\104\101\032\108\097\115\116\032\102\101\119\032\100\101\103\114\101\101\115\032\115\111\032\116\104\101\032\115\104\111\116\032\108\097\110\100\115\046\032\084\105\103\104\116\032\068\101\097\100\122\111\110\101\032\115\104\114\105\110\107\115\032\116\104\101\032\115\116\111\112\032\097\110\103\108\101\032\102\111\114\032\102\097\114\032\116\097\114\103\101\116\115\032\119\104\101\114\101\032\116\104\101\032\104\101\097\100\032\115\117\098\116\101\110\100\115\032\108\101\115\115\032\116\104\097\110\032\097\032\116\101\110\116\104\032\111\102\032\097\032\100\101\103\114\101\101\046"
-    _0x37cv19.Parent_0x69v43parent
-_0x69v43
+    _0x6C63(parent, "Info")
+    local _0x05AC = Instance.new("TextLabel")
+    _0x05AC.Size = UDim2.new(1, 0, 0, 60) _0x05AC.BackgroundTransparency = 1
+    _0x05AC.Font = Enum.Font.Gotham _0x05AC.TextSize = 10
+    _0x05AC.TextColor3 = _0x97CF.TextMuted _0x05AC.TextWrapped = true
+    _0x05AC.TextXAlignment = Enum.TextXAlignment.Left
+    _0x05AC.TextYAlignment = Enum.TextYAlignment.Top
+    _0x05AC.Text = "Distance Boost raises pull strength on far targets. Convergence Snap commits the aim inside the last few degrees so the shot lands. Tight Deadzone shrinks the stop angle for far targets where the head subtends less than a tenth of a degree."
+    _0x05AC.Parent = parent
+end
 
-function _0x283v55.BuildTriggerTab(_0xaev68)
-    _0x69v43(_0xaev68, "\084\114\105\103\103\101\114\098\111\116")
-    _0xb3v74(_0xaev68, "\069\110\097\098\108\101\032\084\114\105\103\103\101\114\098\111\116", "\065\117\116\111\070\105\114\101\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\065\108\119\097\121\115\032\079\110", "\065\117\116\111\070\105\114\101\065\108\119\097\121\115\079\110")
-    _0x69v43(_0xaev68, "\075\101\121\098\105\110\100")
-    _0x69v43(_0xaev68, "\070\105\114\101\032\075\101\121", "\065\117\116\111\070\105\114\101\066\105\110\100\084\121\112\101", "\065\117\116\111\070\105\114\101\075\101\121\067\111\100\101", "\065\117\116\111\070\105\114\101\077\111\117\115\101\066\117\116\116\111\110")
-    _0x69v43(_0xaev68, "\084\105\109\105\110\103")
-    _0x69v43(_0xaev68, "\070\105\114\101\032\068\101\108\097\121", "\065\117\116\111\070\105\114\101\068\101\108\097\121"_0x69v43_0x69v43_0x69v43._0x69v430_0x69v43)
-    _0x69v43(_0xaev68, "\082\097\110\103\101")
-    _0x69v43(_0xaev68, "\077\097\120\032\068\105\115\116\097\110\099\101", "\065\117\116\111\070\105\114\101\077\097\120\068\105\115\116\097\110\099\101", _0x69v43, (0x3e8 + 0x3e8), (0x19 + 0x19))
-    _0xb3v74(_0xaev68, "\080\114\111\120\105\109\105\116\121\032\070\097\108\108\098\097\099\107", "\065\117\116\111\070\105\114\101\080\114\111\120\105\109\105\116\121\070\097\108\108\098\097\099\107")
-    _0x69v43(_0xaev68, "\080\114\111\120\105\109\105\116\121\032\065\110\103\108\101", "\065\117\116\111\070\105\114\101\080\114\111\120\105\109\105\116\121\065\110\103\108\101"_0x69v43._0x69v43_0x69v43_0x69v43.1)
-_0x69v43
+function _0xB457.BuildTriggerTab(parent)
+    _0x9E48(parent, "Triggerbot")
+    _0x4201(parent, "Enable Triggerbot", "AutoFireEnabled")
+    _0x4201(parent, "Always On", "AutoFireAlwaysOn")
+    _0x9E48(parent, "Keybind")
+    _0x6A58(parent, "Fire Key", "AutoFireBindType", "AutoFireKeyCode", "AutoFireMouseButton")
+    _0x9E48(parent, "Timing")
+    _0xE17A(parent, "Fire Delay", "AutoFireDelay", 0.01, 0.5, 0.01)
+    _0x9E48(parent, "Range")
+    _0xE17A(parent, "Max Distance", "AutoFireMaxDistance", 100, 2000, 50)
+    _0x4201(parent, "Proximity Fallback", "AutoFireProximityFallback")
+    _0xE17A(parent, "Proximity Angle", "AutoFireProximityAngle", 1.0, 8.0, 0.1)
+end
 
-function _0x283v55.BuildModsTab(_0xaev68)
-    _0x69v43(_0xaev68, "\077\111\118\101\109\101\110\116")
-    _0xb3v74(_0xaev68, "\070\108\121", "\070\108\121\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\070\108\121\032\083\112\101\101\100", "\070\108\121\083\112\101\101\100", (0x5 + 0x5), 80_0x69v43)
-    _0xb3v74(_0xaev68, "\083\112\101\101\100\032\072\097\099\107", "\083\112\101\101\100\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\087\097\108\107\032\083\112\101\101\100", "\083\112\101\101\100\086\097\108\117\101", (0x8 + 0x8), _0x69v43_0x69v43)
-    _0xb3v74(_0xaev68, "\073\110\102\105\110\105\116\101\032\074\117\109\112", "\073\110\102\074\117\109\112\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\078\111\099\108\105\112", "\078\111\099\108\105\112\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\082\101\099\111\105\108\032\038\032\069\102\102\101\099\116\115")
-    _0xb3v74(_0xaev68, "\078\111\032\082\101\099\111\105\108", "\078\111\082\101\099\111\105\108\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\065\110\116\105\032\070\108\097\115\104", "\065\110\116\105\070\108\097\115\104\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\087\101\097\112\111\110\032\084\119\101\097\107\115")
-    _0xb3v74(_0xaev68, "\072\105\116\098\111\120\032\069\120\112\097\110\100\101\114", "\072\105\116\098\111\120\069\120\112\097\110\100\101\114\069\110\097\098\108\101\100")
-    _0x69v43(_0xaev68, "\069\120\112\097\110\100\101\114\032\083\105\122\101", "\072\105\116\098\111\120\069\120\112\097\110\100\101\114\083\105\122\101"_0x69v43._0x69v43_0x69v43_0x69v43.1)
-    _0xafv71(_0xaev68, "\067\111\109\098\097\116\032\069\120\116\114\097\115")
-    _0xb3v74(_0xaev68, "\082\097\112\105\100\032\070\105\114\101", "\082\097\112\105\100\070\105\114\101\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\077\097\120\032\065\099\099\117\114\097\099\121", "\077\097\120\065\099\099\117\114\097\099\121\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\078\111\032\083\112\114\101\097\100", "\078\111\083\112\114\101\097\100\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\083\112\105\110\098\111\116", "\083\112\105\110\098\111\116\069\110\097\098\108\101\100")
-    _0xb3v74(_0xaev68, "\067\117\115\116\111\109\032\067\114\111\115\115\104\097\105\114", "\067\117\115\116\111\109\067\114\111\115\115\104\097\105\114\069\110\097\098\108\101\100")
-    _0xafv71(_0xaev68, "\070\117\110")
-    _0xb3v74(_0xaev68, "\072\105\116\032\083\111\117\110\100\115", "\072\105\116\083\111\117\110\100\115\069\110\097\098\108\101\100")
-    local _0x2b7v94 = {"\086\105\110\101\032\066\111\111\109", "\077\101\103\097\032\075\110\105\103\104\116", "\077\076\071\032\065\105\114\104\111\114\110", "\066\111\111\109\032\072\101\097\100\115\104\111\116", "\084\097\099\111\032\066\101\108\108"}
-    local _0x2b8v48_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x2b8v48.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4324) _0x2b8v48.BackgroundColor3_0x69v43VEILUI._0x3bbv42
-    _0x2b8v48.BorderSizePixel_0x69v430 _0x2b8v48.Parent_0x69v43parent
-    _0xa6v90(soundRow_0x69v43) _0xa9v60(_0x2b8v48, _0x1aav64.Stroke_0x69v43_0x69v43.4)
-    local _0x2b9v90_0x69v431 / #_0x2b7v94
-    local _0x2bav74 = {}
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x2b7v94) do
-        local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-        _0x286v53.Size_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43.Position_0x69v43UDim2._0x69v43_0x69v43 * (i_0x69v431_0x69v43_0x69v43_0x69v430)
-        _0x286v53.BackgroundTransparency_0x69v43_0x69v43.Font_0x69v43Enum.Font.GothamMedium_0x69v43TextSize_0x69v439
-        _0x286v53.TextColor3_0x69v43VEILUI.TextMuted_0x69v43Text_0x69v43_0x69v43b.AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43soundRow
-        _0x286v53.MouseButton1Click:Connect(function()
-            _0x69v43_0x69v43 _0x110v81._0x367v66 then pcall(_0xb0v24) return _0x69v43
-            _0x110v81.HitSoundChoice_0x69v43nm
-            _0x69v43 _0x69v43_0x69v43_0x69v43pairs(_0x2bav74) do
-                _0x69v43o == _0x69v43then_0x69v43.TextColor3_0x69v43VEILUI._0x3b5v86 else_0x69v43.TextColor3_0x69v43VEILUI._0x3b6v43 _0x69v43
-            _0x69v43
-            _0x81v99()
-        _0x69v43)
-        sBtns_0x69v43] = _0x286v53
-        _0x69v43Configuration._0x364v94 == _0x69v43then_0x69v43TextColor3_0x69v43VEILUI._0x3b5v86 _0x69v43
-    _0x69v43
-_0x69v43
+function _0xB457.BuildModsTab(parent)
+    _0x9E48(parent, "Movement")
+    _0x4201(parent, "Fly", "FlyEnabled")
+    _0xE17A(parent, "Fly Speed", "FlySpeed", 10, 80, 5)
+    _0x4201(parent, "Speed Hack", "SpeedEnabled")
+    _0xE17A(parent, "Walk Speed", "SpeedValue", 16, 500, 1)
+    _0x4201(parent, "Infinite Jump", "InfJumpEnabled")
+    _0x4201(parent, "Noclip", "NoclipEnabled")
+    _0x9E48(parent, "Recoil & Effects")
+    _0x4201(parent, "No Recoil", "NoRecoilEnabled")
+    _0x4201(parent, "Anti Flash", "AntiFlashEnabled")
+    _0x9E48(parent, "Weapon Tweaks")
+    _0x4201(parent, "Hitbox Expander", "HitboxExpanderEnabled")
+    _0xE17A(parent, "Expander Size", "HitboxExpanderSize", 1.0, 5.0, 0.1)
+    _0x6C63(parent, "Combat Extras")
+    _0x4201(parent, "Rapid Fire", "RapidFireEnabled")
+    _0x4201(parent, "Max Accuracy", "MaxAccuracyEnabled")
+    _0x4201(parent, "No Spread", "NoSpreadEnabled")
+    _0x4201(parent, "Spinbot", "SpinbotEnabled")
+    _0x4201(parent, "Custom Crosshair", "CustomCrosshairEnabled")
+    _0x6C63(parent, "Fun")
+    _0x4201(parent, "Hit Sounds", "HitSoundsEnabled")
+    local _0xA3FF = {"Vine Boom", "Mega Knight", "MLG Airhorn", "Boom Headshot", "Taco Bell"}
+    local _0xCE35 = Instance.new("Frame")
+    _0xCE35.Size = UDim2.new(1, 0, 0, 24) _0xCE35.BackgroundColor3 = _0x7CB3.BtnBg
+    _0xCE35.BorderSizePixel = 0 _0xCE35.Parent = parent
+    _0xE1D1(_0xCE35, 6) _0x80E5(_0xCE35, _0x7CB3.Stroke, 1, 0.4)
+    local _0xF801 = 1 / #_0xA3FF
+    local _0x8897 = {}
+    for _0x9236, _0x8E0F in ipairs(_0xA3FF) do
+        local _0x2EAC = Instance.new("TextButton")
+        _0x2EAC.Size = UDim2.new(_0xF801, 0, 1, 0) _0x2EAC.Position = UDim2.new(_0xF801 * (_0x9236 - 1), 0, 0, 0)
+        _0x2EAC.BackgroundTransparency = 1 _0x2EAC.Font = Enum.Font.GothamMedium _0x2EAC.TextSize = 9
+        _0x2EAC.TextColor3 = _0x7CB3.TextMuted _0x2EAC.Text = _0x8E0F _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0xCE35
+        _0x2EAC.MouseButton1Click:Connect(function()
+            if not _0x77AD.IsPremium then pcall(_0x6E22) return end
+            _0x77AD.HitSoundChoice = _0x8E0F
+            for _0x5B5D, bb in pairs(_0x8897) do
+                if _0x5B5D == _0x8E0F then bb.TextColor3 = _0x7CB3.Text else bb.TextColor3 = _0x7CB3.TextMuted end
+            end
+            _0x9CA3()
+        end)
+        _0x8897[_0x8E0F] = _0x2EAC
+        if _0x77AD.HitSoundChoice == _0x8E0F then _0x2EAC.TextColor3 = _0x7CB3.Text end
+    end
+end
 
-function _0x283v55.BuildConfigTab(_0xaev68)
-    _0x69v43(_0xaev68, "\073\110\116\101\114\102\097\099\101")
-    _0x69v43(_0xaev68, "\077\101\110\117\032\075\101\121", "\077\101\110\117\066\105\110\100\084\121\112\101", "\077\101\110\117\075\101\121", "\077\101\110\117\077\111\117\115\101\066\117\116\116\111\110")
-    _0x69v43(_0xaev68, "\080\101\114\102\111\114\109\097\110\099\101\032\084\111\111\108\115")
-    _0xb3v74(_0xaev68, "\070\080\083\032\066\111\111\115\116", "\070\080\083\066\111\111\115\116\069\110\097\098\108\101\100", function(_0x3d6v96)
-        _0x69v43_0x69v43then pcall(_0x27bv64.EnableFPSBoost) else pcall(_0x27bv64.DisableFPSBoost) _0x69v43
-    _0x69v43)
-    _0x69v43(_0xaev68, "\077\097\120\032\082\101\110\100\101\114\032\068\105\115\116\097\110\099\101", "\077\097\120\082\101\110\100\101\114\068\105\115\116\097\110\099\101", _0x69v43, (0x3e8 + 0x3e8), (0x19 + 0x19))
-    _0x69v43(_0xaev68, "\080\114\101\109\105\117\109\032\075\101\121\032\092\050\050\054\092\049\053\050\092\049\051\051")
-    local _0x2bbv94_0x69v43Instance._0x69v43("\084\101\120\116\066\111\120")
-    _0x2bbv94.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4334) _0x2bbv94.BackgroundColor3_0x69v43VEILUI._0x3bbv42
-    _0x2bbv94.BorderSizePixel_0x69v430 _0x2bbv94.Font_0x69v43Enum.Font.GothamMedium
-    _0x2bbv94.TextSize_0x69v43_0x69v43premInput.TextColor3_0x69v43VEILUI._0x3b5v86
-    _0x2bbv94.PlaceholderText_0x69v43"\086\076\045\088\088\088\088\088\088\088\088\088"
-    _0x2bbv94.PlaceholderColor3_0x69v43VEILUI._0x3b6v43 _0x2bbv94.Text_0x69v43""
-    _0x2bbv94.ClearTextOnFocus_0x69v43false _0x2bbv94.TextXAlignment_0x69v43Enum.TextXAlignment.Left _0x2bbv94.Parent_0x69v43parent
-    _0xa6v90(premInput_0x69v43)
-    local _0x2bcv60_0x69v43Instance._0x69v43("\085\073\080\097\100\100\105\110\103")
-    _0x2bcv60.PaddingLeft_0x69v43UDim._0x69v43(_0x69v4310) _0x2bcv60.PaddingRight_0x69v43UDim._0x69v43(_0x69v4310) _0x2bcv60.Parent_0x69v43premInput
-    _0xc2v97(_0xaev68, "\082\101\100\101\101\109\032\080\114\101\109\105\117\109\032\075\101\121", function(_0xd1v47)
-        local _0xa5v89_0x69v43tostring(_0x2bbv94.Text_0x69v43 ""):gsub("\094\037\115\043", ""):gsub("\037\115\043\036", "")
-        _0x69v43_0x69v43 == "" then _0x119v35.Show("\069\110\116\101\114\032\097\032\107\101\121\032\102\105\114\115\116", false) return _0x69v43
-        local _0xf2v80_0x69v43KeySystem.Validate(_0x69v43)
-        _0x69v43_0x69v43_0x69v43 _0x110v81._0x367v66 then
-            _0x69v43.Text_0x69v43"\065\099\116\105\118\097\116\101\100\058\032" .. _0x110v81._0x368v73
-            _0x2bbv94.Text_0x69v43""
-            task.wait(_0x69v43_0x69v43.Text_0x69v43"\082\101\100\101\101\109\032\080\114\101\109\105\117\109\032\075\101\121"
+function _0xB457.BuildConfigTab(parent)
+    _0x9E48(parent, "Interface")
+    _0x6A58(parent, "Menu Key", "MenuBindType", "MenuKey", "MenuMouseButton")
+    _0x9E48(parent, "Performance Tools")
+    _0x4201(parent, "FPS Boost", "FPSBoostEnabled", function(_0x0207)
+        if _0x0207 then pcall(_0xE5C4.EnableFPSBoost) else pcall(_0xE5C4.DisableFPSBoost) end
+    end)
+    _0xE17A(parent, "Max Render Distance", "MaxRenderDistance", 200, 2000, 50)
+    _0x9E48(parent, "Premium Key \226\152\133")
+    local _0xD9E2 = Instance.new("TextBox")
+    _0xD9E2.Size = UDim2.new(1, 0, 0, 34) _0xD9E2.BackgroundColor3 = _0x7CB3.BtnBg
+    _0xD9E2.BorderSizePixel = 0 _0xD9E2.Font = Enum.Font.GothamMedium
+    _0xD9E2.TextSize = 12 _0xD9E2.TextColor3 = _0x7CB3.Text
+    _0xD9E2.PlaceholderText = "VL-XXXXXXXXX"
+    _0xD9E2.PlaceholderColor3 = _0x7CB3.TextMuted _0xD9E2.Text = ""
+    _0xD9E2.ClearTextOnFocus = false _0xD9E2.TextXAlignment = Enum.TextXAlignment.Left _0xD9E2.Parent = parent
+    _0xE1D1(_0xD9E2, 6)
+    local _0x81AB = Instance.new("UIPadding")
+    _0x81AB.PaddingLeft = UDim.new(0, 10) _0x81AB.PaddingRight = UDim.new(0, 10) _0x81AB.Parent = _0xD9E2
+    _0xAA0B(parent, "Redeem Premium Key", function(_0x78ED)
+        local _0x6260 = tostring(_0xD9E2.Text or ""):gsub("^%s+", ""):gsub("%s+$", "")
+        if _0x6260 == "" then _0xC488.Show("Enter a key first", false) return end
+        local _0xDF7B = _0xB7CC.Validate(_0x6260)
+        if _0xDF7B and _0x77AD.IsPremium then
+            _0x78ED.Text = "Activated: " .. _0x77AD.PremiumTier
+            _0xD9E2.Text = ""
+            task.wait(2) _0x78ED.Text = "Redeem Premium Key"
         else
-            _0x69v43.Text_0x69v43"\078\111\116\032\097\032\118\097\108\105\100\032\112\114\101\109\105\117\109\032\107\101\121"
-            task.wait(_0x69v43_0x69v43.Text_0x69v43"\082\101\100\101\101\109\032\080\114\101\109\105\117\109\032\075\101\121"
-        _0x69v43
-    _0x69v43, "\097\099\099\101\110\116")
-    _0x69v43(_0xaev68, "\076\105\099\101\110\115\101\032\083\116\097\116\117\115")
-    local _0x2bdv13_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x2bdv13.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4350) _0x2bdv13.BackgroundColor3_0x69v43VEILUI._0x3bbv42
-    _0x2bdv13.BackgroundTransparency_0x69v43_0x69v43 _0x2bdv13.BorderSizePixel_0x69v430 _0x2bdv13.Parent_0x69v43parent
-    _0xa6v90(statusFrame_0x69v43) _0xa9v60(_0x2bdv13, _0x1aav64.Stroke_0x69v43_0x69v43.3)
-    local _0x2bev28_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x2bev28.Size_0x69v43UDim2._0x69v43(1_0x69v4316_0x69v43, (0x8 + 0x8)) _0x2bev28.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v436)
-    _0x2bev28.BackgroundTransparency_0x69v431 _0x2bev28.Font_0x69v43Enum.Font.GothamBold
-    _0x2bev28.TextSize_0x69v43_0x69v43statusLabel.TextColor3_0x69v43VEILUI._0x3aev24
-    _0x2bev28.TextXAlignment_0x69v43Enum.TextXAlignment.Left
-    _0x2bev28.Text_0x69v43"\084\121\112\101\058\032\010\032\032\032\032\108\111\099\097\108\032\116\105\109\101\076\097\098\101\108\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"TextLabel"\041\010\032\032\032\032\116\105\109\101\076\097\098\101\108\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\045\049\054\044\032\048\044\032\049\054\041\032\116\105\109\101\076\097\098\101\108\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\056\044\032\048\044\032\050\052\041\010\032\032\032\032\116\105\109\101\076\097\098\101\108\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\032\116\105\109\101\076\097\098\101\108\046\070\111\110\116\032\061\032\069\110\117\109\046\070\111\110\116\046\071\111\116\104\097\109\010\032\032\032\032\116\105\109\101\076\097\098\101\108\046\084\101\120\116\083\105\122\101\032\061\032\049\049\032\116\105\109\101\076\097\098\101\108\046\084\101\120\116\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\084\101\120\116\077\117\116\101\100\010\032\032\032\032\116\105\109\101\076\097\098\101\108\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\032\061\032\069\110\117\109\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\046\076\101\102\116\010\032\032\032\032\116\105\109\101\076\097\098\101\108\046\084\101\120\116\032\061\032"Time Remaining: 
-    _0x18fv80.Track(_0xefv37.Heartbeat:Connect(function()
-        _0x69v43CameraAssist.ShuttingDown_0x69v43 _0x69v43 _0x2bdv13.Parent then return _0x69v43
-        _0x69v43Configuration._0x367v66 _0x69v43 _0x110v81.PremiumExpiry_0x69v430 then
-            local _0x2bfv45_0x69v43Configuration.PremiumExpiry_0x69v43_0x69v43time()
-            _0x69v43remaining <= 0 then
-                _0x110v81.IsPremium_0x69v43false _0x110v81.PremiumTier_0x69v43_0x69v43
-                _0x110v81.PremiumExpiry_0x69v430 _0x110v81.PremiumKey_0x69v43_0x69v43
-                _0x2bev28.Text_0x69v43"\084\121\112\101\058\032\069\120\112\105\114\101\100" _0x2bev28.TextColor3_0x69v43VEILUI._0x3b9v49
-                timeLabel.Text_0x69v43"\084\105\109\101\032\082\101\109\097\105\110\105\110\103\058\032\010\032\032\032\032\032\032\032\032\032\032\032\032\101\108\115\101\010\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\115\116\097\116\117\115\076\097\098\101\108\046\084\101\120\116\032\061\032"Type: Premium \_0x69v43\_0x69v43\_0x69v43 "\032\046\046\032\116\111\115\116\114\105\110\103\040\067\111\110\102\105\103\117\114\097\116\105\111\110\046\080\114\101\109\105\117\109\084\105\101\114\032\111\114\032""\041\010\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\115\116\097\116\117\115\076\097\098\101\108\046\084\101\120\116\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\071\111\108\100\010\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\116\105\109\101\076\097\098\101\108\046\084\101\120\116\032\061\032"Time Remaining: "\032\046\046\032\102\111\114\109\097\116\084\105\109\101\040\114\101\109\097\105\110\105\110\103\041\010\032\032\032\032\032\032\032\032\032\032\032\032\101\110\100\010\032\032\032\032\032\032\032\032\101\108\115\101\010\032\032\032\032\032\032\032\032\032\032\032\032\108\111\099\097\108\032\115\097\118\101\100\075\101\121\044\032\101\120\112\105\114\121\032\061\032\075\101\121\083\121\115\116\101\109\046\082\101\097\100\083\097\118\101\100\040\041\010\032\032\032\032\032\032\032\032\032\032\032\032\105\102\032\115\097\118\101\100\075\101\121\032\097\110\100\032\101\120\112\105\114\121\032\097\110\100\032\101\120\112\105\114\121\032\062\032\111\115\046\116\105\109\101\040\041\032\116\104\101\110\010\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\115\116\097\116\117\115\076\097\098\101\108\046\084\101\120\116\032\061\032"Type: Work._0x69v43 Key"\032\115\116\097\116\117\115\076\097\098\101\108\046\084\101\120\116\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\065\099\099\101\110\116\051\010\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\116\105\109\101\076\097\098\101\108\046\084\101\120\116\032\061\032"Time Remaining: "\032\046\046\032\102\111\114\109\097\116\084\105\109\101\040\101\120\112\105\114\121\032\045\032\111\115\046\116\105\109\101\040\041\041\010\032\032\032\032\032\032\032\032\032\032\032\032\101\108\115\101\010\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\032\115\116\097\116\117\115\076\097\098\101\108\046\084\101\120\116\032\061\032"Type: 
-                timeLabel.Text_0x69v43"\084\105\109\101\032\082\101\109\097\105\110\105\110\103\058\032\010\032\032\032\032\032\032\032\032\032\032\032\032\101\110\100\010\032\032\032\032\032\032\032\032\101\110\100\010\032\032\032\032\101\110\100\041\041\010\032\032\032\032\067\083\101\040\112\097\114\101\110\116\044\032"Configuration"\041\010\032\032\032\032\067\066\117\116\040\112\097\114\101\110\116\044\032"Save Config"\044\032\102\117\110\099\116\105\111\110\040\098\116\110\041\010\032\032\032\032\032\032\032\032\108\111\099\097\108\032\111\107\032\061\032\067\111\110\102\105\103\117\114\097\116\105\111\110\058\083\097\118\101\040\041\010\032\032\032\032\032\032\032\032\108\111\099\097\108\032\111\032\061\032\098\116\110\046\084\101\120\116\032\098\116\110\046\084\101\120\116\032\061\032\111\107\032\097\110\100\032"Saved"\032\111\114\032"Failed"\010\032\032\032\032\032\032\032\032\116\097\115\107\046\119\097\105\116\040\049\046\050\041\032\098\116\110\046\084\101\120\116\032\061\032\111\010\032\032\032\032\101\110\100\044\032"accent"\041\010\032\032\032\032\067\066\117\116\040\112\097\114\101\110\116\044\032"Load Config"\044\032\102\117\110\099\116\105\111\110\040\098\116\110\041\010\032\032\032\032\032\032\032\032\108\111\099\097\108\032\111\107\032\061\032\067\111\110\102\105\103\117\114\097\116\105\111\110\058\076\111\097\100\040\041\010\032\032\032\032\032\032\032\032\108\111\099\097\108\032\111\032\061\032\098\116\110\046\084\101\120\116\032\098\116\110\046\084\101\120\116\032\061\032\111\107\032\097\110\100\032"Loaded"\032\111\114\032"No Save"\010\032\032\032\032\032\032\032\032\116\097\115\107\046\119\097\105\116\040\049\046\050\041\032\098\116\110\046\084\101\120\116\032\061\032\111\010\032\032\032\032\101\110\100\041\010\032\032\032\032\067\083\101\040\112\097\114\101\110\116\044\032"Community"\041\010\032\032\032\032\067\066\117\116\040\112\097\114\101\110\116\044\032"Join Discord"\044\032\102\117\110\099\116\105\111\110\040\098\116\110\041\010\032\032\032\032\032\032\032\032\108\111\099\097\108\032\111\032\061\032\098\116\110\046\084\101\120\116\010\032\032\032\032\032\032\032\032\105\102\032\116\121\112\101\040\115\101\116\099\108\105\112\098\111\097\114\100\041\032\061\061\032"function"\032\116\104\101\110\032\112\099\097\108\108\040\115\101\116\099\108\105\112\098\111\097\114\100\044\032"https_0x69v43discord_0x69v43/K3vgcVsCsS"\041\032\098\116\110\046\084\101\120\116\032\061\032"Link copied"\032\101\110\100\010\032\032\032\032\032\032\032\032\116\097\115\107\046\119\097\105\116\040\049\046\054\041\032\098\116\110\046\084\101\120\116\032\061\032\111\010\032\032\032\032\101\110\100\044\032"discord"\041\010\032\032\032\032\067\083\101\040\112\097\114\101\110\116\044\032"System"\041\010\032\032\032\032\067\066\117\116\040\112\097\114\101\110\116\044\032"Unload VEIL"\044\032\102\117\110\099\116\105\111\110\040\041\032\073\110\116\101\114\102\097\099\101\046\085\110\108\111\097\100\040\041\032\101\110\100\044\032"danger"\041\010\101\110\100\010\010\102\117\110\099\116\105\111\110\032\073\110\116\101\114\102\097\099\101\046\067\114\101\097\116\101\040\041\010\032\032\032\032\108\111\099\097\108\032\115\103\032\061\032\109\097\107\101\083\099\114\101\101\110\071\117\105\040"VEIL_UI"\044\032\053\048\048\048\044\032\102\097\108\115\101\041\010\032\032\032\032\105\102\032\110\111\116\032\115\103\032\116\104\101\110\032\114\101\116\117\114\110\032\110\105\108\032\101\110\100\010\032\032\032\032\073\110\116\101\114\102\097\099\101\046\083\099\114\101\101\110\071\117\105\032\061\032\115\103\010\032\032\032\032\108\111\099\097\108\032\109\102\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"Frame"\041\010\032\032\032\032\109\102\046\078\097\109\101\032\061\032"Main"\010\032\032\032\032\109\102\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\055\048\048\044\032\048\044\032\052\056\048\041\010\032\032\032\032\109\102\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\046\053\044\032\045\051\053\048\044\032\048\046\053\044\032\045\050\052\048\041\010\032\032\032\032\109\102\046\066\097\099\107\103\114\111\117\110\100\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\066\103\032\109\102\046\066\111\114\100\101\114\083\105\122\101\080\105\120\101\108\032\061\032\048\010\032\032\032\032\109\102\046\067\108\105\112\115\068\101\115\099\101\110\100\097\110\116\115\032\061\032\116\114\117\101\032\109\102\046\086\105\115\105\098\108\101\032\061\032\102\097\108\115\101\032\109\102\046\080\097\114\101\110\116\032\061\032\115\103\010\032\032\032\032\073\110\116\101\114\102\097\099\101\046\077\097\105\110\070\114\097\109\101\032\061\032\109\102\010\032\032\032\032\099\111\114\110\101\114\040\109\102\044\032\049\052\041\032\115\116\114\111\107\101\040\109\102\044\032\086\069\073\076\085\073\046\083\116\114\111\107\101\044\032\049\046\053\044\032\048\041\010\032\032\032\032\108\111\099\097\108\032\115\105\100\101\098\097\114\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"Frame"\041\010\032\032\032\032\115\105\100\101\098\097\114\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\049\053\056\044\032\049\044\032\045\049\054\041\032\115\105\100\101\098\097\114\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\056\044\032\048\044\032\056\041\010\032\032\032\032\115\105\100\101\098\097\114\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\032\115\105\100\101\098\097\114\046\080\097\114\101\110\116\032\061\032\109\102\010\032\032\032\032\108\111\099\097\108\032\108\111\103\111\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"TextLabel"\041\010\032\032\032\032\108\111\103\111\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\048\044\032\048\044\032\051\054\041\032\108\111\103\111\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\010\032\032\032\032\108\111\103\111\046\070\111\110\116\032\061\032\069\110\117\109\046\070\111\110\116\046\071\111\116\104\097\109\066\108\097\099\107\032\108\111\103\111\046\084\101\120\116\032\061\032"VEIL"\032\108\111\103\111\046\084\101\120\116\083\105\122\101\032\061\032\051\048\010\032\032\032\032\108\111\103\111\046\084\101\120\116\067\111\108\111\114\051\032\061\032\067\111\108\111\114\051\046\102\114\111\109\082\071\066\040\050\053\053\044\032\050\053\053\044\032\050\053\053\041\010\032\032\032\032\108\111\103\111\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\032\061\032\069\110\117\109\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\046\067\101\110\116\101\114\032\108\111\103\111\046\080\097\114\101\110\116\032\061\032\115\105\100\101\098\097\114\010\032\032\032\032\097\100\100\083\104\105\110\101\040\108\111\103\111\041\010\032\032\032\032\108\111\099\097\108\032\118\049\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"TextLabel"\041\010\032\032\032\032\118\049\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\048\044\032\048\044\032\049\050\041\032\118\049\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\048\044\032\048\044\032\051\052\041\010\032\032\032\032\118\049\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\032\118\049\046\070\111\110\116\032\061\032\069\110\117\109\046\070\111\110\116\046\071\111\116\104\097\109\066\111\108\100\010\032\032\032\032\118\049\046\084\101\120\116\032\061\032"V 1"\032\118\049\046\084\101\120\116\083\105\122\101\032\061\032\049\048\010\032\032\032\032\118\049\046\084\101\120\116\067\111\108\111\114\051\032\061\032\067\111\108\111\114\051\046\102\114\111\109\082\071\066\040\049\056\048\044\032\049\051\048\044\032\050\053\053\041\010\032\032\032\032\118\049\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\032\061\032\069\110\117\109\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\046\067\101\110\116\101\114\032\118\049\046\080\097\114\101\110\116\032\061\032\115\105\100\101\098\097\114\010\032\032\032\032\097\100\100\083\104\105\110\101\040\118\049\041\010\032\032\032\032\108\111\099\097\108\032\115\108\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"TextLabel"\041\010\032\032\032\032\115\108\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\048\044\032\048\044\032\049\050\041\032\115\108\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\048\044\032\048\044\032\052\056\041\010\032\032\032\032\115\108\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\032\115\108\046\070\111\110\116\032\061\032\069\110\117\109\046\070\111\110\116\046\071\111\116\104\097\109\066\111\108\100\010\032\032\032\032\115\108\046\084\101\120\116\032\061\032"S_0x69v43_0x69v43_0x69v43_0x69v43 Y_0x69v43_0x69v43_0x69v43T E"\032\115\108\046\084\101\120\116\083\105\122\101\032\061\032\056\010\032\032\032\032\115\108\046\084\101\120\116\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\065\099\099\101\110\116\051\032\115\108\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\032\061\032\069\110\117\109\046\084\101\120\116\088\065\108\105\103\110\109\101\110\116\046\067\101\110\116\101\114\032\115\108\046\080\097\114\101\110\116\032\061\032\115\105\100\101\098\097\114\010\032\032\032\032\097\100\100\083\104\105\110\101\040\115\108\041\010\032\032\032\032\108\111\099\097\108\032\116\097\098\078\032\061\032\123"Visuals"\044\032"Combat"\044\032"Silent"\044\032"Trigger"\044\032"Mods"\044\032"Config"\125\010\032\032\032\032\108\111\099\097\108\032\116\097\098\066\116\110\115\032\061\032\123\125\010\032\032\032\032\102\111\114\032\105\044\032\110\109\032\105\110\032\105\112\097\105\114\115\040\116\097\098\078\041\032\100\111\010\032\032\032\032\032\032\032\032\108\111\099\097\108\032\098\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"TextButton"\041\010\032\032\032\032\032\032\032\032\098\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\045\049\050\044\032\048\044\032\051\048\041\032\098\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\054\044\032\048\044\032\055\056\032\043\032\040\105\032\045\032\049\041\032\042\032\051\054\041\010\032\032\032\032\032\032\032\032\098\046\066\097\099\107\103\114\111\117\110\100\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\066\116\110\066\103\032\098\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\048\046\052\032\098\046\066\111\114\100\101\114\083\105\122\101\080\105\120\101\108\032\061\032\048\010\032\032\032\032\032\032\032\032\098\046\070\111\110\116\032\061\032\069\110\117\109\046\070\111\110\116\046\071\111\116\104\097\109\077\101\100\105\117\109\032\098\046\084\101\120\116\032\061\032\110\109\032\098\046\084\101\120\116\083\105\122\101\032\061\032\049\050\010\032\032\032\032\032\032\032\032\098\046\084\101\120\116\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\084\101\120\116\077\117\116\101\100\032\098\046\065\117\116\111\066\117\116\116\111\110\067\111\108\111\114\032\061\032\102\097\108\115\101\032\098\046\080\097\114\101\110\116\032\061\032\115\105\100\101\098\097\114\010\032\032\032\032\032\032\032\032\099\111\114\110\101\114\040\098\044\032\056\041\032\115\116\114\111\107\101\040\098\044\032\086\069\073\076\085\073\046\083\116\114\111\107\101\044\032\049\044\032\048\046\051\041\010\032\032\032\032\032\032\032\032\116\097\098\066\116\110\115\091\110\109\093\032\061\032\098\010\032\032\032\032\032\032\032\032\073\110\116\101\114\102\097\099\101\046\084\097\098\066\117\116\116\111\110\115\091\110\109\093\032\061\032\098\010\032\032\032\032\101\110\100\010\032\032\032\032\108\111\099\097\108\032\115\116\097\116\117\115\082\111\119\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"Frame"\041\010\032\032\032\032\115\116\097\116\117\115\082\111\119\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\045\049\050\044\032\048\044\032\052\056\041\032\115\116\097\116\117\115\082\111\119\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\054\044\032\049\044\032\045\053\054\041\010\032\032\032\032\115\116\097\116\117\115\082\111\119\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\032\115\116\097\116\117\115\082\111\119\046\080\097\114\101\110\116\032\061\032\115\105\100\101\098\097\114\010\032\032\032\032\108\111\099\097\108\032\102\112\115\066\097\114\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"Frame"\041\010\032\032\032\032\102\112\115\066\097\114\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\048\044\032\048\044\032\050\048\041\032\102\112\115\066\097\114\046\066\097\099\107\103\114\111\117\110\100\067\111\108\111\114\051\032\061\032\086\069\073\076\085\073\046\066\116\110\066\103\010\032\032\032\032\102\112\115\066\097\114\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\048\046\051\032\102\112\115\066\097\114\046\066\111\114\100\101\114\083\105\122\101\080\105\120\101\108\032\061\032\048\032\102\112\115\066\097\114\046\080\097\114\101\110\116\032\061\032\115\116\097\116\117\115\082\111\119\010\032\032\032\032\099\111\114\110\101\114\040\102\112\115\066\097\114\044\032\054\041\032\115\116\114\111\107\101\040\102\112\115\066\097\114\044\032\086\069\073\076\085\073\046\065\099\099\101\110\116\044\032\049\044\032\048\046\053\041\010\032\032\032\032\108\111\099\097\108\032\102\112\115\068\111\116\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"Frame"\041\010\032\032\032\032\102\112\115\068\111\116\046\083\105\122\101\032\061\032\085\068\105\109\050\046\102\114\111\109\079\102\102\115\101\116\040\054\044\032\054\041\032\102\112\115\068\111\116\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\056\044\032\048\046\053\044\032\045\051\041\010\032\032\032\032\102\112\115\068\111\116\046\066\097\099\107\103\114\111\117\110\100\067\111\108\111\114\051\032\061\032\067\111\108\111\114\051\046\102\114\111\109\082\071\066\040\056\048\044\032\050\050\048\044\032\049\051\048\041\032\102\112\115\068\111\116\046\066\111\114\100\101\114\083\105\122\101\080\105\120\101\108\032\061\032\048\032\102\112\115\068\111\116\046\080\097\114\101\110\116\032\061\032\102\112\115\066\097\114\010\032\032\032\032\099\111\114\110\101\114\040\102\112\115\068\111\116\044\032\051\041\010\032\032\032\032\108\111\099\097\108\032\102\112\115\076\097\098\101\108\032\061\032\073\110\115\116\097\110\099\101\046\110\101\119\040"TextLabel"\041\010\032\032\032\032\102\112\115\076\097\098\101\108\046\083\105\122\101\032\061\032\085\068\105\109\050\046\110\101\119\040\049\044\032\045\050\050\044\032\049\044\032\048\041\032\102\112\115\076\097\098\101\108\046\080\111\115\105\116\105\111\110\032\061\032\085\068\105\109\050\046\110\101\119\040\048\044\032\050\048\044\032\048\044\032\048\041\010\032\032\032\032\102\112\115\076\097\098\101\108\046\066\097\099\107\103\114\111\117\110\100\084\114\097\110\115\112\097\114\101\110\099\121\032\061\032\049\032\102\112\115\076\097\098\101\108\046\070\111\110\116\032\061\032\069\110\117\109\046\070\111\110\116\046\071\111\116\104\097\109\066\111\108\100\010\032\032\032\032\102\112\115\076\097\098\101\108\046\084\101\120\116\032\061\032"
-    fpsLabel.TextXAlignment_0x69v43Enum.TextXAlignment.Left fpsLabel.Parent_0x69v43fpsBar
-    local _0x2c0v50_0x69v43Instance._0x69v43("\084\101\120\116\076\097\098\101\108")
-    _0x2c0v50.Size_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4322) _0x2c0v50.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v4326)
-    _0x2c0v50.BackgroundTransparency_0x69v431 _0x2c0v50.Font_0x69v43Enum.Font.GothamBold
-    _0x2c0v50.Text_0x69v43tostring(_0x111v38._0x36bv95) _0x2c0v50.TextSize_0x69v4314
-    _0x2c0v50.TextColor3_0x69v43VEILUI._0x3aev24 _0x2c0v50.TextXAlignment_0x69v43Enum.TextXAlignment.Center _0x2c0v50.Parent_0x69v43statusRow
-    local _0x2c1v73, _0x3f7v72_0x69v43_0x69v430
-    _0x18fv80.Track(_0xefv37.RenderStepped:Connect(function(_0x8fv91)
-        _0x69v43CameraAssist.ShuttingDown_0x69v43 _0x69v43 fpsLabel.Parent then return _0x69v43
- _0x2c1v73_0x69v43fa_0x69v43_0x69v43ff_0x69v43ff_0x69v431
-        _0x69v43fa >= _0x69v43 then
-            local _0x65v40_0x69v43math.floor_0x69v43_0x69v43fa_0x69v43_0x69v43)
-            fpsLabel.Text_0x69v43tostring(_0x65v40) .. "\032\070\080\083"
-            local _0xaav64_0x69v43_0x65v40 >= _0x69v43_0x69v43 Color3.fromRGB_0x69v43, _0x69v43, _0x69v43) or (_0x65v40 >= _0x69v43_0x69v43 Color3.fromRGB(_0x69v43, _0x69v43, (0x1e + 0x1e)) _0x69v43Color3.fromRGB(_0x69v43, (0x28 + 0x28), _0x69v43))
-            fpsDot.BackgroundColor3_0x69v43_0x69v43 fpsLabel.TextColor3_0x69v43_0x69v43
- _0x2c1v73_0x69v430_0x69v43_0x69v430
-        _0x69v43
-    _0x69v43))
-    local _0x2c3v99_0x69v43Instance._0x69v43("\070\114\097\109\101")
-    _0x2c3v99.Size_0x69v43UDim2._0x69v43(1_0x69v43_0x69v43_0x69v43_0x69v4316) _0x2c3v99.Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43)
-    _0x2c3v99.BackgroundColor3_0x69v43VEILUI._0x3bbv42 _0x2c3v99.BackgroundTransparency_0x69v43_0x69v43
-    _0x2c3v99.BorderSizePixel_0x69v430 _0x2c3v99.Parent_0x69v43mf
-    _0xa6v90(_0x2c3v99, (0x5 + 0x5)) _0xa9v60(_0x2c3v99, _0x1aav64.Stroke_0x69v43._0x69v430)
-    local _0x2c4v76_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-    _0x69v43Size_0x69v43UDim2.fromOffset_0x69v43, (0xc + 0xc)) _0x69v43Position_0x69v43UDim2._0x69v43(1_0x69v4330_0x69v43_0x69v43)
-    _0x69v43BackgroundTransparency_0x69v431_0x69v43.Font_0x69v43Enum.Font.GothamBold_0x69v43.Text_0x69v43"\088"
-    _0x69v43TextSize_0x69v43_0x69v43_0x69v43TextColor3_0x69v43VEILUI.Text_0x69v43.AutoButtonColor_0x69v43false_0x69v43.Parent_0x69v43mf
-    _0x69v43MouseButton1Click:Connect(function_0x69v43_0x69v43Visible_0x69v43false _0x69v43)
-    local _0x2b0v33_0x69v43false_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43
-    _0x69v43InputBegan:Connect(function(_0x90v85)
-        _0x69v43input.UserInputType == Enum.UserInputType.MouseButton1 then
- _0x2b0v33_0x69v43true_0x69v43_0x69v43input.Position_0x69v43_0x69v43_0x69v43Position
-        _0x69v43
-    _0x69v43)
-    _0x18fv80.Track(_0x69v43.InputChanged:Connect(function(_0x90v85)
-        _0x69v43_0x69v43_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.MouseMovement then
-            local _0x1c3v59_0x69v43input.Position_0x69v43dS
-            _0x69v43Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43Scale, _0x69v43X.Offset_0x69v43_0x69v43_0x69v43_0x69v43Y.Scale, _0x69v43Y.Offset_0x69v43_0x69v43Y)
-        _0x69v43
-    _0x69v43))
-    _0x18fv80.Track(_0x69v43.InputEnded:Connect(function(_0x90v85)
-        _0x69v43input.UserInputType == Enum.UserInputType.MouseButton1 then_0x69v43_0x69v43false _0x69v43
-    _0x69v43))
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(tabN) do
-        local _0x12av20_0x69v43Instance._0x69v43("\083\099\114\111\108\108\105\110\103\070\114\097\109\101")
-        _0x69v43Size_0x69v43UDim2._0x69v43(1_0x69v4316_0x69v43_0x69v4316) _0x69v43Position_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v438)
-        _0x69v43BackgroundTransparency_0x69v431_0x69v43.BorderSizePixel_0x69v430
-        _0x69v43ScrollBarThickness_0x69v433_0x69v43.ScrollBarImageColor3_0x69v43VEILUI._0x3b3v27
-        _0x69v43CanvasSize_0x69v43UDim2._0x69v43(_0x69v43_0x69v43_0x69v430)
-        _0x69v43AutomaticCanvasSize_0x69v43Enum.AutomaticSize_0x69v43_0x69v43Visible_0x69v43false_0x69v43.Parent_0x69v43content
-        local _0x2b4v27_0x69v43Instance._0x69v43("\085\073\076\105\115\116\076\097\121\111\117\116")
-        _0x69v43Padding_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43SortOrder_0x69v43Enum.SortOrder.LayoutOrder_0x69v43.Parent_0x69v43sc
-        local _0x2c5v10_0x69v43Instance._0x69v43("\085\073\080\097\100\100\105\110\103")
-        _0x69v43PaddingTop_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43PaddingBottom_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43PaddingRight_0x69v43UDim._0x69v43(_0x69v43_0x69v43_0x69v43Parent_0x69v43sc
-        _0x283v55.TabContents_0x69v43] = _0x12av20
-    _0x69v43
-    function _0x283v55.SelectTab_0x69v43)
-        _0x69v43Interface.CurrentTab then
-            local _0x2c6v37_0x69v43tabBtns[_0x283v55.CurrentTab]
-            _0x69v43_0x69v43then_0x69v43Create_0x69v43, TweenInfo._0x69v43_0x69v432), {BackgroundColor3_0x69v43VEILUI._0x3bbv42, _0x380v57_0x69v43_0x69v43, _0x3f8v72_0x69v43VEILUI.TextMuted_0x69v43Play_0x69v43_0x69v43
-        _0x69v43
-        _0x283v55.CurrentTab_0x69v43nm
-        local _0x286v53_0x69v43tabBtns_0x69v43]
-        _0x69v43b then
-            _0x286v53.BackgroundColor3_0x69v43VEILUI._0x3b3v27
-            _0x285v66:Create(_0x69v43TweenInfo._0x69v43_0x69v432), {BackgroundTransparency_0x69v43_0x69v43, _0x3f8v72_0x69v43VEILUI.Text_0x69v43Play()
-        _0x69v43
-        _0x69v43 _0x69v43c_0x69v43 pairs(_0x283v55.TabContents) _0x69v43c._0x3d0v23 = (_0xd6v18 == _0x1e1v48) _0x69v43
-    _0x69v43
-    _0x69v43_0x69v43_0x69v43_0x69v43 pairs(tabBtns) _0x69v43b.MouseButton1Click:Connect(function_0x69v43Interface.SelectTab_0x69v43) _0x69v43) _0x69v43
-    pcall(function_0x69v43Interface.BuildVisualsTab(_0x283v55.TabContents["\086\105\115\117\097\108\115"_0x69v43_0x69v43)
-    pcall(function_0x69v43Interface.BuildCombatTab(_0x283v55.TabContents["\067\111\109\098\097\116"_0x69v43_0x69v43)
-    pcall(function_0x69v43Interface.BuildSilentTab(_0x283v55.TabContents["\083\105\108\101\110\116"_0x69v43_0x69v43)
-    pcall(function_0x69v43Interface.BuildTriggerTab(_0x283v55.TabContents["\084\114\105\103\103\101\114"_0x69v43_0x69v43)
-    pcall(function_0x69v43Interface.BuildModsTab(_0x283v55.TabContents["\077\111\100\115"_0x69v43_0x69v43)
-    pcall(function_0x69v43Interface.BuildConfigTab(_0x283v55.TabContents["\067\111\110\102\105\103"_0x69v43_0x69v43)
-    _0x283v55.SelectTab("\086\105\115\117\097\108\115")
-_0x69v43
+            _0x78ED.Text = "Not a valid premium key"
+            task.wait(2) _0x78ED.Text = "Redeem Premium Key"
+        end
+    end, "accent")
+    _0x9E48(parent, "License Status")
+    local _0xFEF8 = Instance.new("Frame")
+    _0xFEF8.Size = UDim2.new(1, 0, 0, 50) _0xFEF8.BackgroundColor3 = _0x7CB3.BtnBg
+    _0xFEF8.BackgroundTransparency = 0.3 _0xFEF8.BorderSizePixel = 0 _0xFEF8.Parent = parent
+    _0xE1D1(_0xFEF8, 6) _0x80E5(_0xFEF8, _0x7CB3.Stroke, 1, 0.3)
+    local _0x0241 = Instance.new("TextLabel")
+    _0x0241.Size = UDim2.new(1, -16, 0, 16) _0x0241.Position = UDim2.new(0, 8, 0, 6)
+    _0x0241.BackgroundTransparency = 1 _0x0241.Font = Enum.Font.GothamBold
+    _0x0241.TextSize = 11 _0x0241.TextColor3 = _0x7CB3.Accent3
+    _0x0241.TextXAlignment = Enum.TextXAlignment.Left
+    _0x0241.Text = "Type: --" _0x0241.Parent = _0xFEF8
+    local _0x6FB4 = Instance.new("TextLabel")
+    _0x6FB4.Size = UDim2.new(1, -16, 0, 16) _0x6FB4.Position = UDim2.new(0, 8, 0, 24)
+    _0x6FB4.BackgroundTransparency = 1 _0x6FB4.Font = Enum.Font.Gotham
+    _0x6FB4.TextSize = 11 _0x6FB4.TextColor3 = _0x7CB3.TextMuted
+    _0x6FB4.TextXAlignment = Enum.TextXAlignment.Left
+    _0x6FB4.Text = "Time Remaining: --" _0x6FB4.Parent = _0xFEF8
+    _0x55FF.Track(_0xB932.Heartbeat:Connect(function()
+        if _0x1996.ShuttingDown or not _0xFEF8.Parent then return end
+        if _0x77AD.IsPremium and _0x77AD.PremiumExpiry > 0 then
+            local _0xEFA2 = _0x77AD.PremiumExpiry - os.time()
+            if _0xEFA2 <= 0 then
+                _0x77AD.IsPremium = false _0x77AD.PremiumTier = nil
+                _0x77AD.PremiumExpiry = 0 _0x77AD.PremiumKey = nil
+                _0x0241.Text = "Type: Expired" _0x0241.TextColor3 = _0x7CB3.Danger
+                _0x6FB4.Text = "Time Remaining: --"
+            else
+                _0x0241.Text = "Type: Premium \226\152\133 " .. tostring(_0x77AD.PremiumTier or "")
+                _0x0241.TextColor3 = _0x7CB3.Gold
+                _0x6FB4.Text = "Time Remaining: " .. _0xE439(_0xEFA2)
+            end
+        else
+            local _0x47F4, _0x0C4D = _0xB7CC.ReadSaved()
+            if _0x47F4 and _0x0C4D and _0x0C4D > os.time() then
+                _0x0241.Text = "Type: Work.ink Key" _0x0241.TextColor3 = _0x7CB3.Accent3
+                _0x6FB4.Text = "Time Remaining: " .. _0xE439(_0x0C4D - os.time())
+            else
+                _0x0241.Text = "Type: --" _0x0241.TextColor3 = _0x7CB3.TextMuted
+                _0x6FB4.Text = "Time Remaining: --"
+            end
+        end
+    end))
+    _0x9E48(parent, "Configuration")
+    _0xAA0B(parent, "Save Config", function(_0x78ED)
+        local _0xDF7B = _0x77AD:Save()
+        local _0x5B5D = _0x78ED.Text _0x78ED.Text = _0xDF7B and "Saved" or "Failed"
+        task.wait(1.2) _0x78ED.Text = _0x5B5D
+    end, "accent")
+    _0xAA0B(parent, "Load Config", function(_0x78ED)
+        local _0xDF7B = _0x77AD:Load()
+        local _0x5B5D = _0x78ED.Text _0x78ED.Text = _0xDF7B and "Loaded" or "No Save"
+        task.wait(1.2) _0x78ED.Text = _0x5B5D
+    end)
+    _0x9E48(parent, "Community")
+    _0xAA0B(parent, "Join Discord", function(_0x78ED)
+        local _0x5B5D = _0x78ED.Text
+        if type(setclipboard) == "function" then pcall(setclipboard, "https://discord.gg/K3vgcVsCsS") _0x78ED.Text = "Link copied" end
+        task.wait(1.6) _0x78ED.Text = _0x5B5D
+    end, "discord")
+    _0x9E48(parent, "System")
+    _0xAA0B(parent, "Unload VEIL", function() _0xB457.Unload() end, "danger")
+end
 
-function _0x283v55.Unload()
-    _0x1e4v40.ShuttingDown_0x69v43true
-    _0xfcv64.Active_0x69v43false
-    _0x69v43SILENT.UninstallHook then pcall(_0xfcv64.UninstallHook) _0x69v43
-    pcall(function_0x69v43CameraAssist.Unbind_0x69v43_0x69v43)
-    pcall(function_0x69v43CameraAssist.UnbindViewFOV_0x69v43_0x69v43)
-    pcall(function_0x69v43CameraAssist.RestorePostFX_0x69v43_0x69v43)
-    pcall(function_0x69v43NVDisable_0x69v43_0x69v43)
-    pcall(function_0x69v43PerformanceTools.DisableFPSBoost_0x69v43_0x69v43)
+function _0xB457.Create()
+    local _0xFA03 = _0xE472("VEIL_UI", 5000, false)
+    if not _0xFA03 then return nil end
+    _0xB457.ScreenGui = _0xFA03
+    local _0xAD95 = Instance.new("Frame")
+    _0xAD95.Name = "Main"
+    _0xAD95.Size = UDim2.new(0, 700, 0, 480)
+    _0xAD95.Position = UDim2.new(0.5, -350, 0.5, -240)
+    _0xAD95.BackgroundColor3 = _0x7CB3.Bg _0xAD95.BorderSizePixel = 0
+    _0xAD95.ClipsDescendants = true _0xAD95.Visible = false _0xAD95.Parent = _0xFA03
+    _0xB457.MainFrame = _0xAD95
+    _0xE1D1(_0xAD95, 14) _0x80E5(_0xAD95, _0x7CB3.Stroke, 1.5, 0)
+    local _0xEAAA = Instance.new("Frame")
+    _0xEAAA.Size = UDim2.new(0, 158, 1, -16) _0xEAAA.Position = UDim2.new(0, 8, 0, 8)
+    _0xEAAA.BackgroundTransparency = 1 _0xEAAA.Parent = _0xAD95
+    local _0x7284 = Instance.new("TextLabel")
+    _0x7284.Size = UDim2.new(1, 0, 0, 36) _0x7284.BackgroundTransparency = 1
+    _0x7284.Font = Enum.Font.GothamBlack _0x7284.Text = "VEIL" _0x7284.TextSize = 30
+    _0x7284.TextColor3 = Color3.fromRGB(255, 255, 255)
+    _0x7284.TextXAlignment = Enum.TextXAlignment.Center _0x7284.Parent = _0xEAAA
+    _0x9BD5(_0x7284)
+    local _0xAA02 = Instance.new("TextLabel")
+    _0xAA02.Size = UDim2.new(1, 0, 0, 12) _0xAA02.Position = UDim2.new(0, 0, 0, 34)
+    _0xAA02.BackgroundTransparency = 1 _0xAA02.Font = Enum.Font.GothamBold
+    _0xAA02.Text = "V 1" _0xAA02.TextSize = 10
+    _0xAA02.TextColor3 = Color3.fromRGB(180, 130, 255)
+    _0xAA02.TextXAlignment = Enum.TextXAlignment.Center _0xAA02.Parent = _0xEAAA
+    _0x9BD5(_0xAA02)
+    local _0xECAA = Instance.new("TextLabel")
+    _0xECAA.Size = UDim2.new(1, 0, 0, 12) _0xECAA.Position = UDim2.new(0, 0, 0, 48)
+    _0xECAA.BackgroundTransparency = 1 _0xECAA.Font = Enum.Font.GothamBold
+    _0xECAA.Text = "S E C U R I T Y   S U I T E" _0xECAA.TextSize = 8
+    _0xECAA.TextColor3 = _0x7CB3.Accent3 _0xECAA.TextXAlignment = Enum.TextXAlignment.Center _0xECAA.Parent = _0xEAAA
+    _0x9BD5(_0xECAA)
+    local _0xA7E9 = {"Visuals", "Combat", "Silent", "Trigger", "Mods", "Config"}
+    local _0x6207 = {}
+    for _0x9236, _0x8E0F in ipairs(_0xA7E9) do
+        local _0x2EAC = Instance.new("TextButton")
+        _0x2EAC.Size = UDim2.new(1, -12, 0, 30) _0x2EAC.Position = UDim2.new(0, 6, 0, 78 + (_0x9236 - 1) * 36)
+        _0x2EAC.BackgroundColor3 = _0x7CB3.BtnBg _0x2EAC.BackgroundTransparency = 0.4 _0x2EAC.BorderSizePixel = 0
+        _0x2EAC.Font = Enum.Font.GothamMedium _0x2EAC.Text = _0x8E0F _0x2EAC.TextSize = 12
+        _0x2EAC.TextColor3 = _0x7CB3.TextMuted _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0xEAAA
+        _0xE1D1(_0x2EAC, 8) _0x80E5(_0x2EAC, _0x7CB3.Stroke, 1, 0.3)
+        _0x6207[_0x8E0F] = _0x2EAC
+        _0xB457.TabButtons[_0x8E0F] = _0x2EAC
+    end
+    local _0xCA7B = Instance.new("Frame")
+    _0xCA7B.Size = UDim2.new(1, -12, 0, 48) _0xCA7B.Position = UDim2.new(0, 6, 1, -56)
+    _0xCA7B.BackgroundTransparency = 1 _0xCA7B.Parent = _0xEAAA
+    local _0x8960 = Instance.new("Frame")
+    _0x8960.Size = UDim2.new(1, 0, 0, 20) _0x8960.BackgroundColor3 = _0x7CB3.BtnBg
+    _0x8960.BackgroundTransparency = 0.3 _0x8960.BorderSizePixel = 0 _0x8960.Parent = _0xCA7B
+    _0xE1D1(_0x8960, 6) _0x80E5(_0x8960, _0x7CB3.Accent, 1, 0.5)
+    local _0x458F = Instance.new("Frame")
+    _0x458F.Size = UDim2.fromOffset(6, 6) _0x458F.Position = UDim2.new(0, 8, 0.5, -3)
+    _0x458F.BackgroundColor3 = Color3.fromRGB(80, 220, 130) _0x458F.BorderSizePixel = 0 _0x458F.Parent = _0x8960
+    _0xE1D1(_0x458F, 3)
+    local _0xE369 = Instance.new("TextLabel")
+    _0xE369.Size = UDim2.new(1, -22, 1, 0) _0xE369.Position = UDim2.new(0, 20, 0, 0)
+    _0xE369.BackgroundTransparency = 1 _0xE369.Font = Enum.Font.GothamBold
+    _0xE369.Text = "--- FPS" _0xE369.TextSize = 10 _0xE369.TextColor3 = _0x7CB3.Text
+    _0xE369.TextXAlignment = Enum.TextXAlignment.Left _0xE369.Parent = _0x8960
+    local _0xB847 = Instance.new("TextLabel")
+    _0xB847.Size = UDim2.new(1, 0, 0, 22) _0xB847.Position = UDim2.new(0, 0, 0, 26)
+    _0xB847.BackgroundTransparency = 1 _0xB847.Font = Enum.Font.GothamBold
+    _0xB847.Text = tostring(_0x76B0.Name) _0xB847.TextSize = 14
+    _0xB847.TextColor3 = _0x7CB3.Accent3 _0xB847.TextXAlignment = Enum.TextXAlignment.Center _0xB847.Parent = _0xCA7B
+    local _0xBC73, _0xC358 = 0, 0
+    _0x55FF.Track(_0xB932.RenderStepped:Connect(function(_0x154F)
+        if _0x1996.ShuttingDown or not _0xE369.Parent then return end
+        _0xBC73 = _0xBC73 + _0x154F _0xC358 = _0xC358 + 1
+        if _0xBC73 >= 0.5 then
+            local _0x6EA8 = math.floor(_0xC358 / _0xBC73 + 0.5)
+            _0xE369.Text = tostring(_0x6EA8) .. " FPS"
+            local _0xE798 = _0x6EA8 >= 90 and Color3.fromRGB(80, 220, 130) or (_0x6EA8 >= 45 and Color3.fromRGB(255, 220, 60) or Color3.fromRGB(255, 80, 100))
+            _0x458F.BackgroundColor3 = _0xE798 _0xE369.TextColor3 = _0xE798
+            _0xBC73 = 0 _0xC358 = 0
+        end
+    end))
+    local _0x643E = Instance.new("Frame")
+    _0x643E.Size = UDim2.new(1, -176, 1, -16) _0x643E.Position = UDim2.new(0, 168, 0, 8)
+    _0x643E.BackgroundColor3 = _0x7CB3.BtnBg _0x643E.BackgroundTransparency = 0.7
+    _0x643E.BorderSizePixel = 0 _0x643E.Parent = _0xAD95
+    _0xE1D1(_0x643E, 10) _0x80E5(_0x643E, _0x7CB3.Stroke, 1.5, 0)
+    local _0xAE53 = Instance.new("TextButton")
+    _0xAE53.Size = UDim2.fromOffset(24, 24) _0xAE53.Position = UDim2.new(1, -30, 0, 6)
+    _0xAE53.BackgroundTransparency = 1 _0xAE53.Font = Enum.Font.GothamBold _0xAE53.Text = "X"
+    _0xAE53.TextSize = 14 _0xAE53.TextColor3 = _0x7CB3.Text _0xAE53.AutoButtonColor = false _0xAE53.Parent = _0xAD95
+    _0xAE53.MouseButton1Click:Connect(function() _0xAD95.Visible = false end)
+    local _0xB8C8 = false dS = nil dP = nil
+    _0xAD95.InputBegan:Connect(function(_0xAE2A)
+        if _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 then
+            _0xB8C8 = true dS = _0xAE2A.Position dP = _0xAD95.Position
+        end
+    end)
+    _0x55FF.Track(_0xA548.InputChanged:Connect(function(_0xAE2A)
+        if _0xB8C8 and _0xAE2A.UserInputType == Enum.UserInputType.MouseMovement then
+            local _0x270D = _0xAE2A.Position - dS
+            _0xAD95.Position = UDim2.new(dP.X.Scale, dP.X.Offset + _0x270D.X, dP.Y.Scale, dP.Y.Offset + _0x270D.Y)
+        end
+    end))
+    _0x55FF.Track(_0xA548.InputEnded:Connect(function(_0xAE2A)
+        if _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 then _0xB8C8 = false end
+    end))
+    for _, _0x8E0F in ipairs(_0xA7E9) do
+        local _0x9649 = Instance.new("ScrollingFrame")
+        _0x9649.Size = UDim2.new(1, -16, 1, -16) _0x9649.Position = UDim2.new(0, 8, 0, 8)
+        _0x9649.BackgroundTransparency = 1 _0x9649.BorderSizePixel = 0
+        _0x9649.ScrollBarThickness = 3 _0x9649.ScrollBarImageColor3 = _0x7CB3.Accent
+        _0x9649.CanvasSize = UDim2.new(0, 0, 0, 0)
+        _0x9649.AutomaticCanvasSize = Enum.AutomaticSize.Y _0x9649.Visible = false _0x9649.Parent = _0x643E
+        local _0x2900 = Instance.new("UIListLayout")
+        _0x2900.Padding = UDim.new(0, 4) _0x2900.SortOrder = Enum.SortOrder.LayoutOrder _0x2900.Parent = _0x9649
+        local _0xB680 = Instance.new("UIPadding")
+        _0xB680.PaddingTop = UDim.new(0, 4) _0xB680.PaddingBottom = UDim.new(0, 6) _0xB680.PaddingRight = UDim.new(0, 4) _0xB680.Parent = _0x9649
+        _0xB457.TabContents[_0x8E0F] = _0x9649
+    end
+    function _0xB457.SelectTab(_0x8E0F)
+        if _0xB457.CurrentTab then
+            local _0xBADE = _0x6207[_0xB457.CurrentTab]
+            if _0xBADE then _0xFB97:Create(_0xBADE, TweenInfo.new(0.2), {BackgroundColor3 = _0x7CB3.BtnBg, BackgroundTransparency = 0.4, TextColor3 = _0x7CB3.TextMuted}):Play() end
+        end
+        _0xB457.CurrentTab = _0x8E0F
+        local _0x2EAC = _0x6207[_0x8E0F]
+        if _0x2EAC then
+            _0x2EAC.BackgroundColor3 = _0x7CB3.Accent
+            _0xFB97:Create(_0x2EAC, TweenInfo.new(0.2), {BackgroundTransparency = 0.1, TextColor3 = _0x7CB3.Text}):Play()
+        end
+        for _0xB877, _0x3A4B in pairs(_0xB457.TabContents) do _0x3A4B.Visible = (_0xB877 == _0x8E0F) end
+    end
+    for _0x8E0F, _0x2EAC in pairs(_0x6207) do _0x2EAC.MouseButton1Click:Connect(function() _0xB457.SelectTab(_0x8E0F) end) end
+    pcall(function() _0xB457.BuildVisualsTab(_0xB457.TabContents["Visuals"]) end)
+    pcall(function() _0xB457.BuildCombatTab(_0xB457.TabContents["Combat"]) end)
+    pcall(function() _0xB457.BuildSilentTab(_0xB457.TabContents["Silent"]) end)
+    pcall(function() _0xB457.BuildTriggerTab(_0xB457.TabContents["Trigger"]) end)
+    pcall(function() _0xB457.BuildModsTab(_0xB457.TabContents["Mods"]) end)
+    pcall(function() _0xB457.BuildConfigTab(_0xB457.TabContents["Config"]) end)
+    _0xB457.SelectTab("Visuals")
+end
+
+function _0xB457.Unload()
+    _0x1996.ShuttingDown = true
+    _0x2D8B.Active = false
+    if _0x2D8B.UninstallHook then pcall(_0x2D8B.UninstallHook) end
+    pcall(function() _0x1996.Unbind() end)
+    pcall(function() _0x1996.UnbindViewFOV() end)
+    pcall(function() _0x1996.RestorePostFX() end)
+    pcall(function() _0xDC48() end)
+    pcall(function() _0xE5C4.DisableFPSBoost() end)
     pcall(function()
-        local _0x113v64_0x69v43Players.LocalPlayer
-        _0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23 then
-            local _0xe7v97_0x69v43_0x69v43Character:FindFirstChildOfClass("\084\111\111\108")
-            _0x69v43t _0x69v43 _0x69v43_0x69v43Enabled then_0x69v43Enabled_0x69v43true _0x69v43
-            local _0x1f0v25_0x69v43_0x69v43Character:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-            _0x69v43_0x69v43 then
-                pcall(function_0x69v43_0x69v43.AutoRotate_0x69v43true _0x69v43)
-                pcall(function_0x69v43_0x69v43:SetStateEnabled(Enum.HumanoidStateType.Freefall, true) _0x69v43)
-                pcall(function_0x69v43_0x69v43:SetStateEnabled(Enum.HumanoidStateType.Running, true) _0x69v43)
-                pcall(function_0x69v43_0x69v43:SetStateEnabled(Enum.HumanoidStateType.Jumping, true) _0x69v43)
-            _0x69v43
-            _0x69v43CameraAssist._neckJoint _0x69v43 _0x1e4v40._neckC0 then
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        if _0x1A90 and _0x1A90.Character then
+            local _0xD871 = _0x1A90.Character:FindFirstChildOfClass("Tool")
+            if _0xD871 and not _0xD871.Enabled then _0xD871.Enabled = true end
+            local _0x44C9 = _0x1A90.Character:FindFirstChildOfClass("Humanoid")
+            if _0x44C9 then
+                pcall(function() _0x44C9.AutoRotate = true end)
+                pcall(function() _0x44C9:SetStateEnabled(Enum.HumanoidStateType.Freefall, true) end)
+                pcall(function() _0x44C9:SetStateEnabled(Enum.HumanoidStateType.Running, true) end)
+                pcall(function() _0x44C9:SetStateEnabled(Enum.HumanoidStateType.Jumping, true) end)
+            end
+            if _0x1996._neckJoint and _0x1996._neckC0 then
                 pcall(function()
-                    _0x69v43CameraAssist._neckJoint.Parent then
-                        _0x1e4v40._neckJoint_0x69v43_0x69v43CameraAssist._neckC0
-                    _0x69v43
-                _0x69v43)
-            _0x69v43
-            _0x1e4v40._neckJoint_0x69v43_0x69v43 _0x1e4v40._neckC0_0x69v43_0x69v43
-        _0x69v43
-    _0x69v43)
-    pcall(function_0x69v43Connections.DisconnectAll_0x69v43_0x69v43)
-    _0x110v81.VisualsEnabled_0x69v43false
-    _0x110v81.CameraAssistEnabled_0x69v43false
-    _0x110v81.AutoFireEnabled_0x69v43false
+                    if _0x1996._neckJoint.Parent then
+                        _0x1996._neckJoint.C0 = _0x1996._neckC0
+                    end
+                end)
+            end
+            _0x1996._neckJoint = nil _0x1996._neckC0 = nil
+        end
+    end)
+    pcall(function() _0x55FF.DisconnectAll() end)
+    _0x77AD.VisualsEnabled = false
+    _0x77AD.CameraAssistEnabled = false
+    _0x77AD.AutoFireEnabled = false
     pcall(function()
-        _0x69v43 _0x69v43v_0x69v43 pairs(_0x1b8v63.Objects) do
-            _0x69v43v then
-                _0x69v43v.Container then pcall(function_0x69v43v.Container:Destroy_0x69v43_0x69v43) _0x69v43
-                _0x69v43v._0x3c3v87 then
-                    _0x69v43 _0x69v43l_0x69v43 ipairs_0x69v43SkeletonLines) _0x69v43_0x69v43l then pcall(function_0x69v43l:Destroy_0x69v43_0x69v43) _0x69v43 _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-        _0x1b8v63.Objects = {}
-    _0x69v43)
+        for _, _0x8C41 in pairs(_0xD16E.Objects) do
+            if _0x8C41 then
+                if _0x8C41.Container then pcall(function() _0x8C41.Container:Destroy() end) end
+                if _0x8C41.SkeletonLines then
+                    for _, _0x104C in ipairs(_0x8C41.SkeletonLines) do if _0x104C then pcall(function() _0x104C:Destroy() end) end end
+                end
+            end
+        end
+        _0xD16E.Objects = {}
+    end)
     pcall(function()
-        _0x69v43Visuals.Container then _0x1b8v63.Container:Destroy_0x69v43_0x69v43
-        _0x1b8v63.Container_0x69v43_0x69v43
-    _0x69v43)
-    pcall(function_0x69v43FOVCircle.Destroy_0x69v43_0x69v43)
-    pcall(function_0x69v43_0x69v43Interface.ScreenGui then _0x283v55.ScreenGui:Destroy_0x69v43_0x69v43 _0x69v43)
-    pcall(function_0x69v43saveActiveProfile_0x69v43_0x69v43)
-    pcall(function_0x69v43Configuration:Save_0x69v43_0x69v43)
+        if _0xD16E.Container then _0xD16E.Container:Destroy() end
+        _0xD16E.Container = nil
+    end)
+    pcall(function() _0xA3FC.Destroy() end)
+    pcall(function() if _0xB457.ScreenGui then _0xB457.ScreenGui:Destroy() end end)
+    pcall(function() _0x9CA3() end)
+    pcall(function() _0x77AD:Save() end)
     pcall(function()
-        local _0xeav74_0x69v43safeGuiParent()
-        _0x69v43_0x69v43 then
-            _0x69v43 _0x69v43g_0x69v43 ipairs(_0x69v43:GetChildren()) do
-                local _0xd6v18_0x69v43g._0x36bv95
-                _0x69v43n == "\086\069\073\076\095\083\116\097\114\116\117\112"_0x69v43 _0xd6v18 == "\086\069\073\076\095\087\097\116\101\114\109\097\114\107"_0x69v43 _0xd6v18 == "\086\069\073\076\095\068\105\115\099\111\114\100"
-                    _0x69v43n == "\086\069\073\076\095\080\114\101\109\105\117\109"_0x69v43 _0xd6v18 == "\086\069\073\076\095\077\111\098\105\108\101\079\118\101\114\108\097\121"_0x69v43 _0xd6v18 == "\086\069\073\076\095\080\105\099\107\101\114"
-                    _0x69v43n == "\086\069\073\076\095\067\114\111\115\115\104\097\105\114"_0x69v43 _0xd6v18 == "\086\069\073\076\095\075\101\121\085\073"_0x69v43 _0xd6v18 == "\086\069\073\076\095\080\111\112\117\112"
-                    _0x69v43n == "\086\069\073\076\095\085\073"_0x69v43 _0xd6v18 == "\086\069\073\076\095\086\105\115\117\097\108\115"_0x69v43 _0xd6v18 == "\086\069\073\076\095\070\079\086" then
-                    pcall(function_0x69v43g:Destroy_0x69v43_0x69v43)
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-_0x69v43
+        local _0x14E4 = _0xB27C()
+        if _0x14E4 then
+            for _, _0x8377 in ipairs(_0x14E4:GetChildren()) do
+                local _0xB877 = _0x8377.Name
+                if _0xB877 == "VEIL_Startup" or _0xB877 == "VEIL_Watermark" or _0xB877 == "VEIL_Discord"
+                    or _0xB877 == "VEIL_Premium" or _0xB877 == "VEIL_MobileOverlay" or _0xB877 == "VEIL_Picker"
+                    or _0xB877 == "VEIL_Crosshair" or _0xB877 == "VEIL_KeyUI" or _0xB877 == "VEIL_Popup"
+                    or _0xB877 == "VEIL_UI" or _0xB877 == "VEIL_Visuals" or _0xB877 == "VEIL_FOV" then
+                    pcall(function() _0x8377:Destroy() end)
+                end
+            end
+        end
+    end)
+end
 
+-- ============================================================
+-- Mobile overlay
+-- ============================================================
+local _0x453F = nil
+local _0x1FFE = function() if _0xB457.MainFrame then _0xB457.MainFrame.Visible = not _0xB457.MainFrame.Visible end end
+if _0x9A4D.isMobile then
+    local _0x14E4 = _0xB27C()
+    if _0x14E4 then
+        local _0xFA03 = Instance.new("ScreenGui")
+        _0xFA03.Name = "VEIL_MobileOverlay" _0xFA03.ResetOnSpawn = false _0xFA03.IgnoreGuiInset = true
+        _0xFA03.ZIndexBehavior = Enum.ZIndexBehavior.Sibling _0xFA03.DisplayOrder = 50
+        pcall(function() _0xFA03.Parent = _0x14E4 end)
+        local function _0x2146(_0x4BFF, text, px, py, size, _0xE798)
+            local _0x2EAC = Instance.new("TextButton")
+            _0x2EAC.Name = _0x4BFF _0x2EAC.AnchorPoint = Vector2.new(0.5, 0.5)
+            _0x2EAC.Size = UDim2.fromOffset(size, size) _0x2EAC.Position = UDim2.new(px, 0, py, 0)
+            _0x2EAC.BackgroundColor3 = _0xE798 _0x2EAC.BackgroundTransparency = 0.35 _0x2EAC.BorderSizePixel = 0
+            _0x2EAC.Font = Enum.Font.GothamBold _0x2EAC.TextSize = math.floor(size * 0.22)
+            _0x2EAC.TextColor3 = Color3.fromRGB(255, 255, 255) _0x2EAC.Text = text
+            _0x2EAC.TextStrokeTransparency = 0.5 _0x2EAC.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+            _0x2EAC.AutoButtonColor = false _0x2EAC.Parent = _0xFA03
+            local _0x3A4B = Instance.new("UICorner") _0x3A4B.CornerRadius = UDim.new(0.5, 0) _0x3A4B.Parent = _0x2EAC
+            return _0x2EAC
+        end
+        local _0x74F4 = _0x2146("Aim", "AIM", 0.88, 0.55, 100, Color3.fromRGB(220, 60, 90))
+        local _0x1D79 = _0x2146("Menu", "MENU", 0.12, 0.10, 70, Color3.fromRGB(99, 102, 241))
+        _0x74F4.InputBegan:Connect(function(_0xAE2A)
+            if _0xAE2A.UserInputType == Enum.UserInputType.Touch or _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 then _0x1996.KeyHeld = true end
+        end)
+        _0x74F4.InputEnded:Connect(function(_0xAE2A)
+            if _0xAE2A.UserInputType == Enum.UserInputType.Touch or _0xAE2A.UserInputType == Enum.UserInputType.MouseButton1 then _0x1996.KeyHeld = false end
+        end)
+        _0x1D79.MouseButton1Click:Connect(_0x1FFE)
+        _0x453F = _0xFA03
+    end
+    _0x77AD.CameraAssistUseMouseWhileLocking = false
+    _0x77AD.CameraAssistSmoothing = 10
+    _0x77AD.CameraAssistFOV = 30
+end
 
-
-
-local _0x2c7v21_0x69v43_0x69v43
-local _0x2c8v36_0x69v43function_0x69v43_0x69v43Interface.MainFrame then _0x283v55.MainFrame.Visible_0x69v43_0x69v43 _0x283v55.MainFrame._0x3d0v23 _0x69v43 _0x69v43
-_0x69v43DeviceInfo.isMobile then
-    local _0xeav74_0x69v43safeGuiParent()
-    _0x69v43_0x69v43 then
-        local _0x11av28_0x69v43Instance._0x69v43("\083\099\114\101\101\110\071\117\105")
-        _0x69v43Name_0x69v43"\086\069\073\076\095\077\111\098\105\108\101\079\118\101\114\108\097\121"_0x69v43.ResetOnSpawn_0x69v43false_0x69v43.IgnoreGuiInset_0x69v43true
-        _0x69v43ZIndexBehavior_0x69v43Enum.ZIndexBehavior.Sibling_0x69v43.DisplayOrder_0x69v4350
-        pcall(function_0x69v43_0x69v43Parent_0x69v43_0x69v43 _0x69v43)
-        local function _0xd2v42(_0x79v33, _0x6cv32, _0xd3v90, _0xd4v52, _0x6ev56, _0xaav64)
-            local _0x286v53_0x69v43Instance._0x69v43("\084\101\120\116\066\117\116\116\111\110")
-            _0x286v53.Name_0x69v43name_0x69v43AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-            _0x286v53.Size_0x69v43UDim2.fromOffset(_0x6ev56, size_0x69v43.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43, py_0x69v43)
-            _0x286v53.BackgroundColor3_0x69v43_0x69v43_0x69v43BackgroundTransparency_0x69v430_0x69v43_0x69v43BorderSizePixel_0x69v430
-            _0x286v53.Font_0x69v43Enum.Font.GothamBold_0x69v43TextSize_0x69v43math.floor(size_0x69v430_0x69v43)
-            _0x286v53.TextColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43.Text_0x69v43text
-            _0x286v53.TextStrokeTransparency_0x69v43_0x69v43_0x69v43TextStrokeColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v430)
-            _0x286v53.AutoButtonColor_0x69v43false_0x69v43Parent_0x69v43sg
-            local _0x127v13_0x69v43Instance._0x69v43("\085\073\067\111\114\110\101\114"_0x69v43.CornerRadius_0x69v43UDim._0x69v43_0x69v43_0x69v43_0x69v43c.Parent_0x69v43b
-            return _0x286v53
-        _0x69v43
-        local _0x2c9v42_0x69v43_0x69v43"\065\105\109", "\065\073\077"_0x69v43_0x69v43_0x69v43_0x69v43, _0x69v43, Color3.fromRGB(_0x69v43, (0x1e + 0x1e), (0x2d + 0x2d)))
-        local _0x2cav68_0x69v43_0x69v43"\077\101\110\117", "\077\069\078\085"_0x69v43_0x69v43_0x69v43_0x69v43, (0x23 + 0x23), Color3.fromRGB_0x69v43, _0x69v43, _0x69v43))
-        _0x69v43InputBegan:Connect(function(_0x90v85)
-            _0x69v43input.UserInputType == Enum.UserInputType.Touch_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.MouseButton1 then _0x1e4v40.KeyHeld_0x69v43true _0x69v43
-        _0x69v43)
-        _0x69v43InputEnded:Connect(function(_0x90v85)
-            _0x69v43input.UserInputType == Enum.UserInputType.Touch_0x69v43 _0x90v85.UserInputType == Enum.UserInputType.MouseButton1 then _0x1e4v40.KeyHeld_0x69v43false _0x69v43
-        _0x69v43)
-        _0x69v43MouseButton1Click:Connect(_0x2c8v36)
- _0x2c7v21_0x69v43sg
-    _0x69v43
-    _0x110v81.CameraAssistUseMouseWhileLocking_0x69v43false
-    _0x110v81.CameraAssistSmoothing_0x69v4310
-    _0x110v81.CameraAssistFOV_0x69v4330
-_0x69v43
-
-
-
-
-local _0x2cbv92 = {
-    "\102\108\097\115\104", "\098\108\105\110\100", "\100\097\109\097\103\101", "\104\105\116\109\097\114\107", "\104\105\116\095", "\095\104\105\116", "\098\108\111\111\100",
-    "\114\101\100\102\108\097\115\104", "\119\104\105\116\101\102\108\097\115\104", "\103\114\101\110\097\100\101", "\102\108\097\115\104\098\097\110\103", "\099\111\110\099\117\115\115\105\111\110",
-    "\111\118\101\114\108\097\121", "\118\105\103\110\101\116\116\101", "\104\117\114\116", "\100\109\103",
+-- ============================================================
+-- Anti-Flash
+-- ============================================================
+local _0xF82F = {
+    "flash", "blind", "damage", "hitmark", "hit_", "_hit", "blood",
+    "redflash", "whiteflash", "grenade", "flashbang", "concussion",
+    "overlay", "vignette", "hurt", "dmg",
 }
-local function _0xd5v76(_0xd6v18)
-    _0x69v43_0x69v43_0x69v43then return false _0x69v43
-    local _0x193v63_0x69v43n:lower()
-    _0x69v43 _0x69v43p_0x69v43 ipairs(_0x2cbv92) _0x69v43_0x69v43l:find(_0x69v43then return true _0x69v43 _0x69v43
+local function _0x300B(_0xB877)
+    if not _0xB877 then return false end
+    local _0x104C = _0xB877:lower()
+    for _, _0x938C in ipairs(_0xF82F) do if _0x104C:find(_0x938C) then return true end end
     return false
-_0x69v43
-local function _0xd7v32()
-    local _0x2ccv17 = { killedFX_0x69v43setmetatable({}, {__mode_0x69v43"\107"}), _0x3f9v13 = {}, _0x3fav83_0x69v43_0x69v43 }
-    local function _0xd8v81(_0xd9v87)
-        _0x69v43_0x69v43 _0x110v81.AntiFlashEnabled_0x69v43 _0x69v43 inst_0x69v43 _0x69v43 _0xd9v87.Parent then return _0x69v43
-        _0x69v43inst:_0x69v43("\067\111\108\111\114\067\111\114\114\101\099\116\105\111\110\069\102\102\101\099\116") _0x69v43inst:_0x69v43("\066\114\105\103\104\116\110\101\115\115\069\102\102\101\099\116")
-            _0x69v43inst:_0x69v43("\066\108\117\114\069\102\102\101\099\116") _0x69v43inst:_0x69v43("\068\101\112\116\104\079\102\070\105\101\108\100\069\102\102\101\099\116") then
-            _0x69v43inst._0x36bv95 == "\086\069\073\076\095\078\105\103\104\116\086\105\115\105\111\110" then return _0x69v43
-            local _0x2cdv90_0x69v43nameIsFlashy(_0xd9v87._0x36bv95)
-            _0x69v43_0x69v43 _0x2cdv90 _0x69v43 _0xd9v87:_0x69v43("\067\111\108\111\114\067\111\114\114\101\099\116\105\111\110\069\102\102\101\099\116") then
-                if (_0xd9v87.Brightness_0x69v43 0) > 0_0x69v43 then flashy_0x69v43true _0x69v43
-                local _0x1a1v66_0x69v43inst.TintColor
-                _0x69v43_0x69v43_0x69v43_0x69v43.R_0x69v430_0x69v43 _0x69v43_0x69v43.G_0x69v430_0x69v43 _0x69v43_0x69v43.B_0x69v430_0x69v43 _0x69v43 (_0xd9v87.Enabled ~= false) then flashy_0x69v43true _0x69v43
-            _0x69v43
-            _0x69v43_0x69v43 _0x2cdv90 _0x69v43 _0xd9v87:_0x69v43("\066\114\105\103\104\116\110\101\115\115\069\102\102\101\099\116") _0x69v43 (_0xd9v87.Brightness_0x69v43 0) > 0_0x69v43 then flashy_0x69v43true _0x69v43
-            _0x69v43flashy then pcall(function_0x69v43inst.Enabled_0x69v43false _0x69v43) _0x2ccv17.killedFX[_0xd9v87] = true _0x69v43
-        _0x69v43
-    _0x69v43
-    _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0xf1v69:GetChildren()) _0x69v43killLighting_0x69v43) _0x69v43
-    table.insert(_0x2ccv17._0x3f9v13, _0xf1v69.DescendantAdded:Connect(function(_0xdav39)
-        _0x69v43_0x69v43 _0x110v81._0x341v68 then return _0x69v43
-        task.defer(function_0x69v43killLighting_0x69v43) _0x69v43)
-    _0x69v43))
-    _0x2ccv17.sweepTask_0x69v43task.spawn(function()
-        while _0x69v43 _0x1e4v40.ShuttingDown_0x69v43
-            task.wait_0x69v4333_0x69v43RATE_MULT)
-            _0x69v43_0x69v43 _0x110v81._0x341v68 then continue _0x69v43
-            _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0xf1v69:GetChildren()) _0x69v43killLighting_0x69v43) _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43__VEIL_AntiFlash_0x69v43AntiFlash
-_0x69v43
+end
+local function _0xDAC4()
+    local _0xB361 = { killedFX = setmetatable({}, {__mode = "k"}), conns = {}, sweepTask = nil }
+    local function _0xEFF8(inst)
+        if not _0x77AD.AntiFlashEnabled or not inst or not inst.Parent then return end
+        if inst:IsA("ColorCorrectionEffect") or inst:IsA("BrightnessEffect")
+            or inst:IsA("BlurEffect") or inst:IsA("DepthOfFieldEffect") then
+            if inst.Name == "VEIL_NightVision" then return end
+            local _0xA6E8 = _0x300B(inst.Name)
+            if not _0xA6E8 and inst:IsA("ColorCorrectionEffect") then
+                if (inst.Brightness or 0) > 0.35 then _0xA6E8 = true end
+                local _0x9C04 = inst.TintColor
+                if _0x9C04 and _0x9C04.R > 0.85 and _0x9C04.G > 0.85 and _0x9C04.B > 0.85 and (inst.Enabled ~= false) then _0xA6E8 = true end
+            end
+            if not _0xA6E8 and inst:IsA("BrightnessEffect") and (inst.Brightness or 0) > 0.25 then _0xA6E8 = true end
+            if _0xA6E8 then pcall(function() inst.Enabled = false end) _0xB361.killedFX[inst] = true end
+        end
+    end
+    for _, ch in ipairs(_0x18A8:GetChildren()) do _0xEFF8(ch) end
+    table.insert(_0xB361.conns, _0x18A8.DescendantAdded:Connect(function(ch)
+        if not _0x77AD.AntiFlashEnabled then return end
+        task.defer(function() _0xEFF8(ch) end)
+    end))
+    _0xB361.sweepTask = task.spawn(function()
+        while not _0x1996.ShuttingDown do
+            task.wait(0.33 * _0x7C2F)
+            if not _0x77AD.AntiFlashEnabled then continue end
+            for _, ch in ipairs(_0x18A8:GetChildren()) do _0xEFF8(ch) end
+        end
+    end)
+    _G.__VEIL_AntiFlash = _0xB361
+end
 
-
-
-
-local function _0xdbv81()
-    _0x69v43_0x69v43__VEIL_INITIALIZED then return _0x69v43
-    _0x69v43__VEIL_INITIALIZED_0x69v43true
-    pcall(function_0x69v43Configuration:Load_0x69v43_0x69v43)
-    _0x69v43Configuration._0x34fv85 _0x69v43 _0xfcv64.InstallHook then
-        pcall(_0xfcv64.InstallHook)
-    _0x69v43
-    local _0x246v32_0x69v43detectWeapon()
-    _0x69v43Configuration._0x32cv76 _0x69v43 _0x110v81._0x32bv78 then
- _0x182v69_0x69v43_0x69v43_0x69v43 "\068\101\102\097\117\108\116"
-        _0x7fv34(_0x182v69)
+-- ============================================================
+-- Initialize
+-- ============================================================
+local function _0xDFD4()
+    if _G.__VEIL_INITIALIZED then return end
+    _G.__VEIL_INITIALIZED = true
+    pcall(function() _0x77AD:Load() end)
+    if _0x77AD.SilentAimEnabled and _0x2D8B.InstallHook then
+        pcall(_0x2D8B.InstallHook)
+    end
+    local _0xD108 = _0x11FD()
+    if _0x77AD.WeaponProfilesEnabled and _0x77AD.WeaponAutoDetect then
+        _0x51E5 = _0xD108 or "Default"
+        _0xA561(_0x51E5)
     else
- _0x182v69_0x69v43"\068\101\102\097\117\108\116"
-    _0x69v43
-    _0x283v55.Create()
-    _0x1acv64.Ensure()
-    _0x69v43Configuration._0x342v13 then pcall(_0x27bv64.EnableFPSBoost) _0x69v43
-    pcall(_0xd7v32)
-    _0x69v43Configuration._0x33dv34 then pcall(_0x9av70) _0x69v43
-    _0x1e4v40.InitFocusTracking()
-    _0x1e4v40.Bind()
-    pcall(_0x1e4v40.BindViewFOV)
-    _0x69v43__VEIL_BindDeferred_0x69v43function()
-        _0x69v43CameraAssist.Bound then return _0x69v43
-        _0x1e4v40.Bind()
-        pcall(_0x1e4v40.BindViewFOV)
-    _0x69v43
-    _0x69v43__VEIL_Weapon = {
- _0x3fbv83_0x69v43function_0x69v43return _0x182v69 _0x69v43, _0x3fcv41_0x69v43function(_0x79v33) saveActiveProfile_0x69v43ActiveWeaponName_0x69v43name _0x7fv34(_0x79v33) _0x69v43,
+        _0x51E5 = "Default"
+    end
+    _0xB457.Create()
+    _0xA3FC.Ensure()
+    if _0x77AD.FPSBoostEnabled then pcall(_0xE5C4.EnableFPSBoost) end
+    pcall(_0xDAC4)
+    if _0x77AD.NightVisionEnabled then pcall(_0x6ADF) end
+    _0x1996.InitFocusTracking()
+    _0x1996.Bind()
+    pcall(_0x1996.BindViewFOV)
+    _G.__VEIL_BindDeferred = function()
+        if _0x1996.Bound then return end
+        _0x1996.Bind()
+        pcall(_0x1996.BindViewFOV)
+    end
+    _G.__VEIL_Weapon = {
+        get = function() return _0x51E5 end,
+        set = function(_0x4BFF) _0x9CA3() _0x51E5 = _0x4BFF _0xA561(_0x4BFF) end,
     }
-    _0x18fv80.Track(_0x69v43.InputBegan:Connect(function(_0x90v85)
-        local _0x2cev83_0x69v43false
-        _0x69v43Configuration._0x347v62 == "\077\111\117\115\101" then
- _0x2cev83_0x69v43input.UserInputType == _0x110v81._0x349v81
+    _0x55FF.Track(_0xA548.InputBegan:Connect(function(_0xAE2A)
+        local _0x73FD = false
+        if _0x77AD.MenuBindType == "Mouse" then
+            _0x73FD = _0xAE2A.UserInputType == _0x77AD.MenuMouseButton
         else
- _0x2cev83_0x69v43input.UserInputType == Enum.UserInputType.Keyboard _0x69v43 _0x90v85.KeyCode == _0x110v81._0x348v88
-        _0x69v43
-        _0x69v43_0x69v43 _0x2cev83 then return _0x69v43
-        _0x69v43Interface.MainFrame then _0x283v55.MainFrame.Visible_0x69v43_0x69v43 _0x283v55.MainFrame._0x3d0v23 _0x69v43
-    _0x69v43))
-    _0x18fv80.Track(_0x69v43.InputBegan:Connect(function(_0x90v85)
-        _0x69v43Configuration._0x335v14 == "\077\111\117\115\101" then
-            _0x69v43input.UserInputType == _0x110v81._0x337v21 then _0x248v55.KeyHeld_0x69v43true _0x69v43
+            _0x73FD = _0xAE2A.UserInputType == Enum.UserInputType.Keyboard and _0xAE2A.KeyCode == _0x77AD.MenuKey
+        end
+        if not _0x73FD then return end
+        if _0xB457.MainFrame then _0xB457.MainFrame.Visible = not _0xB457.MainFrame.Visible end
+    end))
+    _0x55FF.Track(_0xA548.InputBegan:Connect(function(_0xAE2A)
+        if _0x77AD.AutoFireBindType == "Mouse" then
+            if _0xAE2A.UserInputType == _0x77AD.AutoFireMouseButton then _0x034E.KeyHeld = true end
         else
-            _0x69v43input.UserInputType == Enum.UserInputType.Keyboard _0x69v43 _0x90v85.KeyCode == _0x110v81._0x336v83 then _0x248v55.KeyHeld_0x69v43true _0x69v43
-        _0x69v43
-    _0x69v43))
-    _0x18fv80.Track(_0x69v43.InputEnded:Connect(function(_0x90v85)
-        _0x69v43Configuration._0x335v14 == "\077\111\117\115\101" then
-            _0x69v43input.UserInputType == _0x110v81._0x337v21 then _0x248v55.KeyHeld_0x69v43false _0x69v43
+            if _0xAE2A.UserInputType == Enum.UserInputType.Keyboard and _0xAE2A.KeyCode == _0x77AD.AutoFireKeyCode then _0x034E.KeyHeld = true end
+        end
+    end))
+    _0x55FF.Track(_0xA548.InputEnded:Connect(function(_0xAE2A)
+        if _0x77AD.AutoFireBindType == "Mouse" then
+            if _0xAE2A.UserInputType == _0x77AD.AutoFireMouseButton then _0x034E.KeyHeld = false end
         else
-            _0x69v43input.UserInputType == Enum.UserInputType.Keyboard _0x69v43 _0x90v85.KeyCode == _0x110v81._0x336v83 then _0x248v55.KeyHeld_0x69v43false _0x69v43
-        _0x69v43
-    _0x69v43))
-    _0x18fv80.Track(_0xeev16.PlayerRemoving:Connect(function(_0xdcv26)
-        _0x1b8v63.OnPlayerRemoving(_0xdcv26)
-        _0x190v27.ClearTeamCache(_0xdcv26)
-    _0x69v43))
-    _0x18fv80.Track(_0xefv37.RenderStepped:Connect(function()
-        _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-        _0x69v43Configuration.VisualsEnabled_0x69v43 next(_0x1b8v63.Objects) ~= _0x69v43 then
-            pcall(function_0x69v43Visuals.Step_0x69v43_0x69v43)
-        _0x69v43
-        _0x69v43Configuration.CameraAssistDrawFOV_0x69v43 _0x110v81._0x353v42 then
-            pcall(function_0x69v43FOVCircle.Update_0x69v43_0x69v43)
-        _0x69v43
-    _0x69v43))
-    local _0x2cfv21 = {}
-    local function _0xddv46(_0x79v33, _0xdev83, _0xdfv21) _0x69v43name] = { rate_0x69v43rate_0x69v43RATE_MULT, _0x2dfv68_0x69v43_0x69v43_0xdfv21_0x69v43fn_0x69v43_0x69v43
-    _0x69v43("\115\105\108\101\110\116\095\102\108\097\103"_0x69v43, function()
-        _0xfcv64.Active_0x69v43Configuration._0x34fv85
-            _0x69v43 _0x1e4v40.Lock ~= _0x69v43
-            _0x69v43 _0x1e4v40.Lock._0x3a8v23 ~= _0x69v43
-            _0x69v43 _0x1e4v40.Lock._0x3a8v23.Parent ~= _0x69v43
-    _0x69v43)
-    _0x69v43("\105\110\112\117\116\095\114\101\099\111\110\099\105\108\101"_0x69v43, function()
-        _0x69v43_0x69v43 _0x1e4v40.KeyHeld _0x69v43 _0x69v43 _0x248v55.KeyHeld then return _0x69v43
-        _0x69v43CameraAssist.KeyHeld then
-            local _0x2d0v12_0x69v43false
-            _0x69v43Configuration._0x34av13 == "\077\111\117\115\101" then
-                pcall(function_0x69v43stillHeld_0x69v43_0x69v43:IsMouseButtonPressed(_0x110v81._0x34bv15) _0x69v43)
+            if _0xAE2A.UserInputType == Enum.UserInputType.Keyboard and _0xAE2A.KeyCode == _0x77AD.AutoFireKeyCode then _0x034E.KeyHeld = false end
+        end
+    end))
+    _0x55FF.Track(_0xE1FF.PlayerRemoving:Connect(function(_0x938C)
+        _0xD16E.OnPlayerRemoving(_0x938C)
+        _0xC036.ClearTeamCache(_0x938C)
+    end))
+    _0x55FF.Track(_0xB932.RenderStepped:Connect(function()
+        if _0x1996.ShuttingDown then return end
+        if _0x77AD.VisualsEnabled or next(_0xD16E.Objects) ~= nil then
+            pcall(function() _0xD16E.Step() end)
+        end
+        if _0x77AD.CameraAssistDrawFOV or _0x77AD.SilentAimDrawFOV then
+            pcall(function() _0xA3FC.Update() end)
+        end
+    end))
+    local _0x4816 = {}
+    local function _0x67F3(_0x4BFF, _0x245B, fn) _0x4816[_0x4BFF] = { _0x245B = _0x245B * _0x7C2F, _0x905F = 0, fn = fn } end
+    _0x67F3("silent_flag", 0, function()
+        _0x2D8B.Active = _0x77AD.SilentAimEnabled
+            and _0x1996.Lock ~= nil
+            and _0x1996.Lock.Character ~= nil
+            and _0x1996.Lock.Character.Parent ~= nil
+    end)
+    _0x67F3("input_reconcile", 0, function()
+        if not _0x1996.KeyHeld and not _0x034E.KeyHeld then return end
+        if _0x1996.KeyHeld then
+            local _0x025D = false
+            if _0x77AD.AimBindType == "Mouse" then
+                pcall(function() _0x025D = _0xA548:IsMouseButtonPressed(_0x77AD.AimMouseButton) end)
             else
-                pcall(function_0x69v43stillHeld_0x69v43_0x69v43:IsKeyDown(_0x110v81._0x34cv82) _0x69v43)
-            _0x69v43
-            _0x69v43_0x69v43 _0x2d0v12 then _0x1e4v40.KeyHeld_0x69v43false _0x69v43
-        _0x69v43
-        _0x69v43AutoFire.KeyHeld then
-            local _0x2d0v12_0x69v43false
-            _0x69v43Configuration._0x335v14 == "\077\111\117\115\101" then
-                pcall(function_0x69v43stillHeld_0x69v43_0x69v43:IsMouseButtonPressed(_0x110v81._0x337v21) _0x69v43)
+                pcall(function() _0x025D = _0xA548:IsKeyDown(_0x77AD.AimKeyCode) end)
+            end
+            if not _0x025D then _0x1996.KeyHeld = false end
+        end
+        if _0x034E.KeyHeld then
+            local _0x025D = false
+            if _0x77AD.AutoFireBindType == "Mouse" then
+                pcall(function() _0x025D = _0xA548:IsMouseButtonPressed(_0x77AD.AutoFireMouseButton) end)
             else
-                pcall(function_0x69v43stillHeld_0x69v43_0x69v43:IsKeyDown(_0x110v81._0x336v83) _0x69v43)
-            _0x69v43
-            _0x69v43_0x69v43 _0x2d0v12 then _0x248v55.KeyHeld_0x69v43false _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43("\097\117\116\111\102\105\114\101"_0x69v43, function()
-        _0x69v43_0x69v43 _0x110v81._0x32fv13 then return _0x69v43
-        _0x248v55.CheckAndFire()
-    _0x69v43)
-    _0x69v43("\102\101\097\116\117\114\101\097\112\112\108\121"_0x69v43_0x69v43, function()
-        _0x9dv23("\097\105\109\108\111\099\107", { enabled_0x69v43Configuration._0x358v55, _0x3fcv41 = { CameraAssistUseMouseWhileLocking_0x69v43false } })
-        _0x9dv23("\114\097\103\101\098\111\116", { enabled_0x69v43Configuration._0x359v49, _0x3fcv41 = { CameraAssistSmoothing_0x69v43_0x69v43_0x317v57_0x69v4365 } })
-        _0x9dv23("\114\097\112\105\100\102\105\114\101", { enabled_0x69v43Configuration._0x35av47, _0x3fcv41 = { AutoFireDelay_0x69v430_0x69v43 } })
-        _0x9dv23("\097\099\099\117\114\097\099\121", { enabled = (_0x110v81.MaxAccuracyEnabled_0x69v43 _0x110v81.NoSpreadEnabled_0x69v43_0x3fcv41 = { CameraAssistBulletSpeed_0x69v433000, _0x31fv18_0x69v43true } })
-    _0x69v43)
-    _0x69v43("\115\112\105\110\098\111\116"_0x69v43_0x69v43, function()
-        local _0x113v64_0x69v43Players.LocalPlayer
-        local _0x1cfv54_0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23 _0x69v43_0x69v43._0x3a8v23:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-        _0x69v43_0x69v43_0x69v43 then return _0x69v43
-        local _0x2d1v29_0x69v43_0x69v43FindFirstChild("\086\069\073\076\095\083\112\105\110\071\121\114\111")
-        _0x69v43Configuration._0x35dv18 _0x69v43 _0x69v43 _0x1e4v40.Lock then
-            _0x69v43_0x69v43 _0x2d1v29 then
- _0x2d1v29_0x69v43Instance._0x69v43("\066\111\100\121\071\121\114\111")
-                _0x2d1v29.Name_0x69v43"\086\069\073\076\095\083\112\105\110\071\121\114\111" _0x2d1v29.MaxTorque_0x69v43Vector3._0x69v43(_0x69v4310e20_0x69v43)
-                _0x2d1v29.P_0x69v43_0x69v43 _0x2d1v29.D_0x69v43_0x69v43 _0x2d1v29.Parent_0x69v43my
-                _0x2d1v29.CFrame_0x69v43_0x69v43CFrame
-            _0x69v43
-            _0x2d1v29.CFrame_0x69v43gyro.CFrame_0x69v43CFrame.Angles(_0x69v43math._0x69v43_0x69v43_0x69v430)
-        elseif _0x2d1v29 then _0x2d1v29:Destroy_0x69v43_0x69v43
-    _0x69v43)
-    local _0x2d2v29_0x69v430
-    _0x18fv80.Track(_0x69v43.JumpRequest:Connect(function_0x69v43infJumpStamp_0x69v43tick_0x69v43_0x69v43))
-    _0x69v43("\105\110\102\106\117\109\112"_0x69v43_0x69v43, function()
-        _0x69v43_0x69v43 _0x110v81._0x362v52 then return _0x69v43
-        local _0x113v64_0x69v43Players.LocalPlayer
-        local _0x1f0v25_0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23 _0x69v43_0x69v43._0x3a8v23:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-        _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-        local _0x2d3v99_0x69v43_0x69v43:IsKeyDown(Enum.KeyCode.Space)
-        _0x69v43_0x69v43 _0x2d3v99 _0x69v43 (tick() - _0x2d2v29) > 0_0x69v43 then return _0x69v43
-        pcall(function_0x69v43_0x69v43:ChangeState(Enum.HumanoidStateType.Jumping) _0x69v43)
-        pcall(function_0x69v43_0x69v43.Jump_0x69v43true _0x69v43)
-    _0x69v43)
-    local _0x2d4v82 = {}
-    local _0x2d5v63_0x69v43false
-    _0x69v43("\110\111\099\108\105\112"_0x69v43_0x69v43, function()
-        local _0x113v64_0x69v43Players.LocalPlayer
-        local _0x184v96_0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23
-        _0x69v43_0x69v43 _0x184v96 then _0x2d4v82 = {} noclipWasOn_0x69v43false return _0x69v43
-        local _0x2d6v49_0x69v43Configuration.NoclipEnabled_0x69v43 _0x110v81._0x361v78
-        _0x69v43wantNoclip then
- _0x2d5v63_0x69v43true
-            _0x69v43Configuration._0x361v78 then _0x110v81.FlyEnabled_0x69v43true _0x69v43
-            _0x69v43 _0x69v43p_0x69v43 ipairs(_0x184v96:GetDescendants()) do
-                _0x69v43p:_0x69v43("\066\097\115\101\080\097\114\116") _0x69v43 _0x69v43 _0x2d4v82[_0x69v43then _0x2d4v82[_0xdcv26] = _0xdcv26.CanCollide_0x69v43CanCollide_0x69v43false _0x69v43
-            _0x69v43
-        elseif _0x2d5v63 then
-            _0x69v43 _0x3cav51, state_0x69v43 pairs(_0x2d4v82) _0x69v43pcall(function_0x69v43part.CanCollide_0x69v43state _0x69v43) _0x69v43
- _0x2d4v82 = {} noclipWasOn_0x69v43false
-        _0x69v43
-    _0x69v43)
-    local _0x2d7v73 = {}
-    local _0x2d8v33_0x69v43_0x69v43
-    local _0x2d9v87_0x69v43_0x69v43
-    _0x69v43("\099\104\097\109\115"_0x69v43_0x69v43, function()
-        local _0x113v64_0x69v43Players.LocalPlayer
-        local _0x184v96_0x69v43_0x69v43_0x69v43_0x69v43._0x3a8v23
-        local _0x185v38_0x69v43char _0x69v43 _0x184v96:FindFirstChildOfClass("\084\111\111\108")
-        _0x69v43_0x69v43 _0x110v81._0x35fv45 then
-            _0x69v43chamsLastTool then
-                _0x69v43 _0x3cav51, data_0x69v43 pairs(_0x2d7v73) _0x69v43pcall(function_0x69v43part.Material_0x69v43data_0x69v43part.Color_0x69v43data_0x69v43_0x69v43) _0x69v43
- _0x2d7v73 = {} chamsLastTool_0x69v43_0x69v43 chamsLastColor_0x69v43_0x69v43
-            _0x69v43
+                pcall(function() _0x025D = _0xA548:IsKeyDown(_0x77AD.AutoFireKeyCode) end)
+            end
+            if not _0x025D then _0x034E.KeyHeld = false end
+        end
+    end)
+    _0x67F3("autofire", 0, function()
+        if not _0x77AD.AutoFireEnabled then return end
+        _0x034E.CheckAndFire()
+    end)
+    _0x67F3("featureapply", 0.15, function()
+        _0xDC8F("aimlock", { enabled = _0x77AD.AimLockEnabled, set = { CameraAssistUseMouseWhileLocking = false } })
+        _0xDC8F("ragebot", { enabled = _0x77AD.RagebotEnabled, set = { CameraAssistSmoothing = 0, CameraAssistFOV = 65 } })
+        _0xDC8F("rapidfire", { enabled = _0x77AD.RapidFireEnabled, set = { AutoFireDelay = 0.01 } })
+        _0xDC8F("accuracy", { enabled = (_0x77AD.MaxAccuracyEnabled or _0x77AD.NoSpreadEnabled), set = { CameraAssistBulletSpeed = 3000, CameraAssistPrediction = true } })
+    end)
+    _0x67F3("spinbot", 0.05, function()
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        local _0xE174 = _0x1A90 and _0x1A90.Character and _0x1A90.Character:FindFirstChild("HumanoidRootPart")
+        if not _0xE174 then return end
+        local _0x6916 = _0xE174:FindFirstChild("VEIL_SpinGyro")
+        if _0x77AD.SpinbotEnabled and not _0x1996.Lock then
+            if not _0x6916 then
+                _0x6916 = Instance.new("BodyGyro")
+                _0x6916.Name = "VEIL_SpinGyro" _0x6916.MaxTorque = Vector3.new(0, 10e20, 0)
+                _0x6916.P = 1e6 _0x6916.D = 1e5 _0x6916.Parent = _0xE174
+                _0x6916.CFrame = _0xE174.CFrame
+            end
+            _0x6916.CFrame = _0x6916.CFrame * CFrame.Angles(0, math.rad(25), 0)
+        elseif _0x6916 then _0x6916:Destroy() end
+    end)
+    local _0xA5E2 = 0
+    _0x55FF.Track(_0xA548.JumpRequest:Connect(function() _0xA5E2 = tick() end))
+    _0x67F3("infjump", 0.05, function()
+        if not _0x77AD.InfJumpEnabled then return end
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        local _0x44C9 = _0x1A90 and _0x1A90.Character and _0x1A90.Character:FindFirstChildOfClass("Humanoid")
+        if not _0x44C9 then return end
+        local _0xB090 = _0xA548:IsKeyDown(Enum.KeyCode.Space)
+        if not _0xB090 and (tick() - _0xA5E2) > 0.15 then return end
+        pcall(function() _0x44C9:ChangeState(Enum.HumanoidStateType.Jumping) end)
+        pcall(function() _0x44C9.Jump = true end)
+    end)
+    local _0x924F = {}
+    local _0x7357 = false
+    _0x67F3("noclip", 0.15, function()
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        local _0xE895 = _0x1A90 and _0x1A90.Character
+        if not _0xE895 then _0x924F = {} _0x7357 = false return end
+        local _0xF184 = _0x77AD.NoclipEnabled or _0x77AD.FlyNoclipEnabled
+        if _0xF184 then
+            _0x7357 = true
+            if _0x77AD.FlyNoclipEnabled then _0x77AD.FlyEnabled = true end
+            for _, _0x938C in ipairs(_0xE895:GetDescendants()) do
+                if _0x938C:IsA("BasePart") and not _0x924F[_0x938C] then _0x924F[_0x938C] = _0x938C.CanCollide _0x938C.CanCollide = false end
+            end
+        elseif _0x7357 then
+            for _0x7AA7, state in pairs(_0x924F) do pcall(function() _0x7AA7.CanCollide = state end) end
+            _0x924F = {} _0x7357 = false
+        end
+    end)
+    local _0xED98 = {}
+    local _0x6B0D = nil
+    local _0xC4E0 = nil
+    _0x67F3("chams", 0.08, function()
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        local _0xE895 = _0x1A90 and _0x1A90.Character
+        local _0x9EEE = _0xE895 and _0xE895:FindFirstChildOfClass("Tool")
+        if not _0x77AD.ViewmodelChamsEnabled then
+            if _0x6B0D then
+                for _0x7AA7, _0x67E3 in pairs(_0xED98) do pcall(function() _0x7AA7.Material = _0x67E3.m _0x7AA7.Color = _0x67E3.c end) end
+                _0xED98 = {} _0x6B0D = nil _0xC4E0 = nil
+            end
             return
-        _0x69v43
-        local _0x2dav12_0x69v43VEILUI._0x3b3v27
-        _0x69v43tool _0x69v43 _0x185v38 ~= _0x2d8v33 then
-            _0x69v43 _0x3cav51, data_0x69v43 pairs(_0x2d7v73) _0x69v43pcall(function_0x69v43part.Material_0x69v43data_0x69v43part.Color_0x69v43data_0x69v43_0x69v43) _0x69v43
- _0x2d7v73 = {} chamsLastTool_0x69v43tool chamsLastColor_0x69v43targetColor
-            _0x69v43 _0x69v43p_0x69v43 ipairs(_0x185v38:GetDescendants()) do
-                _0x69v43p:_0x69v43("\066\097\115\101\080\097\114\116") then
-                    _0x2d7v73[_0xdcv26] = { m_0x69v43p.Material_0x69v43_0x69v43p.Color }
-                    _0xdcv26.Material_0x69v43Enum.Material.Neon
-                    _0xdcv26.Color_0x69v43targetColor
-                _0x69v43
-            _0x69v43
-        elseif _0x185v38 _0x69v43 _0x2d9v87 ~= _0x2dav12 then
- _0x2d9v87_0x69v43targetColor
-            _0x69v43 part_0x69v43_0x69v43 pairs(_0x2d7v73) do
-                _0x69v43part.Parent then pcall(function_0x69v43part.Color_0x69v43targetColor _0x69v43) _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    local _0x2dbv89_0x69v43false
-    _0x69v43("\115\107\121"_0x69v43._0x69v43function()
-        local _0x2dcv19_0x69v43Configuration._0x360v89
-        _0x69v43want == _0x2dbv89 then return _0x69v43
- _0x2dbv89_0x69v43want
-        _0x69v43want then
-            _0x69v43_0x69v43 _0xf1v69:FindFirstChild("\086\069\073\076\095\083\107\121") then
-                local _0x2ddv62_0x69v43Instance._0x69v43("\083\107\121")
-                _0x69v43.Name_0x69v43"\086\069\073\076\095\083\107\121"
-                _0x69v43.SkyboxBk_0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\049\053\057\052\053\052\050\057\057" _0x69v43.SkyboxDn_0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\049\053\057\052\053\052\050\057\054"
-                _0x69v43.SkyboxFt_0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\049\053\057\052\053\052\050\057\051" _0x69v43.SkyboxLf_0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\049\053\057\052\053\052\050\056\054"
-                _0x69v43.SkyboxRt_0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\049\053\057\052\053\052\051\048\048" _0x69v43.SkyboxUp_0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\049\053\057\052\053\052\050\056\056"
-                _0x69v43.Parent_0x69v43Lighting
-            _0x69v43
+        end
+        local _0x6FFD = _0x7CB3.Accent
+        if _0x9EEE and _0x9EEE ~= _0x6B0D then
+            for _0x7AA7, _0x67E3 in pairs(_0xED98) do pcall(function() _0x7AA7.Material = _0x67E3.m _0x7AA7.Color = _0x67E3.c end) end
+            _0xED98 = {} _0x6B0D = _0x9EEE _0xC4E0 = _0x6FFD
+            for _, _0x938C in ipairs(_0x9EEE:GetDescendants()) do
+                if _0x938C:IsA("BasePart") then
+                    _0xED98[_0x938C] = { _0x4D37 = _0x938C.Material, _0x3A4B = _0x938C.Color }
+                    _0x938C.Material = Enum.Material.Neon
+                    _0x938C.Color = _0x6FFD
+                end
+            end
+        elseif _0x9EEE and _0xC4E0 ~= _0x6FFD then
+            _0xC4E0 = _0x6FFD
+            for _0x7AA7, _ in pairs(_0xED98) do
+                if _0x7AA7.Parent then pcall(function() _0x7AA7.Color = _0x6FFD end) end
+            end
+        end
+    end)
+    local _0x6513 = false
+    _0x67F3("sky", 1.0, function()
+        local _0x21A6 = _0x77AD.SkyChangerEnabled
+        if _0x21A6 == _0x6513 then return end
+        _0x6513 = _0x21A6
+        if _0x21A6 then
+            if not _0x18A8:FindFirstChild("VEIL_Sky") then
+                local _0x0E85 = Instance.new("Sky")
+                _0x0E85.Name = "VEIL_Sky"
+                _0x0E85.SkyboxBk = "rbxassetid://159454299" _0x0E85.SkyboxDn = "rbxassetid://159454296"
+                _0x0E85.SkyboxFt = "rbxassetid://159454293" _0x0E85.SkyboxLf = "rbxassetid://159454286"
+                _0x0E85.SkyboxRt = "rbxassetid://159454300" _0x0E85.SkyboxUp = "rbxassetid://159454288"
+                _0x0E85.Parent = _0x18A8
+            end
         else
-            local _0x2ddv62_0x69v43Lighting:FindFirstChild("\086\069\073\076\095\083\107\121")
-            _0x69v43_0x69v43 then _0x69v43:Destroy_0x69v43_0x69v43
-        _0x69v43
-    _0x69v43)
-    local _0x2dev82_0x69v43false
-    _0x69v43("\099\114\111\115\115\104\097\105\114"_0x69v43._0x69v43function()
-        local _0x2dcv19_0x69v43Configuration._0x366v24 _0x69v43 _0x110v81._0x367v66
-        _0x69v43want == _0x2dev82 then return _0x69v43
- _0x2dev82_0x69v43want
-        _0x69v43want then
-            local _0x11av28_0x69v43makeScreenGui("\086\069\073\076\095\067\114\111\115\115\104\097\105\114", _0x69v43, true)
-            _0x69v43_0x69v43then
-                local _0x149v51_0x69v43Instance._0x69v43("\070\114\097\109\101")
-                _0x149v51.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43) _0x149v51.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43)
-                _0x149v51.Size_0x69v43UDim2.fromOffset_0x69v43, (0xc + 0xc)) _0x149v51.BackgroundTransparency_0x69v431 _0x149v51.Parent_0x69v43sg
-                local function _0xe0v34(_0xe1v99, _0xe2v11, _0xe3v87, _0xe4v37)
-                    local _0xf3v49_0x69v43Instance._0x69v43("\070\114\097\109\101")
-                    _0xf3v49.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-                    _0xf3v49.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43offx_0x69v43._0x69v43offy)
-                    _0xf3v49.Size_0x69v43UDim2.fromOffset(sizex_0x69v43_0x69v43sizey_0x69v432)
-                    _0xf3v49.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43_0x69v43_0x69v43o.BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43group
-                    local _0x1a6v30_0x69v43Instance._0x69v43("\070\114\097\109\101")
-                    _0x1a6v30.AnchorPoint_0x69v43Vector2._0x69v43_0x69v43_0x69v43_0x69v43)
-                    _0x1a6v30.Position_0x69v43UDim2._0x69v43_0x69v43_0x69v43offx_0x69v43._0x69v43offy)
-                    _0x1a6v30.Size_0x69v43UDim2.fromOffset(_0xe3v87, _0xe4v37)
-                    _0x1a6v30.BackgroundColor3_0x69v43Color3.fromRGB(_0x69v43, _0x69v43, _0x69v43_0x69v43.BorderSizePixel_0x69v43_0x69v43.Parent_0x69v43group
-                _0x69v43
-                _0x69v43(0_0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43(_0x69v43_0x69v43_0x69v43_0x69v43) _0x69v43_0x69v43._0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v43_0x69v431)
-            _0x69v43
+            local _0x0E85 = _0x18A8:FindFirstChild("VEIL_Sky")
+            if _0x0E85 then _0x0E85:Destroy() end
+        end
+    end)
+    local _0x187F = false
+    _0x67F3("crosshair", 1.0, function()
+        local _0x21A6 = _0x77AD.CustomCrosshairEnabled and _0x77AD.IsPremium
+        if _0x21A6 == _0x187F then return end
+        _0x187F = _0x21A6
+        if _0x21A6 then
+            local _0xFA03 = _0xE472("VEIL_Crosshair", 150, true)
+            if _0xFA03 then
+                local _0x74DC = Instance.new("Frame")
+                _0x74DC.AnchorPoint = Vector2.new(0.5, 0.5) _0x74DC.Position = UDim2.new(0.5, 0, 0.5, 0)
+                _0x74DC.Size = UDim2.fromOffset(24, 24) _0x74DC.BackgroundTransparency = 1 _0x74DC.Parent = _0xFA03
+                local function _0xE383(offx, offy, sizex, sizey)
+                    local _0x5B5D = Instance.new("Frame")
+                    _0x5B5D.AnchorPoint = Vector2.new(0.5, 0.5)
+                    _0x5B5D.Position = UDim2.new(0.5, offx, 0.5, offy)
+                    _0x5B5D.Size = UDim2.fromOffset(sizex + 2, sizey + 2)
+                    _0x5B5D.BackgroundColor3 = Color3.fromRGB(0, 0, 0) _0x5B5D.BorderSizePixel = 0 _0x5B5D.Parent = _0x74DC
+                    local _0x9236 = Instance.new("Frame")
+                    _0x9236.AnchorPoint = Vector2.new(0.5, 0.5)
+                    _0x9236.Position = UDim2.new(0.5, offx, 0.5, offy)
+                    _0x9236.Size = UDim2.fromOffset(sizex, sizey)
+                    _0x9236.BackgroundColor3 = Color3.fromRGB(255, 255, 255) _0x9236.BorderSizePixel = 0 _0x9236.Parent = _0x74DC
+                end
+                _0xE383(0, -4.5, 1, 6) _0xE383(0, 4.5, 1, 6) _0xE383(-4.5, 0, 6, 1) _0xE383(4.5, 0, 6, 1)
+            end
         else
-            local _0xeav74_0x69v43safeGuiParent()
-            _0x69v43_0x69v43 then
-                _0x69v43 _0x69v43g_0x69v43 ipairs(_0x69v43:GetChildren()) do
-                    _0x69v43g._0x36bv95 == "\086\069\073\076\095\067\114\111\115\115\104\097\105\114" then pcall(function_0x69v43g:Destroy_0x69v43_0x69v43) _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43("\101\115\112\118\105\115"_0x69v43_0x69v43, function()
-        _0x69v43_0x69v43 _0x110v81._0x35ev14 then return _0x69v43
-        local _0x1d6v37_0x69v43Configuration.BoxColorMap_0x69v43 {}
-        _0x69v43 _0x69v43_0x69v43_0x69v43pairs(_0x1b8v63.Objects) do
-            _0x69v43_0x69v43Player _0x69v43_0x69v43._0x3a8v23 _0x69v43_0x69v43._0x3bcv22 then
-                local _0x19cv79, _0x3cav51_0x69v43Utility.GetHitboxPosition_0x69v43._0x3a8v23, "\072\101\097\100")
-                _0x69v43_0x69v43 then
-                    local _0x1dav15_0x69v43Utility.IsPositionVisible(_0x69v43_0x69v43_0x69v43Character_0x69v43tostring_0x69v43._0x3c4v55.UserId_0x69v43part)
-                    _0x69v43Stroke.Color_0x69v43_0x69v43 _0x69v43 Color3.fromRGB_0x69v43, _0x69v43, _0x69v43) or (_0x69v43[_0x110v81._0x304v72] _0x69v43Color3.fromRGB(_0x69v43, _0x69v43, (0x1e + 0x1e)))
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43("\104\105\116\115\111\117\110\100\115"_0x69v43._0x69v43function()
-        _0x69v43_0x69v43 _0x110v81.HitSoundsEnabled_0x69v43 _0x69v43 _0x110v81._0x367v66 then return _0x69v43
-        local _0x100v77_0x69v43CameraAssist.Lock
-        _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43.Player_0x69v43 _0x69v43_0x69v43._0x3a8v23 then return _0x69v43
-        local _0x1f0v25_0x69v43_0x69v43Character:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-        _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-        local _0xa5v89_0x69v43"\086\069\073\076\095\072\080\095" .. tostring_0x69v43._0x3c4v55._0x3aav40)
-        local _0x2dfv68_0x69v43_0x69v43_0x69v43]
-        _0x69v43last _0x69v43 _0x69v43.Health_0x69v43last then
-            local _0x2e0v79 = (_0x110v81.HitSoundMap_0x69v43 {})[_0x110v81.HitSoundChoice_0x69v43 "\086\105\110\101\032\066\111\111\109"] _0x69v43"\114\098\120\097\115\115\101\116\105\100\058\047\047\054\051\048\056\054\048\054\049\049\054"
+            local _0x14E4 = _0xB27C()
+            if _0x14E4 then
+                for _, _0x8377 in ipairs(_0x14E4:GetChildren()) do
+                    if _0x8377.Name == "VEIL_Crosshair" then pcall(function() _0x8377:Destroy() end) end
+                end
+            end
+        end
+    end)
+    _0x67F3("espvis", 0.12, function()
+        if not _0x77AD.ESPTargetVisEnabled then return end
+        local _0xB12A = _0x77AD.BoxColorMap or {}
+        for _, _0x34B6 in pairs(_0xD16E.Objects) do
+            if _0x34B6.Player and _0x34B6.Character and _0x34B6.Stroke then
+                local _0x3694, _0x7AA7 = _0xC036.GetHitboxPosition(_0x34B6.Character, "Head")
+                if _0x3694 then
+                    local _0xC2AA = _0xC036.IsPositionVisible(_0x3694, {_0x34B6.Character}, tostring(_0x34B6.Player.UserId), _0x7AA7)
+                    _0x34B6.Stroke.Color = _0xC2AA and Color3.fromRGB(80, 220, 130) or (_0xB12A[_0x77AD.BoxColor] or Color3.fromRGB(255, 100, 60))
+                end
+            end
+        end
+    end)
+    _0x67F3("hitsounds", 0.2, function()
+        if not _0x77AD.HitSoundsEnabled or not _0x77AD.IsPremium then return end
+        local _0x3135 = _0x1996.Lock
+        if not _0x3135 or not _0x3135.Player or not _0x3135.Character then return end
+        local _0x44C9 = _0x3135.Character:FindFirstChildOfClass("Humanoid")
+        if not _0x44C9 then return end
+        local _0x6260 = "VEIL_HP_" .. tostring(_0x3135.Player.UserId)
+        local _0x905F = _G[_0x6260]
+        if _0x905F and _0x44C9.Health < _0x905F then
+            local _0x3E54 = (_0x77AD.HitSoundMap or {})[_0x77AD.HitSoundChoice or "Vine Boom"] or "rbxassetid://6308606116"
             pcall(function()
-                local _0x2e1v39_0x69v43Instance._0x69v43("\083\111\117\110\100")
-                _0x69v43.SoundId_0x69v43soundId _0x69v43.Volume_0x69v43_0x69v43 _0x69v43.Parent_0x69v43game:GetService("\083\111\117\110\100\083\101\114\118\105\099\101")
-                _0x69v43:Play()
-                task.delay(_0x69v43function_0x69v43pcall(function_0x69v43_0x69v43:Destroy_0x69v43_0x69v43) _0x69v43)
-            _0x69v43)
-        _0x69v43
-        _0x69v43_0x69v43] = _0x69v43.Health
-    _0x69v43)
-    _0x69v43("\104\105\116\098\111\120"_0x69v43._0x69v43function()
-        _0x69v43_0x69v43 _0x110v81._0x33ev54 then
-            local _0x113v64_0x69v43Players.LocalPlayer
-            _0x69v43_0x69v43_0x69v43 then return _0x69v43
-            _0x69v43 _0x69v43p_0x69v43 ipairs(_0xeev16:GetPlayers()) do
-                _0x69v43p ~= _0x69v43_0x69v43_0x69v43Character _0x69v43_0x69v43Character.Parent then
-                    _0x69v43 _0x69v43n_0x69v43 ipairs({"\072\101\097\100","\085\112\112\101\114\084\111\114\115\111","\076\111\119\101\114\084\111\114\115\111","\084\111\114\115\111","\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116"_0x69v43do
-                        local _0x1fav37_0x69v43p._0x3a8v23:FindFirstChild(_0xd6v18)
-                        _0x69v43part _0x69v43 _0x3cav51:_0x69v43("\066\097\115\101\080\097\114\116") then
-                            local _0x2e2v58_0x69v43part:GetAttribute("\086\069\073\076\095\079\114\105\103\083\105\122\101")
-                            _0x69v43orig _0x69v43 _0x3cav51._0x3ddv15 ~= _0x2e2v58 then pcall(function_0x69v43part.Size_0x69v43orig _0x69v43) _0x69v43
-                        _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
+                local _0x1642 = Instance.new("Sound")
+                _0x1642.SoundId = _0x3E54 _0x1642.Volume = 0.5 _0x1642.Parent = game:GetService("SoundService")
+                _0x1642:Play()
+                task.delay(2, function() pcall(function() _0x1642:Destroy() end) end)
+            end)
+        end
+        _G[_0x6260] = _0x44C9.Health
+    end)
+    _0x67F3("hitbox", 0.4, function()
+        if not _0x77AD.HitboxExpanderEnabled then
+            local _0x1A90 = _0xE1FF.LocalPlayer
+            if not _0x1A90 then return end
+            for _, _0x938C in ipairs(_0xE1FF:GetPlayers()) do
+                if _0x938C ~= _0x1A90 and _0x938C.Character and _0x938C.Character.Parent then
+                    for _, _0xB877 in ipairs({"Head","UpperTorso","LowerTorso","Torso","HumanoidRootPart"}) do
+                        local _0x7AA7 = _0x938C.Character:FindFirstChild(_0xB877)
+                        if _0x7AA7 and _0x7AA7:IsA("BasePart") then
+                            local _0x3639 = _0x7AA7:GetAttribute("VEIL_OrigSize")
+                            if _0x3639 and _0x7AA7.Size ~= _0x3639 then pcall(function() _0x7AA7.Size = _0x3639 end) end
+                        end
+                    end
+                end
+            end
             return
-        _0x69v43
-        local _0x113v64_0x69v43Players.LocalPlayer
-        _0x69v43_0x69v43_0x69v43 then return _0x69v43
-        _0x69v43 _0x69v43p_0x69v43 ipairs(_0xeev16:GetPlayers()) do
-            _0x69v43p ~= _0x69v43_0x69v43_0x69v43Character _0x69v43_0x69v43Character.Parent then
-                _0x69v43 _0x69v43part_name_0x69v43 ipairs({"\072\101\097\100", "\085\112\112\101\114\084\111\114\115\111", "\076\111\119\101\114\084\111\114\115\111", "\084\111\114\115\111", "\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116"_0x69v43do
-                    local _0x1fav37_0x69v43p._0x3a8v23:FindFirstChild(part_name)
-                    _0x69v43part _0x69v43 _0x3cav51:_0x69v43("\066\097\115\101\080\097\114\116") then
-                        _0x69v43_0x69v43 _0x3cav51:GetAttribute("\086\069\073\076\095\079\114\105\103\083\105\122\101") then _0x3cav51:SetAttribute("\086\069\073\076\095\079\114\105\103\083\105\122\101", _0x3cav51._0x3ddv15) _0x69v43
-                        local _0x2e2v58_0x69v43part:GetAttribute("\086\069\073\076\095\079\114\105\103\083\105\122\101")
-                        local _0x2e3v64_0x69v43orig * (_0x110v81.HitboxExpanderSize_0x69v43_0x69v435)
-                        _0x69v43part._0x3ddv15 ~= _0x2e3v64 then pcall(function_0x69v43part.Size_0x69v43target _0x69v43) _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43("\110\111\114\101\099\111\105\108"_0x69v43_0x69v43, function()
-        _0x69v43_0x69v43 _0x110v81._0x340v82 then return _0x69v43
-        local _0x113v64_0x69v43Players.LocalPlayer
-        _0x69v43_0x69v43_0x69v43_0x69v43 _0x69v43_0x69v43._0x3a8v23 then return _0x69v43
-        local _0x184v96_0x69v43_0x69v43Character
-        local _0x1f0v25_0x69v43char:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-        _0x69v43_0x69v43 _0x69v43 then return _0x69v43
-        _0x69v43_0x69v43.CameraOffset.Magnitude_0x69v430._0x69v43 then
-            pcall(function_0x69v43_0x69v43.CameraOffset_0x69v43Vector3.zero _0x69v43)
-        _0x69v43
-        local _0x185v38_0x69v43char:FindFirstChildOfClass("\084\111\111\108")
-        _0x69v43tool then
-            _0x69v43 _0x69v43_0x69v43_0x69v43ipairs(_0x185v38:GetChildren()) do
-                _0x69v43_0x69v43_0x69v43("\078\117\109\098\101\114\086\097\108\117\101") then
-                    local _0xd6v18_0x69v43_0x69v43Name:lower()
-                    _0x69v43n:find("\114\101\099\111\105\108") _0x69v43n:find("\107\105\099\107") _0x69v43n:find("\115\112\114\101\097\100") _0x69v43n:find("\115\104\097\107\101") then
-                        _0x69v43_0x69v43Value ~= 0 then pcall(function_0x69v43_0x69v43Value_0x69v430 _0x69v43) _0x69v43
-                    _0x69v43
-                elseif_0x69v43:_0x69v43("\086\101\099\116\111\114\051\086\097\108\117\101") then
-                    local _0xd6v18_0x69v43_0x69v43Name:lower()
-                    _0x69v43n:find("\114\101\099\111\105\108") _0x69v43n:find("\107\105\099\107") _0x69v43n:find("\115\104\097\107\101") then
-                        _0x69v43_0x69v43Value.Magnitude_0x69v430 then pcall(function_0x69v43_0x69v43Value_0x69v43Vector3.zero _0x69v43) _0x69v43
-                    _0x69v43
-                _0x69v43
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    local _0x2e4v95 = { Tool_0x69v43_0x69v43, _0x3fdv96_0x69v43false, _0x3fev33_0x69v43false, _0x3ffv95_0x69v43false, _0x400v21_0x69v43_0x69v43, _0x401v87_0x69v43_0x69v43, _0x402v37_0x69v43_0x69v43 }
-    local _0x2e5v82_0x69v43Instance._0x69v43("\066\111\100\121\086\101\108\111\099\105\116\121")
-    _0x2e5v82.Name_0x69v43"\086\069\073\076\095\070\108\121\066\086" _0x2e5v82.MaxForce_0x69v43Vector3._0x69v43(math.huge, math.huge, math.huge)
-    _0x2e5v82.P_0x69v4310000 _0x2e5v82.Parent_0x69v43_0x69v43
-    _0x69v43("\102\108\121\115\112\101\101\100"_0x69v43_0x69v43, function()
-        local _0x113v64_0x69v43Players.LocalPlayer
-        _0x69v43_0x69v43_0x69v43 then return _0x69v43
-        local _0x184v96_0x69v43_0x69v43Character
-        _0x69v43_0x69v43 char_0x69v43 _0x69v43 _0x184v96.Parent then
-            _0x2e5v82.Parent_0x69v43_0x69v43 _0x2e4v95.Tool_0x69v43_0x69v43 _0x2e4v95.WasForcing_0x69v43false
-            _0x2e4v95.StatesDisabled_0x69v43false _0x2e4v95.SpeedApplied_0x69v43false
-            _0x69v43FlyState._0x402v37 then pcall(function_0x69v43FlyState._0x402v37:Destroy_0x69v43_0x69v43) _0x2e4v95.Boost_0x69v43_0x69v43 _0x69v43
+        end
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        if not _0x1A90 then return end
+        for _, _0x938C in ipairs(_0xE1FF:GetPlayers()) do
+            if _0x938C ~= _0x1A90 and _0x938C.Character and _0x938C.Character.Parent then
+                for _, part_name in ipairs({"Head", "UpperTorso", "LowerTorso", "Torso", "HumanoidRootPart"}) do
+                    local _0x7AA7 = _0x938C.Character:FindFirstChild(part_name)
+                    if _0x7AA7 and _0x7AA7:IsA("BasePart") then
+                        if not _0x7AA7:GetAttribute("VEIL_OrigSize") then _0x7AA7:SetAttribute("VEIL_OrigSize", _0x7AA7.Size) end
+                        local _0x3639 = _0x7AA7:GetAttribute("VEIL_OrigSize")
+                        local _0xF079 = _0x3639 * (_0x77AD.HitboxExpanderSize or 1.5)
+                        if _0x7AA7.Size ~= _0xF079 then pcall(function() _0x7AA7.Size = _0xF079 end) end
+                    end
+                end
+            end
+        end
+    end)
+    _0x67F3("norecoil", 0.08, function()
+        if not _0x77AD.NoRecoilEnabled then return end
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        if not _0x1A90 or not _0x1A90.Character then return end
+        local _0xE895 = _0x1A90.Character
+        local _0x44C9 = _0xE895:FindFirstChildOfClass("Humanoid")
+        if not _0x44C9 then return end
+        if _0x44C9.CameraOffset.Magnitude > 0.001 then
+            pcall(function() _0x44C9.CameraOffset = Vector3.zero end)
+        end
+        local _0x9EEE = _0xE895:FindFirstChildOfClass("Tool")
+        if _0x9EEE then
+            for _, ch in ipairs(_0x9EEE:GetChildren()) do
+                if ch:IsA("NumberValue") then
+                    local _0xB877 = ch.Name:lower()
+                    if _0xB877:find("recoil") or _0xB877:find("kick") or _0xB877:find("spread") or _0xB877:find("shake") then
+                        if ch.Value ~= 0 then pcall(function() ch.Value = 0 end) end
+                    end
+                elseif ch:IsA("Vector3Value") then
+                    local _0xB877 = ch.Name:lower()
+                    if _0xB877:find("recoil") or _0xB877:find("kick") or _0xB877:find("shake") then
+                        if ch.Value.Magnitude > 0 then pcall(function() ch.Value = Vector3.zero end) end
+                    end
+                end
+            end
+        end
+    end)
+    local _0x9799 = { Tool = nil, WasForcing = false, StatesDisabled = false, SpeedApplied = false, PreSpeed = nil, PreJump = nil, Boost = nil }
+    local _0xF647 = Instance.new("BodyVelocity")
+    _0xF647.Name = "VEIL_FlyBV" _0xF647.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+    _0xF647.P = 10000 _0xF647.Parent = nil
+    _0x67F3("flyspeed", 0.05, function()
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        if not _0x1A90 then return end
+        local _0xE895 = _0x1A90.Character
+        if not _0xE895 or not _0xE895.Parent then
+            _0xF647.Parent = nil _0x9799.Tool = nil _0x9799.WasForcing = false
+            _0x9799.StatesDisabled = false _0x9799.SpeedApplied = false
+            if _0x9799.Boost then pcall(function() _0x9799.Boost:Destroy() end) _0x9799.Boost = nil end
             return
-        _0x69v43
-        local _0x2e6v40_0x69v43char:FindFirstChild("\072\117\109\097\110\111\105\100\082\111\111\116\080\097\114\116")
-        local _0x1f0v25_0x69v43char:FindFirstChildOfClass("\072\117\109\097\110\111\105\100")
-        _0x69v43_0x69v43 _0x69v43_0x69v43 _0x69v43 _0x69v43 then _0x2e5v82.Parent_0x69v43_0x69v43 return _0x69v43
-        _0x69v43_0x69v43 _0x110v81._0x338v84 _0x69v43 _0x69v43 _0x110v81._0x33av40 _0x69v43 _0x69v43 _0x2e4v95._0x3fdv96 _0x69v43 _0x69v43 _0x2e4v95._0x3ffv95 _0x69v43 _0x2e5v82.Parent == _0x69v43 then return _0x69v43
-        local _0xcev69_0x69v43char:FindFirstChildOfClass("\084\111\111\108")
-        _0x69v43_0x69v43 then _0x2e4v95.Tool_0x69v43_0x69v43 _0x69v43
-        local _0x2e7v68_0x69v43Configuration._0x338v84
-        local _0x2e8v65_0x69v43Configuration._0x33av40
-        local _0x2e9v99_0x69v43flyA_0x69v43 _0x2e8v65
-        _0x69v43flyA then
-            _0x69v43FlyForward.Parent ~= _0x69v43 then _0x2e5v82.Parent_0x69v43_0x69v43 _0x69v43
-            local _0x102v57_0x69v43Workspace.CurrentCamera
-            local _0xbdv91, _0x1cfv54, _0x403v58_0x69v43_0x69v43_0x69v430
-            _0x69v43DeviceInfo.isMobile then
-                local _0x2ebv23_0x69v43_0x69v43.MoveDirection
-                _0x69v43_0x69v43_0x69v43_0x69v43.Magnitude_0x69v430_0x69v43 then_0x69v43_0x69v43_0x69v43X_0x69v43_0x69v430_0x69v43_0x69v43_0x69v43Z _0x69v43
+        end
+        local _0x0F19 = _0xE895:FindFirstChild("HumanoidRootPart")
+        local _0x44C9 = _0xE895:FindFirstChildOfClass("Humanoid")
+        if not _0x0F19 or not _0x44C9 then _0xF647.Parent = nil return end
+        if not _0x77AD.FlyEnabled and not _0x77AD.SpeedEnabled and not _0x9799.WasForcing and not _0x9799.SpeedApplied and _0xF647.Parent == nil then return end
+        local _0x7BF5 = _0xE895:FindFirstChildOfClass("Tool")
+        if _0x7BF5 then _0x9799.Tool = _0x7BF5 end
+        local _0x2AB7 = _0x77AD.FlyEnabled
+        local _0x04DD = _0x77AD.SpeedEnabled
+        local _0x193F = _0x2AB7 or _0x04DD
+        if _0x2AB7 then
+            if _0xF647.Parent ~= _0x0F19 then _0xF647.Parent = _0x0F19 end
+            local _0x7458 = _0x3BA1.CurrentCamera
+            local _0xA856, _0xE174, _0x0D19 = 0, 0, 0
+            if _0x9A4D.isMobile then
+                local _0x4EAD = _0x44C9.MoveDirection
+                if _0x4EAD and _0x4EAD.Magnitude > 0.01 then _0xA856 = _0x4EAD.X _0xE174 = 0 _0x0D19 = _0x4EAD.Z end
             else
-                _0x69v43_0x69v43:IsKeyDown(Enum.KeyCode._0x69v43then_0x69v43_0x69v43mz_0x69v431 _0x69v43
-                _0x69v43_0x69v43:IsKeyDown(Enum.KeyCode._0x69v43then_0x69v43_0x69v43mz_0x69v431 _0x69v43
-                _0x69v43_0x69v43:IsKeyDown(Enum.KeyCode._0x69v43then_0x69v43_0x69v43mx_0x69v431 _0x69v43
-                _0x69v43_0x69v43:IsKeyDown(Enum.KeyCode._0x69v43then_0x69v43_0x69v43mx_0x69v431 _0x69v43
-                _0x69v43_0x69v43:IsKeyDown(Enum.KeyCode.Space) then_0x69v43_0x69v43my_0x69v431 _0x69v43
-                _0x69v43_0x69v43:IsKeyDown(Enum.KeyCode.LeftControl) then_0x69v43_0x69v43my_0x69v431 _0x69v43
-            _0x69v43
-            local _0x2ebv23_0x69v43Vector3._0x69v43_0x69v43, _0x1cfv54, _0x403v58)
-            local _0x21ev21_0x69v43math.clamp(_0x110v81.FlySpeed_0x69v43_0x69v43, (0x5 + 0x5), (0x28 + 0x28))
-            local _0x20bv51_0x69v43base
-            _0x69v43_0x69v43 _0xf9v42.isMobile _0x69v43 _0x69v43:IsKeyDown(Enum.KeyCode.LeftShift) then_0x69v43_0x69v43base_0x69v43_0x69v43 _0x69v43
-            _0x69v43_0x69v43 _0x69v43_0x69v43.Magnitude_0x69v430 then
-                local _0x8bv25 = (_0x69v43.CFrame.LookVector * -_0x69v43Z_0x69v43_0x69v43.CFrame.RightVector_0x69v43_0x69v43X_0x69v43Vector3._0x69v43(_0x69v43_0x69v430) * _0x69v43Y)
-                _0x69v43_0x69v43.Magnitude_0x69v430 then _0x69v43_0x69v43_0x69v43.Unit _0x69v43
-                _0x2e5v82.Velocity_0x69v43FlyForward.Velocity:Lerp(_0x69v43_0x69v43sp_0x69v43_0x69v43)
+                if _0xA548:IsKeyDown(Enum.KeyCode.W) then _0x0D19 = _0x0D19 - 1 end
+                if _0xA548:IsKeyDown(Enum.KeyCode.S) then _0x0D19 = _0x0D19 + 1 end
+                if _0xA548:IsKeyDown(Enum.KeyCode.A) then _0xA856 = _0xA856 - 1 end
+                if _0xA548:IsKeyDown(Enum.KeyCode.D) then _0xA856 = _0xA856 + 1 end
+                if _0xA548:IsKeyDown(Enum.KeyCode.Space) then _0xE174 = _0xE174 + 1 end
+                if _0xA548:IsKeyDown(Enum.KeyCode.LeftControl) then _0xE174 = _0xE174 - 1 end
+            end
+            local _0x4EAD = Vector3.new(_0xA856, _0xE174, _0x0D19)
+            local _0x33FF = math.clamp(_0x77AD.FlySpeed or 50, 10, 80)
+            local _0xF894 = _0x33FF
+            if not _0x9A4D.isMobile and _0xA548:IsKeyDown(Enum.KeyCode.LeftShift) then _0xF894 = _0x33FF * 2.2 end
+            if _0x7458 and _0x4EAD.Magnitude > 0 then
+                local _0xB0D1 = (_0x7458.CFrame.LookVector * -_0x4EAD.Z + _0x7458.CFrame.RightVector * _0x4EAD.X + Vector3.new(0, 1, 0) * _0x4EAD.Y)
+                if _0xB0D1.Magnitude > 0 then _0xB0D1 = _0xB0D1.Unit end
+                _0xF647.Velocity = _0xF647.Velocity:Lerp(_0xB0D1 * _0xF894, 0.35)
             else
-                _0x2e5v82.Velocity_0x69v43FlyForward.Velocity_0x69v430_0x69v43
-            _0x69v43
+                _0xF647.Velocity = _0xF647.Velocity * 0.15
+            end
         else
-            _0x69v43FlyForward.Parent then _0x2e5v82.Velocity_0x69v43Vector3._0x69v43(_0x69v43_0x69v43_0x69v43FlyForward.Parent_0x69v43_0x69v43 _0x69v43
-        _0x69v43
-        _0x69v43spdA then
-            _0x69v43_0x69v43 _0x2e4v95._0x3ffv95 then
-                _0x2e4v95.PreSpeed_0x69v43_0x69v43.WalkSpeed
-                _0x2e4v95.PreJump_0x69v43_0x69v43.JumpPower
-                _0x2e4v95.SpeedApplied_0x69v43true
-                _0x2e4v95.Boost_0x69v43Instance._0x69v43("\066\111\100\121\086\101\108\111\099\105\116\121")
-                _0x2e4v95._0x402v37.Name_0x69v43"\086\069\073\076\095\083\112\101\101\100\066\111\111\115\116"
-                _0x2e4v95._0x402v37.MaxForce_0x69v43Vector3._0x69v43(_0x69v43_0x69v43, _0x69v43)
-                _0x2e4v95._0x402v37.P_0x69v431250
-                _0x2e4v95._0x402v37.Parent_0x69v43_0x69v43
-            _0x69v43
-            local _0x2ecv14_0x69v43math.clamp(_0x110v81.SpeedValue_0x69v43_0x69v43, (0x8 + 0x8), _0x69v43)
-            pcall(function_0x69v43_0x69v43.WalkSpeed_0x69v43target_ws _0x69v43)
-            pcall(function_0x69v43_0x69v43.JumpPower_0x69v43math._0x69v43(_0x69v43.JumpPower, (0x19 + 0x19)) _0x69v43)
-            _0x69v43FlyState._0x402v37 _0x69v43 _0x69v43 then
-                local _0x2ebv23_0x69v43_0x69v43.MoveDirection
-                _0x69v43_0x69v43_0x69v43_0x69v43.Magnitude_0x69v430_0x69v43 then
-                    _0x2e4v95._0x402v37.Velocity_0x69v43Vector3._0x69v43_0x69v43._0x69v43_0x69v43_0x69v43_0x69v43Unit * (target_ws_0x69v43_0x69v43)
+            if _0xF647.Parent then _0xF647.Velocity = Vector3.new(0, 0, 0) _0xF647.Parent = nil end
+        end
+        if _0x04DD then
+            if not _0x9799.SpeedApplied then
+                _0x9799.PreSpeed = _0x44C9.WalkSpeed
+                _0x9799.PreJump = _0x44C9.JumpPower
+                _0x9799.SpeedApplied = true
+                _0x9799.Boost = Instance.new("BodyVelocity")
+                _0x9799.Boost.Name = "VEIL_SpeedBoost"
+                _0x9799.Boost.MaxForce = Vector3.new(1e5, 0, 1e5)
+                _0x9799.Boost.P = 1250
+                _0x9799.Boost.Parent = _0x0F19
+            end
+            local _0x0ADB = math.clamp(_0x77AD.SpeedValue or 60, 16, 500)
+            pcall(function() _0x44C9.WalkSpeed = _0x0ADB end)
+            pcall(function() _0x44C9.JumpPower = math.max(_0x44C9.JumpPower, 50) end)
+            if _0x9799.Boost and _0x0F19 then
+                local _0x4EAD = _0x44C9.MoveDirection
+                if _0x4EAD and _0x4EAD.Magnitude > 0.01 then
+                    _0x9799.Boost.Velocity = Vector3.new(_0x4EAD.X, 0, _0x4EAD.Z).Unit * (_0x0ADB * 0.9)
                 else
-                    _0x2e4v95._0x402v37.Velocity_0x69v43Vector3._0x69v43(_0x69v43_0x69v430)
-                _0x69v43
-            _0x69v43
+                    _0x9799.Boost.Velocity = Vector3.new(0, 0, 0)
+                end
+            end
         else
-            _0x69v43FlyState._0x3ffv95 then
-                _0x69v43FlyState._0x400v21 then pcall(function_0x69v43_0x69v43.WalkSpeed_0x69v43FlyState._0x400v21 _0x69v43) _0x69v43
-                _0x69v43FlyState._0x401v87 then pcall(function_0x69v43_0x69v43.JumpPower_0x69v43FlyState._0x401v87 _0x69v43) _0x69v43
-                _0x69v43FlyState._0x402v37 then pcall(function_0x69v43FlyState._0x402v37:Destroy_0x69v43_0x69v43) _0x2e4v95.Boost_0x69v43_0x69v43 _0x69v43
-                _0x2e4v95.PreSpeed_0x69v43_0x69v43 _0x2e4v95.PreJump_0x69v43_0x69v43 _0x2e4v95.SpeedApplied_0x69v43false
-            _0x69v43
-        _0x69v43
-        _0x69v43forceRun then
-            _0x2e4v95.WasForcing_0x69v43true
-            local _0x128v45_0x69v43_0x69v43:GetState()
-            _0x69v43st ~= Enum.HumanoidStateType.Running _0x69v43_0x69v43 ~= Enum.HumanoidStateType.RunningNoPhysics then
-                pcall(function_0x69v43_0x69v43:ChangeState(Enum.HumanoidStateType.Running) _0x69v43)
-            _0x69v43
-            _0x69v43_0x69v43 _0x2e4v95._0x3fev33 then
-                _0x2e4v95.StatesDisabled_0x69v43true
-                pcall(function_0x69v43_0x69v43:SetStateEnabled(Enum.HumanoidStateType.Freefall, false) _0x69v43)
-            _0x69v43
-            _0x69v43FlyState.Tool _0x69v43 _0x2e4v95.Tool.Parent ~= _0x184v96 _0x69v43 (_0x69v43 _0x2e4v95.Tool.Parent_0x69v43 _0x2e4v95.Tool.Parent == _0x69v43Backpack) then
-                pcall(function_0x69v43_0x69v43:EquipTool(_0x2e4v95.Tool) _0x69v43)
-            _0x69v43
-            _0x69v43FlyState.Tool _0x69v43 _0x69v43 _0x2e4v95.Tool.Parent then _0x2e4v95.Tool_0x69v43_0x69v43 _0x69v43
-        elseif _0x2e4v95._0x3fdv96 then
-            _0x2e4v95.WasForcing_0x69v43false _0x2e4v95.StatesDisabled_0x69v43false
-            pcall(function_0x69v43_0x69v43:SetStateEnabled(Enum.HumanoidStateType.Freefall, true) _0x69v43)
-            _0x69v43FlyState.Tool _0x69v43 _0x2e4v95.Tool.Parent == _0x69v43Backpack then
-                pcall(function_0x69v43_0x69v43:EquipTool(_0x2e4v95.Tool) _0x69v43)
-            _0x69v43
-        _0x69v43
-    _0x69v43)
-    _0x69v43("\100\101\102\108\101\099\116\098\108\111\099\107"_0x69v43._0x69v43function()
-        _0x69v43_0x69v43 _0x110v81._0x343v11 then return _0x69v43
-        local _0x113v64_0x69v43Players.LocalPlayer
-        _0x69v43_0x69v43_0x69v43 then return _0x69v43
-        local _0x184v96_0x69v43_0x69v43Character
-        _0x69v43_0x69v43 char_0x69v43 _0x69v43 _0x184v96.Parent then return _0x69v43
-        local _0x185v38_0x69v43char:FindFirstChildOfClass("\084\111\111\108")
-        _0x69v43_0x69v43 _0x185v38 then return _0x69v43
-        local _0x2edv47_0x69v43false
-        local _0x100v77_0x69v43CameraAssist.Lock
-        _0x69v43_0x69v43_0x69v43_0x69v43._0x3c4v55 _0x69v43 _0x190v27.IsTargetDeflecting_0x69v43._0x3c4v55) then _0x69v43_0x69v43true _0x69v43
-        _0x69v43_0x69v43 then
-            _0x69v43tool.Enabled then pcall(function_0x69v43tool.Enabled_0x69v43false _0x69v43) _0x69v43
-        elseif _0x69v43 _0x185v38.Enabled then
-            pcall(function_0x69v43tool.Enabled_0x69v43true _0x69v43)
-        _0x69v43
-    _0x69v43)
-    _0x18fv80.Track(_0xefv37.Heartbeat:Connect(function(_0x8fv91)
-        _0x69v43CameraAssist.ShuttingDown then return _0x69v43
-        local _0x191v84_0x69v43tick()
-        _0x69v43 _0x69v43_0x69v43_0x69v43 pairs_0x69v43) do
-            _0x69v43_0x69v43_0x69v43_0x69v43._0x2dfv68 >= _0x69v43._0xdev83 then
-                _0x69v43.last_0x69v43_0x69v43
-                pcall(_0x69v43_0x69v43, _0x8fv91)
-            _0x69v43
-        _0x69v43
-    _0x69v43))
-_0x69v43
+            if _0x9799.SpeedApplied then
+                if _0x9799.PreSpeed then pcall(function() _0x44C9.WalkSpeed = _0x9799.PreSpeed end) end
+                if _0x9799.PreJump then pcall(function() _0x44C9.JumpPower = _0x9799.PreJump end) end
+                if _0x9799.Boost then pcall(function() _0x9799.Boost:Destroy() end) _0x9799.Boost = nil end
+                _0x9799.PreSpeed = nil _0x9799.PreJump = nil _0x9799.SpeedApplied = false
+            end
+        end
+        if _0x193F then
+            _0x9799.WasForcing = true
+            local _0x48A3 = _0x44C9:GetState()
+            if _0x48A3 ~= Enum.HumanoidStateType.Running and _0x48A3 ~= Enum.HumanoidStateType.RunningNoPhysics then
+                pcall(function() _0x44C9:ChangeState(Enum.HumanoidStateType.Running) end)
+            end
+            if not _0x9799.StatesDisabled then
+                _0x9799.StatesDisabled = true
+                pcall(function() _0x44C9:SetStateEnabled(Enum.HumanoidStateType.Freefall, false) end)
+            end
+            if _0x9799.Tool and _0x9799.Tool.Parent ~= _0xE895 and (not _0x9799.Tool.Parent or _0x9799.Tool.Parent == _0x1A90.Backpack) then
+                pcall(function() _0x44C9:EquipTool(_0x9799.Tool) end)
+            end
+            if _0x9799.Tool and not _0x9799.Tool.Parent then _0x9799.Tool = nil end
+        elseif _0x9799.WasForcing then
+            _0x9799.WasForcing = false _0x9799.StatesDisabled = false
+            pcall(function() _0x44C9:SetStateEnabled(Enum.HumanoidStateType.Freefall, true) end)
+            if _0x9799.Tool and _0x9799.Tool.Parent == _0x1A90.Backpack then
+                pcall(function() _0x44C9:EquipTool(_0x9799.Tool) end)
+            end
+        end
+    end)
+    _0x67F3("deflectblock", 0.1, function()
+        if not _0x77AD.AutoStopOnKatanaDeflect then return end
+        local _0x1A90 = _0xE1FF.LocalPlayer
+        if not _0x1A90 then return end
+        local _0xE895 = _0x1A90.Character
+        if not _0xE895 or not _0xE895.Parent then return end
+        local _0x9EEE = _0xE895:FindFirstChildOfClass("Tool")
+        if not _0x9EEE then return end
+        local _0x4141 = false
+        local _0x3135 = _0x1996.Lock
+        if _0x3135 and _0x3135.Player and _0xC036.IsTargetDeflecting(_0x3135.Player) then _0x4141 = true end
+        if _0x4141 then
+            if _0x9EEE.Enabled then pcall(function() _0x9EEE.Enabled = false end) end
+        elseif not _0x9EEE.Enabled then
+            pcall(function() _0x9EEE.Enabled = true end)
+        end
+    end)
+    _0x55FF.Track(_0xB932.Heartbeat:Connect(function(_0x154F)
+        if _0x1996.ShuttingDown then return end
+        local _0x17DA = tick()
+        for _, sys in pairs(_0x4816) do
+            if _0x17DA - sys.last >= sys.rate then
+                sys.last = _0x17DA
+                pcall(sys.fn, _0x154F)
+            end
+        end
+    end))
+end
 
-_0x69v43__VEIL_last_connections_0x69v43Connections
-_0x69v43__VEIL_Mobile = {
- _0x404v40_0x69v43DeviceInfo, _0x405v51_0x69v43function(_0x83v25) _0x1e4v40.KeyHeld_0x69v43s _0x69v43 true_0x69v43 false _0x69v43, _0x406v67_0x69v43function_0x69v43mobileToggleMenu_0x69v43_0x69v43, _0x407v52_0x69v43MobileOverlay,
+_G.__VEIL_last_connections = _0x55FF
+_G.__VEIL_Mobile = {
+    device = _0x9A4D,
+    aim = function(_0x0404) _0x1996.KeyHeld = _0x0404 and true or false end,
+    toggleMenu = function() _0x1FFE() end,
+    overlay = _0x453F,
 }
 
-
-
-
-local _0x2eev44 = {}
-_0x2eev44.Interval_0x69v4312_0x69v4360_0x69v4360
-_0x2eev44._memLast_0x69v43_0x69v43
-local function _0xe5v10()
-    _0x69v43ExecutorInfo._0x36ev70 then
-        _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\076\097\115\116\083\116\097\114\116\117\112\046\116\120\116", "\086\069\073\076\095\076\097\115\116\083\116\097\114\116\117\112\046\116\120\116"_0x69v43do
-            local _0xf2v80, _0x37dv81_0x69v43pcall(readfile_0x69v43)
-            _0x69v43_0x69v43_0x69v43 _0x37dv81 then local _0xd6v18_0x69v43tonumber(_0x37dv81) _0x69v43n _0x69v43 n_0x69v430 then return_0x69v43_0x69v43 _0x69v43
-        _0x69v43
-    _0x69v43
-    return _0x2eev44._memLast
-_0x69v43
-local function _0xe6v72(_0x3acv42)
-    _0x2eev44._memLast_0x69v43t
-    _0x69v43_0x69v43 _0x111v38._0x36dv30 then return _0x69v43
-    _0x69v43ExecutorInfo._0x36fv73 then pcall(makefolder, "\086\069\073\076") _0x69v43
-    _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\076\097\115\116\083\116\097\114\116\117\112\046\116\120\116", "\086\069\073\076\095\076\097\115\116\083\116\097\114\116\117\112\046\116\120\116"_0x69v43do
-        _0x69v43pcall(writefile_0x69v43, tostring(t_0x69v43then return _0x69v43
-    _0x69v43
-_0x69v43
-function _0x2eev44.ShouldPlay()
-    local _0x2dfv68_0x69v43sgRead()
-    _0x69v43_0x69v43 _0x2dfv68 then return true _0x69v43
-    return (_0x69v43time() - _0x2dfv68) >= _0x2eev44.Interval
-_0x69v43
-function _0x2eev44._0x69v43()
+-- ============================================================
+-- Startup gate
+-- ============================================================
+local _0xDA01 = {}
+_0xDA01.Interval = 12 * 60 * 60
+_0xDA01._memLast = nil
+local function _0x0A8D()
+    if _0x76B0.HasReadfile then
+        for _, _0x938C in ipairs({"VEIL/LastStartup.txt", "VEIL_LastStartup.txt"}) do
+            local _0xDF7B, _0x3748 = pcall(readfile, _0x938C)
+            if _0xDF7B and _0x3748 then local _0xB877 = tonumber(_0x3748) if _0xB877 and _0xB877 > 0 then return _0xB877 end end
+        end
+    end
+    return _0xDA01._memLast
+end
+local function _0x5BB4(_0xD871)
+    _0xDA01._memLast = _0xD871
+    if not _0x76B0.HasWritefile then return end
+    if _0x76B0.HasMakeFolder then pcall(makefolder, "VEIL") end
+    for _, _0x938C in ipairs({"VEIL/LastStartup.txt", "VEIL_LastStartup.txt"}) do
+        if pcall(writefile, _0x938C, tostring(_0xD871)) then return end
+    end
+end
+function _0xDA01.ShouldPlay()
+    local _0x905F = _0x0A8D()
+    if not _0x905F then return true end
+    return (os.time() - _0x905F) >= _0xDA01.Interval
+end
+function _0xDA01.Run()
     task.defer(function()
-        task.wait_0x69v433)
-        local _0x2efv69_0x69v43false
-        local function _0xe8v41()
-            _0x69v43_0x69v43 then return _0x69v43
- _0x2efv69_0x69v43true
-            _0x69v43Interface.MainFrame then _0x283v55.MainFrame.Visible_0x69v43true _0x69v43
-            _0x69v43__VEIL_StartupDone_0x69v43true
-            _0x69v43_0x69v43__VEIL_BindDeferred then pcall_0x69v43.__VEIL_BindDeferred) _0x69v43
-        _0x69v43
-        _0x69v43_0x69v43 _0x2eev44.ShouldPlay_0x69v43then_0x69v43_0x69v43return _0x69v43
-        sgWrite_0x69v43.time())
-        local _0x2f0v75_0x69v43pcall(_0x95v56, _0xe8v41)
-        _0x69v43_0x69v43 _0x69v43 then_0x69v43_0x69v43_0x69v43
-        task.delay(_0x69v43rv)
-    _0x69v43)
-_0x69v43
-local function _0xe9v89()
+        task.wait(0.3)
+        local _0x5B20 = false
+        local function _0xCFC4()
+            if _0x5B20 then return end
+            _0x5B20 = true
+            if _0xB457.MainFrame then _0xB457.MainFrame.Visible = true end
+            _G.__VEIL_StartupDone = true
+            if _G.__VEIL_BindDeferred then pcall(_G.__VEIL_BindDeferred) end
+        end
+        if not _0xDA01.ShouldPlay() then _0xCFC4() return end
+        _0x5BB4(os.time())
+        local _0xE903 = pcall(_0xB5D3, _0xCFC4)
+        if not _0xE903 then _0xCFC4() end
+        task.delay(8, _0xCFC4)
+    end)
+end
+local function _0x7130()
     task.spawn(function()
-        local _0x281v47_0x69v430
-        while _0x69v43_0x69v43.__VEIL_StartupDone _0x69v43 waited_0x69v43_0x69v43_0x69v43task.wait_0x69v4315) waited_0x69v43waited_0x69v430_0x69v43 _0x69v43
-        task.wait_0x69v436)
-        local _0x191v84_0x69v43_0x69v43time()
-        local _0x2dfv68_0x69v43_0x69v43
-        _0x69v43ExecutorInfo._0x36ev70 then
-            _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\076\097\115\116\068\105\115\099\111\114\100\080\111\112\117\112\046\116\120\116", "\086\069\073\076\095\076\097\115\116\068\105\115\099\111\114\100\080\111\112\117\112\046\116\120\116"_0x69v43do
-                local _0xf2v80, _0x37dv81_0x69v43pcall(readfile_0x69v43)
-                _0x69v43_0x69v43_0x69v43 _0x37dv81 then local _0xd6v18_0x69v43tonumber(_0x37dv81) _0x69v43n _0x69v43 n_0x69v430 then last_0x69v43n break _0x69v43 _0x69v43
-            _0x69v43
-        _0x69v43
-        _0x69v43last _0x69v43 (_0x69v43_0x69v43last) < 12_0x69v4360_0x69v43_0x69v43then return _0x69v43
-        _0x69v43ExecutorInfo._0x36dv30 then
-            _0x69v43ExecutorInfo._0x36fv73 then pcall(makefolder, "\086\069\073\076") _0x69v43
-            _0x69v43 _0x69v43p_0x69v43 ipairs({"\086\069\073\076\047\076\097\115\116\068\105\115\099\111\114\100\080\111\112\117\112\046\116\120\116", "\086\069\073\076\095\076\097\115\116\068\105\115\099\111\114\100\080\111\112\117\112\046\116\120\116"_0x69v43do
-                _0x69v43pcall(writefile_0x69v43, tostring(_0x69v43_0x69v43then break _0x69v43
-            _0x69v43
-        _0x69v43
-        pcall(_0x99v27)
-    _0x69v43)
-_0x69v43
+        local _0xFB05 = 0
+        while not _G.__VEIL_StartupDone and _0xFB05 < 15 do task.wait(0.15) _0xFB05 = _0xFB05 + 0.15 end
+        task.wait(0.6)
+        local _0x17DA = os.time()
+        local _0x905F = nil
+        if _0x76B0.HasReadfile then
+            for _, _0x938C in ipairs({"VEIL/LastDiscordPopup.txt", "VEIL_LastDiscordPopup.txt"}) do
+                local _0xDF7B, _0x3748 = pcall(readfile, _0x938C)
+                if _0xDF7B and _0x3748 then local _0xB877 = tonumber(_0x3748) if _0xB877 and _0xB877 > 0 then _0x905F = _0xB877 break end end
+            end
+        end
+        if _0x905F and (_0x17DA - _0x905F) < 12 * 60 * 60 then return end
+        if _0x76B0.HasWritefile then
+            if _0x76B0.HasMakeFolder then pcall(makefolder, "VEIL") end
+            for _, _0x938C in ipairs({"VEIL/LastDiscordPopup.txt", "VEIL_LastDiscordPopup.txt"}) do
+                if pcall(writefile, _0x938C, tostring(_0x17DA)) then break end
+            end
+        end
+        pcall(_0x0AE1)
+    end)
+end
 
-
-
-
+-- ============================================================
+-- Boot
+-- ============================================================
 task.defer(function()
-    local _0x2f1v55, _0x408v42_0x69v43KeySystem.ReadSaved()
-    _0x69v43savedKey _0x69v43 _0x408v42 _0x69v43_0x69v43.time() < _0x408v42 then
-        local _0x12fv71, _0x37cv19_0x69v43KeySystem.DetectTier(_0x2f1v55)
-        _0x69v43tier then
-            _0x110v81.IsPremium_0x69v43true
-            _0x110v81.PremiumTier_0x69v43info._0x79v33
-            _0x110v81.PremiumExpiry_0x69v43savedExpiry
-            _0x110v81.PremiumKey_0x69v43savedKey
-        _0x69v43
-        _0x12dv21.Authorized_0x69v43true
-        pcall(_0xdbv81)
-        _0x92v94()
-        _0x2eev44._0x69v43()
-        _0xe9v89()
-        pcall(_0x280v16.Register)
+    local _0x47F4, _0x05BC = _0xB7CC.ReadSaved()
+    if _0x47F4 and _0x05BC and os.time() < _0x05BC then
+        local _0xB494, _0x05AC = _0xB7CC.DetectTier(_0x47F4)
+        if _0xB494 then
+            _0x77AD.IsPremium = true
+            _0x77AD.PremiumTier = _0x05AC.name
+            _0x77AD.PremiumExpiry = _0x05BC
+            _0x77AD.PremiumKey = _0x47F4
+        end
+        _0xB7CC.Authorized = true
+        pcall(_0xDFD4)
+        _0x2F55()
+        _0xDA01.Run()
+        _0x7130()
+        pcall(_0x6C2B.Register)
         return
-    _0x69v43
-    _0x12dv21.ClearSaved()
-    _0x72v62(function()
-        pcall(_0xdbv81)
-        _0x92v94()
-        _0x2eev44._0x69v43()
-        _0xe9v89()
-        pcall(_0x280v16.Register)
-    _0x69v43)
-_0x69v43)
+    end
+    _0xB7CC.ClearSaved()
+    _0x6ABC(function()
+        pcall(_0xDFD4)
+        _0x2F55()
+        _0xDA01.Run()
+        _0x7130()
+        pcall(_0x6C2B.Register)
+    end)
+end)
 
-return {Configuration_0x69v43Configuration, _0x190v27_0x69v43Utility, _0x12dv21_0x69v43KeySystem}
+return {_0x77AD = _0x77AD, _0xC036 = _0xC036, _0xB7CC = _0xB7CC}
